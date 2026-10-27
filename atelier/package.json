@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Hack cognitif : comprendre les failles humaines pour s'en prémunir",
   "config": {
-    "siteUrl": ""
+    "siteUrl": "https://anna-mamelli.github.io/hack-cognitif"
   },
   "scripts": {
     "build": "node build.mjs"
