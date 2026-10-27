@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Labo | Hack cognitif</title>
 <meta name="description" content="Trois exercices pour s'entraîner à repérer, mesurer et prioriser les failles cognitives. Tous les messages sont fictifs et rien n'est enregistré.">
+<meta name="robots" content="max-image-preview:large">
+<meta property="og:site_name" content="Hack cognitif">
 <meta property="og:title" content="Labo | Hack cognitif">
 <meta property="og:description" content="Trois exercices pour s'entraîner à repérer, mesurer et prioriser les failles cognitives. Tous les messages sont fictifs et rien n'est enregistré.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -22,17 +24,17 @@
 
 <header class="top" id="top">
   <div class="container bar">
-    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <a class="brand" href="./">Hack <b>cognitif</b></a>
     <nav id="nav" aria-label="Navigation principale">
-      <a href="index.html" data-v="accueil">Accueil</a>
-      <a href="fiches.html" data-v="fiches">Fiches</a>
-      <a href="cours.html" data-v="cours">Cours</a>
-      <a href="labo.html" data-v="labo" aria-current="page">Labo</a>
-      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
-      <a href="glossaire.html" data-v="glossaire">Glossaire</a>
-      <a href="lexique.html" data-v="lexique">Lexique IT</a>
-      <a href="ressources.html" data-v="ressources">Ressources</a>
-      <a href="a-propos.html" data-v="a-propos">À propos</a>
+      <a href="./" data-v="accueil">Accueil</a>
+      <a href="fiches" data-v="fiches">Fiches</a>
+      <a href="cours" data-v="cours">Cours</a>
+      <a href="labo" data-v="labo" aria-current="page">Labo</a>
+      <a href="chapeaux" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire" data-v="glossaire">Glossaire</a>
+      <a href="lexique" data-v="lexique">Lexique IT</a>
+      <a href="ressources" data-v="ressources">Ressources</a>
+      <a href="a-propos" data-v="a-propos">À propos</a>
     </nav>
     <div class="actions">
       <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
@@ -59,7 +61,7 @@
   </header>
   <div class="filters" id="lab-tabs" role="group" aria-label="Choix de l'outil"><button type="button" data-t="anat" aria-pressed="true">Anatomie d'un message</button><button type="button" data-t="quiz" aria-pressed="false">Repère la faille</button><button type="button" data-t="score" aria-pressed="false">Score de gravité</button></div>
   <div class="lab-pane" id="lab-anat"><div class="filters" role="group" aria-label="Choix du message"><button type="button" data-m="0" aria-pressed="true">En entreprise</button><button type="button" data-m="1" aria-pressed="false">Dans un cabinet</button><button type="button" data-all="1" aria-pressed="false">Montrer toutes les failles</button></div><div class="mail"><div class="mh top"><span class="fake">Message fictif d'entraînement</span></div><div class="mh"><span>De</span><span><button type="button" class="hl" data-k="expediteur">M. Directeur Exemple &lt;direction@societe-exemple.invalid&gt;</button></span></div><div class="mh"><span>À</span><span>Camille</span></div><div class="mh"><span>Objet</span><span>Urgent : règlement à effectuer</span></div><div class="mb"><p>Bonjour Camille,</p><p><button type="button" class="hl" data-k="canal">Je suis en déplacement et injoignable par téléphone.</button> J'ai une demande pour vous, à traiter <button type="button" class="hl" data-k="urgence">aujourd'hui avant 17 h</button>.</p><p>Un nouveau prestataire doit être réglé sans attendre. <button type="button" class="hl" data-k="secret">Ne m'en parlez pas par les canaux habituels et n'en informez pas la comptabilité pour l'instant.</button></p><p><button type="button" class="hl" data-k="confiance">Vous êtes la seule personne en qui j'ai pleinement confiance sur ce dossier.</button> <button type="button" class="hl" data-k="canalpay">Je vous envoie le RIB par retour de message.</button></p><p>Cordialement,<br>M. Directeur Exemple</p></div></div><div class="detail" id="anat-detail" aria-live="polite"><p class="hint">Survolez ou touchez une phrase soulignée pour voir le levier cognitif exploité, la technique DIMA associée et le patch qui casserait l'attaque.</p></div></div>
-  <div class="lab-pane" id="lab-quiz" hidden=""><div class="qwrap"><div class="qhead"><span>Message 1 sur 12</span><span class="fake">Fictif</span></div><div class="qmsg">Votre banque : votre relevé mensuel est disponible dans votre espace client. Connectez-vous comme d'habitude, sans lien dans ce message.</div><div class="qbtns"><button type="button" data-a="ok">Légitime</button><button type="button" data-a="trap">Piégé</button></div><div id="q-fb" aria-live="polite"></div></div></div>
+  <div class="lab-pane" id="lab-quiz" data-volatile="" hidden=""><div class="qwrap"><div class="qhead"><span>Message 1 sur 12</span><span class="fake">Fictif</span></div><div class="qmsg">Votre banque : votre relevé mensuel est disponible dans votre espace client. Connectez-vous comme d'habitude, sans lien dans ce message.</div><div class="qbtns"><button type="button" data-a="ok">Légitime</button><button type="button" data-a="trap">Piégé</button></div><div id="q-fb" aria-live="polite"></div></div></div>
   <div class="lab-pane" id="lab-score" hidden=""><p class="hint" style="max-width:62ch">Notez une faille sur cinq critères. Le score pondère l'exposition (20 %), la probabilité (25 %), l'impact (30 %) et la difficulté de détection (25 %). La facilité de correction ne baisse pas la gravité : elle sert à choisir quoi corriger en premier.</p><div class="filters" id="sc-pre" role="group" aria-label="Exemples"><button type="button" data-p="0">Fraude au président</button><button type="button" data-p="1">Hameçonnage ciblé de cabinet</button><button type="button" data-p="2">Inondation informationnelle</button><button type="button" data-p="3">Détournement de la saillance</button><button type="button" data-p="4">Délégation à un assistant IA</button></div><div class="sgrid"><div id="sc-sliders"><div class="sl"><label for="sc-expo">Exposition<output id="o-expo">5</output></label><input id="sc-expo" type="range" min="0" max="10" step="1" value="5"><small>Combien de personnes ou de situations sont concernées.</small></div><div class="sl"><label for="sc-prob">Probabilité d'exploitation<output id="o-prob">5</output></label><input id="sc-prob" type="range" min="0" max="10" step="1" value="5"><small>Chances que le levier fonctionne, y compris sous charge.</small></div><div class="sl"><label for="sc-imp">Impact<output id="o-imp">5</output></label><input id="sc-imp" type="range" min="0" max="10" step="1" value="5"><small>Gravité des conséquences si l'exploitation réussit.</small></div><div class="sl"><label for="sc-det">Difficulté de détection<output id="o-det">5</output></label><input id="sc-det" type="range" min="0" max="10" step="1" value="5"><small>À quel point la tentative passe inaperçue.</small></div><div class="sl"><label for="sc-ease">Facilité de correction<output id="o-ease">5</output></label><input id="sc-ease" type="range" min="0" max="10" step="1" value="5"><small>Rapidité et coût pour appliquer un patch efficace.</small></div></div><div class="panel" style="margin-top:0"><div class="sev" id="sc-num">5.0 / 10</div><div class="slabel" id="sc-lab">Gravité modérée</div><div class="gauge" style="margin:12px 0"><i id="sc-fill" style="width: 50%; background: var(--color-ent);"></i></div><svg class="radar" id="sc-radar" viewBox="0 0 240 240" role="img" aria-label="Profil de la faille sur quatre critères"><polygon class="grid" points="120,100 140,120 120,140 100,120"></polygon><polygon class="grid" points="120,80 160,120 120,160 80,120"></polygon><polygon class="grid" points="120,60 180,120 120,180 60,120"></polygon><polygon class="grid" points="120,40 200,120 120,200 40,120"></polygon><polygon class="shape" points="120.0,80.0 160.0,120.0 120.0,160.0 80.0,120.0"></polygon><text x="120" y="24" text-anchor="middle">Exposition</text><text x="210" y="123" text-anchor="start">Probabilité</text><text x="120" y="218" text-anchor="middle">Impact</text><text x="30" y="123" text-anchor="end">Détection</text></svg><p id="sc-adv" style="margin:8px 0 0;font-size:1rem">Risque modéré, correction difficile : surveiller. Un patch d'entraînement peut suffire, à mesurer dans le temps.</p></div></div><p class="note">Les exemples sont des estimations indicatives, à discuter, pas des mesures. Rien n'est enregistré.</p></div>
   <p class="note">Une idée de message fictif pour le quiz ? <a href="https://framaforms.org/formulaire-de-contact-1793119061" data-contrib="" target="_blank" rel="noopener">Proposez-la</a> : elle sera relue avant d'être ajoutée.</p>
 </section>
@@ -68,29 +70,29 @@
 <footer class="foot">
   <div class="container foot-in">
     <div class="foot-brand">
-      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <a class="brand" href="./">Hack <b>cognitif</b></a>
       <p>Comprendre les failles humaines pour les corriger.</p>
     </div>
     <nav class="foot-cols" aria-label="Pied de page">
       <div>
         <h2>Terrains</h2>
-        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+        <ul><li><a href="organisations">Organisations</a></li><li><a href="dirigeants-cibles">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent">Dirigeants qui influencent</a></li></ul>
       </div>
       <div>
         <h2>Apprendre</h2>
-        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+        <ul><li><a href="fiches">Fiches</a></li><li><a href="cours">Cours</a></li><li><a href="labo">Labo</a></li><li><a href="chapeaux">Chapeaux</a></li></ul>
       </div>
       <div>
         <h2>Vocabulaire</h2>
-        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+        <ul><li><a href="glossaire">Glossaire</a></li><li><a href="lexique">Lexique IT</a></li></ul>
       </div>
       <div>
         <h2>Sources</h2>
-        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+        <ul><li><a href="references">Références</a></li><li><a href="ressources">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
       </div>
       <div>
         <h2>Le site</h2>
-        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+        <ul><li><a href="a-propos">À propos</a></li><li><a href="contribuer">Contribuer</a></li><li><a href="contact">Contact</a></li><li><a href="mentions-legales">Mentions légales</a></li></ul>
       </div>
     </nav>
     <p class="foot-note">© 2026 Hack cognitif.</p>

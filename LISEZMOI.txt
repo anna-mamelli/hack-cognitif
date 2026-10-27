@@ -25,9 +25,11 @@ Contributions et contact (formulaire Framaforms)
 - Créditer une personne sur une fiche (avec son accord) : dans script.js, ajouter à la fiche concernée relu: ["Prénom Nom"] pour une relecture, ou contrib: ["Prénom Nom"] pour une contribution. Les noms s'affichent en bas de la fiche, dans l'encadré « Contribuer à cette fiche ».
 
 Publier
-- Déposer à la racine de l'hébergement statique (Netlify, GitHub Pages, OVH...) : tous les fichiers .html de la racine, script.js, style.css, tokens.css, base.css et le dossier images/ (et sitemap.xml et robots.txt s'ils existent). Ne pas publier atelier/, .hallmark/, .vscode/ ni LISEZMOI.txt.
-- Quand l'adresse du site est connue, la donner au moment de fabriquer pour obtenir aussi sitemap.xml, robots.txt et les liens canoniques. Dans PowerShell, depuis le dossier atelier :
-    $env:SITE_URL = "https://votre-adresse.fr"; npm run build
+- Déposer à la racine de l'hébergement statique (Netlify, GitHub Pages, OVH...) : tous les fichiers .html de la racine, favicon.svg, script.js, style.css, tokens.css, base.css et le dossier images/ (et sitemap.xml et robots.txt s'ils existent). Ne pas publier atelier/, .hallmark/, .vscode/ ni LISEZMOI.txt. Avec GitHub Pages, le dépôt entier est publié : c'est sans danger, ces fichiers ne contiennent rien de personnel.
+- Quand l'adresse du site est connue, l'écrire une fois pour toutes dans atelier/package.json, à la ligne "siteUrl" (par exemple "siteUrl": "https://hack-cognitif.github.io"), puis relancer « npm run build ». Chaque fabrication ajoute alors sitemap.xml, robots.txt, les liens canoniques, l'image de partage et les données structurées lues par Google (nom du site, fil d'Ariane, article avec dates et références sur chaque fiche).
+- Les adresses des pages n'ont pas d'extension (…/fiches, …/fiche-autorite) : GitHub Pages sert fiches.html à l'adresse …/fiches, et les anciennes adresses en .html marchent toujours. En aperçu local (index.html ouvert depuis le disque, ou Live Server), les liens gardent .html pour fonctionner sans serveur. Un autre hébergeur doit savoir servir page.html à l'adresse page (Netlify le fait ; Apache demande une règle).
+- atelier/dates.json garde la date de première publication et de dernière modification de chaque page : la date ne change que si le contenu de la page change. La date de mise à jour s'affiche en haut de chaque fiche. Ne pas supprimer ce fichier.
+- Après la mise en ligne : vérifier une fiche avec le test des résultats enrichis de Google (search.google.com/test/rich-results), puis déclarer le site et son sitemap dans la Search Console.
 - Les polices viennent de Google Fonts (connexion requise ; sinon polices système de repli). Pour un site conforme RGPD, héberger les polices soi-même.
 
 A faire avant publication

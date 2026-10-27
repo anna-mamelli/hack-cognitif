@@ -925,8 +925,10 @@
   }
   function items(list) { return list.map(function (x) { return '<p class="item"><b>' + x[0] + ' :</b> ' + x[1] + '</p>'; }).join(""); }
   function pills(f) { return f.ax.map(function (a) { return '<span class="pill ' + a + '">' + AX[a] + '</span>'; }).join(""); }
+  /* Espace insécable devant : ; ? ! » et après « : la ponctuation ne passe jamais seule à la ligne */
+  function nb(s) { return s.replace(/ ([:;?!»])/g, "\u00a0$1").replace(/« /g, "«\u00a0"); }
   function rowHTML(f) {
-    return '<a class="row" href="#fiche-' + f.id + '"><div><h3>' + f.title + '</h3><p>' + f.teaser + '</p></div><div class="tags">' + pills(f) + '</div></a>';
+    return '<a class="row" href="#fiche-' + f.id + '"><div><h3>' + nb(f.title) + '</h3><p>' + f.teaser + '</p></div><div class="tags">' + pills(f) + '</div></a>';
   }
   function ficheById(id) { return FICHES.filter(function (x) { return x.id === id; })[0]; }
 
@@ -1316,7 +1318,7 @@
               "Beaucoup ne signalent pas les faits. La honte et la crainte d'être jugées y jouent un rôle, entretenues par une idée répandue : seules les personnes naïves ou cupides se feraient avoir (Cross, 2015). Celles qui signalent rapportent souvent un accueil décevant et un manque de soutien (Cross et coll., 2016).",
               "Le silence a un coût : une personne déjà escroquée peut être sollicitée à nouveau, par exemple par un faux service qui promet de récupérer les fonds contre paiement. Côté défense, la priorité est double : accueillir sans blâmer, et prévenir ces secondes escroqueries."],
       blue: [["Signaux", "personne qui minimise ou cache une perte ; contact inattendu qui propose de récupérer les fonds contre paiement ou contre des coordonnées ; collègue qui n'ose pas dire qu'il a cliqué ; isolement après les faits."],
-             ["Contre-mesures", "accueillir sans reproche ni ironie ; orienter vers l'assistance officielle (en France, cybermalveillance.gouv.fr) et vers le dépôt de plainte ; prévenir qu'aucun service sérieux ne fait payer la récupération des fonds ; en entreprise, garantir qu'un clic signalé ne sera pas sanctionné ; proposer un soutien psychologique quand le choc est fort."]],
+             ["Contre-mesures", "accueillir sans reproche ni ironie ; orienter vers l'assistance officielle (en France, 17Cyber, ouvert fin 2024 par la police, la gendarmerie et Cybermalveillance.gouv.fr) et vers le dépôt de plainte ; prévenir qu'aucun service sérieux ne fait payer la récupération des fonds ; en entreprise, garantir qu'un clic signalé ne sera pas sanctionné ; proposer un soutien psychologique quand le choc est fort."]],
       red: [["Hypothèse testée", "après un exercice fictif, un débriefing sans reproche augmente-t-il les signalements lors de l'exercice suivant, par rapport à un débriefing qui insiste sur l'échec ?"],
             ["Cadre", RC]],
       pistes: ["Recenser les canaux par lesquels une personne peut signaler une erreur sans honte dans une organisation.", "Mesurer le délai entre une erreur et son signalement selon la culture de l'équipe."],
@@ -1375,7 +1377,8 @@
       socle: ["Un exercice d'hameçonnage réaliste suppose de tromper les participants. La recherche n'accepte la tromperie qu'à des conditions strictes : elle doit être justifiée, sans alternative raisonnable, ne pas causer de tort sérieux, et être suivie d'un débriefing rapide (American Psychological Association, 2017, normes 8.07 et 8.08). Le code de déontologie des psychologues et la déclaration d'Helsinki posent des exigences proches.",
               "Ces règles valent aussi en entreprise, où se posent des questions propres : accord de l'organisation et information générale des équipes, absence de sanction individuelle, données agrégées, choix des leurres (Resnik et Finn, 2018). Un leurre qui joue sur une prime, la santé ou l'emploi peut blesser et détruire la confiance envers l'équipe de sécurité.",
               "Le cadre de ce site en découle : exercices fictifs, participants informés, indicateurs agrégés, débriefing, aucune personne désignée. Un exercice réussi n'est pas celui qui piège le plus, mais celui qui laisse les équipes plus capables et plus confiantes."],
-      cas: [],
+      cas: ["GoDaddy (décembre 2020) : environ 500 salariés ont reçu un faux courriel promettant une prime de fin d'année de 650 dollars. Ceux qui avaient cliqué ont appris deux jours plus tard qu'ils avaient échoué à un test et devaient refaire une formation ; l'entreprise s'est excusée (Bell, 2020).",
+            "West Midlands Trains (mai 2021) : environ 2 500 salariés ont reçu un message semblant venir de la direction, qui promettait une prime pour leur travail pendant la pandémie. C'était un exercice d'hameçonnage ; le syndicat TSSA l'a jugé « grossier et répréhensible », l'entreprise l'a défendu (Coble, 2021)."],
       blue: [["Signaux", "exercice lancé sans cadre écrit ; leurre qui promet une prime, menace l'emploi ou touche à la santé ; résultats individuels diffusés ; aucun débriefing prévu ; participants qui découvrent l'exercice par la sanction."],
              ["Contre-mesures", "cadre écrit validé par la direction et les représentants du personnel ; information générale des équipes sur l'existence des exercices ; liste de leurres interdits ; débriefing rapide et bienveillant ; données agrégées ; possibilité de se retirer."]],
       red: [["Hypothèse testée", "informer les équipes de l'existence des exercices, sans date ni contenu, change-t-il la mesure par rapport à des exercices non annoncés, et améliore-t-il la confiance envers l'équipe de sécurité ?"],
@@ -1417,34 +1420,36 @@
     { label: "Facteurs humains et erreur", fiche: "facteurs-humains", te: [], note: "Fiche de conception : aucune technique DIMA." },
     { label: "Niveaux de preuve", fiche: "niveaux-preuve", te: ["TE0222"], note: "Le biais de confirmation fait retenir l'étude qui arrange ; rapprochement partiel." }
   );
-  R.button2014 = ["Button, M., Lewis, C., & Tapley, J. (2014). Not a victimless crime: The impact of fraud on individual victims and their families. Security Journal, 27(1), 36–54.", D + "10.1057/sj.2012.11", 0];
-  R.cross2015 = ["Cross, C. (2015). No laughing matter: Blaming the victim of online fraud. International Review of Victimology, 21(2), 187–204.", D + "10.1177/0269758015571471", 0];
-  R.cross2016 = ["Cross, C., Richards, K., & Smith, R. G. (2016). The reporting experiences and support needs of victims of online fraud. Trends & Issues in Crime and Criminal Justice, 518. Australian Institute of Criminology.", null, 0];
-  R.castle2012 = ["Castle, E., Eisenberger, N. I., Seeman, T. E., Moons, W. G., Boggero, I. A., Grinblatt, M. S., & Taylor, S. E. (2012). Neural and behavioral bases of age differences in perceptions of trust. Proceedings of the National Academy of Sciences, 109(51), 20848–20852.", D + "10.1073/pnas.1218518109", 0];
-  R.carstensen2006 = ["Carstensen, L. L. (2006). The influence of a sense of time on human development. Science, 312(5782), 1913–1915.", D + "10.1126/science.1127488", 0];
-  R.ruffman2012 = ["Ruffman, T., Murray, J., Halberstadt, J., & Vater, T. (2012). Age-related differences in deception. Psychology and Aging, 27(3), 543–549.", D + "10.1037/a0023380", 0];
-  R.gollwitzer1999 = ["Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. American Psychologist, 54(7), 493–503.", D + "10.1037/0003-066X.54.7.493", 0];
-  R.gollwitzer2006 = ["Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119.", D + "10.1016/S0065-2601(06)38002-1", 0];
-  R.gross2002 = ["Gross, J. J. (2002). Emotion regulation: Affective, cognitive, and social consequences. Psychophysiology, 39(3), 281–291.", D + "10.1017/S0048577201393198", 0];
-  R.stanislaw1999 = ["Stanislaw, H., & Todorov, N. (1999). Calculation of signal detection theory measures. Behavior Research Methods, Instruments, & Computers, 31(1), 137–149.", D + "10.3758/BF03207704", 0];
-  R.macmillan2005 = ["Macmillan, N. A., & Creelman, C. D. (2005). Detection theory: A user's guide (2e éd.). Lawrence Erlbaum Associates.", null, 0];
-  R.canfield2016 = ["Canfield, C. I., Fischhoff, B., & Davis, A. (2016). Quantifying phishing susceptibility for detection and behavior decisions. Human Factors, 58(8), 1158–1172.", D + "10.1177/0018720816665025", 0];
-  R.shadish2002 = ["Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). Experimental and quasi-experimental designs for generalized causal inference. Houghton Mifflin.", null, 0];
-  R.steves2020 = ["Steves, M., Greene, K., & Theofanos, M. (2020). Categorizing human phishing difficulty: A Phish Scale. Journal of Cybersecurity, 6(1), tyaa009.", D + "10.1093/cybsec/tyaa009", 0];
-  R.resnik2018 = ["Resnik, D. B., & Finn, P. R. (2018). Ethics and phishing experiments. Science and Engineering Ethics, 24(4), 1241–1252.", D + "10.1007/s11948-017-9952-9", 0];
-  R.apa2017 = ["American Psychological Association (2017). Ethical principles of psychologists and code of conduct (normes 8.07 et 8.08).", null, 0];
-  R.reason2000 = ["Reason, J. (2000). Human error: Models and management. BMJ, 320(7237), 768–770.", D + "10.1136/bmj.320.7237.768", 0];
-  R.reason1990 = ["Reason, J. (1990). Human error. Cambridge University Press.", null, 0];
-  R.beautement2008 = ["Beautement, A., Sasse, M. A., & Wonham, M. (2008). The compliance budget: Managing security behaviour in organisations. Proceedings of the 2008 New Security Paradigms Workshop, 47–58.", D + "10.1145/1595676.1595684", 0];
-  R.osc2015 = ["Open Science Collaboration (2015). Estimating the reproducibility of psychological science. Science, 349(6251), aac4716.", D + "10.1126/science.aac4716", 0];
-  R.ioannidis2005 = ["Ioannidis, J. P. A. (2005). Why most published research findings are false. PLoS Medicine, 2(8), e124.", D + "10.1371/journal.pmed.0020124", 0];
-  R.nosek2018 = ["Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences, 115(11), 2600–2606.", D + "10.1073/pnas.1708274114", 0];
+  R.button2014 = ["Button, M., Lewis, C., & Tapley, J. (2014). Not a victimless crime: The impact of fraud on individual victims and their families. Security Journal, 27(1), 36–54.", D + "10.1057/sj.2012.11", 1];
+  R.cross2015 = ["Cross, C. (2015). No laughing matter: Blaming the victim of online fraud. International Review of Victimology, 21(2), 187–204.", D + "10.1177/0269758015571471", 1];
+  R.cross2016 = ["Cross, C., Richards, K., & Smith, R. G. (2016). The reporting experiences and support needs of victims of online fraud. Trends & Issues in Crime and Criminal Justice, 518. Australian Institute of Criminology.", "https://www.aic.gov.au/publications/tandi/tandi518", 1];
+  R.castle2012 = ["Castle, E., Eisenberger, N. I., Seeman, T. E., Moons, W. G., Boggero, I. A., Grinblatt, M. S., & Taylor, S. E. (2012). Neural and behavioral bases of age differences in perceptions of trust. Proceedings of the National Academy of Sciences, 109(51), 20848–20852.", D + "10.1073/pnas.1218518109", 1];
+  R.carstensen2006 = ["Carstensen, L. L. (2006). The influence of a sense of time on human development. Science, 312(5782), 1913–1915.", D + "10.1126/science.1127488", 1];
+  R.ruffman2012 = ["Ruffman, T., Murray, J., Halberstadt, J., & Vater, T. (2012). Age-related differences in deception. Psychology and Aging, 27(3), 543–549.", D + "10.1037/a0023380", 1];
+  R.gollwitzer1999 = ["Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. American Psychologist, 54(7), 493–503.", D + "10.1037/0003-066X.54.7.493", 1];
+  R.gollwitzer2006 = ["Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119.", D + "10.1016/S0065-2601(06)38002-1", 1];
+  R.gross2002 = ["Gross, J. J. (2002). Emotion regulation: Affective, cognitive, and social consequences. Psychophysiology, 39(3), 281–291.", D + "10.1017/S0048577201393198", 1];
+  R.stanislaw1999 = ["Stanislaw, H., & Todorov, N. (1999). Calculation of signal detection theory measures. Behavior Research Methods, Instruments, & Computers, 31(1), 137–149.", D + "10.3758/BF03207704", 1];
+  R.macmillan2005 = ["Macmillan, N. A., & Creelman, C. D. (2005). Detection theory: A user's guide (2e éd.). Lawrence Erlbaum Associates.", null, 1];
+  R.canfield2016 = ["Canfield, C. I., Fischhoff, B., & Davis, A. (2016). Quantifying phishing susceptibility for detection and behavior decisions. Human Factors, 58(8), 1158–1172.", D + "10.1177/0018720816665025", 1];
+  R.shadish2002 = ["Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). Experimental and quasi-experimental designs for generalized causal inference. Houghton Mifflin.", null, 1];
+  R.steves2020 = ["Steves, M., Greene, K., & Theofanos, M. (2020). Categorizing human phishing difficulty: A Phish Scale. Journal of Cybersecurity, 6(1), tyaa009.", D + "10.1093/cybsec/tyaa009", 1];
+  R.resnik2018 = ["Resnik, D. B., & Finn, P. R. (2018). Ethics and phishing experiments. Science and Engineering Ethics, 24(4), 1241–1252.", D + "10.1007/s11948-017-9952-9", 1];
+  R.apa2017 = ["American Psychological Association (2017). Ethical principles of psychologists and code of conduct (2002, amendé en 2010 et 2017 ; normes 8.07 et 8.08).", "https://www.apa.org/ethics/code", 1];
+  R.reason2000 = ["Reason, J. (2000). Human error: Models and management. BMJ, 320(7237), 768–770.", D + "10.1136/bmj.320.7237.768", 1];
+  R.reason1990 = ["Reason, J. (1990). Human error. Cambridge University Press.", null, 1];
+  R.beautement2008 = ["Beautement, A., Sasse, M. A., & Wonham, M. (2008). The compliance budget: Managing security behaviour in organisations. Proceedings of the 2008 New Security Paradigms Workshop, 47–58.", D + "10.1145/1595676.1595684", 1];
+  R.osc2015 = ["Open Science Collaboration (2015). Estimating the reproducibility of psychological science. Science, 349(6251), aac4716.", D + "10.1126/science.aac4716", 1];
+  R.ioannidis2005 = ["Ioannidis, J. P. A. (2005). Why most published research findings are false. PLoS Medicine, 2(8), e124.", D + "10.1371/journal.pmed.0020124", 1];
+  R.nosek2018 = ["Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences, 115(11), 2600–2606.", D + "10.1073/pnas.1708274114", 1];
+  R.bell2020 = ["Bell, K. (2020, 24 décembre). GoDaddy phishing 'test' teased employees with a fake holiday bonus. Engadget.", "https://www.engadget.com/godaddy-sent-fake-phising-email-promising-holiday-bonus-220756457.html", 1];
+  R.coble2021 = ["Coble, S. (2021, 10 mai). Staff bonus was \"crass\" phishing simulation. Infosecurity Magazine.", "https://www.infosecurity-magazine.com/news/staff-bonus-was-crass-phishing/", 1];
   FREFS.victimologie = ["button2014", "cross2015", "cross2016"];
   FREFS["vieillissement-confiance"] = ["castle2012", "ruffman2012", "carstensen2006", "spreng2016"];
   FREFS["plans-si-alors"] = ["gross2002", "gollwitzer1999", "gollwitzer2006"];
   FREFS["analyse-exercice"] = ["stanislaw1999", "macmillan2005", "canfield2016"];
   FREFS["plan-exercice"] = ["shadish2002", "steves2020", "lain2022", "ho2025"];
-  FREFS["ethique-simulation"] = ["apa2017", "resnik2018", "deonto", "helsinki"];
+  FREFS["ethique-simulation"] = ["apa2017", "resnik2018", "deonto", "helsinki", "bell2020", "coble2021"];
   FREFS["facteurs-humains"] = ["reason2000", "reason1990", "adams1999", "beautement2008"];
   FREFS["niveaux-preuve"] = ["osc2015", "ioannidis2005", "nosek2018"];
   SENS["Après l'escroquerie : victimes et revictimisation"] = {
@@ -1577,20 +1582,48 @@
   }
 
   /* ---------- Fiches (liste) ---------- */
-  var filter = "all", fquery = "";
+  /* Familles : d'abord ce que les attaques exploitent, puis les sciences qui l'expliquent, puis la méthode ; de A à Z dans chaque famille.
+     Une fiche dont le type n'a pas de famille va dans « Autres fiches ». */
+  var FAMS = [
+    ["attaque", "Leviers et techniques d'attaque", "Ce que l'attaquant exploite, et comment le repérer."],
+    ["politique", "Communication et influence politique", "Cadrer, saturer, désigner : l'influence à grande échelle."],
+    ["np", NP, "Perception, mémoire, attention, décision : les mécanismes visés."],
+    ["ps", PS, "Le groupe, les normes, l'autorité et l'engagement."],
+    ["soin", "Clinique et facteurs humains", "Soutenir les victimes, préparer ses réponses, concevoir pour l'erreur."],
+    ["methode", "Méthode, mesure et éthique", "Mesurer sans se tromper, simuler sans trahir."],
+    ["autres", "Autres fiches", ""]
+  ];
+  var FAM_OF = { "Levier": "attaque", "Technique": "attaque", "Mécanisme": "attaque", "Prospective": "attaque", "Communication politique": "politique",
+    "Psychologie clinique": "soin", "Ergonomie": "soin", "Mesure": "methode", "Méthode": "methode" };
+  FAM_OF[NP] = "np"; FAM_OF[PS] = "ps";
+  function famOf(f) { return FAM_OF[f.tag] || "autres"; }
+  function byTitle(a, b) { return a.title.localeCompare(b.title, "fr", { sensitivity: "base", ignorePunctuation: true }); }
+  /* Ordre de lecture, repris par les liens « fiche précédente / suivante » ; FICHES garde l'ordre d'ajout pour les « dernières fiches » */
+  var FORDER = FAMS.reduce(function (out, fam) {
+    return out.concat(FICHES.filter(function (f) { return famOf(f) === fam[0]; }).sort(byTitle));
+  }, []);
+  var filter = "all", fquery = "", fsort = "theme";
+  try { if (localStorage.getItem("hc-fsort") === "az") fsort = "az"; } catch (e) {}
   var FILTERS = [["all", "Toutes"], ["ent", "Organisations"], ["pou", "Dirigeants ciblés"], ["inf", "Dirigeants qui influencent"], ["tra", "Transversal"]];
   function renderFiches() {
     $("filters").innerHTML = FILTERS.map(function (f) {
       var n = f[0] === "all" ? FICHES.length : countAx(f[0]);
       return '<button type="button" data-f="' + f[0] + '" aria-pressed="' + (filter === f[0]) + '">' + f[1] + ' (' + n + ')</button>';
     }).join("");
+    Array.prototype.forEach.call($("fsort").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-s") === fsort)); });
     var q = norm(fquery).trim();
-    var list = FICHES.filter(function (f) {
+    var list = FORDER.filter(function (f) {
       if (filter !== "all" && f.ax.indexOf(filter) === -1) return false;
       if (!q) return true;
       return norm(f.title + " " + f.teaser + " " + f.socle.join(" ")).indexOf(q) !== -1;
     });
-    $("all-rows").innerHTML = list.map(rowHTML).join("");
+    $("all-rows").innerHTML = fsort === "az"
+      ? '<div class="rows">' + list.slice().sort(byTitle).map(rowHTML).join("") + '</div>'
+      : FAMS.map(function (fam) {
+        var rows = list.filter(function (f) { return famOf(f) === fam[0]; });
+        if (!rows.length) return "";
+        return '<section class="cgroup fgroup" id="fg-' + fam[0] + '"><div class="cgroup-head"><h2>' + fam[1] + ' <span class="n">' + rows.length + '</span></h2>' + (fam[2] ? '<p>' + fam[2] + '</p>' : '') + '</div><div class="rows">' + rows.map(rowHTML).join("") + '</div></section>';
+      }).join("");
     $("fcount").textContent = list.length + " fiche" + (list.length > 1 ? "s" : "");
     $("f-empty").hidden = list.length > 0;
   }
@@ -1598,6 +1631,13 @@
     var b = e.target.closest("button");
     if (!b) return;
     filter = b.getAttribute("data-f");
+    renderFiches();
+  });
+  $("fsort").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-s]");
+    if (!b) return;
+    fsort = b.getAttribute("data-s");
+    try { localStorage.setItem("hc-fsort", fsort); } catch (err) {}
     renderFiches();
   });
   $("fq").addEventListener("input", function (e) { fquery = e.target.value; renderFiches(); });
@@ -1612,11 +1652,18 @@
 
   /* ---------- Fiche (détail) ---------- */
   var SECS = [];
-  function ficheHTML(f, idx) {
+  /* Date de mise à jour : la fabrication des pages la place dans une balise meta, le visiteur la voit dans l'en-tête de la fiche */
+  function majHTML() {
+    var m = document.querySelector('meta[property="article:modified_time"]');
+    if (!m) return "";
+    var d = new Date(m.content + "T12:00:00");
+    return '<div data-maj><dt>Mise à jour</dt><dd><time datetime="' + m.content + '">' + d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + '</time></dd></div>';
+  }
+  function ficheHTML(f) {
     SECS = [["s-socle", "Socle"]];
     var out = '<header class="page-head"><a class="back" href="#fiches">Toutes les fiches</a>' +
-      '<h1>' + f.title + '</h1><p class="lead">' + f.teaser + '</p>' +
-      '<dl class="fmeta"><div><dt>Terrains</dt><dd>' + f.ax.map(function (a) { return SLUG[a] ? '<a class="pill ' + a + '" href="#' + SLUG[a] + '">' + AX[a] + '</a>' : '<span class="pill ' + a + '">' + AX[a] + '</span>'; }).join("") + '</dd></div><div><dt>Type</dt><dd>' + f.tag + '</dd></div></dl></header><div class="fiche-layout"><article class="fiche-main">' +
+      '<h1>' + nb(f.title) + '</h1><p class="lead">' + f.teaser + '</p>' +
+      '<dl class="fmeta"><div><dt>Terrains</dt><dd>' + f.ax.map(function (a) { return SLUG[a] ? '<a class="pill ' + a + '" href="#' + SLUG[a] + '">' + AX[a] + '</a>' : '<span class="pill ' + a + '">' + AX[a] + '</span>'; }).join("") + '</dd></div><div><dt>Type</dt><dd>' + f.tag + '</dd></div>' + majHTML() + '</dl></header><div class="fiche-layout"><article class="fiche-main">' +
       '<section class="block" id="s-socle" style="margin-top:36px"><h2>Socle</h2>' + f.socle.map(function (p) { return '<p>' + p + '</p>'; }).join("") + '</section>';
     if (f.cas && f.cas.length) {
       SECS.push(["s-cas", "Cas publics"]);
@@ -1639,10 +1686,10 @@
       (f.relu && f.relu.length ? '<p class="credits"><b>Relue par :</b> ' + f.relu.join(", ") + '</p>' : '') +
       (f.contrib && f.contrib.length ? '<p class="credits"><b>Avec les contributions de :</b> ' + f.contrib.join(", ") + '</p>' : '') +
       '</section>';
-    var prev = FICHES[idx - 1], next = FICHES[idx + 1];
+    var at = FORDER.indexOf(f), prev = FORDER[at - 1], next = FORDER[at + 1];
     out += '<nav class="pn" aria-label="Fiches voisines">' +
-      (prev ? '<a class="prev" href="#fiche-' + prev.id + '"><small>Fiche précédente</small><span>' + prev.title + '</span></a>' : '<span></span>') +
-      (next ? '<a class="next" href="#fiche-' + next.id + '"><small>Fiche suivante</small><span>' + next.title + '</span></a>' : '') + '</nav>';
+      (prev ? '<a class="prev" href="#fiche-' + prev.id + '"><small>Fiche précédente</small><span>' + nb(prev.title) + '</span></a>' : '<span></span>') +
+      (next ? '<a class="next" href="#fiche-' + next.id + '"><small>Fiche suivante</small><span>' + nb(next.title) + '</span></a>' : '') + '</nav>';
     out += '</article><aside class="toc" aria-label="Sommaire"><h2>Sur cette page</h2><ol>' +
       SECS.map(function (s, i) { return '<li><button type="button" data-t="' + s[0] + '"' + (i === 0 ? ' aria-current="true"' : '') + '>' + s[1] + '</button></li>'; }).join("") + '</ol></aside></div>';
     return out;
@@ -1873,10 +1920,14 @@
   /* ---------- Routage ---------- */
   var VIEWS = ["accueil", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "a-propos", "contribuer", "contact", "mentions-legales"];
   var current = "accueil";
+  /* Sur le site publié, les adresses n'ont pas d'extension : l'hébergeur sert fiches.html à l'adresse « fiches ».
+     En aperçu local (fichier ouvert depuis le disque, Live Server), rien ne fait ce lien : les liens gardent .html */
+  var LOCAL = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  var EXT = LOCAL ? ".html" : "";
   function fileFor(h) {
-    if (!h || h === "accueil") return "index.html";
-    if (h.indexOf("fiche-") === 0) return ficheById(h.slice(6)) ? h + ".html" : null;
-    if (TERRAINS[h] || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain")) return h + ".html";
+    if (!h || h === "accueil") return LOCAL ? "index.html" : "./";
+    if (h.indexOf("fiche-") === 0) return ficheById(h.slice(6)) ? h + EXT : null;
+    if (TERRAINS[h] || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain")) return h + EXT;
     return null;
   }
   function nav(h, q) {
@@ -1888,7 +1939,7 @@
     .concat(Object.keys(TERRAINS), FICHES.map(function (f) { return "fiche-" + f.id; }));
   function route() {
     var h = STATIC ? document.body.getAttribute("data-page") : (location.hash || "").slice(1) || "accueil";
-    var view = h, f = null, idx = -1;
+    var view = h, f = null;
     if (TERRAINS[h]) {
       view = "terrain";
       $("v-terrain").innerHTML = terrainHTML(TERRAINS[h]);
@@ -1896,11 +1947,11 @@
       labelCells($("v-terrain"));
     } else if (h.indexOf("fiche-") === 0) {
       var id = h.slice(6);
-      FICHES.forEach(function (x, i) { if (x.id === id) { f = x; idx = i; } });
+      f = ficheById(id) || null;
       view = f ? "fiche" : "fiches";
     } else if (VIEWS.indexOf(h) === -1 || h === "fiche" || h === "terrain") { view = "accueil"; }
     if (f) {
-      $("v-fiche").innerHTML = ficheHTML(f, idx);
+      $("v-fiche").innerHTML = ficheHTML(f);
       $("v-fiche").setAttribute("data-band", f.ax[0]);
     }
     VIEWS.forEach(function (v) { $("v-" + v).hidden = (v !== view); });
@@ -1937,6 +1988,11 @@
         if (t) a.setAttribute("href", t);
       });
     };
+    /* In a local preview, the page's own links (written without extension) get their .html back */
+    if (LOCAL) Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
+      var v = a.getAttribute("href"), t = v === "./" ? "index.html" : /^[\w-]+$/.test(v) && fileFor(v);
+      if (t) a.setAttribute("href", t);
+    });
     relink();
     new MutationObserver(relink).observe($("main"), { childList: true, subtree: true });
     /* A crossfade between pages the browser declines (a file opened from disk) is simply skipped */

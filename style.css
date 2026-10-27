@@ -384,6 +384,11 @@ details.callout[open] summary { margin-bottom: var(--space-xs); }
 .cgroup-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2xs) var(--space-lg); padding-bottom: var(--space-sm); border-bottom: var(--rule-bar) solid var(--band-ink); }
 .cgroup-head h2 { margin: 0; }
 .cgroup-head p { margin: 0; color: var(--color-muted); }
+.cgroup-head h2 .n { margin-left: var(--space-2xs); font: 500 var(--text-md)/1 var(--font-outlier); color: var(--color-muted); }
+.fgroup .rows { border-top: 0; }
+.sortby { align-items: center; margin: 0; }
+.sortby > span { margin-right: var(--space-2xs); color: var(--color-muted); font-size: var(--text-md); }
+@media (min-width: 40rem) { .sortby { margin-left: auto; } }
 .clist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: var(--gap-columns); }
 .citem { display: flex; justify-content: space-between; gap: var(--space-md); padding: var(--space-md) var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
 .citem .cmain { display: flex; flex-direction: column; gap: var(--space-3xs); min-width: 0; }

@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "description": "Hack cognitif : comprendre les failles humaines pour s'en prémunir",
+  "config": {
+    "siteUrl": ""
+  },
   "scripts": {
     "build": "node build.mjs"
   },
