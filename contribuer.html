@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contribuer | Hack cognitif</title>
+<meta name="description" content="Une source, un cas public, une correction, une notion à rédiger : chaque contribution rend les fiches plus justes, et chacun mieux armé pour s'en prémunir.">
+<meta property="og:title" content="Contribuer | Hack cognitif">
+<meta property="og:description" content="Une source, un cas public, une correction, une notion à rédiger : chaque contribution rend les fiches plus justes, et chacun mieux armé pour s'en prémunir.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body data-page="contribuer">
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="index.html" data-v="accueil">Accueil</a>
+      <a href="fiches.html" data-v="fiches">Fiches</a>
+      <a href="cours.html" data-v="cours">Cours</a>
+      <a href="labo.html" data-v="labo">Labo</a>
+      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire.html" data-v="glossaire">Glossaire</a>
+      <a href="lexique.html" data-v="lexique">Lexique IT</a>
+      <a href="ressources.html" data-v="ressources">Ressources</a>
+      <a href="a-propos.html" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<section id="v-contribuer" class="page container" data-band="rose">
+  <header class="page-head">
+    <h1>Contribuer</h1>
+    <p class="lead">Une source, un cas public, une correction, une notion à rédiger : chaque contribution rend les fiches plus justes, et chacun mieux armé pour s'en prémunir.</p>
+  </header>
+  <div class="contrib-cta">
+    <a class="btn primary" href="https://framaforms.org/formulaire-de-contact-1793119061" data-contrib="" target="_blank" rel="noopener">Proposer une contribution</a>
+    <p class="hint" data-contrib-wait="" hidden="">Le formulaire de contribution sera bientôt en ligne.</p>
+  </div>
+  <section class="block">
+    <h2>Ce qui est bienvenu</h2>
+    <ul class="plain">
+      <li><b>Une source</b> : une étude, un rapport ou un article qui appuie ou nuance une fiche.</li>
+      <li><b>Un cas public</b> : un cas documenté par une source fiable (presse, rapport officiel, décision de justice).</li>
+      <li><b>Une correction</b> : une erreur, une imprécision, une référence à mettre à jour.</li>
+      <li><b>Une notion à rédiger</b> : l'une des notions marquées « À rédiger » sur la <a href="cours.html">page Cours</a>.</li>
+      <li><b>Un message fictif pour le Labo</b> : un exemple d'entraînement, sans marque ni personne réelle.</li>
+      <li><b>Une relecture experte</b> : voir ci-dessous.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Ce qui n'est pas publié</h2>
+    <ul class="plain">
+      <li>Un scénario prêt à l'emploi, ou une technique optimisée pour manipuler une personne réelle.</li>
+      <li>Une contribution qui vise une personne, un parti ou une organisation, ou qui permet de l'identifier, en dehors d'un cas public déjà documenté.</li>
+      <li>Des données personnelles, des captures non anonymisées ou des éléments couverts par un secret.</li>
+      <li>Une affirmation sans source vérifiable.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Relecture experte</h2>
+    <p>Vous êtes clinicienne, clinicien, psychologue, chercheuse, chercheur ou professionnel de la sécurité ? La relecture d'une fiche de votre domaine est la contribution la plus utile au site. Avec votre accord, votre nom figure sur la fiche relue.</p>
+  </section>
+  <section class="block">
+    <h2>Comment c'est traité</h2>
+    <ul class="plain">
+      <li>Chaque proposition est relue avant toute publication ; certaines ne sont pas retenues.</li>
+      <li>Les sources sont vérifiées et classées « vérifiée » ou « à contrôler », comme sur la <a href="references.html">page Références</a>.</li>
+      <li>Avec votre accord, votre nom apparaît sur la fiche à laquelle vous avez contribué.</li>
+      <li>Les informations transmises servent uniquement à traiter la contribution.</li>
+    </ul>
+  </section>
+  <p class="note">Le formulaire est hébergé par Framaforms, un service de l'association Framasoft. Voir aussi les <a href="mentions-legales.html">mentions légales</a>.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

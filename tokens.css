@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  --color-paper: oklch(84% 0.012 245); --color-paper-2: oklch(81% 0.012 245); --color-paper-3: oklch(77% 0.012 245);
+  --color-ink: oklch(16% 0.020 245); --color-ink-2: oklch(24% 0.018 245); --color-muted: oklch(38% 0.016 245);
+  --color-rule: oklch(73% 0.013 240); --color-rule-2: oklch(32% 0.018 240);
+  --color-accent: oklch(45% 0.180 350); --color-accent-2: oklch(37% 0.160 350); --color-accent-ink: oklch(97% 0.006 245); --color-focus: oklch(46% 0.190 350);
+  --color-sheet: oklch(93.5% 0.008 245);
+  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Newsreader", ui-serif, Georgia, serif;
+  --font-outlier: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-card: 0; --radius-pill: 2px; --rule-hair: 1px; --rule-bar: 2px; --shadow-card: none;
+  --tracking-display: -0.02em; --display-weight: 600;
+  --text-body: 1.125rem;
+  /* Hack cognitif: the three terrains, blue and red team, printed as chart inks on the slate */
+  --color-ent: oklch(44% 0.090 75); --color-ent-tint: oklch(90% 0.035 80);
+  --color-pou: oklch(42% 0.075 215); --color-pou-tint: oklch(90% 0.025 215);
+  --color-inf: oklch(42% 0.085 145); --color-inf-tint: oklch(90% 0.035 145);
+  --color-blue: oklch(42% 0.120 260); --color-blue-tint: oklch(90% 0.030 260);
+  --color-red: oklch(46% 0.150 30); --color-red-tint: oklch(91% 0.030 30);
+  --color-accent-soft: oklch(90% 0.040 350);
+  --color-sheet-2: oklch(89% 0.010 245);
+  --color-band: var(--color-ink); --color-band-ink: var(--color-sheet); --color-band-muted: oklch(78% 0.012 245);
+  --color-scrim: oklch(16% 0.020 245 / 0.55);
+}
+/* Dark: re-derived, same hues; follows the site's Auto / Clair / Sombre switch (data-theme) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper: oklch(17% 0.014 245); --color-paper-2: oklch(20% 0.014 245); --color-paper-3: oklch(23% 0.014 245);
+  --color-ink: oklch(93% 0.010 245); --color-ink-2: oklch(86% 0.012 245); --color-muted: oklch(72% 0.014 245);
+  --color-rule: oklch(33% 0.014 240); --color-rule-2: oklch(75% 0.014 240);
+  --color-accent: oklch(70% 0.115 350); --color-accent-2: oklch(78% 0.090 350); --color-accent-ink: oklch(17% 0.014 245); --color-focus: oklch(74% 0.130 350);
+  --color-sheet: oklch(22% 0.012 245); --color-sheet-2: oklch(26% 0.012 245);
+  --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(28% 0.040 80);
+  --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(27% 0.030 215);
+  --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(27% 0.040 145);
+  --color-blue: oklch(78% 0.090 260); --color-blue-tint: oklch(27% 0.040 260);
+  --color-red: oklch(76% 0.110 30); --color-red-tint: oklch(28% 0.045 30);
+  --color-accent-soft: oklch(30% 0.060 350);
+  --color-band: oklch(24% 0.016 245); --color-band-ink: var(--color-ink); --color-band-muted: var(--color-muted);
+  --color-scrim: oklch(8% 0.010 245 / 0.65);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-paper: oklch(17% 0.014 245); --color-paper-2: oklch(20% 0.014 245); --color-paper-3: oklch(23% 0.014 245);
+    --color-ink: oklch(93% 0.010 245); --color-ink-2: oklch(86% 0.012 245); --color-muted: oklch(72% 0.014 245);
+    --color-rule: oklch(33% 0.014 240); --color-rule-2: oklch(75% 0.014 240);
+    --color-accent: oklch(70% 0.115 350); --color-accent-2: oklch(78% 0.090 350); --color-accent-ink: oklch(17% 0.014 245); --color-focus: oklch(74% 0.130 350);
+    --color-sheet: oklch(22% 0.012 245); --color-sheet-2: oklch(26% 0.012 245);
+    --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(28% 0.040 80);
+    --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(27% 0.030 215);
+    --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(27% 0.040 145);
+    --color-blue: oklch(78% 0.090 260); --color-blue-tint: oklch(27% 0.040 260);
+    --color-red: oklch(76% 0.110 30); --color-red-tint: oklch(28% 0.045 30);
+    --color-accent-soft: oklch(30% 0.060 350);
+    --color-band: oklch(24% 0.016 245); --color-band-ink: var(--color-ink); --color-band-muted: var(--color-muted);
+    --color-scrim: oklch(8% 0.010 245 / 0.65);
+  }
+}

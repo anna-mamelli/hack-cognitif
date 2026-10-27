@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiches | Hack cognitif</title>
+<meta name="description" content="Chaque fiche suit le même modèle : socle, protocole blue team (défense), protocole red team (simulation encadrée), pistes originales.">
+<meta property="og:title" content="Fiches | Hack cognitif">
+<meta property="og:description" content="Chaque fiche suit le même modèle : socle, protocole blue team (défense), protocole red team (simulation encadrée), pistes originales.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body data-page="fiches">
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="index.html" data-v="accueil">Accueil</a>
+      <a href="fiches.html" data-v="fiches" aria-current="page">Fiches</a>
+      <a href="cours.html" data-v="cours">Cours</a>
+      <a href="labo.html" data-v="labo">Labo</a>
+      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire.html" data-v="glossaire">Glossaire</a>
+      <a href="lexique.html" data-v="lexique">Lexique IT</a>
+      <a href="ressources.html" data-v="ressources">Ressources</a>
+      <a href="a-propos.html" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<section id="v-fiches" class="page container" data-band="rose">
+  <header class="page-head">
+    <h1>Fiches</h1>
+    <p class="lead">Chaque fiche suit le même modèle : socle, protocole blue team (défense), protocole red team (simulation encadrée), pistes originales.</p>
+  </header>
+  <div class="toolbar">
+    <input id="fq" class="search" type="search" placeholder="Filtrer les fiches…" autocomplete="off" aria-label="Filtrer les fiches">
+    <span class="count" id="fcount">44 fiches</span>
+  </div>
+  <div class="filters" id="filters" role="group" aria-label="Filtrer par axe"><button type="button" data-f="all" aria-pressed="true">Toutes (44)</button><button type="button" data-f="ent" aria-pressed="false">Organisations (22)</button><button type="button" data-f="pou" aria-pressed="false">Dirigeants ciblés (10)</button><button type="button" data-f="inf" aria-pressed="false">Dirigeants qui influencent (13)</button><button type="button" data-f="tra" aria-pressed="false">Transversal (27)</button></div>
+  <div class="rows" id="all-rows"><a class="row" href="fiche-autorite.html"><div><h3>Autorité usurpée</h3><p>Quand le titre de l'émetteur remplace la vérification.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-urgence.html"><div><h3>Urgence et pression temporelle</h3><p>Le délai court remplace la réflexion.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-usurpation.html"><div><h3>Usurpation de voix et d'image</h3><p>Quand « j'ai vu » et « j'ai entendu » ne prouvent plus rien.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-hamecon-cible.html"><div><h3>Hameçonnage ciblé de responsables</h3><p>Un message sur mesure, adressé à la bonne personne.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-pretexting.html"><div><h3>Pretexting et canulars</h3><p>Se faire passer pour un interlocuteur plausible.</p></div><div class="tags"><span class="pill pou">Dirigeants ciblés</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-cadrage-agenda.html"><div><h3>Cadrage et agenda</h3><p>Choisir l'angle et les sujets plutôt que mentir.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-inondation.html"><div><h3>Inondation informationnelle</h3><p>Saturer la capacité de vérification plutôt que convaincre.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-parasocial.html"><div><h3>Proximité et relation parasociale</h3><p>Quand le sentiment de connaître quelqu'un remplace l'examen de ses positions.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-adversaire.html"><div><h3>Désignation d'un adversaire</h3><p>Réduire un problème complexe à un coupable.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-saillance.html"><div><h3>Détournement de la saillance</h3><p>Quand on déplace le projecteur plutôt que de mentir.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-delegation.html"><div><h3>Capture de la délégation décisionnelle</h3><p>Influencer le processus de choix plutôt que les opinions.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-psychophysique.html"><div><h3>Psychophysique et analyse des signaux</h3><p>Mesurer ce qu'une équipe de veille détecte vraiment.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-visages.html"><div><h3>Reconnaissance des visages et familiarité</h3><p>Reconnaître un visage n'est pas vérifier une identité.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-memoire-travail.html"><div><h3>Mémoire de travail et charge cognitive</h3><p>Une tête pleine vérifie moins.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-memoire-sources.html"><div><h3>Mémoire de source et faux souvenirs</h3><p>On retient le contenu, on oublie d'où il vient.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-attention-selective.html"><div><h3>Attention sélective, divisée et cécité attentionnelle</h3><p>On ne voit pas ce qu'on ne cherche pas.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-controle-executif.html"><div><h3>Contrôle exécutif : habitude contre supervision</h3><p>Quand le pilote automatique décide à la place du pilote.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-meconnaissance.html"><div><h3>Méconnaissance de sa propre vulnérabilité</h3><p>« Moi, je ne me ferais jamais avoir. »</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-pragmatique.html"><div><h3>Langage et pragmatique : ce qui est dit sans l'être</h3><p>L'essentiel d'un message passe par l'implicite.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-reseaux-saillance.html"><div><h3>Réseaux de la saillance et du contrôle</h3><p>Ce que l'imagerie dit, et ne dit pas, de l'attention.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-declin-fraude.html"><div><h3>Déclin cognitif et vulnérabilité à la fraude</h3><p>Protéger sans stigmatiser.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-decision-emotion.html"><div><h3>Décision, émotion et cortex préfrontal ventromédian</h3><p>Sans émotion, on ne décide pas mieux.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-theorie-esprit.html"><div><h3>Théorie de l'esprit et lecture des intentions</h3><p>Deviner ce que l'autre veut, et se tromper sur ce qu'il veut vraiment.</p></div><div class="tags"><span class="pill pou">Dirigeants ciblés</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-saillance-aberrante.html"><div><h3>Saillance aberrante et traitement des signaux ambigus</h3><p>Quand tout semble signifier quelque chose.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-apprentissage-oubli.html"><div><h3>Apprentissage, oubli et durée de vie d'un patch</h3><p>Un patch cognitif a une date de péremption.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-stress-executif.html"><div><h3>Stress, émotion et contrôle exécutif</h3><p>Sous stress, le contrôle recule et l'automatisme avance.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-psychometrie.html"><div><h3>Psychométrie : fiabilité et validité d'un exercice</h3><p>Mesurer sans se raconter d'histoires.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-perception-reconstruction.html"><div><h3>Perception visuelle : voir est une reconstruction</h3><p>Le cerveau complète ce que l'œil ne donne pas.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-recompense-renforcement.html"><div><h3>Récompense et renforcement variable</h3><p>Pourquoi un fil d'actualité donne envie de continuer.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-spectateur.html"><div><h3>Effet spectateur et diffusion de responsabilité</h3><p>Quand tout le monde a vu l'alerte, chacun pense qu'un autre l'a signalée.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-normes.html"><div><h3>Normes sociales : ce que font les autres, ce qu'ils approuvent</h3><p>« Beaucoup cliquent encore » apprend surtout que cliquer est normal.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-obeissance.html"><div><h3>Obéissance et conformité : ce qui rend le refus possible</h3><p>Un seul allié qui dit non suffit souvent à libérer les autres.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-identite-sociale.html"><div><h3>Identité sociale : « nous » contre « eux »</h3><p>Appartenir à un groupe suffit à en favoriser les membres, et à baisser sa garde.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-engagement.html"><div><h3>Engagement et cohérence : l'escalade des petites demandes</h3><p>Après un premier oui, le second coûte moins.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-reactance.html"><div><h3>Réactance : quand la règle donne envie de la contourner</h3><p>Une règle vécue comme imposée est contournée, même quand elle protège.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-inoculation.html"><div><h3>Inoculation : s'entraîner sur une version affaiblie</h3><p>Reconnaître une technique avant de la rencontrer en vrai.</p></div><div class="tags"><span class="pill inf">Dirigeants qui influencent</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-victimologie.html"><div><h3>Après l'escroquerie : honte, silence et revictimisation</h3><p>Une victime qui se tait est une victime qu'on peut tromper à nouveau.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-vieillissement-confiance.html"><div><h3>Vieillissement et confiance : un facteur de risque, pas une fatalité</h3><p>Avec l'âge, les signaux de méfiance s'atténuent, mais la plupart des personnes âgées ne sont pas victimes.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-plans-si-alors.html"><div><h3>Plans « si… alors » et réévaluation : des outils des TCC contre la pression</h3><p>Décider à l'avance de ce qu'on fera quand l'urgence arrivera.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill pou">Dirigeants ciblés</span></div></a><a class="row" href="fiche-analyse-exercice.html"><div><h3>Lire les résultats d'un exercice : taux, sensibilité et critère</h3><p>Un taux de clic qui baisse ne prouve pas que l'équipe repère mieux.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-plan-exercice.html"><div><h3>Concevoir un exercice qui mesure vraiment</h3><p>Avant, après : la différence ne dit rien sans point de comparaison.</p></div><div class="tags"><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-ethique-simulation.html"><div><h3>Simuler une attaque sans trahir : consentement, tromperie et débriefing</h3><p>Un exercice qui humilie fait perdre plus de sécurité qu'il n'en apporte.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill ent">Organisations</span></div></a><a class="row" href="fiche-facteurs-humains.html"><div><h3>Facteurs humains : concevoir pour l'erreur plutôt que contre l'utilisateur</h3><p>Les erreurs sont inévitables ; les accidents viennent des systèmes qui ne les rattrapent pas.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-niveaux-preuve.html"><div><h3>Niveaux de preuve : documenté, plausible, hypothèse</h3><p>Une étude n'est pas une preuve, et un effet célèbre n'est pas toujours solide.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill inf">Dirigeants qui influencent</span></div></a></div>
+  <p id="f-empty" class="note" hidden="">Aucune fiche ne correspond à ce filtre.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Outils du fabricant de pages (réinstallables avec « npm install » dans atelier)
+atelier/node_modules/
+
+# Sauvegarde d'avant la refonte et captures du skill de design
+.hallmark/
+
+# Réglages locaux de l'éditeur et fichiers système
+.vscode/
+Thumbs.db
+.DS_Store

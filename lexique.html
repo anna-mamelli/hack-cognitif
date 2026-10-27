@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le lexique de l'informatique appliqué à la cognition. | Hack cognitif</title>
+<meta name="description" content="Emprunter les mots de la cybersécurité pour penser les failles humaines apporte une méthode : diagnostiquer, prioriser, corriger, vérifier. Les contre-mesures de chaque fiche sont des patchs cognitifs.">
+<meta property="og:title" content="Le lexique de l'informatique appliqué à la cognition. | Hack cognitif">
+<meta property="og:description" content="Emprunter les mots de la cybersécurité pour penser les failles humaines apporte une méthode : diagnostiquer, prioriser, corriger, vérifier. Les contre-mesures de chaque fiche sont des patchs cognitifs.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body data-page="lexique">
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="index.html" data-v="accueil">Accueil</a>
+      <a href="fiches.html" data-v="fiches">Fiches</a>
+      <a href="cours.html" data-v="cours">Cours</a>
+      <a href="labo.html" data-v="labo">Labo</a>
+      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire.html" data-v="glossaire">Glossaire</a>
+      <a href="lexique.html" data-v="lexique" aria-current="page">Lexique IT</a>
+      <a href="ressources.html" data-v="ressources">Ressources</a>
+      <a href="a-propos.html" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<section id="v-lexique" class="page container" data-band="blue">
+  <header class="page-head">
+    <h1>Le lexique de l'informatique appliqué à la cognition.</h1>
+    <p class="lead">Emprunter les mots de la cybersécurité pour penser les failles humaines apporte une méthode : diagnostiquer, prioriser, corriger, vérifier. Les contre-mesures de chaque fiche sont des patchs cognitifs.</p>
+  </header>
+
+  <section class="block">
+    <h2>Quatre types de patchs cognitifs</h2>
+    <div class="compare">
+      <div class="d"><h3>Patch d'environnement</h3><p>Changer le contexte pour que la faille ne soit plus sollicitée. Exemple : supprimer la possibilité de valider seul un virement. Robustesse : élevée, car il ne dépend pas de la vigilance de chacun.</p></div>
+      <div class="d"><h3>Patch de procédure</h3><p>Une règle explicite et simple, comme rappeler sur un numéro connu ou exiger une double validation. Robustesse : élevée si elle est appliquée aussi sous pression.</p></div>
+      <div class="d"><h3>Patch d'outil</h3><p>Une aide technique : clé de sécurité physique, vérification de provenance, filtre. Robustesse : élevée, mais contournable et à maintenir à jour.</p></div>
+      <div class="d"><h3>Patch d'entraînement</h3><p>Formation et sensibilisation. Robustesse : plus faible. Plusieurs études sur la formation au hameçonnage rapportent des effets modestes qui s'érodent, d'où l'intérêt de le répéter et de le mesurer. <a href="references.html">(voir Lain et coll. 2022, Ho et coll. 2025)</a></p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Correspondances</h2>
+    <div class="tablewrap"><table class="dima"><thead><tr><th>Terme</th><th>En informatique</th><th>Équivalent cognitif</th><th>Exemple</th><th>Limite de la métaphore</th></tr></thead><tbody id="lex-body"><tr class="tcat"><th colspan="5" scope="rowgroup">Attaques et vulnérabilités</th></tr><tr><td data-label="Terme"><b>Chaîne d'approvisionnement</b></td><td data-label="En informatique">Attaque qui compromet un fournisseur, un logiciel ou une mise à jour de confiance pour atteindre ses clients.</td><td data-label="Équivalent cognitif">Sources intermédiaires de confiance dont la compromission contamine l'aval.</td><td data-label="Exemple">Un média, un prestataire ou un assistant relais.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Charge utile (payload)</b></td><td data-label="En informatique">Partie d'un code malveillant qui réalise l'action recherchée une fois l'accès obtenu : chiffrement, vol de données, porte dérobée.</td><td data-label="Équivalent cognitif">Contenu qui produit l'effet recherché.</td><td data-label="Exemple">Une demande de virement, un narratif, une image.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Déni de service (DoS)</b></td><td data-label="En informatique">Attaque qui rend un service indisponible en le saturant de requêtes ; on parle de DDoS quand elle vient de nombreuses machines à la fois.</td><td data-label="Équivalent cognitif">Saturation informationnelle : noyer l'attention.</td><td data-label="Exemple">Flot de contenus qui épuise la capacité de tri (voir DIMA TE0433).</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Exploit</b></td><td data-label="En informatique">Programme ou technique qui tire parti d'une vulnérabilité pour obtenir un effet non prévu : exécuter du code, élever ses droits, lire des données.</td><td data-label="Équivalent cognitif">Technique qui tire parti d'une faille.</td><td data-label="Exemple">Fausse urgence combinée à une fausse autorité.</td><td data-label="Limite de la métaphore">L'effet est probabiliste, jamais garanti.</td></tr><tr><td data-label="Terme"><b>Mouvement latéral</b></td><td data-label="En informatique">Progression d'un attaquant d'une machine compromise vers d'autres systèmes du même réseau.</td><td data-label="Équivalent cognitif">Propagation d'une demande ou d'un narratif vers l'entourage.</td><td data-label="Exemple">Un contact compromis relaie le message.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Surface d'attaque</b></td><td data-label="En informatique">Ensemble des points par lesquels un système peut être attaqué : services exposés, comptes, interfaces, logiciels installés.</td><td data-label="Équivalent cognitif">Ensemble des points exposés d'une personne ou d'un collectif : attention, confiance, décisions, informations publiques.</td><td data-label="Exemple">L'organigramme et les projets publiés en ligne.</td><td data-label="Limite de la métaphore">Elle varie selon la fatigue, la charge et le contexte.</td></tr><tr><td data-label="Terme"><b>Vecteur</b></td><td data-label="En informatique">Voie d'entrée utilisée par une attaque : pièce jointe, lien, clé USB, service exposé sur Internet.</td><td data-label="Équivalent cognitif">Canal par lequel arrive la tentative.</td><td data-label="Exemple">E-mail, appel, réseau social, assistant IA.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Vulnérabilité (faille)</b></td><td data-label="En informatique">Faiblesse d'un logiciel, d'un matériel ou d'une configuration qu'un attaquant peut exploiter pour compromettre un système.</td><td data-label="Équivalent cognitif">Biais ou limite de traitement exploitable.</td><td data-label="Exemple">Le biais d'autorité face à un faux dirigeant.</td><td data-label="Limite de la métaphore">Un biais est aussi une heuristique utile : on ne le supprime pas.</td></tr><tr><td data-label="Terme"><b>Zero-day</b></td><td data-label="En informatique">Vulnérabilité inconnue de l'éditeur, ou pas encore corrigée, au moment où elle est exploitée.</td><td data-label="Équivalent cognitif">Technique exploitant un mécanisme pas encore documenté ni défendu.</td><td data-label="Exemple">Nouveaux usages de l'IA conversationnelle.</td><td data-label="Limite de la métaphore">Difficile à établir avant coup.</td></tr><tr class="tcat"><th colspan="5" scope="rowgroup">Défense</th></tr><tr><td data-label="Terme"><b>Authentification multifacteur</b></td><td data-label="En informatique">Vérification d'identité qui combine au moins deux facteurs de nature différente : ce que l'on sait, ce que l'on possède, ce que l'on est.</td><td data-label="Équivalent cognitif">Vérifier une information par plusieurs sources ou canaux indépendants.</td><td data-label="Exemple">Confirmer une demande par un second canal.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Bac à sable (sandbox)</b></td><td data-label="En informatique">Environnement isolé où l'on exécute un programme ou un fichier suspect sans risque pour le reste du système, afin d'observer son comportement.</td><td data-label="Équivalent cognitif">Délai et espace de vérification avant d'agir ou de relayer.</td><td data-label="Exemple">Attendre avant de partager une image sensible.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Défense en profondeur</b></td><td data-label="En informatique">Superposition de protections indépendantes, de sorte que la défaillance de l'une ne suffise pas à compromettre le système.</td><td data-label="Équivalent cognitif">Plusieurs barrières indépendantes.</td><td data-label="Exemple">Vérification hors canal, double validation, signalement.</td><td data-label="Limite de la métaphore">Chaque barrière ajoute de la friction au travail.</td></tr><tr><td data-label="Terme"><b>Durcissement (hardening)</b></td><td data-label="En informatique">Réduction de la surface d'attaque d'un système : désactiver les services inutiles, fermer les accès superflus, appliquer des configurations sûres.</td><td data-label="Équivalent cognitif">Réduction de la surface d'attaque.</td><td data-label="Exemple">Limiter ce que l'organisation publie sur ses équipes.</td><td data-label="Limite de la métaphore">Trop durcir peut nuire à la transparence et à la confiance.</td></tr><tr><td data-label="Terme"><b>Moindre privilège</b></td><td data-label="En informatique">Principe qui n'accorde à chaque utilisateur, programme ou service que les droits strictement nécessaires à sa tâche.</td><td data-label="Équivalent cognitif">Ne déléguer que ce qui est nécessaire, à une personne comme à un assistant.</td><td data-label="Exemple">Un assistant qui propose sans pouvoir valider.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Patch</b></td><td data-label="En informatique">Correctif publié par un éditeur pour supprimer une vulnérabilité ou un défaut.</td><td data-label="Équivalent cognitif">Correction ciblée d'une vulnérabilité : environnement, procédure, outil ou entraînement.</td><td data-label="Exemple">Règle de rappel sur un numéro connu.</td><td data-label="Limite de la métaphore">Pas de mise à jour du cerveau : l'entraînement s'érode.</td></tr><tr class="tcat"><th colspan="5" scope="rowgroup">Détection, test et analyse</th></tr><tr><td data-label="Terme"><b>Indicateur de compromission (IOC)</b></td><td data-label="En informatique">Trace technique qui signale une compromission possible : adresse IP, nom de domaine, empreinte de fichier, comportement anormal.</td><td data-label="Équivalent cognitif">Signal observable d'une tentative de manipulation.</td><td data-label="Exemple">Demande de secret, changement de canal, urgence injustifiée.</td><td data-label="Limite de la métaphore">Un indicateur isolé ne prouve rien.</td></tr><tr><td data-label="Terme"><b>Journalisation (logs)</b></td><td data-label="En informatique">Enregistrement horodaté des événements d'un système (connexions, actions, erreurs), qui permet de détecter une attaque et de reconstituer ce qui s'est passé.</td><td data-label="Équivalent cognitif">Traçabilité des échanges et décisions sensibles.</td><td data-label="Exemple">Carnet des demandes de paiement exceptionnelles.</td><td data-label="Limite de la métaphore">À encadrer pour respecter la vie privée.</td></tr><tr><td data-label="Terme"><b>Pentest / red team</b></td><td data-label="En informatique">Test d'intrusion autorisé (pentest) ou simulation complète d'un adversaire (red team), menés dans un périmètre convenu pour éprouver les défenses.</td><td data-label="Équivalent cognitif">Simulation encadrée pour tester la défense.</td><td data-label="Exemple">Message fictif dans une organisation consentante.</td><td data-label="Limite de la métaphore">Exige consentement, cadre éthique et débriefing.</td></tr><tr><td data-label="Terme"><b>Rétro-ingénierie</b></td><td data-label="En informatique">Analyse d'un programme ou d'un logiciel malveillant pour comprendre son fonctionnement sans disposer de son code source.</td><td data-label="Équivalent cognitif">Analyser une campagne pour reconstituer son fonctionnement.</td><td data-label="Exemple">Étudier un cas public d'hameçonnage ciblé.</td><td data-label="Limite de la métaphore"></td></tr><tr><td data-label="Terme"><b>Score de gravité (CVSS)</b></td><td data-label="En informatique">Note de 0 à 10 qui évalue la gravité d'une vulnérabilité selon des critères normalisés : exploitabilité, impact, portée (Common Vulnerability Scoring System).</td><td data-label="Équivalent cognitif">Évaluer une faille par sa probabilité d'exploitation, son impact et la facilité de la corriger.</td><td data-label="Exemple">À construire pour les failles cognitives.</td><td data-label="Limite de la métaphore">Exercice de priorisation, pas une mesure objective.</td></tr></tbody></table></div>
+  </section>
+
+  <p class="note">Ce lexique est une aide de pensée, pas un modèle littéral du cerveau. Un biais est aussi une heuristique utile, et le cerveau ne se met pas à jour comme un logiciel : un patch cognitif change surtout le contexte ou la procédure, plus rarement l'individu.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

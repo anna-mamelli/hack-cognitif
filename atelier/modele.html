@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hack cognitif</title>
+<meta name="description" content="Comprendre les failles humaines pour les corriger et s'en prémunir : social engineering, influence politique, neuropsychologie cognitive et psychologie sociale, avec protocoles blue team et red team encadrés.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="#accueil" data-v="accueil">Accueil</a>
+      <a href="#fiches" data-v="fiches">Fiches</a>
+      <a href="#cours" data-v="cours">Cours</a>
+      <a href="#labo" data-v="labo">Labo</a>
+      <a href="#chapeaux" data-v="chapeaux">Chapeaux</a>
+      <a href="#glossaire" data-v="glossaire">Glossaire</a>
+      <a href="#lexique" data-v="lexique">Lexique IT</a>
+      <a href="#ressources" data-v="ressources">Ressources</a>
+      <a href="#a-propos" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+<!-- ACCUEIL -->
+<div id="v-accueil" class="home">
+  <section class="hero" aria-label="Accueil">
+    <div class="container">
+      <h1>Comprendre les failles humaines pour les corriger.</h1>
+      <div class="hero-foot">
+        <div>
+          <p class="lead">Social engineering et influence politique : connaître les leviers cognitifs pour s'en prémunir.</p>
+          <div class="cta">
+            <a class="btn primary" href="#fiches">Explorer les fiches</a>
+            <a class="tlink" href="#cours">Voir le programme</a>
+          </div>
+        </div>
+        <dl class="ledger" id="home-meta" aria-label="Le site en chiffres"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-sec band-blue" aria-labelledby="h-levier">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="h-levier">Un levier, plusieurs terrains</h2>
+        <p>Choisissez un levier cognitif et comparez comment il s'exprime dans une entreprise, autour d'un responsable politique et dans sa communication.</p>
+      </div>
+      <div class="sheet">
+        <div class="tabs" id="lever-tabs" role="group" aria-label="Levier cognitif"></div>
+        <div class="compare" id="lever-out" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="visual">
+    <img src="../images/cerveau-circuits-1600.webp" srcset="../images/cerveau-circuits-960.webp 960w, ../images/cerveau-circuits-1600.webp 1600w, ../images/cerveau-circuits-2400.webp 2400w" sizes="(min-width: 60rem) 100vw, (min-width: 40rem) 150vw, 225vw" width="2400" height="800" alt="Illustration : le profil d'une tête et de son cerveau, sur un fond de circuits électroniques et de code binaire." loading="lazy" decoding="async">
+  </figure>
+
+  <section class="home-sec terrains" aria-labelledby="h-terrains">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="h-terrains">Trois terrains, les mêmes failles.</h2>
+      </div>
+      <div class="axes" id="axes"></div>
+    </div>
+  </section>
+
+  <section class="home-sec latest" aria-labelledby="h-latest">
+    <div class="container">
+      <h2 id="h-latest">Dernières fiches</h2>
+      <div class="rows" id="home-rows"></div>
+      <p class="more"><a class="tlink" href="#fiches">Toutes les fiches</a></p>
+    </div>
+  </section>
+
+  <div class="close-band">
+    <div class="container">
+      <p class="close-lead">Ce site sert à se prémunir : informer et sensibiliser, pour reconnaître les attaques et mieux s'en défendre.</p>
+      <p class="close-note">Il traite des mécanismes, des signaux de détection et des contre-mesures. Il ne publie ni scénarios prêts à l'emploi, ni techniques optimisées pour manipuler une personne réelle.</p>
+      <p class="close-act"><a href="#contribuer">Contribuer au site</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- FICHES -->
+<section id="v-fiches" class="page container" data-band="rose" hidden>
+  <header class="page-head">
+    <h1>Fiches</h1>
+    <p class="lead">Chaque fiche suit le même modèle : socle, protocole blue team (défense), protocole red team (simulation encadrée), pistes originales.</p>
+  </header>
+  <div class="toolbar">
+    <input id="fq" class="search" type="search" placeholder="Filtrer les fiches…" autocomplete="off" aria-label="Filtrer les fiches">
+    <span class="count" id="fcount"></span>
+  </div>
+  <div class="filters" id="filters" role="group" aria-label="Filtrer par axe"></div>
+  <div class="rows" id="all-rows"></div>
+  <p id="f-empty" class="note" hidden>Aucune fiche ne correspond à ce filtre.</p>
+</section>
+
+<section id="v-fiche" class="page container" hidden></section>
+
+<!-- TERRAIN (organisations, dirigeants-cibles, dirigeants-qui-influencent) -->
+<section id="v-terrain" class="page container" hidden></section>
+
+<!-- COURS -->
+<section id="v-cours" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>Cours et notions</h1>
+    <p class="lead">Chaque notion de psychologie cognitive et de neuropsychologie devient une fiche, avec son protocole blue team et red team. Cette carte montre ce qui est rédigé, et ce qui reste à faire.</p>
+  </header>
+  <div class="callout"><p><b>Des notions communes à de nombreux cursus de psychologie et de neuropsychologie.</b> Seuls les intitulés sont repris, pas le contenu des cours : les liens avec les leviers et les techniques DIMA sont mes propositions. Les cours marqués « Suivi » sont ceux de neuropsychologie cognitive que j'ai suivis : ils passent en priorité pour les prochaines fiches.</p></div>
+  <details class="callout"><summary><b>Programmes consultés en ligne</b></summary><p>Seuls les intitulés et les grandes lignes des programmes publics ont été repris, jamais leur contenu rédigé. UFC : <a href="https://formations.univ-fcomte.fr/plugins/odf-web/odf/_content/subprogram-master-psychologie-fr-2-fr/Master%20Psychologie%20%20Psychologie%20Cognitive%20et%20Neuropsychologie.pdf" rel="noopener">master Psychologie cognitive et neuropsychologie, Franche-Comté</a>. UCA : <a href="https://univ-cotedazur.fr/medias/fichier/programmesynoptique-masternpc-2019-2020maj_1592988887837-pdf" rel="noopener">master Neuropsychologie et psychopathologie cognitive, Côte d'Azur</a>. Toulouse : <a href="https://www.univ-tlse3.fr/syllabus/SYL_M1_Neuro-NCI.pdf" rel="noopener">syllabus M1 Neurosciences cognitives et intégrées</a>. USMB : <a href="https://formations.univ-smb.fr/plugins/odf-web/odf/_content/course-neuropsychologie/main-orientation/Neuropsychologie.pdf" rel="noopener">unité Neuropsychologie, Savoie Mont Blanc</a>. ULiège : <a href="https://www.neuropsycho.uliege.be/cms/c_13550293/fr/neuropsycho-master-en-sciences-psychologiques" rel="noopener">master en sciences psychologiques, neuropsychologie</a>. UCLouvain : <a href="https://sites.uclouvain.be/archives-portail/ppe2020/prog-2020-psy2m-lpsy229o" rel="noopener">finalité Neuropsychologie, archives 2020</a>. ULB : <a href="https://projet-pastel.be/public/uploads/17059524915725.pdf" rel="noopener">cours de neuropsychologie clinique</a>. Les programmes changent d'une année à l'autre.</p></details>
+  <div class="progress-line" id="cprog"></div>
+  <div class="ctiles" id="ctiles" role="group" aria-label="Aller à un thème"></div>
+  <div class="toolbar">
+    <input id="cq" class="search" type="search" placeholder="Chercher une notion ou un cours…" autocomplete="off" aria-label="Chercher une notion">
+    <span class="count" id="ccount"></span>
+  </div>
+  <div class="filters" id="cfilters" role="group" aria-label="Filtrer par statut"></div>
+  <div id="cours-list"></div>
+</section>
+
+<!-- LABO -->
+<section id="v-labo" class="page container" data-band="rose" hidden>
+  <header class="page-head">
+    <h1>Labo</h1>
+    <p class="lead">Trois exercices pour s'entraîner à repérer, mesurer et prioriser les failles cognitives. Tous les messages sont fictifs et rien n'est enregistré.</p>
+  </header>
+  <div class="filters" id="lab-tabs" role="group" aria-label="Choix de l'outil"></div>
+  <div class="lab-pane" id="lab-anat"></div>
+  <div class="lab-pane" id="lab-quiz" hidden></div>
+  <div class="lab-pane" id="lab-score" hidden></div>
+  <p class="note">Une idée de message fictif pour le quiz ? <a href="#contribuer" data-contrib>Proposez-la</a> : elle sera relue avant d'être ajoutée.</p>
+</section>
+
+<!-- CHAPEAUX -->
+<section id="v-chapeaux" class="page container" data-band="red" hidden>
+  <header class="page-head">
+    <h1>Chapeaux blancs, gris et noirs</h1>
+    <p class="lead">En cybersécurité, ce qui distingue un chapeau blanc d'un chapeau noir n'est pas la technique mais le cadre. La même idée vaut pour la neuropsychologie cognitive : ses connaissances servent aussi bien à protéger qu'à manipuler.</p>
+  </header>
+  <div class="hats3">
+    <div class="wh"><h2>Chapeau blanc</h2><p>Agit avec autorisation, dans un périmètre défini, avec consentement éclairé et débriefing. Son but est de corriger la faille.</p></div>
+    <div class="gr"><h2>Chapeau gris</h2><p>Intention défensive, mais sans autorisation ou sans cadre complet. Zone d'incertitude éthique, à examiner au cas par cas.</p></div>
+    <div class="bl"><h2>Chapeau noir</h2><p>Exploite la faille pour nuire ou en tirer profit, sans l'accord des personnes concernées.</p></div>
+  </div>
+  <h2>Ce qui fait le chapeau</h2>
+  <ul class="plain">
+    <li><b>Autorisation et périmètre :</b> qui a accepté, pour quoi, et jusqu'où. C'est l'équivalent des règles d'engagement d'un test d'intrusion.</li>
+    <li><b>Consentement éclairé :</b> contrairement à un système informatique, les personnes sont ici la cible. Un exercice sans leur accord n'est pas un test, c'est une manipulation.</li>
+    <li><b>Proportionnalité et protection :</b> pas de stress au-delà du réaliste, arrêt possible à tout moment, aucune exposition de personnes vulnérables.</li>
+    <li><b>Minimisation des données et anonymat :</b> indicateurs agrégés, aucun individu désigné.</li>
+    <li><b>Divulgation responsable :</b> signaler une faille de procédure à son responsable avant de la rendre publique.</li>
+    <li><b>Transparence sur la méthode :</b> dire les limites de ce qu'on a mesuré.</li>
+  </ul>
+  <p class="note flush">Le <a href="https://psychologues.org/wp-content/uploads/2025/01/CODE-DE-DEONTOLOGIE-DES-PSYCHOLOGUES-2021_Colonnes_A3.pdf" target="_blank" rel="noopener">code de déontologie des psychologues</a> (2021) et la <a href="https://www.wma.net/policies-post/wma-declaration-of-helsinki" target="_blank" rel="noopener">déclaration d'Helsinki</a> sur la recherche impliquant des personnes s'appliquent en plus. Voir aussi les <a href="#references">références</a>.</p>
+  <h2>Mêmes connaissances, deux usages</h2>
+  <p>Chaque notion de neuropsychologie cognitive est à double usage. Ce tableau reste au niveau des principes : il ne décrit jamais comment exploiter une faille.</p>
+  <div class="tablewrap"><table><thead><tr><th>Notion</th><th>Usage chapeau blanc</th><th>Usage chapeau noir</th><th>Ce qui les distingue</th></tr></thead><tbody id="hat-rows"></tbody></table></div>
+  <div class="callout"><p><b>Hack cognitif est un site de chapeau blanc.</b> Les fiches décrivent les mécanismes pour les repérer et s'en protéger. Les protocoles red team ne contiennent que des exercices fictifs, consentis et débriefés, sans paramètres pour manipuler. Une proposition qui ne respecte pas ce cadre n'a pas sa place ici.</p></div>
+  <h2>Quel chapeau ?</h2>
+  <p>Six situations fictives à classer. La réponse est discutée à chaque fois, car la frontière entre gris et noir dépend du cadre.</p>
+  <div id="hat-test"></div>
+  <p class="note">Les trois couleurs sont une convention de la cybersécurité, pas une classification juridique.</p>
+</section>
+
+<!-- REFERENCES -->
+<section id="v-references" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>Références et sources</h1>
+    <p class="lead">Toutes les références citées dans les fiches, avec leur statut de vérification. Une référence « vérifiée » a vu son titre, ses auteurs, son année et son support confirmés en ligne ; « à contrôler » signifie qu'elle existe mais qu'un détail (pages, éditeur, lien) reste à relire à la source.</p>
+  </header>
+  <div class="callout"><p><b>Limites.</b> Les vérifications ont été faites par recherche en ligne, pas en bibliothèque : plusieurs pages d'éditeurs étaient inaccessibles. Les cas publics (fraude Arup, appel imitant la voix de Joe Biden, Podesta, MacronLeaks) reposent sur des sources secondaires à compléter. Les résultats de la psychologie sociale et de la psychologie cognitive sont discutés ou ont connu des difficultés de réplication pour certains (par exemple Kruger et Dunning). Les liens avec DIMA et les associations cliniques restent des propositions à valider.</p></div>
+  <input id="refq" class="search refsearch" type="search" placeholder="Rechercher un auteur, un titre…" autocomplete="off" aria-label="Rechercher une référence">
+  <p class="count" id="refcount"></p>
+  <ul class="plain refs" id="reflist"></ul>
+</section>
+
+<!-- GLOSSAIRE -->
+<section id="v-glossaire" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>Glossaire</h1>
+    <p class="lead">Définitions de travail, à vérifier à la source (ANSSI, SGDSN/Viginum, IRSEM, ministère des Armées) avant citation.</p>
+  </header>
+  <div class="toolbar">
+    <input id="q" class="search" type="search" placeholder="phishing, pretexting, influence…" autocomplete="off" aria-label="Rechercher un terme">
+    <span class="count" id="gcount"></span>
+  </div>
+  <div class="filters" id="gfilters" role="group" aria-label="Filtrer par catégorie"></div>
+  <div class="gindex" id="gindex" role="group" aria-label="Aller à une lettre"></div>
+  <div id="gloss"></div>
+  <p id="gloss-empty" class="note" hidden>Aucun terme ne correspond.</p>
+</section>
+
+<!-- LEXIQUE IT -->
+<section id="v-lexique" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>Le lexique de l'informatique appliqué à la cognition.</h1>
+    <p class="lead">Emprunter les mots de la cybersécurité pour penser les failles humaines apporte une méthode : diagnostiquer, prioriser, corriger, vérifier. Les contre-mesures de chaque fiche sont des patchs cognitifs.</p>
+  </header>
+
+  <section class="block">
+    <h2>Quatre types de patchs cognitifs</h2>
+    <div class="compare">
+      <div class="d"><h3>Patch d'environnement</h3><p>Changer le contexte pour que la faille ne soit plus sollicitée. Exemple : supprimer la possibilité de valider seul un virement. Robustesse : élevée, car il ne dépend pas de la vigilance de chacun.</p></div>
+      <div class="d"><h3>Patch de procédure</h3><p>Une règle explicite et simple, comme rappeler sur un numéro connu ou exiger une double validation. Robustesse : élevée si elle est appliquée aussi sous pression.</p></div>
+      <div class="d"><h3>Patch d'outil</h3><p>Une aide technique : clé de sécurité physique, vérification de provenance, filtre. Robustesse : élevée, mais contournable et à maintenir à jour.</p></div>
+      <div class="d"><h3>Patch d'entraînement</h3><p>Formation et sensibilisation. Robustesse : plus faible. Plusieurs études sur la formation au hameçonnage rapportent des effets modestes qui s'érodent, d'où l'intérêt de le répéter et de le mesurer. <a href="#references">(voir Lain et coll. 2022, Ho et coll. 2025)</a></p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Correspondances</h2>
+    <div class="tablewrap"><table class="dima"><thead><tr><th>Terme</th><th>En informatique</th><th>Équivalent cognitif</th><th>Exemple</th><th>Limite de la métaphore</th></tr></thead><tbody id="lex-body"></tbody></table></div>
+  </section>
+
+  <p class="note">Ce lexique est une aide de pensée, pas un modèle littéral du cerveau. Un biais est aussi une heuristique utile, et le cerveau ne se met pas à jour comme un logiciel : un patch cognitif change surtout le contexte ou la procédure, plus rarement l'individu.</p>
+</section>
+
+<!-- RESSOURCES -->
+<section id="v-ressources" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>S'appuyer sur ce qui existe.</h1>
+    <p class="lead">Ce site ne refait pas les catalogues existants. Il les relie à deux terrains précis.</p>
+  </header>
+  <section class="block">
+    <h2>DIMA</h2>
+    <p>Cadre open source (licence Apache-2.0) qui recense les tentatives d'exploiter les biais cognitifs dans les flux d'information. Il s'organise en quatre phases (Detect, Inform, Memorise, Act), en tactiques puis en techniques, et propose un navigateur pour rédiger des rapports de campagne.</p>
+    <p><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">Ouvrir le navigateur DIMA</a>, ou consulter le <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">dépôt GitHub</a>. Les identifiants et les intitulés des techniques repris sur ce site viennent de DIMA (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés.</p>
+    <p><b>Apport de Hack cognitif :</b> rattacher chaque levier et chaque fiche aux techniques DIMA correspondantes. Première version ci-dessous. Ces rapprochements sont des propositions d'analyse, pas une position de DIMA, et sont à valider avant publication.</p>
+    <div class="tablewrap"><table class="dima"><thead><tr><th>Levier ou fiche</th><th>Techniques DIMA</th><th>Remarque</th><th>Plus sensibles</th><th>Moins exposées</th></tr></thead><tbody id="dima-body"></tbody></table></div>
+    <p class="note">Ces deux colonnes servent à se prémunir : savoir dans quelles situations on est plus exposé permet de renforcer ses défenses au bon moment (ralentir, vérifier par un second canal, demander un avis). « Plus sensibles » réunit des conditions cliniques pour lesquelles le mécanisme est documenté ou suspecté altéré, et des situations (surcharge, stress, isolement, habitudes) dans lesquelles le levier agit davantage. « Moins exposées » réunit des profils et des pratiques associés à une moindre sensibilité ; quand aucun n'est établi, le tableau le dit. Ce sont des tendances de groupe, jamais un jugement sur une personne : la grande majorité des personnes concernées n'est pas plus manipulable. L'usage légitime de ces associations est d'adapter les formations et les procédures et de protéger les publics fragiles, jamais de les cibler. Niveaux : <em>documenté</em> (littérature établie), <em>plausible</em> (appuyé indirectement), <em>hypothèse</em> (à tester).</p>
+  </section>
+  <section class="block">
+    <h2>À consulter pour les définitions et les cas</h2>
+    <ul class="plain">
+      <li>ANSSI : guides et rapports sur l'hameçonnage et les menaces visant les organisations.</li>
+      <li>SGDSN / Viginum : rapports publics sur les campagnes d'ingérence numérique.</li>
+      <li>IRSEM : études sur l'influence et la guerre cognitive.</li>
+      <li>MITRE ATT&amp;CK : taxonomie de référence des techniques d'attaque, dont l'ingénierie sociale.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Projets</h2>
+    <ul class="plain">
+      <li><b>Correspondance DIMA</b> : première version ci-dessus, à valider et à compléter avec les cas publics sourcés.</li>
+      <li><b>Cartographie de narratifs</b> (open source) : outil d'analyse de sources ouvertes. <span class="ph">[dépôt à ajouter]</span></li>
+      <li><b>Récit commun</b> : outil ouvert pour construire des références partagées, en conception.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- A PROPOS -->
+<section id="v-a-propos" class="page container" hidden>
+  <header class="page-head">
+    <h1>Neuropsychologue devenue spécialiste réseaux et cybersécurité.</h1>
+    <p class="lead">Je conçois des scénarios de menace cognitive et des protocoles de défense pour renforcer la résilience informationnelle.</p>
+  </header>
+  <section class="block">
+    <h2>Parcours</h2>
+    <p>Master 2 en neuropsychologie et plusieurs expériences cliniques, puis reconversion vers les réseaux et la cybersécurité en 2025 (Bachelor Administrateur Systèmes et Réseaux, Marseille). Comprendre comment fonctionnent l'attention, la confiance et la décision permet de mieux protéger les systèmes, et les personnes qui s'en servent.</p>
+  </section>
+  <section class="block">
+    <h2>Démarche</h2>
+    <ul class="plain">
+      <li><b>Comprendre</b> : fiches sur les leviers cognitifs, de la neuropsychologie à la psychologie sociale, et sur les cas publics.</li>
+      <li><b>Mesurer</b> : protocoles pour évaluer la capacité de détection d'une équipe.</li>
+      <li><b>Renforcer</b> : outils ouverts et contre-mesures concrètes.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Posture éthique</h2>
+    <p>L'objectif est de sensibiliser et d'informer, pour que chacun, personne ou organisation, reconnaisse les attaques et s'en prémunisse. Défendre et construire, jamais manipuler. Les cas cités sont publics et sourcés. Les techniques d'influence politique sont décrites de façon symétrique : elles sont employées par tous les camps, et aucune fiche ne vise un parti ou une personne. Aucune fiche ne propose de scénario prêt à l'emploi contre une personne réelle. Les simulations red team décrites se font dans des cadres d'exercice, avec des participants informés ou une organisation consentante.</p>
+  </section>
+</section>
+
+<!-- CONTRIBUER -->
+<section id="v-contribuer" class="page container" data-band="rose" hidden>
+  <header class="page-head">
+    <h1>Contribuer</h1>
+    <p class="lead">Une source, un cas public, une correction, une notion à rédiger : chaque contribution rend les fiches plus justes, et chacun mieux armé pour s'en prémunir.</p>
+  </header>
+  <div class="contrib-cta">
+    <a class="btn primary" href="#contribuer" data-contrib>Proposer une contribution</a>
+    <p class="hint" data-contrib-wait>Le formulaire de contribution sera bientôt en ligne.</p>
+  </div>
+  <section class="block">
+    <h2>Ce qui est bienvenu</h2>
+    <ul class="plain">
+      <li><b>Une source</b> : une étude, un rapport ou un article qui appuie ou nuance une fiche.</li>
+      <li><b>Un cas public</b> : un cas documenté par une source fiable (presse, rapport officiel, décision de justice).</li>
+      <li><b>Une correction</b> : une erreur, une imprécision, une référence à mettre à jour.</li>
+      <li><b>Une notion à rédiger</b> : l'une des notions marquées « À rédiger » sur la <a href="#cours">page Cours</a>.</li>
+      <li><b>Un message fictif pour le Labo</b> : un exemple d'entraînement, sans marque ni personne réelle.</li>
+      <li><b>Une relecture experte</b> : voir ci-dessous.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Ce qui n'est pas publié</h2>
+    <ul class="plain">
+      <li>Un scénario prêt à l'emploi, ou une technique optimisée pour manipuler une personne réelle.</li>
+      <li>Une contribution qui vise une personne, un parti ou une organisation, ou qui permet de l'identifier, en dehors d'un cas public déjà documenté.</li>
+      <li>Des données personnelles, des captures non anonymisées ou des éléments couverts par un secret.</li>
+      <li>Une affirmation sans source vérifiable.</li>
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Relecture experte</h2>
+    <p>Vous êtes clinicienne, clinicien, psychologue, chercheuse, chercheur ou professionnel de la sécurité ? La relecture d'une fiche de votre domaine est la contribution la plus utile au site. Avec votre accord, votre nom figure sur la fiche relue.</p>
+  </section>
+  <section class="block">
+    <h2>Comment c'est traité</h2>
+    <ul class="plain">
+      <li>Chaque proposition est relue avant toute publication ; certaines ne sont pas retenues.</li>
+      <li>Les sources sont vérifiées et classées « vérifiée » ou « à contrôler », comme sur la <a href="#references">page Références</a>.</li>
+      <li>Avec votre accord, votre nom apparaît sur la fiche à laquelle vous avez contribué.</li>
+      <li>Les informations transmises servent uniquement à traiter la contribution.</li>
+    </ul>
+  </section>
+  <p class="note">Le formulaire est hébergé par Framaforms, un service de l'association Framasoft. Voir aussi les <a href="#mentions-legales">mentions légales</a>.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="v-contact" class="page container" hidden>
+  <header class="page-head">
+    <h1>Écrire pour une collaboration ou une question.</h1>
+    <p class="lead">Collaboration, question sur une fiche, demande institutionnelle.</p>
+  </header>
+  <div class="contrib-cta">
+    <a class="btn primary" href="#contribuer" data-contrib>Écrire via le formulaire</a>
+    <p class="hint" data-contrib-wait>Le formulaire de contact sera bientôt en ligne.</p>
+  </div>
+  <p class="note">Les échanges plus approfondis (scénarios, protocoles d'exercice) se font dans un cadre convenu avec les parties concernées, pas via ce site.</p>
+</section>
+
+<!-- MENTIONS -->
+<section id="v-mentions-legales" class="page container" hidden>
+  <header class="page-head">
+    <h1>Mentions légales</h1>
+  </header>
+  <p class="note flush">Modèle à compléter et à faire vérifier avant mise en ligne.</p>
+  <section class="block"><h2>Éditrice</h2>
+    <p>Site personnel, édité à titre non professionnel par une personne physique. Conformément à la loi pour la confiance dans l'économie numérique (LCEN), l'éditrice a communiqué ses éléments d'identification à l'hébergeur indiqué ci-dessous. Pour lui écrire : <a href="#contribuer" data-contrib>formulaire de contact</a>.</p></section>
+  <section class="block"><h2>Hébergeur</h2><p><span class="ph">[Nom, adresse et téléphone de l'hébergeur]</span></p></section>
+  <section class="block"><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les contenus de ce site sont protégés. Toute reproduction sans autorisation est interdite, hors courtes citations avec mention de la source. Les ressources tierces citées restent soumises à leurs propres licences. Les identifiants et les intitulés des techniques DIMA proviennent du projet <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">DIMA</a> (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés. Les rapprochements entre ces techniques et les fiches sont propres à Hack cognitif et n'engagent pas le projet DIMA.</p></section>
+  <section class="block"><h2>Données personnelles</h2><p>Ce site ne dépose pas de cookies de suivi et ne collecte aucune donnée autre que celles transmises volontairement par le formulaire de contribution et de contact, hébergé par Framaforms (association Framasoft). Ces informations servent uniquement à traiter votre message. Pour exercer vos droits d'accès, de rectification ou de suppression, utilisez ce même formulaire.</p></section>
+  <section class="block"><h2>Responsabilité</h2><p>Les contenus ont une visée informative et pédagogique. Ils ne constituent ni une doctrine officielle ni un conseil opérationnel. Les faits cités sont à vérifier à la source avant toute réutilisation.</p></section>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="#organisations">Organisations</a></li><li><a href="#dirigeants-cibles">Dirigeants ciblés</a></li><li><a href="#dirigeants-qui-influencent">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="#fiches">Fiches</a></li><li><a href="#cours">Cours</a></li><li><a href="#labo">Labo</a></li><li><a href="#chapeaux">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="#glossaire">Glossaire</a></li><li><a href="#lexique">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="#references">Références</a></li><li><a href="#ressources">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="#a-propos">À propos</a></li><li><a href="#contribuer">Contribuer</a></li><li><a href="#contact">Contact</a></li><li><a href="#mentions-legales">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

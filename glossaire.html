@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossaire | Hack cognitif</title>
+<meta name="description" content="Définitions de travail, à vérifier à la source (ANSSI, SGDSN/Viginum, IRSEM, ministère des Armées) avant citation.">
+<meta property="og:title" content="Glossaire | Hack cognitif">
+<meta property="og:description" content="Définitions de travail, à vérifier à la source (ANSSI, SGDSN/Viginum, IRSEM, ministère des Armées) avant citation.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body data-page="glossaire">
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="index.html" data-v="accueil">Accueil</a>
+      <a href="fiches.html" data-v="fiches">Fiches</a>
+      <a href="cours.html" data-v="cours">Cours</a>
+      <a href="labo.html" data-v="labo">Labo</a>
+      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire.html" data-v="glossaire" aria-current="page">Glossaire</a>
+      <a href="lexique.html" data-v="lexique">Lexique IT</a>
+      <a href="ressources.html" data-v="ressources">Ressources</a>
+      <a href="a-propos.html" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<section id="v-glossaire" class="page container" data-band="blue">
+  <header class="page-head">
+    <h1>Glossaire</h1>
+    <p class="lead">Définitions de travail, à vérifier à la source (ANSSI, SGDSN/Viginum, IRSEM, ministère des Armées) avant citation.</p>
+  </header>
+  <div class="toolbar">
+    <input id="q" class="search" type="search" placeholder="phishing, pretexting, influence…" autocomplete="off" aria-label="Rechercher un terme">
+    <span class="count" id="gcount">59 termes</span>
+  </div>
+  <div class="filters" id="gfilters" role="group" aria-label="Filtrer par catégorie"><button type="button" data-g="all" aria-pressed="true">Toutes (59)</button><button type="button" data-g="cyber" aria-pressed="false">Cybersécurité et ingénierie sociale (15)</button><button type="button" data-g="info" aria-pressed="false">Influence et information (17)</button><button type="button" data-g="cog" aria-pressed="false">Psychologie cognitive et neuropsychologie (20)</button><button type="button" data-g="soc" aria-pressed="false">Psychologie sociale (7)</button></div>
+  <div class="gindex" id="gindex" role="group" aria-label="Aller à une lettre"><button type="button" data-l="A" aria-label="Aller à la lettre A">A</button><button type="button" data-l="B" aria-label="Aller à la lettre B">B</button><button type="button" data-l="C" aria-label="Aller à la lettre C">C</button><button type="button" data-l="D" aria-label="Aller à la lettre D">D</button><button type="button" data-l="E" aria-label="Aller à la lettre E">E</button><button type="button" data-l="F" aria-label="Aller à la lettre F">F</button><button type="button" data-l="G" aria-label="Aller à la lettre G">G</button><button type="button" data-l="H" aria-label="Aller à la lettre H">H</button><button type="button" data-l="I" aria-label="Aller à la lettre I">I</button><button type="button" data-l="L" aria-label="Aller à la lettre L">L</button><button type="button" data-l="M" aria-label="Aller à la lettre M">M</button><button type="button" data-l="N" aria-label="Aller à la lettre N">N</button><button type="button" data-l="O" aria-label="Aller à la lettre O">O</button><button type="button" data-l="P" aria-label="Aller à la lettre P">P</button><button type="button" data-l="R" aria-label="Aller à la lettre R">R</button><button type="button" data-l="S" aria-label="Aller à la lettre S">S</button><button type="button" data-l="T" aria-label="Aller à la lettre T">T</button><button type="button" data-l="V" aria-label="Aller à la lettre V">V</button></div>
+  <div id="gloss"><section class="gsec" id="gl-A"><h2 class="gletter">A</h2><dl class="gloss"><div><dt>Administrateur central<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Composante du modèle de mémoire de travail de Baddeley qui coordonne l'attention et les systèmes de stockage temporaire.</dd></div><div><dt>Agnosie aperceptive / associative<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Difficulté à organiser la forme perçue / forme perçue mais sens de l'objet perdu.</dd></div><div><dt>Anosognosie<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Absence de conscience d'un déficit propre, d'origine neurologique.</dd></div><div><dt>Astroturfing<span class="gcat">Influence et information</span></dt><dd>Simulation d'un mouvement spontané de citoyens pour masquer l'origine d'une campagne.</dd></div></dl></section><section class="gsec" id="gl-B"><h2 class="gletter">B</h2><dl class="gloss"><div><dt>Blue team / red team<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Équipe de défense / équipe qui simule l'adversaire dans un cadre d'exercice encadré pour mesurer la défense.</dd></div><div><dt>Budget de conformité<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Quantité limitée d'efforts qu'une personne consacre aux règles de sécurité avant de les contourner.</dd></div></dl></section><section class="gsec" id="gl-C"><h2 class="gletter">C</h2><dl class="gloss"><div><dt>Cadrage (framing)<span class="gcat">Influence et information</span></dt><dd>Choix des mots et de l'angle qui orientent l'interprétation d'un même fait.</dd></div><div><dt>Cécité attentionnelle<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Fait de ne pas percevoir un événement visible mais inattendu quand l'attention est mobilisée ailleurs.</dd></div><div><dt>Conformité<span class="gcat">Psychologie sociale</span></dt><dd>Alignement de son jugement ou de sa conduite sur celui d'un groupe.</dd></div><div><dt>Contrebalancement<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Présentation des mêmes conditions dans des ordres différents pour neutraliser l'effet de l'ordre.</dd></div><div><dt>Crise de la réplication<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Constat qu'une part importante des résultats publiés, notamment en psychologie, ne se reproduit pas.</dd></div></dl></section><section class="gsec" id="gl-D"><h2 class="gletter">D</h2><dl class="gloss"><div><dt>Débriefing<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Entretien qui suit un exercice ou une expérience : on explique ce qui s'est passé, on répond aux questions, on rassure.</dd></div><div><dt>Deepfake<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Contenu audio ou vidéo généré ou modifié par IA pour imiter une personne.</dd></div><div><dt>Désinformation / mésinformation<span class="gcat">Influence et information</span></dt><dd>Diffusion volontaire d'informations fausses ou trompeuses / diffusion d'informations erronées sans intention de nuire.</dd></div><div><dt>Diffusion de responsabilité<span class="gcat">Psychologie sociale</span></dt><dd>Sentiment, au sein d'un groupe, que la responsabilité d'agir revient à quelqu'un d'autre.</dd></div></dl></section><section class="gsec" id="gl-E"><h2 class="gletter">E</h2><dl class="gloss"><div><dt>Effet d'espacement<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Meilleure rétention quand les révisions sont réparties dans le temps plutôt que regroupées.</dd></div><div><dt>Effet spectateur<span class="gcat">Psychologie sociale</span></dt><dd>Tendance à moins intervenir quand d'autres personnes sont témoins de la même situation.</dd></div></dl></section><section class="gsec" id="gl-F"><h2 class="gletter">F</h2><dl class="gloss"><div><dt>Fatigue sécuritaire<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Lassitude face à des consignes de sécurité trop nombreuses, qui conduit à les éviter ou à les contourner.</dd></div><div><dt>Fenêtre d'Overton<span class="gcat">Influence et information</span></dt><dd>Éventail des idées jugées acceptables dans le débat public à un moment donné.</dd></div><div><dt>Fiabilité et validité<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Stabilité des résultats d'un test et capacité à mesurer ce qu'il prétend mesurer.</dd></div><div><dt>Fraude au président<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Escroquerie où un faux dirigeant demande un virement ou une information sensible à un employé.</dd></div></dl></section><section class="gsec" id="gl-G"><h2 class="gletter">G</h2><dl class="gloss"><div><dt>Guerre cognitive<span class="gcat">Influence et information</span></dt><dd>Action visant la façon dont une population perçoit, décide et agit, dans la durée et pas seulement en opération.</dd></div></dl></section><section class="gsec" id="gl-H"><h2 class="gletter">H</h2><dl class="gloss"><div><dt>Hameçonnage (phishing)<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Message trompeur, souvent un e-mail, qui imite une source de confiance pour obtenir des identifiants ou déclencher une action.</dd></div><div><dt>Hameçonnage ciblé (spear phishing)<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Hameçonnage personnalisé à partir d'informations sur la cible et son entourage.</dd></div></dl></section><section class="gsec" id="gl-I"><h2 class="gletter">I</h2><dl class="gloss"><div><dt>Identité sociale<span class="gcat">Psychologie sociale</span></dt><dd>Part de l'image de soi qui vient des groupes auxquels on appartient.</dd></div><div><dt>Influence<span class="gcat">Influence et information</span></dt><dd>Ensemble des actions visant à modifier les perceptions ou les comportements d'un public, par des moyens licites ou non.</dd></div><div><dt>Ingérence numérique étrangère<span class="gcat">Influence et information</span></dt><dd>Opération menée depuis l'étranger sur l'espace informationnel national, au cœur de la mission de Viginum.</dd></div><div><dt>Inoculation (prébunking)<span class="gcat">Influence et information</span></dt><dd>Exposition préventive à une version affaiblie d'une technique de manipulation, avec sa réfutation.</dd></div><div><dt>Inondation informationnelle<span class="gcat">Influence et information</span></dt><dd>Diffusion à très fort volume, multicanale et peu cohérente, qui sature la capacité de vérification.</dd></div></dl></section><section class="gsec" id="gl-L"><h2 class="gletter">L</h2><dl class="gloss"><div><dt>Lutte informationnelle<span class="gcat">Influence et information</span></dt><dd>Détecter, caractériser et contrer les opérations qui visent l'information et les perceptions.</dd></div><div><dt>Lutte informatique d'influence (L2I)<span class="gcat">Influence et information</span></dt><dd>Volet cyber du dispositif français consacré aux actions d'influence dans l'espace numérique.</dd></div><div><dt>Lutte informatique offensive (LIO) / défensive (LID)<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Actions cyber visant respectivement à attaquer des systèmes adverses ou à protéger les siens.</dd></div></dl></section><section class="gsec" id="gl-M"><h2 class="gletter">M</h2><dl class="gloss"><div><dt>Mémoire de source<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Capacité à retrouver l'origine d'une information ou d'un souvenir.</dd></div><div><dt>Microciblage<span class="gcat">Influence et information</span></dt><dd>Adaptation d'un message à de petits segments de public à partir de données personnelles.</dd></div><div><dt>Mise à l'agenda (agenda-setting)<span class="gcat">Influence et information</span></dt><dd>Effet par lequel les sujets les plus mis en avant deviennent ceux que le public juge importants.</dd></div><div><dt>Modèle du fromage suisse<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Représentation des défenses d'un système comme des tranches successives dont les failles ne doivent pas s'aligner.</dd></div></dl></section><section class="gsec" id="gl-N"><h2 class="gletter">N</h2><dl class="gloss"><div><dt>Norme descriptive, norme prescriptive<span class="gcat">Psychologie sociale</span></dt><dd>Ce que la plupart des gens font ; ce qu'ils approuvent ou désapprouvent.</dd></div></dl></section><section class="gsec" id="gl-O"><h2 class="gletter">O</h2><dl class="gloss"><div><dt>Opérations militaires d'influence (OMI)<span class="gcat">Influence et information</span></dt><dd>Activités des armées françaises pour influencer des publics dans le cadre d'une opération, encadrées par la doctrine et le droit.</dd></div><div><dt>OSINT<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Renseignement d'origine sources ouvertes : exploitation d'informations publiques.</dd></div></dl></section><section class="gsec" id="gl-P"><h2 class="gletter">P</h2><dl class="gloss"><div><dt>Plan si… alors (intention de mise en œuvre)<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Plan qui associe à l'avance une situation précise à une réponse précise.</dd></div><div><dt>Pragmatique<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Étude de ce que l'on comprend d'un énoncé au-delà de ses mots, selon le contexte (présupposés, sous-entendus).</dd></div><div><dt>Préenregistrement<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Dépôt public des hypothèses et des analyses d'une étude avant de recueillir les données.</dd></div><div><dt>Pretexting<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Construction d'un prétexte crédible pour obtenir de l'information ou une action.</dd></div><div><dt>Prosopagnosie<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Incapacité à reconnaître des visages familiers, avec une perception des visages par ailleurs préservée.</dd></div><div><dt>PsyOps<span class="gcat">Influence et information</span></dt><dd>Opérations psychologiques militaires (terme anglo-saxon, OTAN et États-Unis).</dd></div></dl></section><section class="gsec" id="gl-R"><h2 class="gletter">R</h2><dl class="gloss"><div><dt>Réactance<span class="gcat">Psychologie sociale</span></dt><dd>Réaction de défense de sa liberté face à une pression perçue, qui pousse à faire l'inverse de ce qui est demandé.</dd></div><div><dt>Réévaluation cognitive<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Stratégie qui change l'interprétation d'une situation pour en modifier l'émotion.</dd></div><div><dt>Relation parasociale<span class="gcat">Influence et information</span></dt><dd>Illusion d'une relation directe avec une figure médiatique.</dd></div><div><dt>Renforcement variable<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Programme où la récompense arrive de façon imprévisible, ce qui entretient durablement un comportement.</dd></div><div><dt>Résilience informationnelle<span class="gcat">Influence et information</span></dt><dd>Capacité d'une société à absorber, détecter et corriger les tentatives de manipulation.</dd></div><div><dt>Revictimisation<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Fait d'être à nouveau victime, par exemple d'un faux service qui promet de récupérer les fonds perdus.</dd></div></dl></section><section class="gsec" id="gl-S"><h2 class="gletter">S</h2><dl class="gloss"><div><dt>Saillance aberrante<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Hypothèse selon laquelle des stimuli sans importance prennent une signification excessive, notamment dans la psychose.</dd></div><div><dt>Sensibilité (d') et critère (c)<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>En théorie de la détection du signal : capacité à distinguer un signal d'un bruit, et tendance à répondre « signal » dans le doute.</dd></div><div><dt>Social engineering (ingénierie sociale)<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Ensemble des techniques qui exploitent des ressorts humains (confiance, autorité, urgence) pour obtenir un accès, une information ou une action.</dd></div><div><dt>Syndrome de Capgras<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Conviction qu'un proche a été remplacé par un sosie, malgré la reconnaissance de ses traits.</dd></div><div><dt>Système attentionnel superviseur (SAS)<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Système du modèle de Norman et Shallice qui intervient dans les situations nouvelles ou risquées, au-dessus des schémas d'action automatiques.</dd></div></dl></section><section class="gsec" id="gl-T"><h2 class="gletter">T</h2><dl class="gloss"><div><dt>Technique de l'amorçage<span class="gcat">Psychologie sociale</span></dt><dd>Obtenir un accord, puis révéler un coût plus élevé que prévu.</dd></div><div><dt>Théorie de l'esprit<span class="gcat">Psychologie cognitive et neuropsychologie</span></dt><dd>Capacité d'attribuer des croyances et des intentions à autrui.</dd></div></dl></section><section class="gsec" id="gl-V"><h2 class="gletter">V</h2><dl class="gloss"><div><dt>Vishing<span class="gcat">Cybersécurité et ingénierie sociale</span></dt><dd>Hameçonnage par téléphone ou message vocal.</dd></div></dl></section></div>
+  <p id="gloss-empty" class="note" hidden="">Aucun terme ne correspond.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

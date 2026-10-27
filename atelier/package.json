@@ -1,0 +1,12 @@
+{
+  "name": "hack-cognitif",
+  "private": true,
+  "type": "module",
+  "description": "Hack cognitif : comprendre les failles humaines pour s'en prémunir",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "24.10.0"
+  }
+}

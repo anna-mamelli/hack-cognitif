@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hack cognitif</title>
+<meta name="description" content="Comprendre les failles humaines pour les corriger et s'en prémunir : social engineering, influence politique, neuropsychologie cognitive et psychologie sociale, avec protocoles blue team et red team encadrés.">
+<meta property="og:title" content="Hack cognitif">
+<meta property="og:description" content="Comprendre les failles humaines pour les corriger et s'en prémunir : social engineering, influence politique, neuropsychologie cognitive et psychologie sociale, avec protocoles blue team et red team encadrés.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230F6B6D%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2717%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EHc%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+</head>
+<body data-page="accueil">
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="top" id="top">
+  <div class="container bar">
+    <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="index.html" data-v="accueil" aria-current="page">Accueil</a>
+      <a href="fiches.html" data-v="fiches">Fiches</a>
+      <a href="cours.html" data-v="cours">Cours</a>
+      <a href="labo.html" data-v="labo">Labo</a>
+      <a href="chapeaux.html" data-v="chapeaux">Chapeaux</a>
+      <a href="glossaire.html" data-v="glossaire">Glossaire</a>
+      <a href="lexique.html" data-v="lexique">Lexique IT</a>
+      <a href="ressources.html" data-v="ressources">Ressources</a>
+      <a href="a-propos.html" data-v="a-propos">À propos</a>
+    </nav>
+    <div class="actions">
+      <button class="ibtn" id="sp-open" type="button" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <span class="lbl">Rechercher</span><span class="kbd">/</span>
+      </button>
+      <button class="ibtn" id="theme-btn" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"></path></svg>
+        <span class="lbl" id="theme-lbl">Auto</span>
+      </button>
+      <button class="ibtn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div id="v-accueil" class="home">
+  <section class="hero" aria-label="Accueil">
+    <div class="container">
+      <h1>Comprendre les failles humaines pour les corriger.</h1>
+      <div class="hero-foot">
+        <div>
+          <p class="lead">Social engineering et influence politique : connaître les leviers cognitifs pour s'en prémunir.</p>
+          <div class="cta">
+            <a class="btn primary" href="fiches.html">Explorer les fiches</a>
+            <a class="tlink" href="cours.html">Voir le programme</a>
+          </div>
+        </div>
+        <dl class="ledger" id="home-meta" aria-label="Le site en chiffres"><div><dt>fiches</dt><dd>44</dd></div><div><dt>leviers</dt><dd>5</dd></div><div><dt>techniques DIMA rapprochées</dt><dd>24</dd></div><div><dt>termes du lexique IT</dt><dd>20</dd></div></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-sec band-blue" aria-labelledby="h-levier">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="h-levier">Un levier, plusieurs terrains</h2>
+        <p>Choisissez un levier cognitif et comparez comment il s'exprime dans une entreprise, autour d'un responsable politique et dans sa communication.</p>
+      </div>
+      <div class="sheet">
+        <div class="tabs" id="lever-tabs" role="group" aria-label="Levier cognitif"><button type="button" data-i="0" aria-pressed="true">Autorité</button><button type="button" data-i="1" aria-pressed="false">Urgence</button><button type="button" data-i="2" aria-pressed="false">Familiarité</button><button type="button" data-i="3" aria-pressed="false">Réciprocité</button><button type="button" data-i="4" aria-pressed="false">Preuve sociale</button></div>
+        <div class="compare" id="lever-out" aria-live="polite"><div class="e"><h3>Organisations</h3><p>Un message qui semble venir d'un dirigeant demande un virement ou un accès, et de ne pas en parler.</p></div><div class="p"><h3>Dirigeants ciblés</h3><p>Un appel ou un courrier qui semble venir d'un ministre, d'un conseiller ou d'un homologue étranger pour obtenir une information ou une décision.</p></div><div class="c"><h3>Dirigeants qui influencent</h3><p>Mise en avant de la fonction, d'experts ou de « ceux qui savent » pour clore une discussion avant l'examen des arguments.</p></div><div class="d"><h3>Défense</h3><p>Vérifier par un second canal, en rappelant un numéro déjà connu et jamais celui fourni dans la demande.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="visual">
+    <img src="images/cerveau-circuits-1600.webp" srcset="images/cerveau-circuits-960.webp 960w, images/cerveau-circuits-1600.webp 1600w, images/cerveau-circuits-2400.webp 2400w" sizes="(min-width: 60rem) 100vw, (min-width: 40rem) 150vw, 225vw" width="2400" height="800" alt="Illustration : le profil d'une tête et de son cerveau, sur un fond de circuits électroniques et de code binaire." loading="lazy" decoding="async">
+  </figure>
+
+  <section class="home-sec terrains" aria-labelledby="h-terrains">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="h-terrains">Trois terrains, les mêmes failles.</h2>
+      </div>
+      <div class="axes" id="axes"><a class="axis-card ax-ent" href="organisations.html" data-ax="ent"><h3>Organisations</h3><p>Phishing, vishing, pretexting, fraude au président, usurpation par deepfake.</p><span class="go"><b>22</b> <span>fiches</span></span></a><a class="axis-card ax-pou" href="dirigeants-cibles.html" data-ax="pou"><h3>Dirigeants ciblés</h3><p>Responsables, cabinets et entourages comme cibles : hameçonnage, canulars, usurpations, désinformation.</p><span class="go"><b>10</b> <span>fiches</span></span></a><a class="axis-card ax-inf" href="dirigeants-qui-influencent.html" data-ax="inf"><h3>Dirigeants qui influencent</h3><p>Communication politique : cadrage, agenda, inondation informationnelle, proximité, désignation d'un adversaire. Décrite de façon symétrique, sans viser un camp.</p><span class="go"><b>13</b> <span>fiches</span></span></a></div>
+    </div>
+  </section>
+
+  <section class="home-sec latest" aria-labelledby="h-latest">
+    <div class="container">
+      <h2 id="h-latest">Dernières fiches</h2>
+      <div class="rows" id="home-rows"><a class="row" href="fiche-niveaux-preuve.html"><div><h3>Niveaux de preuve : documenté, plausible, hypothèse</h3><p>Une étude n'est pas une preuve, et un effet célèbre n'est pas toujours solide.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill inf">Dirigeants qui influencent</span></div></a><a class="row" href="fiche-facteurs-humains.html"><div><h3>Facteurs humains : concevoir pour l'erreur plutôt que contre l'utilisateur</h3><p>Les erreurs sont inévitables ; les accidents viennent des systèmes qui ne les rattrapent pas.</p></div><div class="tags"><span class="pill ent">Organisations</span><span class="pill tra">Transversal</span></div></a><a class="row" href="fiche-ethique-simulation.html"><div><h3>Simuler une attaque sans trahir : consentement, tromperie et débriefing</h3><p>Un exercice qui humilie fait perdre plus de sécurité qu'il n'en apporte.</p></div><div class="tags"><span class="pill tra">Transversal</span><span class="pill ent">Organisations</span></div></a></div>
+      <p class="more"><a class="tlink" href="fiches.html">Toutes les fiches</a></p>
+    </div>
+  </section>
+
+  <div class="close-band">
+    <div class="container">
+      <p class="close-lead">Ce site sert à se prémunir : informer et sensibiliser, pour reconnaître les attaques et mieux s'en défendre.</p>
+      <p class="close-note">Il traite des mécanismes, des signaux de détection et des contre-mesures. Il ne publie ni scénarios prêts à l'emploi, ni techniques optimisées pour manipuler une personne réelle.</p>
+      <p class="close-act"><a href="contribuer.html">Contribuer au site</a></p>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html">Hack <b>cognitif</b></a>
+      <p>Comprendre les failles humaines pour les corriger.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Pied de page">
+      <div>
+        <h2>Terrains</h2>
+        <ul><li><a href="organisations.html">Organisations</a></li><li><a href="dirigeants-cibles.html">Dirigeants ciblés</a></li><li><a href="dirigeants-qui-influencent.html">Dirigeants qui influencent</a></li></ul>
+      </div>
+      <div>
+        <h2>Apprendre</h2>
+        <ul><li><a href="fiches.html">Fiches</a></li><li><a href="cours.html">Cours</a></li><li><a href="labo.html">Labo</a></li><li><a href="chapeaux.html">Chapeaux</a></li></ul>
+      </div>
+      <div>
+        <h2>Vocabulaire</h2>
+        <ul><li><a href="glossaire.html">Glossaire</a></li><li><a href="lexique.html">Lexique IT</a></li></ul>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <ul><li><a href="references.html">Références</a></li><li><a href="ressources.html">Ressources</a></li><li><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">DIMA</a></li></ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contribuer.html">Contribuer</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+    </nav>
+    <p class="foot-note">© 2026 Hack cognitif.</p>
+  </div>
+</footer>
+
+<div class="sp" id="sp" hidden>
+  <div class="sp-back" data-close="1"></div>
+  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
+    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <ul id="sp-list" role="listbox"></ul>
+    <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
