@@ -679,7 +679,7 @@
   PSY["Langage et pragmatique"] = [
     ["Lésions de l'hémisphère droit", "documenté", "Difficulté à saisir l'implicite, l'ironie et les sous-entendus, avec un langage formel préservé."],
     ["Schizophrénie", "documenté", "Difficultés pragmatiques bien décrites : métaphores, ironie et sous-entendus pris au pied de la lettre."],
-    ["Trouble du spectre de l'autisme", "plausible", "Compréhension souvent plus littérale, et moindre effet de cadrage en laboratoire (De Martino et coll., 2008). Cela ne protège pas des escroqueries (Griffiths et coll., 2019)."]];
+    ["Trouble du spectre de l'autisme", "hypothèse", "Par analogie seulement : l'implicite agit comme un cadre, et l'effet de cadrage est en moyenne réduit chez de petits groupes d'adultes autistes (De Martino et coll., 2008). Aucune étude citée ne teste la compréhension de l'implicite. Cela ne protège pas des escroqueries (Griffiths et coll., 2019). Pour tous : reformuler les implicites en énoncés explicites, la contre-mesure de cette fiche."]];
   PSY["Réseaux de la saillance et du contrôle"] = [
     ["Démence fronto-temporale (variant comportemental)", "documenté", "Le réseau de la saillance est atteint tôt (travaux de Seeley) : ce qui devrait alerter ne capte plus l'attention."],
     ["Troubles du spectre psychotique", "plausible", "Fonctionnement altéré du réseau de la saillance décrit en imagerie (modèle du triple réseau de Menon)."],
@@ -688,7 +688,7 @@
   PSY["Théorie de l'esprit et lecture des intentions"] = [
     ["Schizophrénie", "documenté", "Déficits de théorie de l'esprit établis par méta-analyse (Sprong et coll., 2007)."],
     ["Démence fronto-temporale (variant comportemental)", "documenté", "Atteinte précoce de la cognition sociale : une intention trompeuse est plus difficile à repérer."],
-    ["Trouble du spectre de l'autisme", "documenté", "Différences dans l'attribution de fausses croyances (Baron-Cohen et coll., 1985). L'hypothèse de la double empathie rappelle que la difficulté de compréhension est réciproque."]];
+    ["Trouble du spectre de l'autisme", "documenté", "Différences dans l'attribution de fausses croyances (Baron-Cohen et coll., 1985). L'hypothèse de la double empathie (Milton, 2012) rappelle que la difficulté de compréhension est réciproque."]];
   PSY["Apprentissage, oubli et durée de vie d'un patch"] = [
     ["Syndromes amnésiques (lésion hippocampique, syndrome de Korsakoff)", "documenté", "Les consignes nouvelles ne se consolident pas, mais l'apprentissage procédural est souvent préservé : une routine répétée tient là où une formation s'oublie."],
     ["Maladie d'Alzheimer", "documenté", "Oubli accéléré des informations récentes : préférer les aides externes, les rappels fréquents et l'apprentissage sans erreur à une formation ponctuelle."],
@@ -801,7 +801,7 @@
     "reseaux-saillance": ["seeley2007", "menon2010"],
     "declin-fraude": ["spreng2016", "asp2012", "boyle2019"],
     "decision-emotion": ["damasio1994", "bechara1994"],
-    "theorie-esprit": ["premack1978", "baroncohen1985"],
+    "theorie-esprit": ["premack1978", "baroncohen1985", "griffiths2019"],
     "saillance-aberrante": ["kapur2003"],
     "apprentissage-oubli": ["ebbinghaus1885", "cepeda2006", "roediger2006", "lain2022", "ho2025"],
     "stress-executif": ["arnsten2009"],
@@ -1045,7 +1045,7 @@
       plus: ["Troubles anxieux",
         ["Faible numératie", "documenté", "Les personnes moins à l'aise avec les nombres sont plus influencées par la façon de présenter un chiffre (Peters et coll., 2006)."]],
       moins: [["Bonne numératie", "documenté", "Moindre sensibilité aux effets de cadrage des chiffres (Peters et coll., 2006)."],
-        ["Trouble du spectre de l'autisme", "plausible", "Moindre effet de cadrage, mesuré en laboratoire sur de petits effectifs (De Martino et coll., 2008), et choix un peu moins déplacés par une option leurre (Farmer et coll., 2017). Cela ne protège pas des escroqueries : les adultes autistes déclarent plus souvent avoir été poussés ou trompés pour donner de l'argent (Griffiths et coll., 2019)."]]
+        ["Trouble du spectre de l'autisme", "plausible", "Moindre effet de cadrage en moyenne, mesuré en laboratoire sur de petits effectifs (De Martino et coll., 2008), et choix un peu moins déplacés par une option leurre (Farmer et coll., 2017). Cela ne protège pas des escroqueries : les adultes autistes déclarent plus souvent avoir été poussés ou trompés pour donner de l'argent (Griffiths et coll., 2019)."]]
     },
     "Inondation informationnelle": {
       plus: ["TDAH", "Troubles anxieux", "Épuisement informationnel (état de surcharge, pas un trouble)",
@@ -1137,7 +1137,8 @@
     },
     "Théorie de l'esprit et lecture des intentions": {
       plus: ["Schizophrénie", "Démence fronto-temporale (variant comportemental)",
-        ["Vieillissement", "plausible", "Une baisse de la détection du mensonge est rapportée chez les adultes âgés (Ruffman et coll., 2012)."]],
+        ["Vieillissement", "plausible", "Une baisse de la détection du mensonge est rapportée chez les adultes âgés (Ruffman et coll., 2012)."],
+        ["Trouble du spectre de l'autisme", "plausible", "Les adultes autistes déclarent plus souvent avoir été trompés ou poussés à donner de l'argent (48 % contre 20 %, enquête par autodéclaration, Griffiths et coll., 2019). Le mécanisme n'est pas établi : l'enquête ne mesure pas la lecture des intentions, et l'hypothèse de la double empathie (Milton, 2012) rappelle que la difficulté de compréhension est réciproque."]],
       moins: [["Personnes formées au prétexte par des exercices débriefés", "plausible", "Connaître les scénarios types aide à repérer une intention qui ne colle pas au rôle affiché."]],
       illus: ["Trouble du spectre de l'autisme"]
     },
@@ -1340,7 +1341,7 @@
     plus: [["Personnes nouvelles dans un groupe", "plausible", "Elles s'appuient davantage sur ce que font les autres pour savoir ce qui est attendu."],
       ["Situations incertaines", "documenté", "La norme descriptive guide d'autant plus que la situation est floue (Cialdini et coll., 1990)."]],
     moins: [["Personnes qui connaissent la norme réelle", "plausible", "Savoir que la majorité signale corrige l'impression que personne ne le fait."],
-      ["Trouble du spectre de l'autisme", "plausible", "Les adultes autistes ajustent moins leur générosité à leur réputation quand ils sont observés (Izuma et coll., 2011, petit effectif). Cela ne protège pas des escroqueries (Griffiths et coll., 2019)."]]
+      ["Trouble du spectre de l'autisme", "hypothèse", "Dans une tâche de dons, être observé changeait moins la générosité de 10 adultes autistes que celle de 11 témoins (Izuma et coll., 2011). L'étude ne teste pas la norme descriptive, et beaucoup d'adultes autistes décrivent au contraire un effort important pour se conformer, le camouflage social (Hull et coll., 2017). Cela ne protège pas des escroqueries (Griffiths et coll., 2019). Pour tous : connaître la norme réelle, ci-dessus."]]
   };
   SENS["Obéissance et conformité"] = {
     plus: [["Personne seule face à un groupe unanime", "documenté", "La conformité est la plus forte quand personne d'autre ne s'oppose (Asch, 1956)."],
@@ -1614,7 +1615,7 @@
     ["Trouble du spectre de l'autisme", "Différences dans la communication sociale, l'implicite et le traitement sensoriel.",
       ["Trouble du spectre de l'autisme"],
       "Des consignes écrites et explicites, et des vérifications qui ne reposent pas sur la lecture des intentions : rappeler sur un numéro connu, vérifier le rôle annoncé par un autre canal.",
-      "Une procédure claire protège sans dépendre du flair social. L'hypothèse de la double empathie rappelle que la difficulté de compréhension est réciproque : les formations se conçoivent avec les personnes concernées.", "theorie-esprit"],
+      "Une procédure claire protège sans dépendre du flair social. L'hypothèse de la double empathie (Milton, 2012) rappelle que la difficulté de compréhension est réciproque : les formations se conçoivent avec les personnes concernées.", "theorie-esprit"],
     ["Troubles sensoriels, perceptifs et des apprentissages", "Prosopagnosie, cécité et malvoyance, daltonisme, agnosies visuelles, héminégligence, dyslexie.",
       ["Prosopagnosie", "Prosopagnosie (agnosie des visages)", "Cécité (périphérique ou corticale)", "Cécité corticale et syndrome d'Anton", "Achromatopsie et daltonismes", "Agnosies visuelles (aperceptive, associative)", "Syndrome de Balint et simultanagnosie", "Héminégligence", "Troubles spécifiques des apprentissages (dyslexie)"],
       "Des vérifications qui ne reposent pas sur la vue : un code ou une question convenus à l'avance, un rappel sur un numéro connu. Des versions accessibles (texte, audio, lecteur d'écran), des couleurs lisibles par les personnes daltoniennes, et des exercices écrits sans chronomètre ou avec un temps adapté.",
@@ -1642,6 +1643,10 @@
   FREFS["perception-reconstruction"].push("dima2009", "dudley2016");
   FREFS["decision-emotion"].push("koenigs2008", "asp2012");
   FREFS["niveaux-preuve"].push("alloy1979", "moore2012", "dev2022");
+  R.milton2012 = ["Milton, D. E. M. (2012). On the ontological status of autism: The « double empathy problem ». Disability & Society, 27(6), 883–887.", D + "10.1080/09687599.2012.710008", 1];
+  R.hull2017 = ["Hull, L., Petrides, K. V., Allison, C., Smith, P., Baron-Cohen, S., Lai, M.-C., & Mandy, W. (2017). « Putting on my best normal »: Social camouflaging in adults with autism spectrum conditions. Journal of Autism and Developmental Disorders, 47(8), 2519–2534.", D + "10.1007/s10803-017-3166-5", 1];
+  FREFS["theorie-esprit"].push("milton2012");
+  FREFS.normes.push("hull2017");
 
   /* ---------- Tables (DIMA, lexique) ---------- */
   /* Filters of the DIMA table: a condition or situation from « Plus sensibles », a practice from « Ce qui protège », a DIMA technique.
@@ -1678,7 +1683,7 @@
     ["Troubles et états de santé", Object.keys(dPlus).filter(function (k) { return dPlus[k]; })],
     ["Situations", Object.keys(dPlus).filter(function (k) { return !dPlus[k]; })]]);
   $("f-moins").innerHTML = optionsHTML("Toutes les protections", [
-    ["Troubles et états de santé", Object.keys(dMoins).filter(function (k) { return dMoins[k]; })],
+    ["Moins sensibles à un biais précis", Object.keys(dMoins).filter(function (k) { return dMoins[k]; })],
     ["Pratiques et profils", Object.keys(dMoins).filter(function (k) { return !dMoins[k]; })]]);
   $("f-te").innerHTML = '<option value="">Toutes les techniques</option>' + ["1", "2", "3", "4"].map(function (p) {
     return '<optgroup label="Phase ' + DIMA_PHASE[p] + '">' + Object.keys(TE).filter(function (t) { return t.charAt(3) === p; }).sort().map(function (t) {
@@ -1706,10 +1711,10 @@
       var g = resilOf(f.plus);
       msg.push('<p><b>' + f.plus + '</b> : ' + cnt + ' où redoubler de vigilance. Pour chacun, la colonne « Ce qui protège » dit quoi faire' +
         (g !== -1 ? ', et la carte <a href="#resil-' + g + '">' + RESIL[g][0] + '</a> rassemble les protections et les appuis pour cette famille.' : '.') +
-        (dPlus[f.plus] ? ' C\'est une tendance de groupe, jamais une fatalité : un diagnostic ne dit pas qu\'une personne est manipulable.' : '') + '</p>');
+        (dPlus[f.plus] ? ' C\'est une tendance de groupe, jamais une fatalité : un diagnostic ne dit pas qu\'une personne est manipulable. Il sert à adapter les formations et les procédures, jamais à écarter quelqu\'un d\'un poste ou d\'une habilitation.' : '') + '</p>');
     }
-    if (f.moins) msg.push('<p><b>' + f.moins + '</b> : ' + (dMoins[f.moins] ? 'moins sensible à un biais précis dans ' + cnt + '.' +
-      ' C\'est un résultat d\'études expérimentales, pas une protection générale' +
+    if (f.moins) msg.push('<p><b>' + f.moins + '</b> : ' + (dMoins[f.moins] ? 'en moyenne, dans de petits groupes étudiés, un biais précis a moins joué dans ' + cnt + '.' +
+      ' C\'est une tendance de groupe, ni une protection générale, ni un trait de chaque personne' +
       (resilOf(f.moins) !== -1 ? ' : la carte <a href="#resil-' + resilOf(f.moins) + '">' + RESIL[resilOf(f.moins)][0] + '</a> dit aussi où rester vigilant.' : '.') : 'protège dans ' + cnt + '.') + '</p>');
     if (f.te) msg.push('<p><b>' + f.te + ' ' + TE[f.te] + '</b>, phase ' + DIMA_PHASE[f.te.charAt(3)] + ' : rapprochée de ' + cnt + '.</p>');
     $("dima-focus").innerHTML = msg.join("");
