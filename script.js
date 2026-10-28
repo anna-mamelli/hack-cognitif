@@ -246,7 +246,7 @@
     { label: "Psychophysique et analyse des signaux", fiche: "psychophysique", te: ["TE0152"], note: "Seuils de perception des différences." }
   ];
   var LV = { "documenté": "lv-d", "plausible": "lv-p", "hypothèse": "lv-h" };
-  var PSY_NOTE = "À lire pour se prémunir : repérer les situations où l'on est plus exposé, et y renforcer ses défenses. Tendances de groupe, jamais un jugement sur une personne : la plupart des personnes concernées ne sont pas plus manipulables. Usage légitime : adapter les formations et les procédures, protéger.";
+  var PSY_NOTE = "À lire pour se prémunir : repérer les situations où l'on est plus exposé, et y renforcer ses défenses. Tendances de groupe, jamais un jugement sur une personne : un diagnostic ne dit pas qu'une personne est manipulable. Usage légitime : adapter les formations et les procédures, protéger.";
   var PSY = {
     "Levier : Autorité": [
       ["Trouble de la personnalité dépendante", "hypothèse", "Besoin d'être guidé, difficulté à décider sans avis d'autrui."],
@@ -301,16 +301,17 @@
       ["Trouble du spectre de l'autisme", "plausible", "Particularités du traitement sensoriel."]]
   };
   /* Qui est plus sensible à un levier, qui l'est moins (données SENS, plus bas) */
-  function sensItem(label, x) {
+  /* hit: the name chosen in a filter of the Ressources table, highlighted in the cell */
+  function sensItem(label, x, hit) {
     if (x.note) return '<li class="none">' + x.note + '</li>';
     if (typeof x === "string") x = (PSY[label] || []).filter(function (p) { return p[0] === x; })[0];
     if (!x) return "";
-    return '<li><b>' + x[0] + '</b> <span class="lv ' + LV[x[1]] + '">' + x[1] + '</span><br><span class="pdesc">' + x[2] + '</span></li>';
+    return '<li' + (hit && canonOf(x[0]) === hit ? ' class="hit"' : '') + '><b>' + x[0] + '</b> <span class="lv ' + LV[x[1]] + '">' + x[1] + '</span><br><span class="pdesc">' + x[2] + '</span></li>';
   }
-  function sensListHTML(label, side) {
+  function sensListHTML(label, side, hit) {
     var s = SENS[label];
     if (!s || !s[side]) return "";
-    return '<ul class="psy">' + s[side].map(function (x) { return sensItem(label, x); }).join("") + '</ul>';
+    return '<ul class="psy">' + s[side].map(function (x) { return sensItem(label, x, hit); }).join("") + '</ul>';
   }
   function psyBlock(m) {
     var s = SENS[m.label];
@@ -523,7 +524,7 @@
     ["Troubles neurocognitifs", "documenté", "Le déclin cognitif accroît le risque de fraude financière, quel que soit le levier."],
     ["Atteintes frontales (lésion, démence fronto-temporale)", "plausible", "Altération du jugement, de l'inhibition et du contrôle de l'impulsion."]];
   PSY["Décision, émotion et cortex préfrontal ventromédian"] = [
-    ["Lésions préfrontales ventromédianes", "documenté", "Décisions de la vie réelle altérées malgré des tests cognitifs conservés (travaux de Damasio)."],
+    ["Lésions préfrontales ventromédianes", "documenté", "Décisions de la vie réelle altérées malgré des tests cognitifs conservés (travaux de Damasio). La marque ne change plus la préférence dans un test de goût (Koenigs et Tranel, 2008, une seule étude), mais la publicité trompeuse convainc davantage (Asp et coll., 2012) : être moins sensible à un biais ne rend pas moins vulnérable."],
     ["Troubles anxieux", "plausible", "La peur amplifie la décision centrée sur la menace."]];
   PSY["Contrôle exécutif : habitude contre supervision"] = [
     ["Syndrome dysexécutif (atteinte frontale)", "documenté", "Erreurs d'action automatiques, difficulté de planification."],
@@ -658,6 +659,7 @@
   PSY["Saillance aberrante et traitement des signaux ambigus"] = [
     ["Troubles du spectre psychotique", "documenté", "Hypothèse de la saillance aberrante (Kapur). À ne pas généraliser aux personnes."]];
   PSY["Perception visuelle : voir est une reconstruction"] = [
+    ["Schizophrénie", "documenté", "L'illusion du masque creux est moins perçue, surtout en phase aiguë (Dima et coll., 2009) : la perception s'appuie moins sur ce que l'on s'attend à voir. Ce n'est pas une protection : les conclusions hâtives sont plus fréquentes (méta-analyse de Dudley et coll., 2016)."],
     ["Agnosies visuelles (aperceptive, associative)", "documenté", "La forme est vue sans être organisée, ou organisée sans que le sens de l'objet soit reconnu : illustre les étapes de la reconstruction."],
     ["Cécité corticale et syndrome d'Anton", "documenté", "Après une lésion occipitale bilatérale, certains patients nient leur cécité : anosognosie visuelle, voir la fiche sur la méconnaissance de sa propre vulnérabilité."],
     ["Vision aveugle (blindsight)", "documenté", "Capacités visuelles résiduelles sans expérience consciente (lésion du cortex visuel primaire). Ne pas en déduire une influence « subliminale » efficace : ce lien n'est pas établi."],
@@ -677,7 +679,7 @@
   PSY["Langage et pragmatique"] = [
     ["Lésions de l'hémisphère droit", "documenté", "Difficulté à saisir l'implicite, l'ironie et les sous-entendus, avec un langage formel préservé."],
     ["Schizophrénie", "documenté", "Difficultés pragmatiques bien décrites : métaphores, ironie et sous-entendus pris au pied de la lettre."],
-    ["Trouble du spectre de l'autisme", "plausible", "Compréhension souvent plus littérale ; certaines études rapportent une moindre sensibilité à l'effet de cadrage. Ni plus ni moins manipulable en général."]];
+    ["Trouble du spectre de l'autisme", "plausible", "Compréhension souvent plus littérale, et moindre effet de cadrage en laboratoire (De Martino et coll., 2008). Cela ne protège pas des escroqueries (Griffiths et coll., 2019)."]];
   PSY["Réseaux de la saillance et du contrôle"] = [
     ["Démence fronto-temporale (variant comportemental)", "documenté", "Le réseau de la saillance est atteint tôt (travaux de Seeley) : ce qui devrait alerter ne capte plus l'attention."],
     ["Troubles du spectre psychotique", "plausible", "Fonctionnement altéré du réseau de la saillance décrit en imagerie (modèle du triple réseau de Menon)."],
@@ -1043,7 +1045,7 @@
       plus: ["Troubles anxieux",
         ["Faible numératie", "documenté", "Les personnes moins à l'aise avec les nombres sont plus influencées par la façon de présenter un chiffre (Peters et coll., 2006)."]],
       moins: [["Bonne numératie", "documenté", "Moindre sensibilité aux effets de cadrage des chiffres (Peters et coll., 2006)."],
-        ["Trouble du spectre de l'autisme", "plausible", "Moindre effet de cadrage rapporté (De Martino et coll., 2008). Ni plus ni moins manipulable en général."]]
+        ["Trouble du spectre de l'autisme", "plausible", "Moindre effet de cadrage, mesuré en laboratoire sur de petits effectifs (De Martino et coll., 2008), et choix un peu moins déplacés par une option leurre (Farmer et coll., 2017). Cela ne protège pas des escroqueries : les adultes autistes déclarent plus souvent avoir été poussés ou trompés pour donner de l'argent (Griffiths et coll., 2019)."]]
     },
     "Inondation informationnelle": {
       plus: ["TDAH", "Troubles anxieux", "Épuisement informationnel (état de surcharge, pas un trouble)",
@@ -1162,7 +1164,7 @@
       plus: [["Lecture rapide d'images et de graphiques", "plausible", "Ancrage et contraste visuels jouent davantage quand l'examen est bref, sur petit écran ou sous pression."],
         ["Faible aisance avec les graphiques", "documenté", "La littératie graphique prédit la lecture correcte d'un graphique (Galesic et Garcia-Retamero, 2011)."]],
       moins: [["Personnes qui lisent les valeurs et les échelles des axes", "plausible", "Revenir aux chiffres neutralise une partie des effets de contraste et d'échelle."]],
-      illus: ["Agnosies visuelles (aperceptive, associative)", "Cécité corticale et syndrome d'Anton", "Vision aveugle (blindsight)", "Syndrome de Charles Bonnet", "Achromatopsie et daltonismes", "Cécité (périphérique ou corticale)"]
+      illus: ["Schizophrénie", "Agnosies visuelles (aperceptive, associative)", "Cécité corticale et syndrome d'Anton", "Vision aveugle (blindsight)", "Syndrome de Charles Bonnet", "Achromatopsie et daltonismes", "Cécité (périphérique ou corticale)"]
     },
     "Récompense et renforcement variable": {
       plus: ["Addictions comportementales", "TDAH",
@@ -1337,7 +1339,8 @@
   SENS["Normes sociales"] = {
     plus: [["Personnes nouvelles dans un groupe", "plausible", "Elles s'appuient davantage sur ce que font les autres pour savoir ce qui est attendu."],
       ["Situations incertaines", "documenté", "La norme descriptive guide d'autant plus que la situation est floue (Cialdini et coll., 1990)."]],
-    moins: [["Personnes qui connaissent la norme réelle", "plausible", "Savoir que la majorité signale corrige l'impression que personne ne le fait."]]
+    moins: [["Personnes qui connaissent la norme réelle", "plausible", "Savoir que la majorité signale corrige l'impression que personne ne le fait."],
+      ["Trouble du spectre de l'autisme", "plausible", "Les adultes autistes ajustent moins leur générosité à leur réputation quand ils sont observés (Izuma et coll., 2011, petit effectif). Cela ne protège pas des escroqueries (Griffiths et coll., 2019)."]]
   };
   SENS["Obéissance et conformité"] = {
     plus: [["Personne seule face à un groupe unanime", "documenté", "La conformité est la plus forte quand personne d'autre ne s'oppose (Asch, 1956)."],
@@ -1475,7 +1478,7 @@
     { id: "niveaux-preuve", ax: ["tra", "inf"], tag: "Méthode", title: "Niveaux de preuve : documenté, plausible, hypothèse",
       teaser: "Une étude n'est pas une preuve, et un effet célèbre n'est pas toujours solide.",
       socle: ["Ce site classe chaque affirmation en trois niveaux. Documenté : établi par plusieurs études concordantes, idéalement des méta-analyses. Plausible : appuyé indirectement, ou par des études peu nombreuses. Hypothèse : piste à tester. Cette prudence répond à un problème réel de la recherche en psychologie.",
-              "Une vaste tentative de reproduire 100 études publiées en psychologie a obtenu des résultats significatifs dans un peu plus d'un tiers des cas, avec des effets en moyenne moitié moindres que dans les études originales (Open Science Collaboration, 2015). Petits échantillons, analyses choisies après coup et préférence des revues pour les résultats positifs expliquent qu'une part des résultats publiés soient faux (Ioannidis, 2005).",
+              "Une vaste tentative de reproduire 100 études publiées en psychologie a obtenu des résultats significatifs dans un peu plus d'un tiers des cas, avec des effets en moyenne moitié moindres que dans les études originales (Open Science Collaboration, 2015). Petits échantillons, analyses choisies après coup et préférence des revues pour les résultats positifs expliquent qu'une part des résultats publiés soient faux (Ioannidis, 2005). Le « réalisme dépressif », l'idée que les personnes déprimées jugeraient plus lucidement leur contrôle sur les événements (Alloy et Abramson, 1979), en est un exemple : son effet est très faible dans une méta-analyse (Moore et Fresco, 2012) et ne se retrouve pas dans une réplication préenregistrée (Dev et coll., 2022).",
               "Des parades existent : méta-analyses, réplications et préenregistrement, qui consiste à déposer à l'avance hypothèses et analyses (Nosek et coll., 2018). Pour un lecteur, quelques questions suffisent : combien de participants ? L'effet a-t-il été reproduit ? Qui a financé l'étude ? Les campagnes de désinformation exploitent volontiers une étude isolée présentée comme une preuve définitive."],
       blue: [["Signaux", "« une étude montre que… » sans référence ni taille d'échantillon ; effet spectaculaire jamais reproduit ; chiffre repris de source en source sans l'original ; certitude affichée sur un sujet débattu."],
              ["Contre-mesures", "remonter à la source originale ; chercher une méta-analyse ou une réplication ; noter la taille de l'échantillon ; préciser le niveau de preuve quand on cite ; préenregistrer ses propres exercices."]],
@@ -1622,11 +1625,130 @@
       "Garder le lien social, encourager l'entraide dans l'équipe, et rendre le signalement simple et remercié.", "memoire-travail"]
   ];
 
+  /* Quand une particularité rend moins sensible à un biais précis : références vérifiées (Crossref) */
+  R.demartino2008 = ["De Martino, B., Harrison, N. A., Knafo, S., Bird, G., & Dolan, R. J. (2008). Explaining enhanced logical consistency during decision making in autism. The Journal of Neuroscience, 28(42), 10746–10750. (14 adultes autistes et 15 témoins : effet de cadrage réduit, pas absent.)", D + "10.1523/JNEUROSCI.2895-08.2008", 1];
+  R.farmer2017 = ["Farmer, G. D., Baron-Cohen, S., & Skylark, W. J. (2017). People with autism spectrum conditions make more consistent decisions. Psychological Science, 28(8), 1067–1076. (Étude préenregistrée en ligne, 90 autistes et 212 témoins : effet de leurre réduit, écart faible.)", D + "10.1177/0956797617694867", 1];
+  R.izuma2011 = ["Izuma, K., Matsumoto, K., Camerer, C. F., & Adolphs, R. (2011). Insensitivity to social reputation in autism. Proceedings of the National Academy of Sciences, 108(42), 17302–17307. (10 adultes autistes et 11 témoins.)", D + "10.1073/pnas.1107038108", 1];
+  R.griffiths2019 = ["Griffiths, S., Allison, C., Kenny, R., Holt, R., Smith, P., & Baron-Cohen, S. (2019). The Vulnerability Experiences Quotient (VEQ): A study of vulnerability, mental health and life satisfaction in autistic adults. Autism Research, 12(10), 1516–1528. (426 autistes et 268 témoins : 48 % contre 20 % déclarent avoir été trompés ou poussés à donner de l'argent ; correctif de 2026 sans effet sur les conclusions.)", D + "10.1002/aur.2162", 1];
+  R.dima2009 = ["Dima, D., Roiser, J. P., Dietrich, D. E., Bonnemann, C., Lanfermann, H., Emrich, H. M., & Dillo, W. (2009). Understanding why patients with schizophrenia do not perceive the hollow-mask illusion using dynamic causal modelling. NeuroImage, 46(4), 1180–1186.", D + "10.1016/j.neuroimage.2009.03.033", 1];
+  R.dudley2016 = ["Dudley, R., Taylor, P., Wickham, S., & Hutton, P. (2016). Psychosis, delusions and the « jumping to conclusions » reasoning bias: A systematic review and meta-analysis. Schizophrenia Bulletin, 42(3), 652–665.", D + "10.1093/schbul/sbv150", 1];
+  R.koenigs2008 = ["Koenigs, M., & Tranel, D. (2008). Prefrontal cortex damage abolishes brand-cued changes in cola preference. Social Cognitive and Affective Neuroscience, 3(1), 1–6. (12 patients avec lésion ventromédiane.)", D + "10.1093/scan/nsm032", 1];
+  R.alloy1979 = ["Alloy, L. B., & Abramson, L. Y. (1979). Judgment of contingency in depressed and nondepressed students: Sadder but wiser? Journal of Experimental Psychology: General, 108(4), 441–485.", D + "10.1037/0096-3445.108.4.441", 1];
+  R.moore2012 = ["Moore, M. T., & Fresco, D. M. (2012). Depressive realism: A meta-analytic review. Clinical Psychology Review, 32(6), 496–509. (75 études : effet global très faible, qui dépend de la méthode.)", D + "10.1016/j.cpr.2012.05.004", 1];
+  R.dev2022 = ["Dev, A. S., Moore, D. A., Johnson, S. L., & Garrett, K. T. (2022). Sadder ≠ wiser: Depressive realism is not robust to replication. Collabra: Psychology, 8(1), 38529. (Réplication préenregistrée : aucun lien entre symptômes dépressifs et illusion de contrôle.)", D + "10.1525/collabra.38529", 1];
+  FREFS["cadrage-agenda"].push("demartino2008", "farmer2017", "griffiths2019");
+  FREFS.pragmatique.push("demartino2008", "griffiths2019");
+  FREFS.normes.push("izuma2011", "griffiths2019");
+  FREFS["perception-reconstruction"].push("dima2009", "dudley2016");
+  FREFS["decision-emotion"].push("koenigs2008", "asp2012");
+  FREFS["niveaux-preuve"].push("alloy1979", "moore2012", "dev2022");
+
   /* ---------- Tables (DIMA, lexique) ---------- */
-  $("dima-body").innerHTML = MAP.map(function (m) {
-    var name = m.fiche ? '<a href="#fiche-' + m.fiche + '">' + m.label + '</a>' : m.label;
-    return '<tr><td>' + name + '</td><td>' + chipsHTML(m.te) + '</td><td>' + m.note + '</td><td>' + sensListHTML(m.label, "plus") + '</td><td>' + sensListHTML(m.label, "moins") + '</td></tr>';
+  /* Filters of the DIMA table: a condition or situation from « Plus sensibles », a practice from « Ce qui protège », a DIMA technique.
+     A condition written differently from one fiche to another is brought together under one name, so that a person finds at once
+     every lever that concerns them; the states marked « pas un trouble » keep their name without that remark. */
+  var DCANON = {};
+  [["Schizophrénie et troubles psychotiques", ["Schizophrénie", "Schizophrénie et spectre psychotique", "Troubles du spectre psychotique", "Troubles psychotiques (idées de référence)"]],
+    ["Troubles neurocognitifs (dont maladie d'Alzheimer)", ["Troubles neurocognitifs", "Troubles neurocognitifs (dont maladie d'Alzheimer)", "Maladie d'Alzheimer"]],
+    ["Démence fronto-temporale et atteintes frontales", ["Démence fronto-temporale (variant comportemental)", "Atteintes frontales (lésion, démence fronto-temporale)", "Syndrome dysexécutif (atteinte frontale)", "Lésions préfrontales ventromédianes", "Amnésie et troubles de la mémoire de source (atteinte frontale)"]],
+    ["Troubles anxieux", ["Troubles anxieux", "Trouble anxieux généralisé", "Troubles anxieux (anxiété d'évaluation)"]],
+    ["Stress post-traumatique", ["Trouble de stress post-traumatique", "État de stress post-traumatique"]],
+    ["Dépression", ["Dépression", "Dépression (apathie, perte d'initiative)"]],
+    ["Prosopagnosie", ["Prosopagnosie", "Prosopagnosie (agnosie des visages)"]],
+    ["Addictions comportementales (dont jeu pathologique)", ["Jeu pathologique et addictions comportementales", "Addictions comportementales"]],
+    ["TDAH", ["TDAH", "Syndrome dysexécutif (lésions frontales, TDAH)"]],
+    ["Trouble bipolaire (épisodes maniaques ou hypomaniaques)", ["Épisode maniaque ou hypomaniaque (trouble bipolaire)"]]
+  ].forEach(function (c) { c[1].forEach(function (v) { DCANON[v] = c[0]; }); });
+  function canonOf(n) { return DCANON[n] || String(n).replace(/ \((?:facteur de risque|état de surcharge), pas un trouble\)$/, ""); }
+  function sensName(x) { return typeof x === "string" ? x : x.note ? "" : x[0]; }
+  function isClinical(n) { return !/pas un trouble/.test(n) && Object.keys(PSY).some(function (k) { return PSY[k].some(function (p) { return p[0] === n; }); }); }
+  var dPlus = {}, dMoins = {}, dFilter = { plus: "", moins: "", te: "" };
+  MAP.forEach(function (m) {
+    var s = SENS[m.label] || {};
+    (s.plus || []).forEach(function (x) { var n = sensName(x); if (n) dPlus[canonOf(n)] = dPlus[canonOf(n)] || isClinical(n); });
+    (s.moins || []).forEach(function (x) { var n = sensName(x); if (n) dMoins[canonOf(n)] = dMoins[canonOf(n)] || isClinical(n); });
+  });
+  var frSort = function (a, b) { return a.localeCompare(b, "fr", { sensitivity: "base" }); };
+  function optionsHTML(all, groups) {
+    return '<option value="">' + all + '</option>' + groups.map(function (g) {
+      return g[1].length ? '<optgroup label="' + g[0] + '">' + g[1].sort(frSort).map(function (v) { return '<option>' + v + '</option>'; }).join("") + '</optgroup>' : '';
+    }).join("");
+  }
+  $("f-plus").innerHTML = optionsHTML("Tous les troubles et situations", [
+    ["Troubles et états de santé", Object.keys(dPlus).filter(function (k) { return dPlus[k]; })],
+    ["Situations", Object.keys(dPlus).filter(function (k) { return !dPlus[k]; })]]);
+  $("f-moins").innerHTML = optionsHTML("Toutes les protections", [
+    ["Troubles et états de santé", Object.keys(dMoins).filter(function (k) { return dMoins[k]; })],
+    ["Pratiques et profils", Object.keys(dMoins).filter(function (k) { return !dMoins[k]; })]]);
+  $("f-te").innerHTML = '<option value="">Toutes les techniques</option>' + ["1", "2", "3", "4"].map(function (p) {
+    return '<optgroup label="Phase ' + DIMA_PHASE[p] + '">' + Object.keys(TE).filter(function (t) { return t.charAt(3) === p; }).sort().map(function (t) {
+      return '<option value="' + t + '">' + t + ' · ' + TE[t] + '</option>';
+    }).join("") + '</optgroup>';
   }).join("");
+  /* The RESIL card that gathers the protections for a condition, if there is one */
+  function resilOf(c) { for (var i = 0; i < RESIL.length; i++) if (RESIL[i][2].some(function (v) { return canonOf(v) === c; })) return i; return -1; }
+  function renderDima() {
+    var f = dFilter;
+    var rows = MAP.filter(function (m) {
+      var s = SENS[m.label] || {};
+      return (!f.plus || (s.plus || []).some(function (x) { var n = sensName(x); return n && canonOf(n) === f.plus; })) &&
+        (!f.moins || (s.moins || []).some(function (x) { var n = sensName(x); return n && canonOf(n) === f.moins; })) &&
+        (!f.te || m.te.indexOf(f.te) !== -1);
+    });
+    $("dima-body").innerHTML = rows.length ? rows.map(function (m) {
+      var name = m.fiche ? '<a href="#fiche-' + m.fiche + '">' + m.label + '</a>' : m.label;
+      return '<tr><td>' + name + '</td><td>' + chipsHTML(m.te) + '</td><td>' + m.note + '</td><td>' + sensListHTML(m.label, "plus", f.plus) + '</td><td>' + sensListHTML(m.label, "moins", f.moins) + '</td></tr>';
+    }).join("") : '<tr><td colspan="5">Aucun levier ni aucune fiche ne correspond à ces filtres.</td></tr>';
+    if (f.te) Array.prototype.forEach.call($("dima-body").querySelectorAll('.chip[data-te="' + f.te + '"]'), function (c) { c.classList.add("on"); });
+    var n = rows.length, on = f.plus || f.moins || f.te, msg = [];
+    var cnt = n + " levier" + (n > 1 ? "s" : "") + " ou fiche" + (n > 1 ? "s" : "");
+    if (f.plus) {
+      var g = resilOf(f.plus);
+      msg.push('<p><b>' + f.plus + '</b> : ' + cnt + ' où redoubler de vigilance. Pour chacun, la colonne « Ce qui protège » dit quoi faire' +
+        (g !== -1 ? ', et la carte <a href="#resil-' + g + '">' + RESIL[g][0] + '</a> rassemble les protections et les appuis pour cette famille.' : '.') +
+        (dPlus[f.plus] ? ' C\'est une tendance de groupe, jamais une fatalité : un diagnostic ne dit pas qu\'une personne est manipulable.' : '') + '</p>');
+    }
+    if (f.moins) msg.push('<p><b>' + f.moins + '</b> : ' + (dMoins[f.moins] ? 'moins sensible à un biais précis dans ' + cnt + '.' +
+      ' C\'est un résultat d\'études expérimentales, pas une protection générale' +
+      (resilOf(f.moins) !== -1 ? ' : la carte <a href="#resil-' + resilOf(f.moins) + '">' + RESIL[resilOf(f.moins)][0] + '</a> dit aussi où rester vigilant.' : '.') : 'protège dans ' + cnt + '.') + '</p>');
+    if (f.te) msg.push('<p><b>' + f.te + ' ' + TE[f.te] + '</b>, phase ' + DIMA_PHASE[f.te.charAt(3)] + ' : rapprochée de ' + cnt + '.</p>');
+    $("dima-focus").innerHTML = msg.join("");
+    $("dima-focus").hidden = !msg.length;
+    $("dima-count").textContent = on ? n + " sur " + MAP.length + " leviers et fiches" : MAP.length + " leviers et fiches";
+    $("f-reset").hidden = !on;
+    $("f-plus").value = f.plus; $("f-moins").value = f.moins; $("f-te").value = f.te;
+    labelCells(document);
+  }
+  /* The choice is kept in the address (?plus=…&protege=…&te=…), so that a filtered view can be shared as a link */
+  function dimaToUrl() {
+    var q = [["plus", dFilter.plus], ["protege", dFilter.moins], ["te", dFilter.te]].filter(function (x) { return x[1]; })
+      .map(function (x) { return x[0] + "=" + encodeURIComponent(x[1]); }).join("&");
+    try { history.replaceState(null, "", location.pathname + (q ? "?" + q : "") + location.hash); } catch (e) {}
+  }
+  [["f-plus", "plus"], ["f-moins", "moins"], ["f-te", "te"]].forEach(function (x) {
+    $(x[0]).addEventListener("change", function () { dFilter[x[1]] = this.value; renderDima(); dimaToUrl(); });
+  });
+  $("f-reset").addEventListener("click", function () { dFilter = { plus: "", moins: "", te: "" }; renderDima(); dimaToUrl(); });
+  /* A technique card in the table selects that technique */
+  function pickChip(e) {
+    var c = e.target.closest && e.target.closest(".chip[data-te]");
+    if (!c || (e.type === "keydown" && e.key !== "Enter" && e.key !== " ")) return;
+    e.preventDefault();
+    dFilter.te = dFilter.te === c.getAttribute("data-te") ? "" : c.getAttribute("data-te");
+    renderDima(); dimaToUrl();
+  }
+  $("dima-body").addEventListener("click", pickChip);
+  $("dima-body").addEventListener("keydown", pickChip);
+  (function () {
+    var p = new URLSearchParams(location.search), match = function (v, list) {
+      v = norm(v || "").trim();
+      return v ? list.filter(function (k) { return norm(k) === v; })[0] || list.filter(function (k) { return norm(k).indexOf(v) === 0; })[0] || "" : "";
+    };
+    dFilter.plus = match(p.get("plus"), Object.keys(dPlus));
+    dFilter.moins = match(p.get("protege"), Object.keys(dMoins));
+    dFilter.te = match(p.get("te"), Object.keys(TE));
+  })();
+  renderDima();
   /* The fiches where a group of conditions appears, found through PSY (a lever without a fiche keeps its name) */
   function psyFiches(names) {
     return Object.keys(PSY).filter(function (lab) { return PSY[lab].some(function (p) { return names.indexOf(p[0]) !== -1; }); }).map(function (lab) {
@@ -1635,9 +1757,9 @@
       return f ? '<a href="#fiche-' + f.id + '">' + nb(f.title) + '</a>' : lab.replace(/^Levier : (.*)$/, "levier $1");
     });
   }
-  $("resil").innerHTML = RESIL.map(function (g) {
+  $("resil").innerHTML = RESIL.map(function (g, i) {
     var fl = psyFiches(g[2]);
-    return '<article class="tcard rcard"><h4>' + g[0] + '</h4><p class="tags pdesc">' + g[1] + '</p><dl>' +
+    return '<article class="tcard rcard" id="resil-' + i + '"><h4>' + g[0] + '</h4><p class="tags pdesc">' + g[1] + '</p><dl>' +
       '<div class="pr"><dt>Protéger</dt><dd>' + g[3] + '</dd></div>' +
       '<div class="rf"><dt>Renforcer la résilience</dt><dd>' + g[4] + '</dd></div>' +
       (g[5] && ficheById(g[5]) ? '<div class="ts"><dt>Tester la protection</dt><dd>Avec l\'indicateur de la fiche <a href="#fiche-' + g[5] + '">' + nb(ficheById(g[5]).title) +

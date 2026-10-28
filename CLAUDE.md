@@ -42,6 +42,8 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 
 La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide. Le niveau de preuve de chaque contre-mesure vient de `CMLV` (juste après `FREFS`) : une fiche absente de cette table est affichée « plausible ».
 
+Le tableau DIMA de la page Ressources (`renderDima`) se filtre par entrée « Plus sensibles », par entrée « Ce qui protège » et par technique DIMA ; le choix est gardé dans l'adresse (`?plus=…&protege=…&te=…`, un début de mot suffit). `DCANON` regroupe sous un seul nom les variantes d'un même trouble écrites différemment selon les fiches (par exemple « Schizophrénie » et « Troubles du spectre psychotique ») : un nouveau nom de trouble dans `PSY` qui en double un autre doit y être ajouté.
+
 Ajouter une page fixe demande trois choses : une section `v-<route>` dans `modele.html`, la route dans `VIEWS` (`script.js`) et, si besoin, un lien dans `#nav`.
 
 **CSS.** `style.css` importe `tokens.css` (couleurs, espacements, polices ; thème clair, thème sombre par `data-theme` et par `prefers-color-scheme`) et `base.css`. Les commentaires « Hallmark » en tête de `style.css` consignent les choix de design voulus par la propriétaire : les lire avant de toucher à l'apparence.

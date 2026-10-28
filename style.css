@@ -391,7 +391,17 @@ ul.psy li { margin-bottom: var(--space-xs); }
 .tcard dt { font: 600 var(--text-sm)/1.3 var(--font-display); color: var(--k); }
 .tcard dd { margin: var(--space-3xs) 0 0; }
 .tcard .ind dd { color: var(--color-ink); }
-.rcard { border-top: var(--rule-bar) solid var(--band-ink); }
+.rcard { border-top: var(--rule-bar) solid var(--band-ink); scroll-margin-top: var(--space-3xl); }
+.rcard:target { outline: var(--rule-bar) solid var(--color-accent); outline-offset: 2px; }
+
+/* Ressources: filters of the DIMA table, the chosen entry lit in its cell */
+.dfilters { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-sm) var(--space-md); align-items: end; margin: var(--space-lg) 0 var(--space-sm); }
+.dfilters label { display: flex; flex-direction: column; gap: var(--space-2xs); min-width: 0; font: 500 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); }
+.dfilters select { max-width: none; color: var(--color-ink); font-family: var(--font-body); }
+#dima-focus p + p { margin-top: var(--space-xs); }
+.psy li.hit { padding: var(--space-2xs) var(--space-xs); background: var(--color-accent-soft); box-shadow: inset var(--rule-bar) 0 0 var(--color-accent); }
+#dima-body .chip { cursor: pointer; }
+#dima-body .chip.on { border-color: var(--color-accent); background: var(--color-accent-soft); }
 .rcard .pr { --k: var(--color-blue); }
 .rcard .rf { --k: var(--color-inf); }
 .rcard .ts { --k: var(--color-red); }
@@ -758,6 +768,7 @@ dl.gloss div { padding-inline: var(--space-sm); }
   .carte-map td.blank span { display: inline-block; padding: 0 var(--space-2xs); background: var(--color-sheet); }
   .carte-map td.blank span::before { content: none; }
   .tcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dfilters { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; }
   .tablewrap thead { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; display: table-header-group; }
   .tablewrap tbody { display: table-row-group; }
   .tablewrap tr { display: table-row; }
