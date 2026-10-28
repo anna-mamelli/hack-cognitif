@@ -14,7 +14,7 @@ Ajoute la fiche dans un bloc `FICHES.push(...)` situé avant le commentaire `/* 
 - `socle` : deux ou trois paragraphes ; chaque affirmation sourcée « (Auteur, année) » ; les limites et les débats sont dits.
 - `cas` (facultatif) : uniquement des cas publics documentés par une source fiable.
 - `blue` : `[["Signaux", "..."], ["Contre-mesures", "..."]]`.
-- `red` : `[["Hypothèse testée", "..."], ["Cadre", RC]]` : un exercice fictif, consenti, débriefé, sans paramètre permettant de manipuler une personne réelle.
+- `red` : `[["Hypothèse testée", "..."], ["Indicateur", "..."], ["Cadre", RC]]` : un exercice fictif, consenti, débriefé, sans paramètre permettant de manipuler une personne réelle. L'indicateur dit ce qui est mesuré, en agrégé, pour savoir si la contre-mesure marche (une part, un taux ou un délai, comparé avant et après, ou avec et sans la contre-mesure) ; il apparaît aussi sur la page Carte.
 - `pistes` : deux idées de travail ; `note` : le niveau de preuve et les fiches liées.
 
 Puis, au même endroit : une entrée `MAP.push({ label, fiche, te, note })` (techniques DIMA de l'objet `TE`, ou `te: []` avec une note qui l'explique), les références `R.cle = [citation, lien, 0]` (statut 0, à contrôler ; vérifie d'abord qu'aucune clé du même nom n'existe déjà dans `R`), `FREFS.id = [...]`, une entrée `SENS["label"] = { plus: [...], moins: [...] }` (entrées `[qui, niveau, pourquoi]`), et si besoin des termes `GLOSS.push(...)` avec leur catégorie dans `GCAT_OF`. Si la fiche répond à une notion de la page Cours, passe son statut de `"todo", null` à `"fiche", "id"` dans `COURS`.

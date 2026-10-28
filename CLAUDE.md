@@ -34,11 +34,13 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 
 **Organisation de `script.js`.** Tout est dans une seule IIFE, sans module ni dépendance. La première moitié contient les données, la seconde le rendu de chaque vue (à partir de `/* ---------- Tables (DIMA, lexique) ---------- */`). Les données sont réparties en plusieurs blocs thématiques qui ajoutent chacun aux mêmes tables (`FICHES.push`, `MAP.push`, `R.cle = …`, `FREFS.id = …`, `SENS[…]`, `GLOSS.push`) : chercher toutes les occurrences d'une table, pas seulement sa déclaration. Les principales :
 
-- `FICHES` : `id`, `ax` (terrains `ent`, `pou`, `inf`, `tra`), `tag`, `title`, `teaser`, `socle`, `cas`, `blue`, `red`, `pistes`, `note`, et facultativement `relu` et `contrib` (personnes créditées avec leur accord). Le `tag` range la fiche dans une famille par `FAM_OF` ; un tag inconnu tombe dans « Autres fiches ».
+- `FICHES` : `id`, `ax` (terrains `ent`, `pou`, `inf`, `tra`), `tag`, `title`, `teaser`, `socle`, `cas`, `blue` (`Signaux`, `Contre-mesures`), `red` (`Hypothèse testée`, `Indicateur`, `Cadre`), `pistes`, `note`, et facultativement `relu` et `contrib` (personnes créditées avec leur accord). Le `tag` range la fiche dans une famille par `FAM_OF` ; un tag inconnu tombe dans « Autres fiches ».
 - `R` : références `[citation, lien ou null, statut]`, statut `1` vérifiée, `0` à contrôler. `FREFS` relie chaque fiche à ses clés.
 - `TE` et `MAP` : techniques DIMA et rapprochements avec les fiches. `SENS` et `PSY` : colonnes « plus sensibles / moins exposées » et notes cliniques.
 - `COURS` : notions de la page Cours, statut `fiche`, `integre` ou `todo` ; `CTHEMES` et `CTHEME_OF` les rangent par thème.
 - `GLOSS` et `GCAT_OF` : glossaire et catégories. `CONTRIB_FORM` : adresse du formulaire Framaforms.
+
+La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide.
 
 Ajouter une page fixe demande trois choses : une section `v-<route>` dans `modele.html`, la route dans `VIEWS` (`script.js`) et, si besoin, un lien dans `#nav`.
 

@@ -40,6 +40,7 @@
       blue: [["Signaux", "demande hors procédure ; confidentialité exigée ; contournement d'un circuit habituel ; changement de coordonnées ou de canal."],
              ["Contre-mesures", "rappel sur un numéro connu ; double validation des opérations sensibles ; annuaire d'authentification interne ; droit explicite de refuser et de signaler."]],
       red: [["Hypothèse testée", "les équipes appliquent-elles la procédure de vérification face à une demande qui semble venir d'en haut ?"],
+            ["Indicateur", "part des demandes fictives « venues d'en haut » vérifiées par rappel sur un numéro connu avant toute exécution, et délai médian de signalement, avant et après la mise en place de la double validation."],
             ["Cadre", "message fictif, organisation consentante, direction informée, indicateurs agrégés (taux de signalement, délai), débriefing sans désigner d'individus."]],
       pistes: ["Mesurer l'écart entre la procédure écrite et le comportement réel sous pression.", "Comparer la vigilance envers les demandes venant du haut et du côté."],
       note: "Niveau de preuve : levier bien documenté en psychologie sociale. Références à ajouter avant publication." },
@@ -52,6 +53,7 @@
       blue: [["Signaux", "échéance très courte sans justification ; menace de conséquences ; refus d'un délai de vérification."],
              ["Contre-mesures", "règle « plus c'est urgent, plus on vérifie » ; durée minimale pour les opérations sensibles ; escalade possible sans reproche."]],
       red: [["Hypothèse testée", "une demande urgente déclenche-t-elle encore le contrôle prévu ?"],
+            ["Indicateur", "part des demandes fictives urgentes qui passent par le contrôle prévu, comparée à celle des mêmes demandes sans échéance, et délai médian avant vérification."],
             ["Cadre", "exercice annoncé à la direction, contenu fictif, mesure du délai de vérification, pas de sanction individuelle."]],
       pistes: ["Seuil de pression à partir duquel les équipes abandonnent une procédure.", "Effet de la fatigue et de la charge de crise sur ce seuil."],
       note: "Ce levier se combine presque toujours avec l'autorité : les fiches se lisent ensemble." },
@@ -64,9 +66,10 @@
       blue: [["Signaux", "demande inhabituelle sur un canal inhabituel ; refus de rappeler ou de changer de canal ; latence ou artefacts audio et vidéo."],
              ["Contre-mesures", "mot de passe convenu pour les opérations sensibles ; rappel sur numéro connu ; outils de provenance des contenus ; procédure de vérification avant toute diffusion d'un enregistrement sensible."]],
       red: [["Hypothèse testée", "une équipe formée détecte-t-elle et escalade-t-elle un contenu trompeur introduit dans son flux ?"],
+            ["Indicateur", "part des équipes qui escaladent le contenu fictif avant de le diffuser ou d'agir, et délai entre son arrivée dans le flux et l'escalade."],
             ["Cadre", "contenus fictifs, marqués comme tels en interne, jamais d'imitation d'une personne réelle, supports détruits après l'exercice."]],
       pistes: ["« Dividende du menteur » : l'exposition aux contenus synthétiques réduit-elle la confiance dans les contenus authentiques ?", "Cécité attentionnelle d'une cellule de veille sous charge de crise."],
-      note: "Les faits cités sont à vérifier à la source (presse spécialisée, communiqués officiels) avant publication." },
+      note: "Les faits cités reposent sur des sources secondaires : les vérifier à la source (presse spécialisée, communiqués officiels) avant de les reprendre." },
 
     { id: "hamecon-cible", ax: ["ent", "pou"], tag: "Technique", title: "Hameçonnage ciblé de responsables",
       teaser: "Un message sur mesure, adressé à la bonne personne.",
@@ -76,6 +79,7 @@
       blue: [["Signaux", "alerte de sécurité inattendue ; lien de connexion sur un domaine proche du réel ; demande de réinitialiser un mot de passe."],
              ["Contre-mesures", "authentification forte résistante à l'hameçonnage (clés physiques) ; formation spécifique des cabinets et équipes de campagne ; canal de signalement simple ; cloisonnement des comptes."]],
       red: [["Hypothèse testée", "les équipes signalent-elles un message ciblé fictif, et à quel moment ?"],
+            ["Indicateur", "taux de signalement du message fictif et délai médian du premier signalement, comparés entre équipes déjà formées et équipes pas encore formées."],
             ["Cadre", "organisation consentante, message fictif, indicateurs agrégés, aucune récolte d'identifiants réels."]],
       pistes: ["Comparer la vulnérabilité de profils très sollicités et de profils peu exposés.", "Mesurer l'effet d'une clé physique sur le taux de compromission en exercice."],
       note: "Cas publics à sourcer précisément avant publication. L'attribution des opérations reste une question distincte de la technique." },
@@ -88,6 +92,7 @@
       blue: [["Signaux", "interlocuteur inconnu mais très bien informé ; pression pour un échange rapide ; refus de passer par les canaux officiels."],
              ["Contre-mesures", "protocole d'authentification des appels officiels ; formation des standards et secrétariats ; consigne de ne rien confirmer sans vérification."]],
       red: [["Hypothèse testée", "un appel fictif d'un faux homologue passe-t-il les barrières d'accueil et de secrétariat ?"],
+            ["Indicateur", "part des appels fictifs pour lesquels l'accueil applique le protocole d'authentification avant de transmettre ou de confirmer une information."],
             ["Cadre", "structure consentante, scénario générique sans personnalité réelle, retour collectif et non nominatif."]],
       pistes: ["Cartographier les points d'entrée d'une organisation selon leur niveau de protection.", "Étudier l'effet du protocole d'authentification sur la fluidité du travail."],
       note: "Cas public à sourcer précisément avant publication." },
@@ -100,6 +105,7 @@
       blue: [["Signaux", "mêmes formules reprises dans plusieurs prises de parole ; renommage d'une mesure ; sujets mis en avant juste avant ou après un autre sujet sensible."],
              ["Contre-mesures", "comparer plusieurs formulations du même fait ; lire la source primaire ; repérer les éléments de langage ; éducation aux médias."]],
       red: [["Hypothèse testée", "des lecteurs formés repèrent-ils que deux textes décrivent le même fait avec des cadrages différents ?"],
+            ["Indicateur", "part des lecteurs qui reconnaissent le même fait sous les deux cadrages, et écart entre leurs jugements sur les deux versions, avant et après une séance de comparaison de formulations."],
             ["Cadre", "textes fictifs sur un sujet neutre, participants informés, comparaison des interprétations, aucune personnalité réelle."]],
       pistes: ["Mesurer l'effet du cadrage sur l'interprétation avant et après une formation courte.", "Cartographier les éléments de langage d'un débat public à partir de sources ouvertes."],
       note: "Lecture symétrique : ces techniques sont employées par tous les camps. Références à sourcer (McCombs et Shaw 1972, Entman 1993)." },
@@ -112,6 +118,7 @@
       blue: [["Signaux", "volume très supérieur à la capacité de vérification ; messages contradictoires diffusés par plusieurs relais ; sujet qui change avant la fin d'une vérification."],
              ["Contre-mesures", "prioriser les affirmations à fort impact plutôt que tout vérifier ; fiches de vérification courtes ; limiter l'exposition aux flux bruts ; communication institutionnelle régulière et prévisible."]],
       red: [["Hypothèse testée", "une cellule de vérification maintient-elle sa priorisation quand le volume augmente ?"],
+            ["Indicateur", "part des affirmations à fort impact traitées en premier, et délai moyen de traitement, à chaque palier de volume du flux fictif."],
             ["Cadre", "flux fictif à volume croissant, participants informés, mesure du délai et de la qualité du tri."]],
       pistes: ["Seuil de saturation d'une équipe de vérification.", "Effet de la saturation sur la confiance générale dans l'information (« tout se vaut »)."],
       note: "Lecture symétrique. Le modèle RAND porte sur un contexte précis : son extension à d'autres acteurs doit être étayée cas par cas." },
@@ -124,6 +131,7 @@
       blue: [["Signaux", "récit à la première personne ; ton familier ; appel à l'identification plus qu'à l'argument."],
              ["Contre-mesures", "séparer ce qu'on ressent de ce qui est proposé ; évaluer les positions et les actes plutôt que le ton ; diversifier les sources."]],
       red: [["Hypothèse testée", "un public formé distingue-t-il l'adhésion à une personne de l'adhésion à ses propositions ?"],
+            ["Indicateur", "écart entre les jugements portés sur le même programme fictif selon qu'il est présenté de façon formelle ou informelle, comparé entre un groupe formé et un groupe qui ne l'est pas encore."],
             ["Cadre", "personnage fictif, présentations comparées (formelle et informelle) d'un même programme fictif, participants informés."]],
       pistes: ["Mesurer l'effet de la familiarité sur la perception de la compétence.", "Comparer l'impact des formats informels selon les tranches d'âge."],
       note: "Lecture symétrique : la proximité construite est employée dans tous les camps. Références à sourcer (Horton et Wohl 1956)." },
@@ -136,6 +144,7 @@
       blue: [["Signaux", "problème complexe réduit à un seul responsable ; vocabulaire de menace ; absence d'alternatives ou de nuances."],
              ["Contre-mesures", "reformuler le problème en chaîne de causes ; vérifier les chiffres cités ; s'exposer volontairement à des arguments contraires ; débat structuré."]],
       red: [["Hypothèse testée", "un groupe formé repère-t-il la réduction à un coupable dans un discours fictif ?"],
+            ["Indicateur", "part des participants qui repèrent la réduction à un coupable dans le discours fictif et proposent d'autres causes, avant et après un débat structuré."],
             ["Cadre", "discours fictif sur un sujet inventé, aucun groupe réel visé, débriefing."]],
       pistes: ["Mesurer l'effet d'une reformulation en chaîne de causes sur la polarisation perçue.", "Lien entre intolérance à l'incertitude et adhésion aux explications à coupable unique."],
       note: "Lecture symétrique. Les exemples doivent rester génériques ou sourcés de façon précise, sans viser de groupe réel." },
@@ -148,6 +157,7 @@
       blue: [["Indicateurs", "pic d'attention disproportionné sur un sujet mineur ; cadrage émotionnel homogène sur des sources a priori indépendantes ; décalage entre visibilité et poids réel."],
              ["Contre-mesures", "se demander « pourquoi est-ce que je vois ça maintenant ? » ; diversifier les sources ; suivre l'écart entre visibilité et réalité."]],
       red: [["Hypothèse testée", "une cellule de veille repère-t-elle un décalage entre visibilité et réalité ?"],
+            ["Indicateur", "part des cellules qui signalent l'écart entre visibilité et réalité dans les données synthétiques, et délai avant ce signalement."],
             ["Cadre", "scénario fictif, données synthétiques, participants informés, débriefing."]],
       pistes: ["Mesurer l'écart entre saillance perçue et poids réel d'un sujet chez des analystes.", "Effet de la fatigue d'alerte sur le seuil de ce qui est jugé saillant."],
       note: "Niveau de preuve : robuste pour le biais de négativité et la disponibilité." },
@@ -160,6 +170,7 @@
       blue: [["Signaux", "convergence inhabituelle des choix d'une population ; recommandations qui dérivent dans une même direction sur des sujets sensibles."],
              ["Contre-mesures", "l'assistant affiche ses sources et une alternative ; audits par questions pièges ; décisions manuelles sur les sujets importants ; traçabilité pour les assistants de décideurs publics."]],
       red: [["Hypothèse testée", "une organisation détecte-t-elle une dérive progressive des recommandations d'un assistant ?"],
+            ["Indicateur", "nombre de recommandations dérivées de l'assistant fictif acceptées avant la première alerte, et part des audits par questions pièges qui repèrent la dérive."],
             ["Cadre", "assistant fictif en environnement d'exercice, aucune donnée réelle, débriefing."]],
       pistes: ["Protocole d'étude : la délégation prolongée altère-t-elle le contrôle exécutif ?", "Indicateur d'autonomie décisionnelle."],
       note: "Hypothèse prospective, à valider par la recherche." },
@@ -172,6 +183,7 @@
       blue: [["Mesures", "calcul de d' et du critère sur des cas connus ; courbes ROC des outils de détection ; écart relatif minimal perçu par un analyste."],
              ["Contre-mesures", "seuil ajusté au coût de l'erreur ; rotation des analystes ; indicateurs indépendants combinés."]],
       red: [["Hypothèse testée", "une dérive lente restant sous le seuil habituel d'une équipe est-elle repérée, et à quel moment ?"],
+            ["Indicateur", "moment de détection de la dérive synthétique et taux de fausses alertes, avec un seuil fixe puis avec un seuil ajusté au coût de l'erreur."],
             ["Cadre", "données synthétiques en environnement d'exercice, équipe informée, débriefing, suppression des jeux de données."]],
       pistes: ["Seuil de Weber des campagnes d'influence.", "Effet de l'urgence sur le critère de décision d'une équipe."],
       note: "Niveau de preuve : très robuste. Cadre de mesure de la défense, pas de contournement de la détection." }
@@ -369,6 +381,7 @@
       blue: [["Signaux", "visage ou voix « bien connus » associés à une demande inhabituelle ; image de mauvaise qualité justifiée par la connexion ; refus d'un geste de vérification simple."],
              ["Contre-mesures", "vérifier l'identité par un canal indépendant plutôt que par la ressemblance ; mot de passe convenu pour les demandes sensibles ; former à la fragilité de l'appariement de visages peu connus ; prévoir des vérifications qui ne reposent pas sur la vue, pour les personnes aveugles ou malvoyantes comme pour tous."]],
       red: [["Hypothèse testée", "les équipes déclenchent-elles une vérification indépendante quand l'interlocuteur paraît familier mais la demande est inhabituelle ?"],
+            ["Indicateur", "part des demandes inhabituelles d'un interlocuteur fictif familier qui déclenchent une vérification par un canal indépendant, comparée à celle des mêmes demandes venant d'un inconnu."],
             ["Cadre", RC]],
       pistes: ["Écart entre confiance déclarée et exactitude dans l'appariement de visages.", "Effet de la familiarité sur le seuil de déclenchement d'une vérification."],
       note: "Niveau de preuve : bon pour la fragilité de l'appariement de visages peu familiers. Fiche liée aux cours Cognition visuelle et Neuropsychologie de l'adulte." },
@@ -381,6 +394,7 @@
       blue: [["Signaux", "erreurs de procédure qui augmentent aux pics d'activité ; messages sensibles traités en parallèle d'autres tâches ; listes de vérification abandonnées sous pression."],
              ["Contre-mesures", "alléger la charge au moment de la décision sensible ; listes de contrôle courtes ; interdire de traiter un virement en multitâche ; externaliser la mémoire (aide visible plutôt que souvenir)."]],
       red: [["Hypothèse testée", "le taux de vérification baisse-t-il quand la même demande arrive pendant une période chargée ?"],
+            ["Indicateur", "taux de vérification de la même demande fictive en période calme et en période chargée, avec et sans liste de contrôle."],
             ["Cadre", RC]],
       pistes: ["Comparer taux de vérification en période calme et chargée, à échelle d'équipe.", "Coût en temps d'une procédure de vérification, pour la rendre supportable."],
       note: "Niveau de preuve : robuste pour la limitation de capacité. Fiche liée au cours Modèles de la mémoire." },
@@ -393,6 +407,7 @@
       blue: [["Signaux", "affirmation « connue de tous » dont personne ne retrouve l'origine ; mêmes formules reprises par des sources a priori indépendantes ; réponses de témoins qui se rapprochent après discussion."],
              ["Contre-mesures", "noter la source au moment de la réception ; démentir en posant d'abord le fait vrai plutôt qu'en répétant l'affirmation fausse ; recueillir les témoignages séparément."]],
       red: [["Hypothèse testée", "une cellule de veille retrouve-t-elle l'origine d'une affirmation fictive répétée dans plusieurs canaux ?"],
+            ["Indicateur", "part des cellules qui remontent à l'origine de l'affirmation fictive, et délai pour y parvenir, avec et sans la consigne de noter la source à la réception."],
             ["Cadre", RC]],
       pistes: ["Délai au bout duquel les analystes ne savent plus d'où vient une information.", "Efficacité de formats de démenti selon l'ordre fait vrai puis fait faux."],
       note: "Niveau de preuve : robuste pour l'oubli de source et la vérité illusoire. Fiche liée au cours Modèles de la mémoire." },
@@ -405,6 +420,7 @@
       blue: [["Signaux", "angles morts récurrents d'une veille centrée sur des indicateurs précis ; incidents découverts par hasard ; surveillance concentrée sur un seul type de signal."],
              ["Contre-mesures", "rotation des tâches et des regards ; indicateurs larges en plus des indicateurs ciblés ; temps de revue sans objectif préalable ; relecture par quelqu'un d'extérieur."]],
       red: [["Hypothèse testée", "un élément inattendu, introduit dans des données synthétiques pendant une tâche de veille, est-il repéré, et par quelle proportion de l'équipe ?"],
+            ["Indicateur", "proportion de l'équipe qui repère l'élément inattendu, avec et sans temps de revue sans objectif préalable."],
             ["Cadre", RC]],
       pistes: ["Proportion d'analystes qui remarquent un élément inattendu selon la charge de la tâche principale.", "Effet de la rotation des tâches sur la détection."],
       note: "Niveau de preuve : robuste pour la cécité attentionnelle en laboratoire. Fiche liée aux fiches Saillance et Inondation informationnelle." },
@@ -417,6 +433,7 @@
       blue: [["Signaux", "validation par habitude (« je clique toujours sur oui ») ; procédures si fluides qu'on les exécute sans y penser ; erreurs de routine dans les opérations à fort enjeu."],
              ["Contre-mesures", "introduire une friction volontaire sur l'action irréversible (confirmation explicite, délai, double validation) ; varier légèrement la procédure pour casser l'automatisme ; réserver la vigilance aux décisions critiques."]],
       red: [["Hypothèse testée", "une demande qui ressemble à une routine passe-t-elle sans déclencher le mode vérification ?"],
+            ["Indicateur", "taux de vérification d'une demande fictive d'apparence routinière, avec et sans friction volontaire sur l'action irréversible."],
             ["Cadre", RC]],
       pistes: ["Effet d'une confirmation obligatoire sur les erreurs d'action à enjeu.", "Seuil de fatigue d'alerte au-delà duquel les confirmations deviennent des réflexes."],
       note: "Niveau de preuve : modèle classique, discuté dans les détails. Fiche liée au cours Neurologie et neuropsychologie de l'adulte et à la planification de l'action." },
@@ -429,6 +446,7 @@
       blue: [["Signaux", "forte confiance déclarée et faible exactitude mesurée ; refus des exercices de sensibilisation (« cela ne me concerne pas ») ; récidive après alerte."],
              ["Contre-mesures", "retour chiffré et personnel sur la détection (calibration confiance et exactitude) ; présenter les cas comme des pièges conçus par des professionnels, pas comme des fautes ; cultiver la déclaration sans reproche."]],
       red: [["Hypothèse testée", "l'écart entre confiance et exactitude se réduit-il après un retour personnalisé ?"],
+            ["Indicateur", "écart moyen entre la confiance déclarée et l'exactitude de détection, calculé pour le groupe, avant et après le retour personnalisé."],
             ["Cadre", RC]],
       pistes: ["Mesure de la calibration avec l'outil « Repère la faille ».", "Effet du retour de calibration sur la déclaration d'incidents."],
       note: "Prudence : l'analogie avec l'anosognosie est pédagogique, ne pas l'étendre aux personnes. Fiche liée au cours Perspectives psychopathologiques cognitives." },
@@ -441,6 +459,7 @@
       blue: [["Signaux", "affirmation essentielle placée en présupposé (« après l'échec de X… ») ; question qui contient sa propre conclusion ; vocabulaire flou qui laisse le lecteur combler."],
              ["Contre-mesures", "reformuler les implicites en énoncés explicites avant de les juger ; se demander ce qui est tenu pour acquis sans être dit ; relire un texte en retirant les adjectifs."]],
       red: [["Hypothèse testée", "des analystes repèrent-ils une affirmation présupposée dans un texte fictif, et la jugent-ils comme s'ils l'avaient lue explicitement ?"],
+            ["Indicateur", "part des analystes qui repèrent l'affirmation présupposée, et écart entre leur jugement de cette affirmation sous forme implicite et sous forme explicite, avant et après la consigne de reformuler les implicites."],
             ["Cadre", RC]],
       pistes: ["Écart de crédibilité entre une affirmation explicite et la même affirmation présupposée.", "Effet d'un exercice de reformulation sur la détection."],
       note: "Niveau de preuve : bon pour le traitement du présupposé. Fiche liée au cours Psychologie du langage et à la fiche Cadrage et agenda." },
@@ -453,6 +472,7 @@
       blue: [["Usage", "choisir des mesures comportementales plutôt que physiologiques pour évaluer la charge des analystes ; refuser les promesses de « lecture cérébrale » dans les offres commerciales."],
              ["Contre-mesures", "exiger la réplication et la taille d'échantillon avant toute décision fondée sur de l'imagerie ; interdire la collecte de données neuronales sur le lieu de travail sans cadre légal."]],
       red: [["Hypothèse testée", "des mesures simples de charge perçue (questionnaires) prédisent-elles la baisse de vigilance, sans aucune donnée cérébrale ?"],
+            ["Indicateur", "lien statistique entre la charge perçue, mesurée par questionnaire, et la baisse de détection au cours de l'exercice, sans aucune donnée cérébrale."],
             ["Cadre", RC]],
       pistes: ["Comparer mesures subjectives et performances de détection.", "Revue des promesses de neuromarketing et de neuro-influence."],
       note: "Prudence : aucune piste de ciblage neuronal individuel. Fiche liée au cours Imagerie cérébrale et à la fiche Saillance." },
@@ -465,6 +485,7 @@
       blue: [["Signaux", "changements soudains dans la gestion de l'argent ; décisions pressées sous influence d'un tiers ; isolement de la personne vis-à-vis de ses proches."],
              ["Contre-mesures", "délai obligatoire avant tout gros paiement ; personne de confiance désignée ; alertes bancaires sur les opérations inhabituelles ; mesures de protection juridique adaptées ; formations fondées sur la dignité."]],
       red: [["Hypothèse testée", "les procédures de l'organisation (banque, mairie, établissement) détectent-elles un parcours fictif de fraude ?"],
+            ["Indicateur", "part des étapes du parcours fictif de fraude interceptées par les procédures (délai, alerte, personne de confiance), et étape à laquelle l'interception a lieu, lors d'un audit entre professionnels."],
             ["Cadre", "Aucun exercice sur des personnes vulnérables : audit des procédures et jeux de rôle entre professionnels informés uniquement."]],
       pistes: ["Évaluation des délais de réflexion obligatoires.", "Parcours de signalement pour les proches et les professionnels."],
       note: "Sujet sensible : lien avec les conditions cliniques de l'onglet Ressources. Fiche liée aux cours Neurologie, vieillissement et victimologie." },
@@ -477,6 +498,7 @@
       blue: [["Signaux", "décisions prises à chaud juste après une alerte ou une émotion forte ; demande qui appuie sur la peur ou la honte ; échéances artificielles."],
              ["Contre-mesures", "règle du délai de refroidissement avant l'engagement ; second avis d'un tiers non touché par l'émotion ; scénarios d'entraînement pour automatiser la pause."]],
       red: [["Hypothèse testée", "un délai de refroidissement réduit-il l'engagement sur une demande fictive chargée émotionnellement ?"],
+            ["Indicateur", "part des engagements sur la demande fictive chargée émotionnellement, avec et sans délai de refroidissement."],
             ["Cadre", RC]],
       pistes: ["Effet d'un délai obligatoire sur les décisions à enjeu.", "Indicateurs de décision à chaud dans une organisation."],
       note: "Niveau de preuve : hypothèse influente mais débattue. Fiche liée aux fiches Urgence et Pression temporelle et au cours Cognition sociale et émotions." }
@@ -538,6 +560,7 @@
       blue: [["Signaux", "histoire qui explique d'avance chaque objection ; interlocuteur qui s'adapte aux réponses en gardant sa demande ; intérêt personnel de l'émetteur absent du récit."],
              ["Contre-mesures", "se demander « que gagne l'émetteur si j'accepte ? » ; séparer la crédibilité du récit de la légitimité de la demande ; vérifier le rôle annoncé par un canal indépendant."]],
       red: [["Hypothèse testée", "les équipes questionnent-elles l'intérêt de l'émetteur quand le récit est cohérent et poli ?"],
+            ["Indicateur", "part des réponses qui interrogent l'intérêt de l'émetteur ou vérifient son rôle par un canal indépendant, pour un récit fictif cohérent et poli comparé à un récit maladroit."],
             ["Cadre", RC]],
       pistes: ["Écart entre crédibilité du récit et vérification de la demande.", "Entraînement à la question « à qui profite la demande ? »."],
       note: "Niveau de preuve : bon pour le cadre général, à préciser pour les applications. Fiche liée à Pretexting et canulars." },
@@ -550,6 +573,7 @@
       blue: [["Signaux", "multiplication de liens entre événements disparates ; méfiance croissante envers toute source ; fatigue informationnelle marquée."],
              ["Contre-mesures", "ralentir et réduire le volume d'informations ambiguës ; communication de crise claire, stable et cohérente ; orienter vers un soutien adapté plutôt que démentir en bloc."]],
       red: [["Hypothèse testée", "une organisation maintient-elle une communication claire quand un flux de signaux ambigus circule autour d'un événement fictif ?"],
+            ["Indicateur", "délai avant la première communication claire de l'organisation, et nombre de messages contradictoires qu'elle émet pendant l'exercice."],
             ["Cadre", "Aucun exercice sur des personnes concernées par des troubles psychiques : jeux de données synthétiques et exercice de communication entre professionnels informés."]],
       pistes: ["Qualité de la communication de crise face aux rumeurs.", "Indicateurs de fatigue informationnelle."],
       note: "Sujet sensible : ne pas stigmatiser. Ne signifie pas que les personnes concernées sont plus manipulables. Fiche liée à Détournement de la saillance." },
@@ -562,6 +586,7 @@
       blue: [["Signaux", "effet d'une formation qui s'efface en quelques semaines ; mêmes erreurs avant et après la session ; participants qui oublient les procédures pourtant enseignées."],
              ["Contre-mesures", "répétitions espacées et brèves ; quiz de rappel plutôt que relecture ; scénarios variés ; mesure de l'efficacité dans le temps ; réalité virtuelle et jeux sérieux possibles, à évaluer plutôt qu'à supposer efficaces."]],
       red: [["Hypothèse testée", "le taux de détection mesuré juste après une sensibilisation est-il encore présent plusieurs semaines plus tard ?"],
+            ["Indicateur", "taux de détection mesuré juste après la sensibilisation puis plusieurs semaines plus tard, avec et sans rappels espacés."],
             ["Cadre", RC]],
       pistes: ["Courbe de rétention d'une procédure de vérification dans une équipe.", "Comparer formation unique et rappels espacés."],
       note: "Niveau de preuve : robuste pour l'espacement et le test. Deux grandes études en entreprise (Lain et coll. 2022, Ho et coll. 2025) ne trouvent pas de protection durable de la formation seule. Fiche liée aux patchs d'entraînement du Lexique." },
@@ -574,6 +599,7 @@
       blue: [["Signaux", "erreurs de procédure pendant les crises ; décisions plus rigides ; fatigue accumulée dans les équipes de permanence."],
              ["Contre-mesures", "procédures qui n'exigent pas de raisonnement complexe en crise (listes courtes) ; entraînement qui rend les gestes automatiques ; relais et récupération ; soutien après incident, sans reproche."]],
       red: [["Hypothèse testée", "les procédures de crise restent-elles appliquées quand le contexte de l'exercice est chargé en pression ?"],
+            ["Indicateur", "part des étapes de la procédure de crise appliquées en contexte calme et en contexte chargé, avec et sans liste courte."],
             ["Cadre", RC + " Pas de stress induit au-delà du réaliste, arrêt possible à tout moment."]],
       pistes: ["Comparer l'application d'une liste courte et d'une procédure longue en situation chargée.", "Effet du relais sur les erreurs de permanence."],
       note: "Niveau de preuve : robuste pour l'effet du stress aigu sur le contrôle exécutif. Fiche liée à Contrôle exécutif et Urgence." },
@@ -586,6 +612,7 @@
       blue: [["Signaux", "conclusions tirées d'un seul exercice ; indicateurs d'efficacité sans groupe de comparaison ; changements attribués à la sensibilisation alors que d'autres facteurs ont varié."],
              ["Contre-mesures", "plusieurs mesures indépendantes ; groupe de comparaison quand c'est possible ; taille d'échantillon annoncée ; distinguer taux de clics, signalements et comportements réels."]],
       red: [["Hypothèse testée", "les résultats d'un exercice de simulation sont-ils reproduits lors d'une seconde passation comparable ?"],
+            ["Indicateur", "concordance des résultats par équipe entre deux passations comparables, et cohérence entre plusieurs mesures indépendantes (clics, signalements, comportements observés)."],
             ["Cadre", RC]],
       pistes: ["Fiabilité test-retest d'un exercice de détection.", "Indicateurs combinés (signalement, délai, vérification) plutôt qu'un score unique."],
       note: "Fiche méthodologique, liée aux cours Traitement de données et Méthodologie cognitive, et à l'outil « Repère la faille »." },
@@ -598,6 +625,7 @@
       blue: [["Signaux", "axes tronqués ou échelles différentes entre graphiques comparés ; recadrage d'image qui change le sens ; couleur ou taille qui hiérarchise sans justification."],
              ["Contre-mesures", "vérifier les axes et l'origine ; comparer avec l'image complète ; traduire le graphique en phrase chiffrée ; adopter des gabarits de visualisation honnêtes ; ne pas fonder une vérification sur la seule vue : prévoir une version accessible (texte, audio, tiers) et des couleurs lisibles par les personnes daltoniennes."]],
       red: [["Hypothèse testée", "des lecteurs repèrent-ils un axe tronqué dans un graphique fictif, et corrigent-ils leur conclusion ?"],
+            ["Indicateur", "part des lecteurs qui repèrent l'axe tronqué et corrigent leur conclusion, avant et après la consigne de traduire le graphique en phrase chiffrée."],
             ["Cadre", RC]],
       pistes: ["Taux de détection d'un axe tronqué selon la charge du lecteur.", "Effet d'une liste de contrôle de lecture d'un graphique.", "Accessibilité des procédures de vérification pour les personnes aveugles, malvoyantes ou daltoniennes."],
       note: "Niveau de preuve : bon pour les mécanismes perceptifs. Fiche liée à Cognition visuelle et Reconnaissance des visages." },
@@ -610,6 +638,7 @@
       blue: [["Signaux", "défilement sans fin, notifications variables, récompenses sociales irrégulières ; temps d'usage supérieur à l'intention ; difficulté à arrêter."],
              ["Contre-mesures", "pauses et limites par défaut ; suppression des notifications non essentielles ; audit de conception d'un produit (grille de mécanismes de rétention) ; éducation aux mécanismes."]],
       red: [["Hypothèse testée", "une équipe produit ou de veille identifie-t-elle les mécanismes de rétention présents dans un produit fictif décrit sur papier ?"],
+            ["Indicateur", "part des mécanismes de rétention du produit fictif que l'équipe identifie, rapportée à ceux que la grille d'audit établie à l'avance permet de relever."],
             ["Cadre", "Audit sur un produit fictif. Aucune expérimentation sur des utilisateurs et aucun réglage de paramètres pour maximiser l'engagement."]],
       pistes: ["Grille d'audit des mécanismes de rétention.", "Comparer l'effet de limites d'usage par défaut et par choix."],
       note: "Les effets sur la santé mentale sont discutés. Prudence sur les comparaisons avec les substances. Fiche liée à Détournement de la saillance." }
@@ -824,8 +853,7 @@
     { d: "Méthodes et outils", n: [
       ["Traitement de données et initiation à R", "fiche", "analyse-exercice", "base du calcul de d', critère et scores"],
       ["Méthodologie cognitive", "fiche", "plan-exercice", "Suivi · protocoles de mesure, plans d'expérience"],
-      ["Méthodologie sociale et clinique", "fiche", "ethique-simulation", "cadre des simulations red team et du consentement"],
-      ["Anglais", "todo", null, "lecture de DIMA, MITRE ATT&CK, littérature"]
+      ["Méthodologie sociale et clinique", "fiche", "ethique-simulation", "cadre des simulations red team et du consentement"]
     ]},
     { d: "Autres programmes consultés en ligne", n: [
       ["Apprentissage et mémoire ; remédiation cognitive ; neuroplasticité", "fiche", "apprentissage-oubli", "durée de vie des patchs d'entraînement"],
@@ -867,7 +895,7 @@
   /* On a phone each table row reads as a block: every cell carries the title of its column */
   function labelCells(root) {
     Array.prototype.forEach.call((root || document).querySelectorAll(".tablewrap table"), function (t) {
-      var heads = Array.prototype.map.call(t.querySelectorAll("thead th"), function (th) { return th.textContent; });
+      var heads = Array.prototype.map.call(t.querySelectorAll("thead th"), function (th) { return th.getAttribute("data-label") || th.textContent; });
       Array.prototype.forEach.call(t.querySelectorAll("tbody tr"), function (tr) {
         Array.prototype.forEach.call(tr.children, function (td, i) { if (td.tagName === "TD" && heads[i]) td.setAttribute("data-label", heads[i]); });
       });
@@ -1123,6 +1151,7 @@
       blue: [["Signaux", "message suspect reçu par plusieurs personnes à la fois ; alerte visible par plusieurs services sans responsable nommé ; boîte de messagerie partagée ; silence collectif (« quelqu'un a dû le signaler ») ; personne ne sait à qui signaler."],
              ["Contre-mesures", "un responsable nommé pour chaque type d'alerte et chaque boîte partagée ; un bouton de signalement en un clic, sans reproche en cas de fausse alerte ; la règle « signaler même si d'autres l'ont reçu » ; accuser réception des signalements pour montrer qu'ils servent ; s'adresser à une personne nommée plutôt qu'à « l'équipe »."]],
       red: [["Hypothèse testée", "un message fictif envoyé à toute une équipe est-il signalé plus tard, ou moins souvent, que le même message envoyé à une seule personne ?"],
+            ["Indicateur", "taux et délai médian de signalement du même message fictif envoyé à une équipe ou à une seule personne, avant et après la désignation d'un responsable de la boîte partagée."],
             ["Cadre", RC]],
       pistes: ["Mesurer le délai avant le premier signalement selon le nombre de destinataires.", "Comparer une alerte adressée à « l'équipe » et une alerte adressée à une personne nommée.", "Tester l'effet d'un accusé de réception sur les signalements suivants."],
       note: "Niveau de preuve : effet documenté par méta-analyse, d'ampleur modérée et sensible au contexte ; sa transposition au signalement en entreprise est plausible, appuyée par les études sur les messages collectifs. L'affaire Kitty Genovese (1964), qui a inspiré ces travaux, a été déformée par la presse de l'époque (Manning et coll., 2007)." }
@@ -1158,6 +1187,7 @@
       blue: [["Signaux", "campagne de sensibilisation qui chiffre surtout les erreurs ; impression que « tout le monde fait comme ça » ; compteurs, avis ou soutiens apparus soudainement ; comportement à risque présenté comme habituel dans l'équipe."],
              ["Contre-mesures", "mettre en avant la majorité qui vérifie et signale ; associer chaque chiffre à une approbation claire (« merci aux 70 % qui ont signalé ») ; rendre visibles les signalements utiles ; vérifier l'origine des chiffres et des soutiens avant de s'y fier."]],
       red: [["Hypothèse testée", "une campagne fictive qui annonce « la majorité d'entre vous signale » augmente-t-elle les signalements par rapport à « beaucoup cliquent encore » ?"],
+            ["Indicateur", "taux de signalement après chacune des deux formulations de la campagne fictive, comparés entre groupes tirés au sort."],
             ["Cadre", RC]],
       pistes: ["Réécrire les messages de sensibilisation existants en norme positive et comparer les taux de signalement.", "Repérer dans une campagne d'influence les signaux de norme fabriquée : compteurs, consensus soudain, soutiens sans historique."],
       note: "Niveau de preuve : distinction entre normes descriptives et prescriptives bien établie ; l'ampleur des effets varie selon les études et les terrains. Fiche liée au levier Preuve sociale." },
@@ -1170,6 +1200,7 @@
       blue: [["Signaux", "demande qui contourne la procédure au nom d'un supérieur ; pression du type « tout le monde est d'accord » ; peur d'être la seule personne à objecter ; personne n'est chargé de dire non."],
              ["Contre-mesures", "un rôle de vérification attribué par écrit et protégé, même face à la direction ; le droit explicite de suspendre une opération douteuse ; un second avis systématique au-delà d'un seuil ; valoriser publiquement les refus motivés ; en réunion, recueillir les avis avant que la personne la plus haut placée ne s'exprime."]],
       red: [["Hypothèse testée", "une demande fictive venant d'un supérieur et contraire à la procédure est-elle plus souvent suspendue quand un collègue a le rôle explicite de vérifier ?"],
+            ["Indicateur", "part des demandes fictives contraires à la procédure qui sont suspendues, avec et sans rôle explicite de vérification."],
             ["Cadre", RC]],
       pistes: ["Mesurer combien de personnes se sentent autorisées à refuser une demande de la direction.", "Tester l'effet d'une personne désignée pour exprimer le doute en réunion."],
       note: "Niveau de preuve : effets de conformité et d'obéissance bien établis, avec de fortes variations selon le contexte ; leur interprétation est débattue. Fiche liée à Autorité usurpée." },
@@ -1183,6 +1214,7 @@
       blue: [["Signaux", "interlocuteur qui insiste sur une appartenance commune (« entre collègues », « entre anciens ») pour obtenir une faveur ; message qui oppose un « nous » à un « eux » désigné comme responsable ; page ou compte qui se réclame d'une communauté sans historique vérifiable."],
              ["Contre-mesures", "appliquer la même vérification à un membre supposé du groupe qu'à un inconnu ; vérifier l'historique et l'origine des comptes communautaires ; dans la communication interne, rappeler les objectifs communs plutôt que les oppositions entre services ; favoriser les échanges réels entre équipes."]],
       red: [["Hypothèse testée", "un message fictif qui se réclame d'une appartenance professionnelle commune est-il moins vérifié qu'un message neutre ?"],
+            ["Indicateur", "taux de vérification du message fictif qui se réclame d'une appartenance professionnelle commune, comparé à celui d'un message neutre au contenu identique."],
             ["Cadre", RC + " Aucune appartenance politique, religieuse ou d'origine n'est utilisée."]],
       pistes: ["Cartographier les appartenances qu'un attaquant pourrait invoquer à partir de ce que l'organisation publie.", "Mesurer l'effet d'une identité commune rappelée en début d'exercice."],
       note: "Niveau de preuve : favoritisme envers son groupe et effet du contact bien établis ; ampleur variable selon les contextes. Décrit de façon symétrique : le mécanisme est employé par tous les camps." },
@@ -1195,6 +1227,7 @@
       blue: [["Signaux", "demandes qui grandissent par petites étapes ; rappel de ce qui a déjà été accepté (« vous m'avez déjà confirmé… ») ; coût révélé après l'accord ; difficulté à revenir en arrière après un premier engagement."],
              ["Contre-mesures", "évaluer chaque demande comme si elle arrivait seule ; seuils de validation qui s'appliquent quel que soit l'historique de l'échange ; droit explicite de revenir sur un accord quand les conditions changent ; point d'arrêt prévu dans les échanges longs (« je vérifie et je vous rappelle »)."]],
       red: [["Hypothèse testée", "une série de demandes fictives de plus en plus engageantes est-elle interrompue plus tôt quand un seuil de validation existe ?"],
+            ["Indicateur", "rang de la demande à partir duquel la série fictive est interrompue, avec et sans seuil de validation."],
             ["Cadre", RC]],
       pistes: ["Compter, dans les cas publics, le nombre d'étapes avant la demande critique.", "Tester une consigne simple : toute demande qui change de nature repasse par un second canal."],
       note: "Niveau de preuve : effets documentés mais modestes et dépendants du contexte. Fiche liée aux techniques DIMA Pied dans la porte et coûts irrécupérables." },
@@ -1207,6 +1240,7 @@
       blue: [["Signaux", "règles contournées dès qu'elles gênent ; ton impératif ou culpabilisant des consignes ; multiplication des alertes et des obligations ; message qui invite à contourner une règle présentée comme absurde."],
              ["Contre-mesures", "expliquer la raison de chaque règle ; peu de règles, simples et stables ; laisser un choix entre plusieurs façons de se protéger quand c'est possible ; associer les équipes à la conception ; préférer un ton factuel au ton menaçant ; supprimer les alertes inutiles."]],
       red: [["Hypothèse testée", "une même consigne de sécurité, formulée de façon impérative ou expliquée, est-elle suivie différemment dans un exercice fictif ?"],
+            ["Indicateur", "taux d'application de la consigne fictive dans sa version impérative et dans sa version expliquée, comparés entre groupes tirés au sort."],
             ["Cadre", RC]],
       pistes: ["Recenser les règles le plus souvent contournées et la justification qui leur est donnée.", "Tester des alertes plus rares mais mieux expliquées."],
       note: "Niveau de preuve : réactance bien documentée en communication ; son rôle dans le contournement des règles de sécurité est plausible et appuyé par les études sur la fatigue sécuritaire. Fiche liée aux patchs de procédure du Lexique." },
@@ -1220,6 +1254,7 @@
       blue: [["Signaux", "techniques de manipulation qui reviennent d'une campagne à l'autre (émotion forte, faux dilemme, bouc émissaire) ; formation unique jamais rappelée ; sensibilisation centrée sur des contenus plutôt que sur des techniques."],
              ["Contre-mesures", "montrer des exemples affaiblis des techniques réellement utilisées, avec leur réfutation ; viser les techniques plutôt que les sujets ; rappels courts et réguliers ; mesurer la détection dans le temps ; combiner avec des procédures de vérification."]],
       red: [["Hypothèse testée", "une courte séance de prébunking améliore-t-elle la détection de messages fictifs un mois plus tard, avec ou sans rappel ?"],
+            ["Indicateur", "taux de détection de messages fictifs nouveaux un mois après la séance, comparé à celui d'un groupe qui ne l'a pas encore suivie, avec et sans rappel."],
             ["Cadre", RC]],
       pistes: ["Construire un jeu court sur les cinq leviers du site.", "Comparer l'effet d'un rappel à un mois et à trois mois."],
       note: "Niveau de preuve : efficacité documentée en laboratoire et sur le terrain, avec des effets modestes qui s'érodent. Fiche défensive, liée aux patchs d'entraînement du Lexique et à la fiche Apprentissage, oubli et durée de vie d'un patch." }
@@ -1320,6 +1355,7 @@
       blue: [["Signaux", "personne qui minimise ou cache une perte ; contact inattendu qui propose de récupérer les fonds contre paiement ou contre des coordonnées ; collègue qui n'ose pas dire qu'il a cliqué ; isolement après les faits."],
              ["Contre-mesures", "accueillir sans reproche ni ironie ; orienter vers l'assistance officielle (en France, 17Cyber, ouvert fin 2024 par la police, la gendarmerie et Cybermalveillance.gouv.fr) et vers le dépôt de plainte ; prévenir qu'aucun service sérieux ne fait payer la récupération des fonds ; en entreprise, garantir qu'un clic signalé ne sera pas sanctionné ; proposer un soutien psychologique quand le choc est fort."]],
       red: [["Hypothèse testée", "après un exercice fictif, un débriefing sans reproche augmente-t-il les signalements lors de l'exercice suivant, par rapport à un débriefing qui insiste sur l'échec ?"],
+            ["Indicateur", "taux de signalement à l'exercice suivant, selon que le débriefing précédent était sans reproche ou centré sur l'échec."],
             ["Cadre", RC]],
       pistes: ["Recenser les canaux par lesquels une personne peut signaler une erreur sans honte dans une organisation.", "Mesurer le délai entre une erreur et son signalement selon la culture de l'équipe."],
       note: "Niveau de preuve : impact des fraudes et sous-signalement documentés ; la revictimisation par de faux services de récupération est décrite par les organismes de protection des consommateurs. Fiche liée à Effet spectateur." },
@@ -1332,6 +1368,7 @@
       blue: [["Signaux", "nouvel interlocuteur très chaleureux qui s'impose vite ; demande de discrétion vis-à-vis des proches ; urgence financière présentée comme une affaire de confiance ; changement soudain d'habitudes bancaires."],
              ["Contre-mesures", "un tiers de confiance choisi à l'avance pour toute décision financière inhabituelle ; des règles simples et écrites (on ne donne jamais un code par téléphone) ; alertes et plafonds bancaires ; garder le lien social ; informer sans infantiliser."]],
       red: [["Hypothèse testée", "une règle écrite et un tiers de confiance réduisent-ils, dans un exercice de lecture de messages fictifs, les réponses aux demandes chaleureuses mais suspectes ?"],
+            ["Indicateur", "part des réponses aux demandes fictives chaleureuses mais suspectes, avec et sans règle écrite et tiers de confiance, chez des participants volontaires."],
             ["Cadre", RC + " Participation volontaire, aucune personne vulnérable mise en difficulté."]],
       pistes: ["Construire avec des associations de personnes âgées des messages d'entraînement réalistes et respectueux.", "Comparer l'effet d'un tiers de confiance et celui d'une simple information."],
       note: "Niveau de preuve : différences liées à l'âge documentées, souvent sur de petits échantillons et en laboratoire ; modèle de risque issu d'une revue de littérature. Ne pas généraliser à l'ensemble des personnes âgées." },
@@ -1344,6 +1381,7 @@
       blue: [["Signaux", "réaction immédiate à une demande pressante, sans étape de vérification ; consignes générales (« soyez vigilants ») sans réponse concrète ; stress vécu comme une raison d'agir."],
              ["Contre-mesures", "écrire avec chaque équipe deux ou trois plans si… alors pour les demandes à risque ; les répéter en exercice ; afficher la réponse attendue près des postes concernés ; apprendre à nommer l'urgence comme un signal (« je sens de la pression, donc je vérifie »)."]],
       red: [["Hypothèse testée", "un plan si… alors formulé avant un exercice fictif augmente-t-il la part des demandes urgentes vérifiées par un second canal ?"],
+            ["Indicateur", "part des demandes urgentes fictives vérifiées par un second canal, avec et sans plan si… alors formulé à l'avance."],
             ["Cadre", RC]],
       pistes: ["Construire une bibliothèque de plans si… alors pour les cinq leviers du site.", "Comparer un plan rédigé par la personne elle-même et un plan imposé."],
       note: "Niveau de preuve : réévaluation et intentions de mise en œuvre bien documentées ; leur application à l'ingénierie sociale est plausible mais pas encore mesurée. Fiche liée au levier Urgence." },
@@ -1356,6 +1394,7 @@
       blue: [["Signaux", "taux de clic présenté seul ; comparaison entre campagnes aux messages différents ; conclusions tirées de quelques dizaines de personnes ; fausses alertes jamais comptées."],
              ["Contre-mesures", "compter signalements et fausses alertes ; calculer d' et c quand c'est possible ; donner des intervalles plutôt que des chiffres secs ; comparer à difficulté égale ; présenter les résultats par équipe, jamais par personne."]],
       red: [["Hypothèse testée", "deux campagnes fictives de difficulté différente produisent-elles des taux de clic différents alors que la sensibilité d' reste la même ?"],
+            ["Indicateur", "taux de clic, taux de signalement, sensibilité d' et critère c de chaque campagne, avec leurs intervalles, présentés par équipe."],
             ["Cadre", RC]],
       pistes: ["Proposer un modèle de tableau de bord qui montre d', c et les signalements.", "Recalculer d'anciennes campagnes avec ces mesures."],
       note: "Niveau de preuve : cadre statistique établi ; son usage en entreprise demande des effectifs suffisants. Fiche liée à Psychophysique et analyse des signaux et au Labo." },
@@ -1368,6 +1407,7 @@
       blue: [["Signaux", "comparaison avant-après sans groupe témoin ; messages plus faciles après la formation qu'avant ; indicateur choisi après avoir vu les résultats ; échantillon trop petit pour conclure."],
              ["Contre-mesures", "groupe de comparaison tiré au sort ; mêmes messages en ordre contrebalancé ; difficulté notée avant l'envoi ; indicateurs fixés et écrits à l'avance ; effectifs suffisants, ou résultats présentés comme exploratoires."]],
       red: [["Hypothèse testée", "une formation améliore-t-elle la détection quand on la compare à un groupe tiré au sort qui ne l'a pas encore suivie ?"],
+            ["Indicateur", "écart de détection entre le groupe formé et le groupe tiré au sort qui ne l'est pas encore, avec son intervalle et l'effectif annoncé."],
             ["Cadre", RC]],
       pistes: ["Rédiger un modèle de protocole d'exercice en une page.", "Noter la difficulté des messages du Labo avec une échelle commune."],
       note: "Niveau de preuve : principes méthodologiques établis. Fiche liée à Lire les résultats d'un exercice et à Simuler une attaque sans trahir." },
@@ -1382,6 +1422,7 @@
       blue: [["Signaux", "exercice lancé sans cadre écrit ; leurre qui promet une prime, menace l'emploi ou touche à la santé ; résultats individuels diffusés ; aucun débriefing prévu ; participants qui découvrent l'exercice par la sanction."],
              ["Contre-mesures", "cadre écrit validé par la direction et les représentants du personnel ; information générale des équipes sur l'existence des exercices ; liste de leurres interdits ; débriefing rapide et bienveillant ; données agrégées ; possibilité de se retirer."]],
       red: [["Hypothèse testée", "informer les équipes de l'existence des exercices, sans date ni contenu, change-t-il la mesure par rapport à des exercices non annoncés, et améliore-t-il la confiance envers l'équipe de sécurité ?"],
+            ["Indicateur", "écart de détection entre exercices annoncés et non annoncés, et confiance envers l'équipe de sécurité, mesurée par questionnaire anonyme avant et après."],
             ["Cadre", RC]],
       pistes: ["Rédiger une charte d'exercice type, inspirée des comités d'éthique de la recherche.", "Recenser les leurres à proscrire et les remplacer par des équivalents neutres."],
       note: "Niveau de preuve : principes éthiques établis ; leur application aux exercices en entreprise fait l'objet de discussions. Fiche liée à la page Chapeaux." },
@@ -1394,6 +1435,7 @@
       blue: [["Signaux", "recherche d'un coupable après chaque incident ; règles contournées de façon répétée ; procédures longues sur des gestes fréquents ; incidents évités de justesse jamais rapportés."],
              ["Contre-mesures", "analyser les incidents sans chercher de coupable ; recenser les contournements et en comprendre la raison ; ajouter des défenses indépendantes plutôt qu'une seule règle stricte ; simplifier les gestes fréquents ; encourager le signalement des incidents évités de justesse."]],
       red: [["Hypothèse testée", "une procédure de vérification simplifiée est-elle davantage appliquée, dans un exercice fictif, qu'une procédure complète mais longue ?"],
+            ["Indicateur", "taux d'application de la procédure simplifiée et de la procédure complète, et nombre de contournements déclarés pour chacune."],
             ["Cadre", RC]],
       pistes: ["Cartographier les tranches de défense d'un circuit de paiement.", "Mesurer le temps que chaque règle de sécurité coûte aux équipes."],
       note: "Niveau de preuve : modèles bien établis en sécurité industrielle et médicale ; leur transposition à la sécurité informatique est documentée. Fiche liée à Réactance et à Contrôle exécutif." },
@@ -1406,6 +1448,7 @@
       blue: [["Signaux", "« une étude montre que… » sans référence ni taille d'échantillon ; effet spectaculaire jamais reproduit ; chiffre repris de source en source sans l'original ; certitude affichée sur un sujet débattu."],
              ["Contre-mesures", "remonter à la source originale ; chercher une méta-analyse ou une réplication ; noter la taille de l'échantillon ; préciser le niveau de preuve quand on cite ; préenregistrer ses propres exercices."]],
       red: [["Hypothèse testée", "des participants entraînés à trois questions (échantillon, réplication, financement) repèrent-ils mieux des affirmations scientifiques fictives exagérées ?"],
+            ["Indicateur", "part des affirmations fictives exagérées correctement repérées, avant et après l'entraînement aux trois questions, comparée à un groupe qui ne l'a pas encore suivi."],
             ["Cadre", RC]],
       pistes: ["Ajouter à chaque fiche une ligne qui justifie son niveau de preuve.", "Créer un exercice du Labo sur les fausses preuves scientifiques."],
       note: "Niveau de preuve : crise de la réplication documentée en psychologie ; son ampleur varie selon les domaines. Fiche de méthode, liée à la page Références." }
@@ -1526,7 +1569,9 @@
     var n = countAx(a[0]);
     return '<a class="axis-card ax-' + a[0] + '" href="#' + SLUG[a[0]] + '" data-ax="' + a[0] + '"><h3>' + a[2] + '</h3><p>' + a[3] + '</p><span class="go"><b>' + n + '</b> <span>fiche' + (n > 1 ? 's' : '') + '</span></span></a>';
   }).join("");
-  $("home-meta").innerHTML = [[FICHES.length, "fiches"], [LEVERS.length, "leviers"], [Object.keys(TE).length, "techniques DIMA rapprochées"], [LEX.length, "termes du lexique IT"]].map(function (x) {
+  var tests = FICHES.filter(function (f) { return f.red.some(function (p) { return p[0] === "Indicateur"; }); }).length;
+  var checked = Object.keys(R).filter(function (k) { return R[k][2]; }).length;
+  $("home-meta").innerHTML = [[FICHES.length, "fiches"], [tests, "protocoles de test"], [Object.keys(TE).length, "techniques DIMA rapprochées"], [checked, "références vérifiées"]].map(function (x) {
     return '<div><dt>' + x[1] + '</dt><dd>' + x[0] + '</dd></div>';
   }).join("");
   $("home-rows").innerHTML = FICHES.slice(-3).reverse().map(rowHTML).join("");
@@ -1701,6 +1746,117 @@
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
+  /* ---------- Carte : chaque fiche placée par famille et par phase DIMA, avec ses contre-mesures et leur test ---------- */
+  var PHASES = ["1", "2", "3", "4"];
+  function part(list, k) { var x = (list || []).filter(function (p) { return p[0] === k; })[0]; return x ? x[1] : ""; }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function teOf(f) { var m = MAP.filter(function (x) { return x.fiche === f.id; })[0]; return m ? m.te : []; }
+  function phasesOf(f) { var te = teOf(f); return PHASES.filter(function (p) { return te.some(function (t) { return t.charAt(3) === p; }); }); }
+  /* A fiche on the map: tinted with its first terrain, one small square per terrain */
+  function tileHTML(f) {
+    return '<a class="tile t-' + f.ax[0] + '" href="#fiche-' + f.id + '" data-f="' + f.id + '" data-ax="' + f.ax.join(" ") + '"><span>' + nb(f.title) + '</span>' +
+      '<span class="dots" aria-hidden="true">' + f.ax.map(function (a) { return '<i class="' + a + '"></i>'; }).join("") + '</span></a>';
+  }
+  function renderCarte() {
+    var fams = FAMS.filter(function (fam) { return FORDER.some(function (f) { return famOf(f) === fam[0]; }); });
+    var inPhase = function (p) { return function (f) { return p ? phasesOf(f).indexOf(p) !== -1 : !phasesOf(f).length; }; };
+    var cols = PHASES.concat([""]);
+    var head = function (p) {
+      var n = FORDER.filter(inPhase(p)).length, label = p ? DIMA_PHASE[p] : "Hors DIMA", fr = label.replace(/ \(.*\)$/, "");
+      return '<th data-label="' + label + '"' + (p ? '' : ' class="hors"') + '><span class="ph-n"' + (p ? '>0' + p : ' aria-hidden="true">&nbsp;') + '</span><b>' + fr + '</b>' +
+        '<small>' + (p ? label.replace(/^.*\((.*)\)$/, "$1") + ' · ' : 'défense, méthode, soin · ') + n + ' fiche' + (n > 1 ? 's' : '') + '</small></th>';
+    };
+    $("carte-map").innerHTML = '<table class="carte-map"><thead><tr><th data-label="Famille">Famille</th>' + cols.map(head).join("") + '</tr></thead><tbody>' +
+      fams.map(function (fam) {
+        var list = FORDER.filter(function (f) { return famOf(f) === fam[0]; });
+        /* Only a phase with no fiche in a family of vulnerabilities is a blank zone; care and method fiches sit outside DIMA by nature */
+        var gaps = fam[0] !== "soin" && fam[0] !== "methode";
+        return '<tr><td><b>' + fam[1] + '</b><span class="n">' + list.length + ' fiche' + (list.length > 1 ? 's' : '') + '</span></td>' + cols.map(function (p) {
+          var here = list.filter(inPhase(p));
+          if (here.length) return '<td' + (p ? '' : ' class="hors"') + '>' + here.map(tileHTML).join("") + '</td>';
+          return p && gaps ? '<td class="blank"><span>à cartographier</span></td>' : '<td' + (p ? '' : ' class="hors"') + '></td>';
+        }).join("") + '</tr>';
+      }).join("") + '</tbody></table>';
+    labelCells($("carte-map"));
+    var item = function (cls, k, v) { return '<div class="' + cls + '"><dt>' + k + '</dt><dd>' + cap(v) + '</dd></div>'; };
+    $("carte-tests").innerHTML = fams.map(function (fam) {
+      var list = FORDER.filter(function (f) { return famOf(f) === fam[0]; });
+      return '<div class="tgroup"><h3>' + fam[1] + ' <span class="n">' + list.length + '</span></h3><div class="tcards">' + list.map(function (f) {
+        return '<article class="tcard t-' + f.ax[0] + '" data-ax="' + f.ax.join(" ") + '"><h4><a href="#fiche-' + f.id + '">' + nb(f.title) + '</a></h4>' +
+          '<p class="tags">' + pills(f) + '</p><dl>' + item("cm", "Contre-mesures", part(f.blue, "Contre-mesures")) +
+          item("hy", "Hypothèse testée", part(f.red, "Hypothèse testée")) + item("ind", "Indicateur", part(f.red, "Indicateur")) + '</dl></article>';
+      }).join("") + '</div></div>';
+    }).join("");
+    carteFilter();
+    /* The gaps: phases with no fiche in a family of vulnerabilities (care and method fiches describe no attack technique),
+       and levers that have no fiche yet */
+    var empty = [];
+    FAMS.forEach(function (fam) {
+      if (fam[0] === "soin" || fam[0] === "methode") return;
+      var list = FORDER.filter(function (f) { return famOf(f) === fam[0]; });
+      var none = PHASES.filter(function (p) { return !list.some(function (f) { return phasesOf(f).indexOf(p) !== -1; }); });
+      var names = none.map(function (p) { return DIMA_PHASE[p].replace(/ \(.*\)$/, ""); });
+      if (list.length && names.length) empty.push(fam[1] + ", phase" + (names.length > 1 ? "s " : " ") + names.slice(0, -1).join(", ") + (names.length > 1 ? " et " : "") + names[names.length - 1]);
+    });
+    var levers = MAP.filter(function (m) { return !m.fiche; }).map(function (m) { return m.label.replace(/^Levier : /, ""); });
+    $("carte-blanc").innerHTML = '<ul class="plain">' +
+      (empty.length ? '<li><b>Cases vides de la carte :</b> ' + empty.join(" ; ") + '.</li>' : '') +
+      (levers.length ? '<li><b>Leviers décrits sur l\'accueil mais sans fiche dédiée :</b> ' + levers.join(", ") + '.</li>' : '') +
+      '</ul><p class="contrib-act">' + contribLink("Proposer une fiche ou un cas", "btn") + '</p>';
+  }
+  /* The terrain buttons are the map's legend and its filter: the map keeps its shape and dims the other fiches, the test cards show only this terrain */
+  var cax = "all";
+  function carteFilter() {
+    $("carte-filters").innerHTML = FILTERS.map(function (x) {
+      return '<button type="button" data-ax="' + x[0] + '" aria-pressed="' + (x[0] === cax) + '">' + (x[0] === "all" ? '' : '<span class="swatch ' + x[0] + '" aria-hidden="true"></span>') + x[1] + '</button>';
+    }).join("");
+    var on = function (el) { return cax === "all" || el.getAttribute("data-ax").split(" ").indexOf(cax) !== -1; };
+    Array.prototype.forEach.call($("carte-map").querySelectorAll(".tile"), function (t) { t.classList.toggle("off", !on(t)); });
+    var n = 0;
+    Array.prototype.forEach.call($("carte-tests").querySelectorAll(".tcard"), function (c) { c.hidden = !on(c); if (!c.hidden) n++; });
+    Array.prototype.forEach.call($("carte-tests").querySelectorAll(".tgroup"), function (g) { g.hidden = !g.querySelector(".tcard:not([hidden])"); });
+    $("carte-count").textContent = n + " fiche" + (n > 1 ? "s" : "") + (cax === "all" ? "" : " sur ce terrain");
+  }
+  $("carte-filters").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-ax]");
+    if (!b) return;
+    cax = b.getAttribute("data-ax");
+    carteFilter();
+  });
+  /* A fiche placed in several phases: pointing at one lights up the others */
+  function relTile(e, on) {
+    var t = e.target.closest && e.target.closest(".tile[data-f]");
+    if (!t) return;
+    Array.prototype.forEach.call($("carte-map").querySelectorAll('.tile[data-f="' + t.getAttribute("data-f") + '"]'), function (x) { x.classList.toggle("rel", on && x !== t); });
+  }
+  ["mouseover", "focusin"].forEach(function (type) { $("carte-map").addEventListener(type, function (e) { relTile(e, true); }); });
+  ["mouseout", "focusout"].forEach(function (type) { $("carte-map").addEventListener(type, function (e) { relTile(e, false); }); });
+  renderCarte();
+  /* The map as a CSV file, separated by semicolons and with a BOM so that a French spreadsheet reads it as is */
+  function carteCSV() {
+    var strip = function (s) { var d = document.createElement("div"); d.innerHTML = s || ""; return d.textContent.replace(/\s+/g, " ").trim(); };
+    var q = function (s) { return '"' + strip(String(s)).replace(/"/g, '""') + '"'; };
+    var url = function (f) { return STATIC ? new URL(fileFor("fiche-" + f.id), location.href).href : location.href.split("#")[0] + "#fiche-" + f.id; };
+    var head = ["id", "fiche", "adresse", "famille", "type", "terrains", "techniques DIMA", "phases DIMA", "signaux", "contre-mesures", "hypothèse testée", "indicateur", "cadre", "références"];
+    var rows = FORDER.map(function (f) {
+      var fam = FAMS.filter(function (x) { return x[0] === famOf(f); })[0];
+      return [f.id, f.title, url(f), fam ? fam[1] : "", f.tag, f.ax.map(function (a) { return AX[a]; }).join(", "),
+        teOf(f).map(function (t) { return t + " " + TE[t]; }).join(", "), phasesOf(f).map(function (p) { return DIMA_PHASE[p]; }).join(", "),
+        part(f.blue, "Signaux"), part(f.blue, "Contre-mesures"), part(f.red, "Hypothèse testée"), part(f.red, "Indicateur"), part(f.red, "Cadre"),
+        (FREFS[f.id] || []).map(function (k) { return R[k] ? R[k][0] : ""; }).join(" | ")].map(q).join(";");
+    });
+    return "﻿" + [head.map(q).join(";")].concat(rows).join("\r\n") + "\r\n";
+  }
+  $("carte-csv").addEventListener("click", function () {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([carteCSV()], { type: "text/csv;charset=utf-8" }));
+    a.download = "hack-cognitif-carte.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+
   /* ---------- Cours : rangés par thème ; le programme d'origine reste indiqué sur chaque notion ---------- */
   var CTHEMES = [
     ["perception", "Perception et attention", "Ce que l'on voit, ce que l'on remarque et ce qui passe inaperçu."],
@@ -1757,7 +1913,6 @@
     "Traitement de données et initiation à R": "methodes",
     "Méthodologie cognitive": "methodes",
     "Méthodologie sociale et clinique": "methodes",
-    "Anglais": "methodes",
     "Évaluation cognitive, bilan neuropsychologique": "methodes",
     "Évaluation et diagnostic en neuropsychologie de l'adulte ; évaluation et prise en charge": "methodes",
     "Outils et méthode en psychologie sociale": "methodes",
@@ -1918,7 +2073,7 @@
   });
 
   /* ---------- Routage ---------- */
-  var VIEWS = ["accueil", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "a-propos", "contribuer", "contact", "mentions-legales"];
+  var VIEWS = ["accueil", "carte", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "a-propos", "contribuer", "contact", "mentions-legales"];
   var current = "accueil";
   /* Sur le site publié, les adresses n'ont pas d'extension : l'hébergeur sert fiches.html à l'adresse « fiches ».
      En aperçu local (fichier ouvert depuis le disque, Live Server), rien ne fait ce lien : les liens gardent .html */
@@ -2026,7 +2181,7 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   /* ---------- Recherche globale ---------- */
-  var PAGES = [["Accueil", "accueil"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
+  var PAGES = [["Accueil", "accueil"], ["Carte des vulnérabilités cognitives", "carte"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
   var IDX = [];
   PAGES.forEach(function (p) { IDX.push({ t: p[0], k: "Page", x: "", go: function () { nav(p[1]); } }); });
   Object.keys(TERRAINS).forEach(function (slug) { IDX.push({ t: AX[TERRAINS[slug]], k: "Terrain", x: TERRAIN_FOR[TERRAINS[slug]], go: function () { nav(slug); } }); });

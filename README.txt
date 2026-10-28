@@ -1,7 +1,8 @@
 HACK COGNITIF - site statique
 
 Objectif du site
-- Informer et sensibiliser, pour reconnaître les attaques qui exploitent nos leviers cognitifs et mieux s'en prémunir.
+- Fournir une carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive, avec des contre-mesures testables, pour former et renforcer la résilience.
+- La page Carte réunit toutes les fiches par famille et par phase DIMA, avec leurs contre-mesures, leur hypothèse testée et leur indicateur. Elle se télécharge en CSV.
 
 Organisation du dossier
 - À la racine : le site tel qu'il est publié.
@@ -40,5 +41,6 @@ A faire avant publication
 - Relire les phrases « Pour qui » des trois pages de terrain (script.js, TERRAIN_FOR), les thèmes de la page Cours (script.js, CTHEMES et CTHEME_OF) et les fiches de psychologie sociale (script.js, bloc « Psychologie sociale »).
 
 Licence et sources
+- Les textes du site, ses fiches et sa carte sont sous licence Creative Commons Attribution 4.0 (CC BY 4.0), choisie le 28 octobre 2026 : chacun peut les reprendre et les adapter, y compris à des fins commerciales, en citant Hack cognitif. L'illustration de l'accueil n'est pas couverte, puisque sa licence reste à vérifier.
 - DIMA (M82-project) est sous licence Apache 2.0 (vérifié sur le dépôt : https://github.com/M82-project/DIMA, fichier LICENSE, pas de fichier NOTICE). Ce site en reprend 24 identifiants et leurs intitulés en français, parfois abrégés.
 - Conditions respectées : DIMA est cité avec un lien, la licence est nommée avec un lien vers son texte (pages Ressources et Mentions légales), les abréviations sont signalées, et le site précise que ses rapprochements n'engagent pas le projet DIMA (la licence n'autorise pas à se prévaloir du nom DIMA ou M82).

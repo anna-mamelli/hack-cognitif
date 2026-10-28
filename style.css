@@ -336,6 +336,62 @@ ul.psy li { margin-bottom: var(--space-xs); }
 .tablewrap td { vertical-align: top; }
 .tablewrap td:first-child { color: var(--color-ink); }
 
+/* ---------- Carte: fiches as tiles printed in their terrain's ink, empty cells hatched as blank zones ---------- */
+.t-ent { --tile-ink: var(--color-ent); --tile: var(--color-ent-tint); }
+.t-pou { --tile-ink: var(--color-pou); --tile: var(--color-pou-tint); }
+.t-inf { --tile-ink: var(--color-inf); --tile: var(--color-inf-tint); }
+.t-tra { --tile-ink: var(--color-muted); --tile: var(--color-sheet-2); }
+.carte-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-lg); margin: var(--space-xl) 0 var(--space-md); }
+.carte-tools .filters { margin: 0; }
+.legend { color: var(--color-muted); font-size: var(--text-md); }
+.swatch { display: inline-block; width: 0.625rem; height: 0.625rem; margin-right: var(--space-xs); background: var(--color-muted); }
+.swatch.ent, .dots .ent { background: var(--color-ent); }
+.swatch.pou, .dots .pou { background: var(--color-pou); }
+.swatch.inf, .dots .inf { background: var(--color-inf); }
+.swatch.tra, .dots .tra { background: var(--color-muted); }
+.swatch.blank, .carte-map td.blank span::before { width: 1rem; background: repeating-linear-gradient(135deg, var(--color-muted) 0 1px, transparent 1px 4px); outline: var(--rule-hair) solid var(--color-rule-2); }
+.carte-map td.blank span::before { content: ""; display: inline-block; height: 0.625rem; margin-right: var(--space-xs); }
+.filters button[aria-pressed="true"] .swatch { outline: var(--rule-hair) solid var(--color-paper); }
+
+.carte-map { table-layout: fixed; }
+.carte-map th { white-space: normal; vertical-align: bottom; }
+.carte-map th b { display: block; font: 600 var(--text-md)/1.2 var(--font-display); color: var(--color-ink); }
+.carte-map th small { display: block; margin-top: var(--space-3xs); font: 400 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); }
+.carte-map .ph-n { display: block; margin-bottom: var(--space-2xs); font: 500 var(--text-xl)/1 var(--font-outlier); color: var(--band-ink); font-variant-numeric: tabular-nums; }
+.carte-map td:first-child b { display: block; font: 600 var(--text-lg)/1.25 var(--font-display); color: var(--color-ink); }
+.carte-map td:first-child .n { display: block; margin-top: var(--space-2xs); font: 400 var(--text-sm)/1.3 var(--font-outlier); color: var(--color-muted); }
+.carte-map td.blank span { font-size: var(--text-sm); color: var(--color-muted); }
+.tile {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-xs); margin-top: var(--space-2xs); padding: var(--space-xs) var(--space-sm);
+  background: var(--tile); box-shadow: inset var(--rule-bar) 0 0 var(--tile-ink); color: var(--color-ink); text-decoration: none; font: 500 var(--text-sm)/1.35 var(--font-display);
+  transition: box-shadow var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out), outline-color var(--dur-short) var(--ease-out);
+  outline: var(--rule-hair) solid transparent; outline-offset: calc(-1 * var(--rule-hair));
+}
+.tile:first-child { margin-top: 0; }
+.tile .dots { display: flex; flex: none; gap: 2px; padding-top: 0.3em; }
+.tile .dots i { display: block; width: 6px; height: 6px; }
+.tile:hover, .tile:focus-visible { box-shadow: inset 6px 0 0 var(--tile-ink); }
+.tile:hover > span:first-child { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.16em; }
+.tile.rel { outline-color: var(--color-accent); }
+.tile.off { opacity: 0.22; }
+
+.tgroup { margin-top: var(--space-xl); }
+.tgroup h3 { padding-bottom: var(--space-sm); margin-bottom: var(--space-md); border-bottom: var(--rule-bar) solid var(--band-ink); font-size: var(--text-xl); }
+.tgroup h3 .n { margin-left: var(--space-2xs); font: 500 var(--text-md)/1 var(--font-outlier); color: var(--color-muted); }
+.tcards { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
+.tcard { min-width: 0; padding: var(--space-md) var(--space-lg) var(--space-lg); background: var(--color-sheet); border-top: var(--rule-bar) solid var(--tile-ink); }
+.tcard h4 { margin: 0; font: 600 var(--text-lg)/1.25 var(--font-display); }
+.tcard h4 a { text-decoration: none; }
+.tcard h4 a:hover { text-decoration: underline; text-decoration-color: var(--color-accent); }
+.tcard .tags { display: flex; flex-wrap: wrap; gap: var(--space-2xs); margin: var(--space-xs) 0 var(--space-md); }
+.tcard dl { margin: 0; display: grid; gap: var(--space-sm); }
+.tcard dl > div { padding-left: var(--space-sm); border-left: var(--rule-bar) solid var(--k); }
+.tcard .cm { --k: var(--color-blue); }
+.tcard .hy, .tcard .ind { --k: var(--color-red); }
+.tcard dt { font: 600 var(--text-sm)/1.3 var(--font-display); color: var(--k); }
+.tcard dd { margin: var(--space-3xs) 0 0; }
+.tcard .ind dd { color: var(--color-ink); }
+
 /* ---------- Glossary ---------- */
 dl.gloss { margin: 0; border-top: var(--rule-bar) solid var(--color-rule-2); }
 dl.gloss div { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xs) var(--gap-columns); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
@@ -686,6 +742,14 @@ dl.gloss div { padding-inline: var(--space-sm); }
   .tablewrap table { display: table; min-width: 52rem; }
   .tablewrap table:has(#dima-body) { min-width: 72rem; }
   .tablewrap table:has(#lex-body) { min-width: 64rem; }
+  .tablewrap table.carte-map { min-width: 64rem; }
+  .carte-map th:first-child { width: 12rem; }
+  .carte-map .hors { border-left: var(--rule-hair) dashed var(--color-rule-2); }
+  /* On a wide screen the whole blank cell is hatched, in the light rule colour, with its label on the sheet */
+  .carte-map td.blank { background: repeating-linear-gradient(135deg, var(--color-rule) 0 1px, transparent 1px 8px); }
+  .carte-map td.blank span { display: inline-block; padding: 0 var(--space-2xs); background: var(--color-sheet); }
+  .carte-map td.blank span::before { content: none; }
+  .tcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tablewrap thead { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; display: table-header-group; }
   .tablewrap tbody { display: table-row-group; }
   .tablewrap tr { display: table-row; }

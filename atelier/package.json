@@ -2,7 +2,7 @@
   "name": "hack-cognitif",
   "private": true,
   "type": "module",
-  "description": "Hack cognitif : comprendre les failles humaines pour s'en prémunir",
+  "description": "Hack cognitif : carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive",
   "config": {
     "siteUrl": "https://anna-mamelli.github.io/hack-cognitif"
   },

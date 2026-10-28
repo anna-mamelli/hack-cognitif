@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Hack cognitif</title>
-<meta name="description" content="Comprendre les failles humaines pour les corriger et s'en prémunir : social engineering, influence politique, neuropsychologie cognitive et psychologie sociale, avec protocoles blue team et red team encadrés.">
+<meta name="description" content="Carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive (ingénierie sociale, désinformation, ingérence), avec des contre-mesures testables pour former et renforcer la résilience.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,7 @@
     <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
     <nav id="nav" aria-label="Navigation principale">
       <a href="#accueil" data-v="accueil">Accueil</a>
+      <a href="#carte" data-v="carte">Carte</a>
       <a href="#fiches" data-v="fiches">Fiches</a>
       <a href="#cours" data-v="cours">Cours</a>
       <a href="#labo" data-v="labo">Labo</a>
@@ -54,13 +55,13 @@
 <div id="v-accueil" class="home">
   <section class="hero" aria-label="Accueil">
     <div class="container">
-      <h1>Comprendre les failles humaines pour les corriger.</h1>
+      <h1>Une carte ouverte des failles cognitives.</h1>
       <div class="hero-foot">
         <div>
-          <p class="lead">Social engineering et influence politique : connaître les leviers cognitifs pour s'en prémunir.</p>
+          <p class="lead">Les vulnérabilités que la guerre cognitive exploite, chacune avec des contre-mesures testables, pour former et renforcer la résilience.</p>
           <div class="cta">
-            <a class="btn primary" href="#fiches">Explorer les fiches</a>
-            <a class="tlink" href="#cours">Voir le programme</a>
+            <a class="btn primary" href="#carte">Explorer la carte</a>
+            <a class="tlink" href="#fiches">Voir les fiches</a>
           </div>
         </div>
         <dl class="ledger" id="home-meta" aria-label="Le site en chiffres"></dl>
@@ -104,18 +105,61 @@
 
   <div class="close-band">
     <div class="container">
-      <p class="close-lead">Ce site sert à se prémunir : informer et sensibiliser, pour reconnaître les attaques et mieux s'en défendre.</p>
-      <p class="close-note">Il traite des mécanismes, des signaux de détection et des contre-mesures. Il ne publie ni scénarios prêts à l'emploi, ni techniques optimisées pour manipuler une personne réelle.</p>
+      <p class="close-lead">Ce site sert à se défendre : cartographier les failles que la guerre cognitive exploite, et tester ce qui les corrige.</p>
+      <p class="close-note">Il traite des mécanismes, des signaux de détection et des contre-mesures, avec pour chacune une hypothèse et un indicateur pour la tester dans un exercice encadré. Il ne publie ni scénarios prêts à l'emploi, ni techniques optimisées pour manipuler une personne réelle.</p>
       <p class="close-act"><a href="#contribuer">Contribuer au site</a></p>
     </div>
   </div>
 </div>
 
+<!-- CARTE -->
+<section id="v-carte" data-name="Carte des vulnérabilités cognitives" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>La carte des vulnérabilités cognitives</h1>
+    <p class="lead">Les failles cognitives que la guerre cognitive exploite, rangées par famille de mécanismes et par phase de la manipulation, chacune avec ses contre-mesures et le moyen de les tester.</p>
+  </header>
+  <div class="callout"><p><b>Lire la carte.</b> Chaque ligne réunit une famille de fiches. Chaque colonne correspond à l'une des quatre phases dans lesquelles le cadre ouvert <a href="#ressources">DIMA</a> range les techniques de manipulation de l'information : Detect, Inform, Memorise, Act. Une fiche peut occuper plusieurs cases. La colonne « Hors DIMA » réunit les fiches de défense, de méthode et de soin, qui ne décrivent pas une technique d'attaque. Une case hachurée reste à cartographier : aucune fiche ne la couvre encore.</p></div>
+  <div class="carte-tools">
+    <div class="filters" id="carte-filters" role="group" aria-label="Filtrer par terrain"></div>
+    <span class="legend"><span class="swatch blank" aria-hidden="true"></span>à cartographier</span>
+  </div>
+  <div class="tablewrap" id="carte-map"></div>
+  <p class="note">Les rapprochements avec DIMA sont des propositions d'analyse propres à Hack cognitif : ils n'engagent pas le projet DIMA et restent ouverts à la discussion.</p>
+
+  <section class="block">
+    <h2>Des contre-mesures testables</h2>
+    <p>Pour chaque fiche : la contre-mesure, l'hypothèse qu'un exercice peut vérifier, et l'indicateur qui dit si elle marche. Testable ne veut pas dire testé : le résultat dépend de l'exercice mené, de son cadre et de ses effectifs. Les exercices sont fictifs, consentis et débriefés, et leurs indicateurs restent agrégés : aucun individu n'est désigné.</p>
+    <p class="count" id="carte-count" aria-live="polite"></p>
+    <div id="carte-tests"></div>
+  </section>
+
+  <section class="block">
+    <h2>Former avec la carte</h2>
+    <ul class="plain">
+      <li><b>Repérer :</b> commencer par un exercice du <a href="#labo">Labo</a>, comme l'anatomie d'un message ou le quiz de détection.</li>
+      <li><b>Comprendre :</b> lire la fiche du mécanisme en jeu, ses signaux et ses contre-mesures, puis la page du terrain concerné : <a href="#organisations">organisations</a>, <a href="#dirigeants-cibles">dirigeants ciblés</a> ou <a href="#dirigeants-qui-influencent">dirigeants qui influencent</a>.</li>
+      <li><b>Tester :</b> reprendre l'hypothèse et l'indicateur de la fiche pour concevoir un exercice encadré, avec les fiches <a href="#fiche-plan-exercice">Concevoir un exercice qui mesure vraiment</a> et <a href="#fiche-ethique-simulation">Simuler une attaque sans trahir</a>.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>À cartographier</h2>
+    <p>Ce que la carte ne couvre pas encore.</p>
+    <div id="carte-blanc"></div>
+  </section>
+
+  <section class="block">
+    <h2>Une carte ouverte</h2>
+    <p>La carte est publiée sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">Creative Commons Attribution 4.0 (CC BY 4.0)</a> : chacun peut la reprendre et l'adapter, y compris dans une formation, en citant Hack cognitif et en signalant ses modifications. Les identifiants et les intitulés des techniques DIMA restent sous licence Apache 2.0. Les sources sont listées sur la page <a href="#references">Références</a>, avec leur statut de vérification.</p>
+    <p class="contrib-act"><button class="btn" id="carte-csv" type="button">Télécharger la carte (CSV)</button></p>
+  </section>
+</section>
+
 <!-- FICHES -->
 <section id="v-fiches" class="page container" data-band="rose" hidden>
   <header class="page-head">
     <h1>Fiches</h1>
-    <p class="lead">Chaque fiche suit le même modèle : socle, protocole blue team (défense), protocole red team (simulation encadrée), pistes originales.</p>
+    <p class="lead">Chaque fiche est un point de la <a href="#carte">carte</a> : le mécanisme et ses sources (socle), les signaux et les contre-mesures (blue team), puis l'hypothèse et l'indicateur qui permettent de les tester dans un exercice encadré (red team).</p>
   </header>
   <div class="toolbar">
     <input id="fq" class="search" type="search" placeholder="Filtrer les fiches…" autocomplete="off" aria-label="Filtrer les fiches">
@@ -251,30 +295,31 @@
 <section id="v-ressources" data-name="Ressources" class="page container" data-band="blue" hidden>
   <header class="page-head">
     <h1>S'appuyer sur ce qui existe.</h1>
-    <p class="lead">Ce site ne refait pas les catalogues existants. Il les relie à deux terrains précis.</p>
+    <p class="lead">Ce site ne refait pas les catalogues existants. Il les relie aux mécanismes cognitifs et aux contre-mesures.</p>
   </header>
   <section class="block">
     <h2>DIMA</h2>
     <p>Cadre open source (licence Apache-2.0) qui recense les tentatives d'exploiter les biais cognitifs dans les flux d'information. Il s'organise en quatre phases (Detect, Inform, Memorise, Act), en tactiques puis en techniques, et propose un navigateur pour rédiger des rapports de campagne.</p>
     <p><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">Ouvrir le navigateur DIMA</a>, ou consulter le <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">dépôt GitHub</a>. Les identifiants et les intitulés des techniques repris sur ce site viennent de DIMA (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés.</p>
-    <p><b>Apport de Hack cognitif :</b> rattacher chaque levier et chaque fiche aux techniques DIMA correspondantes. Première version ci-dessous. Ces rapprochements sont des propositions d'analyse, pas une position de DIMA, et sont à valider avant publication.</p>
+    <p><b>Apport de Hack cognitif :</b> rattacher chaque levier et chaque fiche aux techniques DIMA correspondantes. Première version ci-dessous, reprise sur la <a href="#carte">carte</a>. Ces rapprochements sont des propositions d'analyse, pas une position de DIMA, et restent ouverts à la discussion.</p>
     <div class="tablewrap"><table class="dima"><thead><tr><th>Levier ou fiche</th><th>Techniques DIMA</th><th>Remarque</th><th>Plus sensibles</th><th>Moins exposées</th></tr></thead><tbody id="dima-body"></tbody></table></div>
     <p class="note">Ces deux colonnes servent à se prémunir : savoir dans quelles situations on est plus exposé permet de renforcer ses défenses au bon moment (ralentir, vérifier par un second canal, demander un avis). « Plus sensibles » réunit des conditions cliniques pour lesquelles le mécanisme est documenté ou suspecté altéré, et des situations (surcharge, stress, isolement, habitudes) dans lesquelles le levier agit davantage. « Moins exposées » réunit des profils et des pratiques associés à une moindre sensibilité ; quand aucun n'est établi, le tableau le dit. Ce sont des tendances de groupe, jamais un jugement sur une personne : la grande majorité des personnes concernées n'est pas plus manipulable. L'usage légitime de ces associations est d'adapter les formations et les procédures et de protéger les publics fragiles, jamais de les cibler. Niveaux : <em>documenté</em> (littérature établie), <em>plausible</em> (appuyé indirectement), <em>hypothèse</em> (à tester).</p>
   </section>
   <section class="block">
     <h2>À consulter pour les définitions et les cas</h2>
     <ul class="plain">
-      <li>ANSSI : guides et rapports sur l'hameçonnage et les menaces visant les organisations.</li>
-      <li>SGDSN / Viginum : rapports publics sur les campagnes d'ingérence numérique.</li>
-      <li>IRSEM : études sur l'influence et la guerre cognitive.</li>
-      <li>MITRE ATT&amp;CK : taxonomie de référence des techniques d'attaque, dont l'ingénierie sociale.</li>
+      <li><a href="https://cyber.gouv.fr" target="_blank" rel="noopener">ANSSI</a> : guides et rapports sur l'hameçonnage et les menaces visant les organisations.</li>
+      <li><a href="https://www.sgdsn.gouv.fr" target="_blank" rel="noopener">SGDSN</a> et VIGINUM, son service de vigilance et de protection contre les ingérences numériques étrangères : rapports publics sur les campagnes d'ingérence numérique.</li>
+      <li><a href="https://www.irsem.fr" target="_blank" rel="noopener">IRSEM</a> : études sur l'influence et la guerre cognitive.</li>
+      <li><a href="https://attack.mitre.org" target="_blank" rel="noopener">MITRE ATT&amp;CK</a> : taxonomie de référence des techniques d'attaque, dont l'ingénierie sociale.</li>
+      <li><a href="https://www.disarm.foundation" target="_blank" rel="noopener">DISARM</a> : cadre ouvert (licence CC BY-SA 4.0), maintenu par la DISARM Foundation, qui décrit les comportements des opérations d'influence.</li>
     </ul>
   </section>
   <section class="block">
     <h2>Projets</h2>
     <ul class="plain">
-      <li><b>Correspondance DIMA</b> : première version ci-dessus, à valider et à compléter avec les cas publics sourcés.</li>
-      <li><b>Cartographie de narratifs</b> (open source) : outil d'analyse de sources ouvertes. <span class="ph">[dépôt à ajouter]</span></li>
+      <li><b>Correspondance DIMA</b> : première version ci-dessus et sur la <a href="#carte">carte</a>, à compléter avec les cas publics sourcés.</li>
+      <li><b>Cartographie de narratifs</b> (open source) : outil d'analyse de sources ouvertes, en préparation.</li>
       <li><b>Récit commun</b> : outil ouvert pour construire des références partagées, en conception.</li>
     </ul>
   </section>
@@ -283,9 +328,20 @@
 <!-- A PROPOS -->
 <section id="v-a-propos" data-name="À propos" class="page container" hidden>
   <header class="page-head">
-    <h1>Neuropsychologue devenue spécialiste réseaux et cybersécurité.</h1>
-    <p class="lead">Je conçois des scénarios de menace cognitive et des protocoles de défense pour renforcer la résilience informationnelle.</p>
+    <h1>Neuropsychologue, en reconversion vers les réseaux et la cybersécurité.</h1>
+    <p class="lead">Je cartographie les vulnérabilités cognitives et je conçois des protocoles de défense testables, pour former et renforcer la résilience informationnelle.</p>
   </header>
+  <section class="block">
+    <h2>Objectif</h2>
+    <p class="lead">Fournir une carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive, avec des contre-mesures testables, pour former et renforcer la résilience.</p>
+    <ul class="plain">
+      <li><b>Une carte :</b> chaque vulnérabilité est reliée à ses mécanismes, à ses terrains et aux techniques du cadre DIMA. <a href="#carte">Voir la carte</a>.</li>
+      <li><b>Ouverte :</b> libre d'accès, sourcée, réutilisable sous licence CC BY 4.0 et ouverte aux <a href="#contribuer">contributions</a>. Ouverte ne veut pas dire mode d'emploi : la carte montre les failles et les défenses, jamais une attaque optimisée.</li>
+      <li><b>La guerre cognitive :</b> les actions qui visent la façon dont une population perçoit, décide et agit (voir le <a href="#glossaire">glossaire</a>).</li>
+      <li><b>Des contre-mesures testables :</b> chaque fiche propose une hypothèse et un indicateur pour vérifier, dans un exercice encadré, qu'une contre-mesure marche.</li>
+      <li><b>Former et renforcer la résilience :</b> les cours, les exercices du <a href="#labo">Labo</a> et le glossaire servent aux formatrices, aux formateurs et aux équipes qui se préparent.</li>
+    </ul>
+  </section>
   <section class="block">
     <h2>Parcours</h2>
     <p>Master 2 en neuropsychologie et plusieurs expériences cliniques, puis reconversion vers les réseaux et la cybersécurité en 2025 (Bachelor Administrateur Systèmes et Réseaux, Marseille). Comprendre comment fonctionnent l'attention, la confiance et la décision permet de mieux protéger les systèmes, et les personnes qui s'en servent.</p>
@@ -293,14 +349,14 @@
   <section class="block">
     <h2>Démarche</h2>
     <ul class="plain">
-      <li><b>Comprendre</b> : fiches sur les leviers cognitifs, de la neuropsychologie à la psychologie sociale, et sur les cas publics.</li>
-      <li><b>Mesurer</b> : protocoles pour évaluer la capacité de détection d'une équipe.</li>
-      <li><b>Renforcer</b> : outils ouverts et contre-mesures concrètes.</li>
+      <li><b>Cartographier</b> : fiches sur les vulnérabilités cognitives, de la neuropsychologie à la psychologie sociale, reliées aux cas publics et au cadre DIMA.</li>
+      <li><b>Tester</b> : pour chaque contre-mesure, une hypothèse, un indicateur et un cadre d'exercice.</li>
+      <li><b>Former</b> : cours, exercices et outils ouverts pour transmettre et renforcer.</li>
     </ul>
   </section>
   <section class="block">
     <h2>Posture éthique</h2>
-    <p>L'objectif est de sensibiliser et d'informer, pour que chacun, personne ou organisation, reconnaisse les attaques et s'en prémunisse. Défendre et construire, jamais manipuler. Les cas cités sont publics et sourcés. Les techniques d'influence politique sont décrites de façon symétrique : elles sont employées par tous les camps, et aucune fiche ne vise un parti ou une personne. Aucune fiche ne propose de scénario prêt à l'emploi contre une personne réelle. Les simulations red team décrites se font dans des cadres d'exercice, avec des participants informés ou une organisation consentante.</p>
+    <p>La finalité est défensive : que chacun, personne ou organisation, reconnaisse ces attaques et s'en prémunisse. Défendre et construire, jamais manipuler. Les cas cités sont publics et sourcés. Les techniques d'influence politique sont décrites de façon symétrique : elles sont employées par tous les camps, et aucune fiche ne vise un parti ou une personne. Aucune fiche ne propose de scénario prêt à l'emploi contre une personne réelle. Les simulations red team décrites se font dans des cadres d'exercice, avec des participants informés ou une organisation consentante.</p>
   </section>
 </section>
 
@@ -371,7 +427,7 @@
   <section class="block"><h2>Éditrice</h2>
     <p>Site personnel, édité à titre non professionnel par une personne physique. Conformément à la loi pour la confiance dans l'économie numérique (LCEN), l'éditrice a communiqué ses éléments d'identification à l'hébergeur indiqué ci-dessous. Pour lui écrire : <a href="#contribuer" data-contrib>formulaire de contact</a>.</p></section>
   <section class="block"><h2>Hébergeur</h2><p>GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Téléphone : +1 877 448 4820. Site : <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</p></section>
-  <section class="block"><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les contenus de ce site sont protégés. Toute reproduction sans autorisation est interdite, hors courtes citations avec mention de la source. Les ressources tierces citées restent soumises à leurs propres licences. Les identifiants et les intitulés des techniques DIMA proviennent du projet <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">DIMA</a> (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés. Les rapprochements entre ces techniques et les fiches sont propres à Hack cognitif et n'engagent pas le projet DIMA.</p></section>
+  <section class="block"><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les textes de ce site, ses fiches et sa carte sont publiés sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> : vous pouvez les reproduire et les adapter, y compris à des fins commerciales ou de formation, à condition de citer Hack cognitif, d'indiquer le lien de la page et de signaler vos modifications. Cette licence ne couvre pas l'illustration de l'accueil ni les ressources tierces citées, qui restent soumises à leurs propres conditions. Les identifiants et les intitulés des techniques DIMA proviennent du projet <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">DIMA</a> (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés. Les rapprochements entre ces techniques et les fiches sont propres à Hack cognitif et n'engagent pas le projet DIMA.</p></section>
   <section class="block"><h2>Données personnelles</h2><p>Ce site ne dépose pas de cookies de suivi. L'éditrice ne collecte aucune donnée autre que celles transmises volontairement par le formulaire de contribution et de contact, hébergé par Framaforms (association Framasoft). Ces informations servent uniquement à traiter votre message. Pour exercer vos droits d'accès, de rectification ou de suppression, utilisez ce même formulaire.</p>
     <p>Deux services techniques reçoivent votre adresse IP lors d'une visite : l'hébergeur GitHub, qui l'enregistre et la conserve pour des raisons de sécurité (<a href="https://docs.github.com/fr/pages/getting-started-with-github-pages/about-github-pages" target="_blank" rel="noopener">documentation de GitHub Pages</a>), et Google Fonts, d'où sont chargées les polices de caractères (<a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">règles de confidentialité de Google</a>).</p></section>
   <section class="block"><h2>Responsabilité</h2><p>Les contenus ont une visée informative et pédagogique. Ils ne constituent ni une doctrine officielle ni un conseil opérationnel. Les faits cités sont à vérifier à la source avant toute réutilisation.</p></section>
@@ -383,7 +439,7 @@
   <div class="container foot-in">
     <div class="foot-brand">
       <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
-      <p>Comprendre les failles humaines pour les corriger.</p>
+      <p>Une carte ouverte des failles cognitives, pour s'en défendre.</p>
     </div>
     <nav class="foot-cols" aria-label="Pied de page">
       <div>
@@ -392,7 +448,7 @@
       </div>
       <div>
         <h2>Apprendre</h2>
-        <ul><li><a href="#fiches">Fiches</a></li><li><a href="#cours">Cours</a></li><li><a href="#labo">Labo</a></li><li><a href="#chapeaux">Chapeaux</a></li></ul>
+        <ul><li><a href="#carte">Carte</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#cours">Cours</a></li><li><a href="#labo">Labo</a></li><li><a href="#chapeaux">Chapeaux</a></li></ul>
       </div>
       <div>
         <h2>Vocabulaire</h2>
@@ -407,7 +463,7 @@
         <ul><li><a href="#a-propos">À propos</a></li><li><a href="#contribuer">Contribuer</a></li><li><a href="#contact">Contact</a></li><li><a href="#mentions-legales">Mentions légales</a></li></ul>
       </div>
     </nav>
-    <p class="foot-note">© 2026 Hack cognitif.</p>
+    <p class="foot-note">© 2026 Hack cognitif. Textes sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">CC BY 4.0</a>.</p>
   </div>
 </footer>
 
