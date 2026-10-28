@@ -391,6 +391,14 @@ ul.psy li { margin-bottom: var(--space-xs); }
 .tcard dt { font: 600 var(--text-sm)/1.3 var(--font-display); color: var(--k); }
 .tcard dd { margin: var(--space-3xs) 0 0; }
 .tcard .ind dd { color: var(--color-ink); }
+.rcard { border-top: var(--rule-bar) solid var(--band-ink); }
+.rcard .pr { --k: var(--color-blue); }
+.rcard .rf { --k: var(--color-inf); }
+.rcard .ts { --k: var(--color-red); }
+.rcard .fl { --k: var(--color-rule-2); }
+.rcard .fl dd { font-size: var(--text-sm); }
+.tcard .cmlv { margin: var(--space-md) 0 0; padding-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); color: var(--color-muted); }
+.tcard .cmlv .lv { margin: 0 var(--space-2xs) 0 0; }
 
 /* ---------- Glossary ---------- */
 dl.gloss { margin: 0; border-top: var(--rule-bar) solid var(--color-rule-2); }

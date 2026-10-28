@@ -7,7 +7,7 @@ Objectif du site
 Organisation du dossier
 - À la racine : le site tel qu'il est publié.
   - index.html et les autres pages .html (une par rubrique, par terrain et par fiche) : pages FABRIQUÉES, à ne pas modifier à la main (elles sont effacées et recréées à chaque fabrication).
-  - script.js : contenus (fiches, cours, glossaire, références, tableau DIMA, colonnes « plus sensibles / moins exposées ») et fonctionnement du site. C'est ici que l'on modifie les contenus.
+  - script.js : contenus (fiches, cours, glossaire, références, tableau DIMA, colonnes « plus sensibles / ce qui protège ») et fonctionnement du site. C'est ici que l'on modifie les contenus.
   - style.css, tokens.css, base.css : apparence (couleurs clair et sombre, polices, mise en page).
   - images/ : l'illustration du bandeau de l'accueil, en trois tailles (le navigateur choisit selon l'écran). Vérifier que sa licence autorise l'usage sur le site.
 - atelier/ : ce qui sert à fabriquer le site, à ne pas publier.
@@ -36,7 +36,7 @@ Publier
 A faire avant publication
 - Site édité à titre non professionnel : l'éditrice reste anonyme pour le public, mais doit communiquer son identité (nom, prénom, adresse, téléphone) à l'hébergeur, et les Mentions légales doivent indiquer le nom et l'adresse de cet hébergeur (atelier/modele.html, section Hébergeur, encore à compléter). Régime prévu par la LCEN (article 1-1, II, depuis la renumérotation de 2024, à vérifier sur Légifrance). Si le site sert un jour à promouvoir une activité rémunérée, il deviendrait professionnel et les mentions complètes seraient obligatoires.
 - Formulaire Framaforms branché (script.js, CONTRIB_FORM) : en vérifier les champs et les réglages de conservation des réponses.
-- Faire relire par un clinicien les associations cliniques et les colonnes « plus sensibles / moins exposées », et valider les rapprochements avec DIMA.
+- Faire relire par un clinicien les associations cliniques, les colonnes « plus sensibles / ce qui protège » et les mesures « Psychopathologies : protéger et renforcer la résilience » de la page Ressources (script.js, RESIL), et valider les rapprochements avec DIMA.
 - Contrôler les références marquées "à contrôler" (page Références).
 - Relire les phrases « Pour qui » des trois pages de terrain (script.js, TERRAIN_FOR), les thèmes de la page Cours (script.js, CTHEMES et CTHEME_OF) et les fiches de psychologie sociale (script.js, bloc « Psychologie sociale »).
 

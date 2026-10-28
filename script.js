@@ -40,7 +40,7 @@
       blue: [["Signaux", "demande hors procédure ; confidentialité exigée ; contournement d'un circuit habituel ; changement de coordonnées ou de canal."],
              ["Contre-mesures", "rappel sur un numéro connu ; double validation des opérations sensibles ; annuaire d'authentification interne ; droit explicite de refuser et de signaler."]],
       red: [["Hypothèse testée", "les équipes appliquent-elles la procédure de vérification face à une demande qui semble venir d'en haut ?"],
-            ["Indicateur", "part des demandes fictives « venues d'en haut » vérifiées par rappel sur un numéro connu avant toute exécution, et délai médian de signalement, avant et après la mise en place de la double validation."],
+            ["Indicateur", "part des demandes fictives « venues d'en haut » vérifiées par rappel sur un numéro connu avant toute exécution, et délai médian de signalement, comparés entre des équipes tirées au sort qui appliquent déjà la double validation et d'autres qui ne l'appliquent pas encore."],
             ["Cadre", "message fictif, organisation consentante, direction informée, indicateurs agrégés (taux de signalement, délai), débriefing sans désigner d'individus."]],
       pistes: ["Mesurer l'écart entre la procédure écrite et le comportement réel sous pression.", "Comparer la vigilance envers les demandes venant du haut et du côté."],
       note: "Niveau de preuve : levier bien documenté en psychologie sociale. Références à ajouter avant publication." },
@@ -53,7 +53,7 @@
       blue: [["Signaux", "échéance très courte sans justification ; menace de conséquences ; refus d'un délai de vérification."],
              ["Contre-mesures", "règle « plus c'est urgent, plus on vérifie » ; durée minimale pour les opérations sensibles ; escalade possible sans reproche."]],
       red: [["Hypothèse testée", "une demande urgente déclenche-t-elle encore le contrôle prévu ?"],
-            ["Indicateur", "part des demandes fictives urgentes qui passent par le contrôle prévu, comparée à celle des mêmes demandes sans échéance, et délai médian avant vérification."],
+            ["Indicateur", "part des demandes fictives urgentes qui passent par le contrôle prévu, comparée à celle des mêmes demandes sans échéance, avec et sans la règle « plus c'est urgent, plus on vérifie », et délai médian avant vérification."],
             ["Cadre", "exercice annoncé à la direction, contenu fictif, mesure du délai de vérification, pas de sanction individuelle."]],
       pistes: ["Seuil de pression à partir duquel les équipes abandonnent une procédure.", "Effet de la fatigue et de la charge de crise sur ce seuil."],
       note: "Ce levier se combine presque toujours avec l'autorité : les fiches se lisent ensemble." },
@@ -69,26 +69,28 @@
             ["Indicateur", "part des équipes qui escaladent le contenu fictif avant de le diffuser ou d'agir, et délai entre son arrivée dans le flux et l'escalade."],
             ["Cadre", "contenus fictifs, marqués comme tels en interne, jamais d'imitation d'une personne réelle, supports détruits après l'exercice."]],
       pistes: ["« Dividende du menteur » : l'exposition aux contenus synthétiques réduit-elle la confiance dans les contenus authentiques ?", "Cécité attentionnelle d'une cellule de veille sous charge de crise."],
-      note: "Les faits cités reposent sur des sources secondaires : les vérifier à la source (presse spécialisée, communiqués officiels) avant de les reprendre." },
+      note: "Les cas cités s'appuient sur la presse généraliste (CNN, Associated Press)." },
 
     { id: "hamecon-cible", ax: ["ent", "pou"], tag: "Technique", title: "Hameçonnage ciblé de responsables",
       teaser: "Un message sur mesure, adressé à la bonne personne.",
       socle: ["Le hameçonnage ciblé personnalise le message à partir d'informations publiques sur la cible et son entourage. Les dirigeants, cabinets et équipes de campagne sont des cibles à forte valeur et à forte charge de travail.",
               "Il combine souvent autorité, urgence et familiarité."],
-      cas: ["Messagerie de John Podesta, directeur de campagne de Hillary Clinton, compromise en 2016 par un faux message d'alerte de sécurité, puis publiée par WikiLeaks.", "« MacronLeaks » (2017) : documents de l'équipe de campagne diffusés avant le second tour ; l'attribution a été débattue."],
+      cas: ["Messagerie de John Podesta, président de la campagne d'Hillary Clinton, compromise en mars 2016 par un courriel imitant une alerte de sécurité Google, puis publiée par WikiLeaks à partir d'octobre 2016 ; opération attribuée au renseignement militaire russe (GRU) par la justice américaine en 2018.",
+            "« MacronLeaks » (2017) : le 5 mai 2017, deux jours avant le second tour, des courriels et documents de l'équipe d'En Marche !, mêlés à des faux, sont diffusés en ligne. Non attribuée publiquement par l'ANSSI en 2017, l'opération a été citée en 2020 dans une inculpation américaine d'officiers du GRU (unité 74455), notamment pour ingérence dans l'élection française ; en 2025, la France a attribué au GRU (mode opératoire APT28) la « tentative de déstabilisation du processus électoral français en 2017 ». Deux attributions qui convergent vers le GRU, sans désigner la même unité.",
+            "Campagne de Donald Trump (2024) : accès à des communications internes, attribué à l'Iran par le FBI, l'ODNI et la CISA dans une déclaration conjointe du 19 août 2024, qui évoque aussi des tentatives d'ingénierie sociale visant les deux grandes campagnes présidentielles."],
       blue: [["Signaux", "alerte de sécurité inattendue ; lien de connexion sur un domaine proche du réel ; demande de réinitialiser un mot de passe."],
-             ["Contre-mesures", "authentification forte résistante à l'hameçonnage (clés physiques) ; formation spécifique des cabinets et équipes de campagne ; canal de signalement simple ; cloisonnement des comptes."]],
+             ["Contre-mesures", "authentification forte résistante à l'hameçonnage (clés physiques) ; avertissements automatiques sur les messages externes ou suspects ; signalement en un clic, sans reproche ; cloisonnement des comptes ; une formation des cabinets et équipes de campagne seulement en complément, et dont l'effet est mesuré."]],
       red: [["Hypothèse testée", "les équipes signalent-elles un message ciblé fictif, et à quel moment ?"],
-            ["Indicateur", "taux de signalement du message fictif et délai médian du premier signalement, comparés entre équipes déjà formées et équipes pas encore formées."],
+            ["Indicateur", "taux de signalement du message fictif et délai médian du premier signalement, comparés entre des équipes tirées au sort, avec et sans bouton de signalement en un clic."],
             ["Cadre", "organisation consentante, message fictif, indicateurs agrégés, aucune récolte d'identifiants réels."]],
       pistes: ["Comparer la vulnérabilité de profils très sollicités et de profils peu exposés.", "Mesurer l'effet d'une clé physique sur le taux de compromission en exercice."],
-      note: "Cas publics à sourcer précisément avant publication. L'attribution des opérations reste une question distincte de la technique." },
+      note: "L'attribution des opérations reste une question distincte de la technique." },
 
     { id: "pretexting", ax: ["pou", "ent"], tag: "Technique", title: "Pretexting et canulars",
       teaser: "Se faire passer pour un interlocuteur plausible.",
       socle: ["Le pretexting consiste à construire un prétexte crédible (un homologue, un collègue d'un autre service, un prestataire) pour obtenir de l'information ou une réaction. Le point d'entrée est souvent l'accueil, un secrétariat ou un standard, moins protégés que la personne visée.",
               "Contre des responsables, l'objectif peut aussi être de provoquer une réaction publique embarrassante."],
-      cas: ["Les humoristes russes Vovan et Lexus ont piégé par téléphone ou visioconférence plusieurs responsables politiques en se faisant passer pour des interlocuteurs de confiance."],
+      cas: ["Le duo russe Vovan et Lexus, que Proofpoint suit sous le nom TA499, a piégé par téléphone ou en visioconférence des responsables politiques et des personnalités, en se faisant passer pour des interlocuteurs de confiance, puis a publié les enregistrements."],
       blue: [["Signaux", "interlocuteur inconnu mais très bien informé ; pression pour un échange rapide ; refus de passer par les canaux officiels."],
              ["Contre-mesures", "protocole d'authentification des appels officiels ; formation des standards et secrétariats ; consigne de ne rien confirmer sans vérification."]],
       red: [["Hypothèse testée", "un appel fictif d'un faux homologue passe-t-il les barrières d'accueil et de secrétariat ?"],
@@ -105,7 +107,7 @@
       blue: [["Signaux", "mêmes formules reprises dans plusieurs prises de parole ; renommage d'une mesure ; sujets mis en avant juste avant ou après un autre sujet sensible."],
              ["Contre-mesures", "comparer plusieurs formulations du même fait ; lire la source primaire ; repérer les éléments de langage ; éducation aux médias."]],
       red: [["Hypothèse testée", "des lecteurs formés repèrent-ils que deux textes décrivent le même fait avec des cadrages différents ?"],
-            ["Indicateur", "part des lecteurs qui reconnaissent le même fait sous les deux cadrages, et écart entre leurs jugements sur les deux versions, avant et après une séance de comparaison de formulations."],
+            ["Indicateur", "part des lecteurs qui reconnaissent le même fait sous les deux cadrages, et écart entre leurs jugements sur les deux versions, comparés entre un groupe qui a suivi une séance de comparaison de formulations et un groupe tiré au sort qui ne l'a pas encore suivie."],
             ["Cadre", "textes fictifs sur un sujet neutre, participants informés, comparaison des interprétations, aucune personnalité réelle."]],
       pistes: ["Mesurer l'effet du cadrage sur l'interprétation avant et après une formation courte.", "Cartographier les éléments de langage d'un débat public à partir de sources ouvertes."],
       note: "Lecture symétrique : ces techniques sont employées par tous les camps. Références à sourcer (McCombs et Shaw 1972, Entman 1993)." },
@@ -131,7 +133,7 @@
       blue: [["Signaux", "récit à la première personne ; ton familier ; appel à l'identification plus qu'à l'argument."],
              ["Contre-mesures", "séparer ce qu'on ressent de ce qui est proposé ; évaluer les positions et les actes plutôt que le ton ; diversifier les sources."]],
       red: [["Hypothèse testée", "un public formé distingue-t-il l'adhésion à une personne de l'adhésion à ses propositions ?"],
-            ["Indicateur", "écart entre les jugements portés sur le même programme fictif selon qu'il est présenté de façon formelle ou informelle, comparé entre un groupe formé et un groupe qui ne l'est pas encore."],
+            ["Indicateur", "écart entre les jugements portés sur le même programme fictif selon qu'il est présenté de façon formelle ou informelle, comparé entre un groupe formé et un groupe tiré au sort qui ne l'est pas encore."],
             ["Cadre", "personnage fictif, présentations comparées (formelle et informelle) d'un même programme fictif, participants informés."]],
       pistes: ["Mesurer l'effet de la familiarité sur la perception de la compétence.", "Comparer l'impact des formats informels selon les tranches d'âge."],
       note: "Lecture symétrique : la proximité construite est employée dans tous les camps. Références à sourcer (Horton et Wohl 1956)." },
@@ -144,7 +146,7 @@
       blue: [["Signaux", "problème complexe réduit à un seul responsable ; vocabulaire de menace ; absence d'alternatives ou de nuances."],
              ["Contre-mesures", "reformuler le problème en chaîne de causes ; vérifier les chiffres cités ; s'exposer volontairement à des arguments contraires ; débat structuré."]],
       red: [["Hypothèse testée", "un groupe formé repère-t-il la réduction à un coupable dans un discours fictif ?"],
-            ["Indicateur", "part des participants qui repèrent la réduction à un coupable dans le discours fictif et proposent d'autres causes, avant et après un débat structuré."],
+            ["Indicateur", "part des participants qui repèrent la réduction à un coupable dans le discours fictif et proposent d'autres causes, comparée entre un groupe qui a suivi un débat structuré et un groupe tiré au sort qui ne l'a pas encore suivi."],
             ["Cadre", "discours fictif sur un sujet inventé, aucun groupe réel visé, débriefing."]],
       pistes: ["Mesurer l'effet d'une reformulation en chaîne de causes sur la polarisation perçue.", "Lien entre intolérance à l'incertitude et adhésion aux explications à coupable unique."],
       note: "Lecture symétrique. Les exemples doivent rester génériques ou sourcés de façon précise, sans viser de groupe réel." },
@@ -313,9 +315,9 @@
   function psyBlock(m) {
     var s = SENS[m.label];
     if (!s) return "";
-    var out = '<h2 style="margin-top:28px">Qui est plus ou moins sensible</h2><div class="sens">' +
+    var out = '<h2 style="margin-top:28px">Qui est plus sensible, ce qui protège</h2><div class="sens">' +
       '<div class="sens-plus"><h3>Plus sensibles</h3>' + sensListHTML(m.label, "plus") + '</div>' +
-      '<div class="sens-moins"><h3>Moins exposées</h3>' + sensListHTML(m.label, "moins") + '</div></div>';
+      '<div class="sens-moins"><h3>Ce qui protège</h3>' + sensListHTML(m.label, "moins") + '</div></div>';
     var il = (PSY[m.label] || []).filter(function (p) { return (s.illus || []).indexOf(p[0]) !== -1; });
     if (il.length) out += '<h3 class="sens-illus">Ce que la clinique éclaire</h3><ul class="psy">' + il.map(function (p) { return sensItem(m.label, p); }).join("") + '</ul>';
     return out + '<p class="note" style="margin-top:8px;border-top:0;padding-top:0">' + PSY_NOTE + '</p>';
@@ -371,7 +373,7 @@
   ];
   /* ---------- Fiches issues de la neuropsychologie cognitive ---------- */
   var NP = "Neuropsychologie cognitive";
-  var RC = "Exercice fictif, participants informés et consentants, indicateurs agrégés, débriefing, aucun individu désigné.";
+  var RC = "Exercice fictif, participants informés et consentants, indicateurs agrégés, débriefing, aucun individu désigné, aucun résultat publié pour un groupe de moins de 10 personnes.";
   FICHES.push(
     { id: "visages", ax: ["tra", "ent"], tag: NP, title: "Reconnaissance des visages et familiarité",
       teaser: "Reconnaître un visage n'est pas vérifier une identité.",
@@ -381,7 +383,7 @@
       blue: [["Signaux", "visage ou voix « bien connus » associés à une demande inhabituelle ; image de mauvaise qualité justifiée par la connexion ; refus d'un geste de vérification simple."],
              ["Contre-mesures", "vérifier l'identité par un canal indépendant plutôt que par la ressemblance ; mot de passe convenu pour les demandes sensibles ; former à la fragilité de l'appariement de visages peu connus ; prévoir des vérifications qui ne reposent pas sur la vue, pour les personnes aveugles ou malvoyantes comme pour tous."]],
       red: [["Hypothèse testée", "les équipes déclenchent-elles une vérification indépendante quand l'interlocuteur paraît familier mais la demande est inhabituelle ?"],
-            ["Indicateur", "part des demandes inhabituelles d'un interlocuteur fictif familier qui déclenchent une vérification par un canal indépendant, comparée à celle des mêmes demandes venant d'un inconnu."],
+            ["Indicateur", "part des demandes inhabituelles d'un interlocuteur fictif familier qui déclenchent une vérification par un canal indépendant, comparée à celle des mêmes demandes venant d'un inconnu, avec et sans mot de passe convenu pour les demandes sensibles."],
             ["Cadre", RC]],
       pistes: ["Écart entre confiance déclarée et exactitude dans l'appariement de visages.", "Effet de la familiarité sur le seuil de déclenchement d'une vérification."],
       note: "Niveau de preuve : bon pour la fragilité de l'appariement de visages peu familiers. Fiche liée aux cours Cognition visuelle et Neuropsychologie de l'adulte." },
@@ -446,7 +448,7 @@
       blue: [["Signaux", "forte confiance déclarée et faible exactitude mesurée ; refus des exercices de sensibilisation (« cela ne me concerne pas ») ; récidive après alerte."],
              ["Contre-mesures", "retour chiffré et personnel sur la détection (calibration confiance et exactitude) ; présenter les cas comme des pièges conçus par des professionnels, pas comme des fautes ; cultiver la déclaration sans reproche."]],
       red: [["Hypothèse testée", "l'écart entre confiance et exactitude se réduit-il après un retour personnalisé ?"],
-            ["Indicateur", "écart moyen entre la confiance déclarée et l'exactitude de détection, calculé pour le groupe, avant et après le retour personnalisé."],
+            ["Indicateur", "écart moyen entre la confiance déclarée et l'exactitude de détection, calculé pour le groupe, comparé entre des participants tirés au sort qui ont reçu le retour personnalisé et d'autres qui ne l'ont pas encore reçu ; données pseudonymisées, retour remis à la seule personne, supprimées après l'analyse."],
             ["Cadre", RC]],
       pistes: ["Mesure de la calibration avec l'outil « Repère la faille ».", "Effet du retour de calibration sur la déclaration d'incidents."],
       note: "Prudence : l'analogie avec l'anosognosie est pédagogique, ne pas l'étendre aux personnes. Fiche liée au cours Perspectives psychopathologiques cognitives." },
@@ -459,7 +461,7 @@
       blue: [["Signaux", "affirmation essentielle placée en présupposé (« après l'échec de X… ») ; question qui contient sa propre conclusion ; vocabulaire flou qui laisse le lecteur combler."],
              ["Contre-mesures", "reformuler les implicites en énoncés explicites avant de les juger ; se demander ce qui est tenu pour acquis sans être dit ; relire un texte en retirant les adjectifs."]],
       red: [["Hypothèse testée", "des analystes repèrent-ils une affirmation présupposée dans un texte fictif, et la jugent-ils comme s'ils l'avaient lue explicitement ?"],
-            ["Indicateur", "part des analystes qui repèrent l'affirmation présupposée, et écart entre leur jugement de cette affirmation sous forme implicite et sous forme explicite, avant et après la consigne de reformuler les implicites."],
+            ["Indicateur", "part des analystes qui repèrent l'affirmation présupposée, et écart entre leur jugement de cette affirmation sous forme implicite et sous forme explicite, comparés entre un groupe qui a reçu la consigne de reformuler les implicites et un groupe tiré au sort qui ne l'a pas reçue."],
             ["Cadre", RC]],
       pistes: ["Écart de crédibilité entre une affirmation explicite et la même affirmation présupposée.", "Effet d'un exercice de reformulation sur la détection."],
       note: "Niveau de preuve : bon pour le traitement du présupposé. Fiche liée au cours Psychologie du langage et à la fiche Cadrage et agenda." },
@@ -472,7 +474,7 @@
       blue: [["Usage", "choisir des mesures comportementales plutôt que physiologiques pour évaluer la charge des analystes ; refuser les promesses de « lecture cérébrale » dans les offres commerciales."],
              ["Contre-mesures", "exiger la réplication et la taille d'échantillon avant toute décision fondée sur de l'imagerie ; interdire la collecte de données neuronales sur le lieu de travail sans cadre légal."]],
       red: [["Hypothèse testée", "des mesures simples de charge perçue (questionnaires) prédisent-elles la baisse de vigilance, sans aucune donnée cérébrale ?"],
-            ["Indicateur", "lien statistique entre la charge perçue, mesurée par questionnaire, et la baisse de détection au cours de l'exercice, sans aucune donnée cérébrale."],
+            ["Indicateur", "lien statistique entre la charge perçue, mesurée par questionnaire, et la baisse de détection au cours de l'exercice, sans aucune donnée cérébrale ; données pseudonymisées, utilisées pour ajuster la charge de travail, jamais pour sélectionner des personnes."],
             ["Cadre", RC]],
       pistes: ["Comparer mesures subjectives et performances de détection.", "Revue des promesses de neuromarketing et de neuro-influence."],
       note: "Prudence : aucune piste de ciblage neuronal individuel. Fiche liée au cours Imagerie cérébrale et à la fiche Saillance." },
@@ -498,7 +500,7 @@
       blue: [["Signaux", "décisions prises à chaud juste après une alerte ou une émotion forte ; demande qui appuie sur la peur ou la honte ; échéances artificielles."],
              ["Contre-mesures", "règle du délai de refroidissement avant l'engagement ; second avis d'un tiers non touché par l'émotion ; scénarios d'entraînement pour automatiser la pause."]],
       red: [["Hypothèse testée", "un délai de refroidissement réduit-il l'engagement sur une demande fictive chargée émotionnellement ?"],
-            ["Indicateur", "part des engagements sur la demande fictive chargée émotionnellement, avec et sans délai de refroidissement."],
+            ["Indicateur", "part des engagements sur une demande fictive à charge émotionnelle modérée (jamais la santé, l'emploi, les proches ni une prime), avec et sans délai de refroidissement."],
             ["Cadre", RC]],
       pistes: ["Effet d'un délai obligatoire sur les décisions à enjeu.", "Indicateurs de décision à chaud dans une organisation."],
       note: "Niveau de preuve : hypothèse influente mais débattue. Fiche liée aux fiches Urgence et Pression temporelle et au cours Cognition sociale et émotions." }
@@ -560,7 +562,7 @@
       blue: [["Signaux", "histoire qui explique d'avance chaque objection ; interlocuteur qui s'adapte aux réponses en gardant sa demande ; intérêt personnel de l'émetteur absent du récit."],
              ["Contre-mesures", "se demander « que gagne l'émetteur si j'accepte ? » ; séparer la crédibilité du récit de la légitimité de la demande ; vérifier le rôle annoncé par un canal indépendant."]],
       red: [["Hypothèse testée", "les équipes questionnent-elles l'intérêt de l'émetteur quand le récit est cohérent et poli ?"],
-            ["Indicateur", "part des réponses qui interrogent l'intérêt de l'émetteur ou vérifient son rôle par un canal indépendant, pour un récit fictif cohérent et poli comparé à un récit maladroit."],
+            ["Indicateur", "part des réponses qui interrogent l'intérêt de l'émetteur ou vérifient son rôle par un canal indépendant, pour un récit fictif cohérent et poli comparé à un récit maladroit, avec et sans la consigne de se demander ce que gagne l'émetteur."],
             ["Cadre", RC]],
       pistes: ["Écart entre crédibilité du récit et vérification de la demande.", "Entraînement à la question « à qui profite la demande ? »."],
       note: "Niveau de preuve : bon pour le cadre général, à préciser pour les applications. Fiche liée à Pretexting et canulars." },
@@ -580,7 +582,7 @@
 
     { id: "apprentissage-oubli", ax: ["tra"], tag: NP, title: "Apprentissage, oubli et durée de vie d'un patch",
       teaser: "Un patch cognitif a une date de péremption.",
-      socle: ["Ce qu'on apprend s'oublie : la courbe de l'oubli est rapide au début, puis ralentit. Réviser à intervalles espacés et se tester soi-même consolide mieux qu'une longue séance unique. Les mêmes mécanismes valent pour une formation à la vigilance.",
+      socle: ["Ce qu'on apprend s'oublie : la courbe de l'oubli est rapide au début, puis ralentit. Réviser à intervalles espacés et se tester soi-même consolide mieux qu'une longue séance unique. Les mêmes mécanismes devraient valoir pour une formation à la vigilance, mais cette transposition n'est pas mesurée.",
               "La neuroplasticité explique que l'entraînement modifie les réponses, mais pas qu'une session ponctuelle suffit. Un patch d'entraînement doit être répété, mesuré et renouvelé, et la remédiation cognitive en neuropsychologie offre un modèle d'entraînement progressif."],
       cas: ["Références à vérifier avant publication : Ebbinghaus (1885), courbe de l'oubli ; Cepeda et coll. (2006) sur l'effet d'espacement ; Roediger et Karpicke (2006) sur le test comme apprentissage."],
       blue: [["Signaux", "effet d'une formation qui s'efface en quelques semaines ; mêmes erreurs avant et après la session ; participants qui oublient les procédures pourtant enseignées."],
@@ -589,7 +591,7 @@
             ["Indicateur", "taux de détection mesuré juste après la sensibilisation puis plusieurs semaines plus tard, avec et sans rappels espacés."],
             ["Cadre", RC]],
       pistes: ["Courbe de rétention d'une procédure de vérification dans une équipe.", "Comparer formation unique et rappels espacés."],
-      note: "Niveau de preuve : robuste pour l'espacement et le test. Deux grandes études en entreprise (Lain et coll. 2022, Ho et coll. 2025) ne trouvent pas de protection durable de la formation seule. Fiche liée aux patchs d'entraînement du Lexique." },
+      note: "Niveau de preuve : robuste pour l'espacement et le test. Deux grandes études en entreprise (Lain et coll. 2022, Ho et coll. 2025) ne trouvent pas d'effet protecteur notable de la formation seule, voire un effet défavorable (Lain et coll. 2022). Fiche liée aux patchs d'entraînement du Lexique." },
 
     { id: "stress-executif", ax: ["ent", "tra"], tag: NP, title: "Stress, émotion et contrôle exécutif",
       teaser: "Sous stress, le contrôle recule et l'automatisme avance.",
@@ -612,7 +614,7 @@
       blue: [["Signaux", "conclusions tirées d'un seul exercice ; indicateurs d'efficacité sans groupe de comparaison ; changements attribués à la sensibilisation alors que d'autres facteurs ont varié."],
              ["Contre-mesures", "plusieurs mesures indépendantes ; groupe de comparaison quand c'est possible ; taille d'échantillon annoncée ; distinguer taux de clics, signalements et comportements réels."]],
       red: [["Hypothèse testée", "les résultats d'un exercice de simulation sont-ils reproduits lors d'une seconde passation comparable ?"],
-            ["Indicateur", "concordance des résultats par équipe entre deux passations comparables, et cohérence entre plusieurs mesures indépendantes (clics, signalements, comportements observés)."],
+            ["Indicateur", "concordance des résultats par équipe d'au moins 10 personnes entre deux passations comparables, et cohérence entre plusieurs mesures indépendantes (clics, signalements, comportements observés)."],
             ["Cadre", RC]],
       pistes: ["Fiabilité test-retest d'un exercice de détection.", "Indicateurs combinés (signalement, délai, vérification) plutôt qu'un score unique."],
       note: "Fiche méthodologique, liée aux cours Traitement de données et Méthodologie cognitive, et à l'outil « Repère la faille »." },
@@ -625,7 +627,7 @@
       blue: [["Signaux", "axes tronqués ou échelles différentes entre graphiques comparés ; recadrage d'image qui change le sens ; couleur ou taille qui hiérarchise sans justification."],
              ["Contre-mesures", "vérifier les axes et l'origine ; comparer avec l'image complète ; traduire le graphique en phrase chiffrée ; adopter des gabarits de visualisation honnêtes ; ne pas fonder une vérification sur la seule vue : prévoir une version accessible (texte, audio, tiers) et des couleurs lisibles par les personnes daltoniennes."]],
       red: [["Hypothèse testée", "des lecteurs repèrent-ils un axe tronqué dans un graphique fictif, et corrigent-ils leur conclusion ?"],
-            ["Indicateur", "part des lecteurs qui repèrent l'axe tronqué et corrigent leur conclusion, avant et après la consigne de traduire le graphique en phrase chiffrée."],
+            ["Indicateur", "part des lecteurs qui repèrent l'axe tronqué et corrigent leur conclusion, comparée entre un groupe qui a reçu la consigne de traduire le graphique en phrase chiffrée et un groupe tiré au sort qui ne l'a pas reçue."],
             ["Cadre", RC]],
       pistes: ["Taux de détection d'un axe tronqué selon la charge du lecteur.", "Effet d'une liste de contrôle de lecture d'un graphique.", "Accessibilité des procédures de vérification pour les personnes aveugles, malvoyantes ou daltoniennes."],
       note: "Niveau de preuve : bon pour les mécanismes perceptifs. Fiche liée à Cognition visuelle et Reconnaissance des visages." },
@@ -684,7 +686,7 @@
   PSY["Théorie de l'esprit et lecture des intentions"] = [
     ["Schizophrénie", "documenté", "Déficits de théorie de l'esprit établis par méta-analyse (Sprong et coll., 2007)."],
     ["Démence fronto-temporale (variant comportemental)", "documenté", "Atteinte précoce de la cognition sociale : une intention trompeuse est plus difficile à repérer."],
-    ["Trouble du spectre de l'autisme", "documenté", "Différences dans l'attribution d'intentions (Baron-Cohen, 1985). L'hypothèse de la double empathie rappelle que la difficulté de compréhension est réciproque."]];
+    ["Trouble du spectre de l'autisme", "documenté", "Différences dans l'attribution de fausses croyances (Baron-Cohen et coll., 1985). L'hypothèse de la double empathie rappelle que la difficulté de compréhension est réciproque."]];
   PSY["Apprentissage, oubli et durée de vie d'un patch"] = [
     ["Syndromes amnésiques (lésion hippocampique, syndrome de Korsakoff)", "documenté", "Les consignes nouvelles ne se consolident pas, mais l'apprentissage procédural est souvent préservé : une routine répétée tient là où une formation s'oublie."],
     ["Maladie d'Alzheimer", "documenté", "Oubli accéléré des informations récentes : préférer les aides externes, les rappels fréquents et l'apprentissage sans erreur à une formation ponctuelle."],
@@ -706,69 +708,72 @@
   var R = {
     simons1999: ["Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained inattentional blindness for dynamic events. Perception, 28(9), 1059–1074.", D + "10.1068/p281059", 1],
     posner1990: ["Posner, M. I., & Petersen, S. E. (1990). The attention system of the human brain. Annual Review of Neuroscience, 13, 25–42.", "https://pubmed.ncbi.nlm.nih.gov/2183676/", 1],
-    baddeley1974: ["Baddeley, A. D., & Hitch, G. (1974). Working memory. In G. H. Bower (Ed.), The Psychology of Learning and Motivation (Vol. 8, pp. 47–89). Academic Press.", null, 0],
-    baddeley2000: ["Baddeley, A. (2000). The episodic buffer: A new component of working memory? Trends in Cognitive Sciences, 4(11), 417–423.", "https://centaur.reading.ac.uk/6104/", 0],
+    baddeley1974: ["Baddeley, A. D., & Hitch, G. (1974). Working memory. In G. H. Bower (Ed.), The Psychology of Learning and Motivation (Vol. 8, pp. 47–89). Academic Press.", D + "10.1016/S0079-7421(08)60452-1", 1],
+    baddeley2000: ["Baddeley, A. (2000). The episodic buffer: A new component of working memory? Trends in Cognitive Sciences, 4(11), 417–423.", D + "10.1016/S1364-6613(00)01538-2", 1],
     sweller1988: ["Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2), 257–285.", "https://dc2.philarchive.org/rec/SWECLD", 1],
     cowan2001: ["Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. Behavioral and Brain Sciences, 24(1), 87–114.", D + "10.1017/S0140525X01003922", 1],
     miller1956: ["Miller, G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. Psychological Review, 63(2), 81–97.", D + "10.1037/h0043158", 1],
-    johnson1993: ["Johnson, M. K., Hashtroudi, S., & Lindsay, D. S. (1993). Source monitoring. Psychological Bulletin, 114(1), 3–28.", null, 0],
-    hasher1977: ["Hasher, L., Goldstein, D., & Toppino, T. (1977). Frequency and the conference of referential validity. Journal of Verbal Learning and Verbal Behavior, 16(1), 107–112.", "https://hasherlab.psych.utoronto.ca/abstracts/hasher_etal_JVLVB_77.htm", 0],
+    johnson1993: ["Johnson, M. K., Hashtroudi, S., & Lindsay, D. S. (1993). Source monitoring. Psychological Bulletin, 114(1), 3–28.", D + "10.1037/0033-2909.114.1.3", 1],
+    hasher1977: ["Hasher, L., Goldstein, D., & Toppino, T. (1977). Frequency and the conference of referential validity. Journal of Verbal Learning and Verbal Behavior, 16(1), 107–112.", D + "10.1016/S0022-5371(77)80012-1", 1],
     loftus1974: ["Loftus, E. F., & Palmer, J. C. (1974). Reconstruction of automobile destruction: An example of the interaction between language and memory. Journal of Verbal Learning and Verbal Behavior, 13(5), 585–589.", D + "10.1016/s0022-5371(74)80011-3", 1],
     norman1986: ["Norman, D. A., & Shallice, T. (1986). Attention to action: Willed and automatic control of behavior. In R. J. Davidson, G. E. Schwartz, & D. Shapiro (Eds.), Consciousness and Self-Regulation (Vol. 4, pp. 1–18). Plenum Press. (DOI du livre.)", D + "10.1007/978-1-4757-0629-1", 1],
     shallice1991: ["Shallice, T., & Burgess, P. W. (1991). Deficits in strategy application following frontal lobe damage in man. Brain, 114(2), 727–741.", "https://pubmed.ncbi.nlm.nih.gov/2043945/", 1],
     stroop1935: ["Stroop, J. R. (1935). Studies of interference in serial verbal reactions. Journal of Experimental Psychology, 18(6), 643–662.", "https://psychclassics.yorku.ca/Stroop/", 1],
-    bruce1986: ["Bruce, V., & Young, A. (1986). Understanding face recognition. British Journal of Psychology, 77(3), 305–327.", "https://www.readkong.com/page/understanding-face-recognition-8670226", 0],
+    bruce1986: ["Bruce, V., & Young, A. (1986). Understanding face recognition. British Journal of Psychology, 77(3), 305–327.", D + "10.1111/j.2044-8295.1986.tb02199.x", 1],
     ellis1990: ["Ellis, H. D., & Young, A. W. (1990). Accounting for delusional misidentifications. British Journal of Psychiatry, 157(2), 239–248.", D + "10.1192/bjp.157.2.239", 1],
     prigatano1991: ["Prigatano, G. P., & Schacter, D. L. (Eds.). (1991). Awareness of deficit after brain injury: Clinical and theoretical issues. Oxford University Press.", "https://dc2.philarchive.org/rec/PRIAOD", 1],
-    kruger1999: ["Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology, 77(6), 1121–1134. (Résultats discutés : l'effet pourrait être en partie un artefact statistique.)", "https://lida.sport-iat.de/svd/Record/4042942?lng=de", 0],
-    grice1975: ["Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), Syntax and Semantics, Vol. 3: Speech Acts (pp. 41–58). Academic Press.", null, 0],
+    kruger1999: ["Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology, 77(6), 1121–1134. (Résultats discutés : l'effet pourrait être en partie un artefact statistique.)", D + "10.1037/0022-3514.77.6.1121", 1],
+    grice1975: ["Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), Syntax and Semantics, Vol. 3: Speech Acts (pp. 41–58). Academic Press.", null, 1],
     seeley2007: ["Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., Reiss, A. L., & Greicius, M. D. (2007). Dissociable intrinsic connectivity networks for salience processing and executive control. Journal of Neuroscience, 27(9), 2349–2356.", D + "10.1523/JNEUROSCI.5587-06.2007", 1],
     menon2010: ["Menon, V., & Uddin, L. Q. (2010). Saliency, switching, attention and control: A network model of insula function. Brain Structure & Function, 214(5–6), 655–667.", D + "10.1007/s00429-010-0262-0", 1],
     asp2012: ["Asp, E., Manzel, K., Koestner, B., Cole, C. A., Denburg, N. L., & Tranel, D. (2012). A neuropsychological test of belief and doubt: Damage to ventromedial prefrontal cortex increases credulity for misleading advertising. Frontiers in Neuroscience, 6, 100.", D + "10.3389/fnins.2012.00100", 1],
     spreng2016: ["Spreng, R. N., Karlawish, J., & Marson, D. C. (2016). Cognitive, social, and neural determinants of diminished decision-making and financial exploitation risk in aging and dementia: A review and new model. Journal of Elder Abuse & Neglect, 28(4–5), 320–344.", D + "10.1080/08946566.2016.1237918", 1],
-    boyle2019: ["Boyle, P. A., Yu, L., Schneider, J. A., Wilson, R. S., & Bennett, D. A. (2019). Scam awareness related to incident Alzheimer dementia and mild cognitive impairment. Annals of Internal Medicine, 170(10), 702–709.", null, 0],
-    damasio1994: ["Damasio, A. R. (1994). Descartes' error: Emotion, reason, and the human brain. G. P. Putnam's Sons. Trad. fr. : L'erreur de Descartes (1995), Odile Jacob.", null, 0],
+    boyle2019: ["Boyle, P. A., Yu, L., Schneider, J. A., Wilson, R. S., & Bennett, D. A. (2019). Scam awareness related to incident Alzheimer dementia and mild cognitive impairment: A prospective cohort study. Annals of Internal Medicine, 170(10), 702–709.", D + "10.7326/M18-2711", 1],
+    damasio1994: ["Damasio, A. R. (1994). Descartes' error: Emotion, reason, and the human brain. G. P. Putnam's Sons. Trad. fr. : L'erreur de Descartes : la raison des émotions (1995), Odile Jacob.", null, 1],
     bechara1994: ["Bechara, A., Damasio, A. R., Damasio, H., & Anderson, S. W. (1994). Insensitivity to future consequences following damage to human prefrontal cortex. Cognition, 50(1–3), 7–15.", "https://pubmed.ncbi.nlm.nih.gov/8039375/", 1],
     premack1978: ["Premack, D., & Woodruff, G. (1978). Does the chimpanzee have a theory of mind? Behavioral and Brain Sciences, 1(4), 515–526.", D + "10.1017/S0140525X00076512", 1],
-    baroncohen1985: ["Baron-Cohen, S., Leslie, A. M., & Frith, U. (1985). Does the autistic child have a « theory of mind » ? Cognition, 21(1), 37–46.", null, 0],
+    baroncohen1985: ["Baron-Cohen, S., Leslie, A. M., & Frith, U. (1985). Does the autistic child have a « theory of mind » ? Cognition, 21(1), 37–46.", D + "10.1016/0010-0277(85)90022-8", 1],
     kapur2003: ["Kapur, S. (2003). Psychosis as a state of aberrant salience: A framework linking biology, phenomenology, and pharmacology in schizophrenia. American Journal of Psychiatry, 160(1), 13–23.", "https://ajp.psychiatryonline.org/cgi/content/full/160/1/13", 1],
-    ebbinghaus1885: ["Ebbinghaus, H. (1885). Über das Gedächtnis. Duncker & Humblot. Trad. angl. (1913) : Memory: A contribution to experimental psychology (Ruger & Bussenius).", "https://psychclassics.yorku.ca/Ebbinghaus/memorypref.htm", 0],
+    ebbinghaus1885: ["Ebbinghaus, H. (1885). Über das Gedächtnis. Duncker & Humblot. Trad. angl. (1913) : Memory: A contribution to experimental psychology (Ruger & Bussenius).", "https://psychclassics.yorku.ca/Ebbinghaus/memorypref.htm", 1],
     cepeda2006: ["Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., & Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380.", D + "10.1037/0033-2909.132.3.354", 1],
     roediger2006: ["Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.", D + "10.1111/j.1467-9280.2006.01693.x", 1],
     arnsten2009: ["Arnsten, A. F. T. (2009). Stress signalling pathways that impair prefrontal cortex structure and function. Nature Reviews Neuroscience, 10(6), 410–422.", "https://pubmed.ncbi.nlm.nih.gov/19455173/", 1],
     marr1982: ["Marr, D. (1982). Vision: A computational investigation into the human representation and processing of visual information. W. H. Freeman (réédition MIT Press, 2010).", null, 1],
-    humphreys1987: ["Humphreys, G. W., & Riddoch, M. J. (1987). To see but not to see: A case study of visual agnosia. Lawrence Erlbaum Associates (réédition Psychology Press).", "https://www.routledge.com/products/9780863770654", 0],
-    pandey2015: ["Pandey, A. V., Rall, K., Satterthwaite, M. L., Nov, O., & Bertini, E. (2015). How deceptive are deceptive visualizations? An empirical analysis of common distortion techniques. CHI '15, ACM.", D + "10.1145/2702123.2702608", 0],
+    humphreys1987: ["Humphreys, G. W., & Riddoch, M. J. (1987). To see but not to see: A case study of visual agnosia. Londres : Lawrence Erlbaum Associates (réédition Psychology Press). ISBN 0-86377-065-7.", "https://www.routledge.com/products/9780863770654", 1],
+    pandey2015: ["Pandey, A. V., Rall, K., Satterthwaite, M. L., Nov, O., & Bertini, E. (2015). How deceptive are deceptive visualizations? An empirical analysis of common distortion techniques. Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15), 1469–1478.", D + "10.1145/2702123.2702608", 1],
     schultz1997: ["Schultz, W., Dayan, P., & Montague, P. R. (1997). A neural substrate of prediction and reward. Science, 275(5306), 1593–1599.", D + "10.1126/science.275.5306.1593", 1],
     ferster1957: ["Ferster, C. B., & Skinner, B. F. (1957). Schedules of reinforcement. Appleton-Century-Crofts.", "https://search.worldcat.org/oclc/4596140", 1],
     anastasi1997: ["Anastasi, A., & Urbina, S. (1997). Psychological testing (7th ed.). Prentice Hall.", null, 1],
     tversky1974: ["Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124–1131.", D + "10.1126/science.185.4157.1124", 1],
     kahneman2011: ["Kahneman, D. (2011). Thinking, fast and slow. Farrar, Straus and Giroux.", null, 1],
-    eppler2004: ["Eppler, M. J., & Mengis, J. (2004). The concept of information overload: A review of literature from organization science, accounting, marketing, MIS, and related disciplines. The Information Society, 20(5), 325–344.", "https://tisj.sitehost.iu.edu/20/5/ab-eppler.html", 0],
+    eppler2004: ["Eppler, M. J., & Mengis, J. (2004). The concept of information overload: A review of literature from organization science, accounting, marketing, MIS, and related disciplines. The Information Society, 20(5), 325–344.", D + "10.1080/01972240490507974", 1],
     vosoughi2018: ["Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. Science, 359(6380), 1146–1151.", "https://www.media.mit.edu/publications/the-spread-of-true-and-false-news-online/", 1],
     lewandowsky2012: ["Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N., & Cook, J. (2012). Misinformation and its correction: Continued influence and successful debiasing. Psychological Science in the Public Interest, 13(3), 106–131.", D + "10.1177/1529100612451018", 1],
     pennycook2019: ["Pennycook, G., & Rand, D. G. (2019). Lazy, not biased: Susceptibility to partisan fake news is better explained by lack of reasoning than by motivated reasoning. Cognition, 188, 39–50.", D + "10.1016/j.cognition.2018.06.011", 1],
     mccombs1972: ["McCombs, M. E., & Shaw, D. L. (1972). The agenda-setting function of mass media. Public Opinion Quarterly, 36(2), 176–187.", "https://fbaum.unc.edu/teaching/articles/POQ-1972-McCOMBS-176-87.pdf", 1],
     entman1993: ["Entman, R. M. (1993). Framing: Toward clarification of a fractured paradigm. Journal of Communication, 43(4), 51–58.", "https://www.academia.edu/13166309", 1],
     horton1956: ["Horton, D., & Wohl, R. R. (1956). Mass communication and para-social interaction: Observations on intimacy at a distance. Psychiatry, 19(3), 215–229.", D + "10.1080/00332747.1956.11023049", 1],
-    paul2016: ["Paul, C., & Matthews, M. (2016). The Russian « Firehose of Falsehood » propaganda model: Why it might work and options to counter it (PE-198). RAND Corporation.", "https://www.jstor.org/stable/resrep02439", 0],
+    paul2016: ["Paul, C., & Matthews, M. (2016). The Russian « Firehose of Falsehood » propaganda model: Why it might work and options to counter it (PE-198). RAND Corporation.", D + "10.7249/PE198", 1],
     tajfel1979: ["Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. In W. G. Austin & S. Worchel (Eds.), The social psychology of intergroup relations (pp. 33–47). Monterey, CA : Brooks/Cole.", "https://alnap.org/help-library/resources/an-integrative-theory-of-intergroup-conflict/", 1],
     milgram1963: ["Milgram, S. (1963). Behavioral study of obedience. Journal of Abnormal and Social Psychology, 67(4), 371–378.", "https://www.psy.miami.edu/_assets/pdf/rpo-articles/milgram-1963.pdf", 1],
     cialdini2001: ["Cialdini, R. B. (2001). Influence: Science and practice (4th ed.). Allyn & Bacon. Trad. fr. (2004) : Influence et manipulation, First.", "https://search.worldcat.org/oclc/43607370", 1],
-    fechner1860: ["Fechner, G. T. (1860). Elemente der Psychophysik. Breitkopf & Härtel. (Loi de Weber-Fechner.)", "https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law", 0],
+    fechner1860: ["Fechner, G. T. (1860). Elemente der Psychophysik (2 vol.). Leipzig : Breitkopf und Härtel. (Loi de Weber-Fechner.)", null, 0],
     green1966: ["Green, D. M., & Swets, J. A. (1966). Signal detection theory and psychophysics. Wiley. ; Hautus, M. J., Macmillan, N. A., & Creelman, C. D. (2022). Detection theory: A user's guide (3e éd.). Routledge.", "https://www.routledge.com/Detection-Theory-A-Users-Guide/Hautus-Macmillan-Creelman/p/book/9781138320857", 1],
-    lain2022: ["Lain, D., Kostiainen, K., & Čapkun, S. (2022). Phishing in organizations: Findings from a large-scale and long-term study. 2022 IEEE Symposium on Security and Privacy. (Formation sans effet mesuré, alertes plus efficaces.)", "https://arxiv.org/pdf/2112.07498", 0],
-    ho2025: ["Ho, G., et al. (2025). Understanding the efficacy of phishing training in practice. 2025 IEEE Symposium on Security and Privacy, 37–54. (Essai contrôlé de 8 mois : pas de protection notable.)", "https://par.nsf.gov/biblio/10600744", 0],
-    arup2024: ["Gangcuangco, T. (2024, 20 mai). Deepfake video conference sees criminals escape with US$25 million. Insurance Business UK. (Source secondaire : à compléter par la presse généraliste ou Arup.)", "https://insurancebusinessmag.com/uk/news/cyber/deepfake-video-conference-sees-criminals-escape-with-us25-million-489790.aspx", 0],
+    lain2022: ["Lain, D., Kostiainen, K., & Čapkun, S. (2022). Phishing in organizations: Findings from a large-scale and long-term study. 2022 IEEE Symposium on Security and Privacy (SP), 842–859. (Plus de 14 000 employés sur 15 mois : la formation intégrée aux simulations n'apporte pas de bénéfice et peut rendre plus vulnérable ; les avertissements dans les courriels et le signalement par les employés sont efficaces.)", D + "10.1109/SP46214.2022.9833766", 1],
+    ho2025: ["Ho, G., Mirian, A., Luo, E., Tong, K., Lee, E., Liu, L., Longhurst, C. A., Dameff, C., Savage, S., & Voelker, G. M. (2025). Understanding the efficacy of phishing training in practice. 2025 IEEE Symposium on Security and Privacy (SP), 37–54. (Essai contrôlé randomisé, plus de 19 500 employés sur 8 mois : la formation annuelle n'a pas d'effet significatif, et la formation intégrée ne réduit les clics que d'environ 2 %.)", D + "10.1109/SP61157.2025.00076", 1],
+    arup2024: ["Magramo, K. (2024, 16 mai). British engineering giant Arup revealed as $25 million deepfake scam victim. CNN. (Arup confirme que « de fausses voix et de fausses images » ont été utilisées.)", "https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk", 1],
     biden2024: ["Swenson, A., & Weissert, W. (2024, 22 janvier). AI-generated robocall impersonates Biden in an apparent attempt to suppress votes in New Hampshire. Associated Press.", "https://www.news4jax.com/news/politics/2024/01/22/ai-generated-robocall-impersonates-biden-in-an-apparent-attempt-to-suppress-votes-in-new-hampshire/", 1],
-    vovan: ["Vovan and Lexus (Kuznetsov & Stolyarov), canulars téléphoniques de responsables politiques. Wikipédia (source secondaire).", "https://en.wikipedia.org/wiki/Vovan_and_Lexus", 1],
-    macronleaks: ["Jeangène Vilmer, J.-B. (2019). The « #MacronLeaks » operation: A post-mortem. Atlantic Council / IRSEM.", "https://www.atlanticcouncil.org/in-depth-research-reports/report/the-macron-leaks-operation-a-post-mortem/", 1],
-    podesta: ["Office of the Director of National Intelligence (2017). Assessing Russian activities and intentions in recent US elections (ICA 2017-01). (Piratage de la messagerie de J. Podesta par hameçonnage, mars 2016.)", "https://www.dni.gov/files/documents/ICA_2017_01.pdf", 0],
-    viginum: ["SGDSN / VIGINUM (2025, 17 juin). Analyse du mode opératoire informationnel russe Storm-1516.", "https://www.sgdsn.gouv.fr/publications/analyse-du-mode-operatoire-informationnel-russe-storm-1516", 0],
+    vovan: ["Cass, Z., & Proofpoint Threat Research Team (2023, 7 mars). Don't answer that! Russia-aligned TA499 beleaguers targets with video call requests. Proofpoint. (Vovan et Lexus, appels et visioconférences avec des responsables sous une fausse identité.)", "https://www.proofpoint.com/us/blog/threat-insight/dont-answer-russia-aligned-ta499-beleaguers-targets-video-call-requests", 1],
+    gru2020: ["Lawfare (2020, 19 octobre). Justice Department charges six Russian GRU officers for widespread hacking efforts. (Inculpation d'officiers du GRU, notamment pour ingérence dans l'élection française de 2017 ; renvoie au communiqué du ministère américain de la Justice.)", "https://www.lawfaremedia.org/article/justice-department-charges-six-russian-gru-officers-widespread-hacking-efforts", 1],
+    iran2024: ["ODNI, FBI & CISA (2024, 19 août). Joint ODNI, FBI, and CISA statement on Iranian election influence efforts. (Compromission de la campagne de Donald Trump attribuée à l'Iran ; ingénierie sociale visant les deux campagnes.)", "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/3afd156", 1],
+    apt28fr2025: ["Ministère de l'Europe et des Affaires étrangères (2025, 29 avril). Russie : attribution de cyberattaques contre la France au service de renseignement militaire russe (APT28).", "https://www.diplomatie.gouv.fr/fr/presse-et-ressources/decouvrir-et-informer/actualites/russie-attribution-de-cyberattaques-contre-la-france-au-service-de-renseignement-militaire-russe", 1],
+    macronleaks: ["Jeangène Vilmer, J.-B. (2019, 20 juin). The « Macron Leaks » operation: A post-mortem. Atlantic Council.", "https://www.atlanticcouncil.org/in-depth-research-reports/report/the-macron-leaks-operation-a-post-mortem/", 1],
+    podesta: ["United States v. Netyksho et al., n° 1:18-cr-00215 (D.D.C., 13 juillet 2018), acte d'accusation, § 21(a) et § 49. (Messagerie du président de la campagne d'Hillary Clinton compromise le 19 mars 2016 par un courriel imitant une alerte de sécurité Google ; publication par « Organization 1 » à partir du 7 octobre 2016.)", "https://en.wikisource.org/wiki/U.S._v._Viktor_Borisovich_Netyksho,_et_al", 1],
+    viginum: ["SGDSN / VIGINUM (2025, mai). Analyse du mode opératoire informationnel russe Storm-1516. (77 opérations recensées jusqu'au 5 mars 2025.)", "https://www.defense.gouv.fr/desinformation/aller-plus-loin/analyses-sgdsn/sgdsn-viginum-analyse-du-mode-operatoire-informationnel-russe-storm", 1],
     deonto: ["CERéDéPsy (2021). Code de déontologie des psychologues (version consolidée du 9 septembre 2021).", "https://psychologues.org/wp-content/uploads/2025/01/CODE-DE-DEONTOLOGIE-DES-PSYCHOLOGUES-2021_Colonnes_A3.pdf", 1],
     helsinki: ["World Medical Association (1964, révisée 2024). Declaration of Helsinki: Ethical principles for medical research involving human participants.", "https://www.wma.net/policies-post/wma-declaration-of-helsinki", 1],
-    anton: ["StatPearls. Anton syndrome (cécité corticale niée, anosognosie visuelle).", "https://statpearls.com/articlelibrary/viewarticle/17722", 0],
-    weiskrantz1986: ["Weiskrantz, L. (1986). Blindsight: A case study and implications. Oxford University Press.", "https://academic.oup.com/book/2388/chapter/142573040", 0],
+    anton: ["Das, J. M., & Naqvi, I. A. Anton syndrome. In StatPearls. StatPearls Publishing (Treasure Island, FL), NBK538155, mise à jour régulière. (Cécité corticale niée, anosognosie visuelle.)", "https://www.ncbi.nlm.nih.gov/books/NBK538155/", 1],
+    weiskrantz1986: ["Weiskrantz, L. (1986). Blindsight: A case study and implications. Oxford University Press (Clarendon Press).", "https://academic.oup.com/book/2388/chapter/142573040", 1],
     attack: ["MITRE. MITRE ATT&CK.", "https://attack.mitre.org/", 1],
     dima: ["M82 Project. DIMA (Detect, Inform, Memorise, Act).", "https://m82-project.github.io/DIMA/", 1]
   };
@@ -776,12 +781,12 @@
     "autorite": ["milgram1963", "cialdini2001"],
     "urgence": ["cialdini2001", "kahneman2011"],
     "usurpation": ["arup2024", "biden2024", "bruce1986"],
-    "hamecon-cible": ["lain2022", "ho2025", "podesta"],
+    "hamecon-cible": ["lain2022", "ho2025", "podesta", "macronleaks", "gru2020", "apt28fr2025", "iran2024"],
     "pretexting": ["vovan", "cialdini2001"],
     "cadrage-agenda": ["mccombs1972", "entman1993", "tversky1974"],
     "inondation": ["paul2016", "eppler2004", "lewandowsky2012", "vosoughi2018"],
     "parasocial": ["horton1956"],
-    "adversaire": ["tajfel1979", "pennycook2019", "macronleaks"],
+    "adversaire": ["tajfel1979", "pennycook2019"],
     "saillance": ["tversky1974", "seeley2007", "menon2010"],
     "psychophysique": ["green1966", "fechner1860"],
     "visages": ["bruce1986", "ellis1990"],
@@ -802,6 +807,33 @@
     "perception-reconstruction": ["marr1982", "humphreys1987", "pandey2015", "weiskrantz1986", "anton"],
     "recompense-renforcement": ["schultz1997", "ferster1957"]
   };
+  /* Niveau de preuve de la contre-mesure elle-même (pas du mécanisme), d'après les références de la fiche :
+     evaluee = une étude citée a mesuré l'effet d'une contre-mesure de ce type, sur ce terrain (sécurité, désinformation) ;
+     evaluee-ailleurs = mesurée dans un autre domaine (santé, environnement, aide) ; a-tester = hypothèse ou mécanisme débattu ;
+     methode = principe de méthode établi. Une fiche absente de cette table est « plausible » : la contre-mesure découle
+     d'un mécanisme documenté, mais aucune étude citée ne l'a évaluée. */
+  var CMLV = {
+    "hamecon-cible": ["evaluee", "la formation par simulation a été évaluée en entreprise, sans effet notable, voire avec un effet défavorable (Lain et coll. 2022 ; Ho et coll. 2025) ; le signalement par les employés a été évalué favorablement (Lain et coll. 2022) ; les autres mesures découlent du mécanisme."],
+    "apprentissage-oubli": ["evaluee", "espacement et test sont évalués en apprentissage, sur du matériel verbal (Cepeda et coll. 2006 ; Roediger et Karpicke 2006) ; en entreprise, la formation seule n'a pas d'effet protecteur notable (Lain et coll. 2022 ; Ho et coll. 2025)."],
+    "inoculation": ["evaluee", "évaluée en laboratoire et sur le terrain (Banas et Rains 2010 ; Maertens et coll. 2021 ; Roozenbeek et coll. 2022), avec des effets modestes qui s'érodent sans rappel."],
+    "spectateur": ["evaluee-ailleurs", "nommer une personne dans un salon de discussion accélère l'aide (Markey 2000), et une demande adressée à une seule personne reçoit plus de réponses (Barron et Yechiam 2002) ; ces études portent sur des demandes d'aide, pas sur le signalement d'un message suspect."],
+    "normes": ["evaluee-ailleurs", "les messages normatifs ont été évalués sur le terrain, hors sécurité (Cialdini 2003 ; Schultz et coll. 2007)."],
+    "identite-sociale": ["evaluee-ailleurs", "le contact entre groupes est associé à moins de préjugés (méta-analyse de Pettigrew et Tropp 2006, surtout corrélationnelle) ; il vise la polarisation, pas l'usurpation d'une appartenance commune."],
+    "plans-si-alors": ["evaluee-ailleurs", "les intentions de mise en œuvre sont évaluées par méta-analyse, hors sécurité (Gollwitzer et Sheeran 2006) ; leur effet face à l'ingénierie sociale n'est pas encore mesuré."],
+    "delegation": ["a-tester", "hypothèse prospective : aucune étude citée."],
+    "meconnaissance": ["a-tester", "l'effet d'un retour sur la calibration reste à évaluer, et l'effet Kruger et Dunning est discuté."],
+    "reseaux-saillance": ["a-tester", "aucune étude citée ne relie des mesures simples de charge à la vigilance en exercice."],
+    "decision-emotion": ["a-tester", "le modèle sous-jacent est débattu, et l'effet d'un délai de refroidissement reste à mesurer."],
+    "saillance-aberrante": ["a-tester", "transposition d'un cadre clinique à la communication de crise, à vérifier."],
+    "psychophysique": ["methode", ""],
+    "psychometrie": ["methode", ""],
+    "analyse-exercice": ["methode", ""],
+    "plan-exercice": ["methode", ""],
+    "ethique-simulation": ["methode", ""]
+  };
+  var CMLV_LBL = { evaluee: ["évaluée", "lv-d"], "evaluee-ailleurs": ["évaluée hors sécurité", "lv-d"], plausible: ["plausible", "lv-p"], "a-tester": ["à tester", "lv-h"], methode: ["méthode établie", "lv-d"] };
+  var CMLV_DEF = { plausible: "découle d'un mécanisme documenté, mais aucune étude citée n'a évalué la contre-mesure elle-même.", methode: "principe de méthode établi : il sert à mesurer, pas à corriger une faille." };
+  function cmlvOf(f) { var x = CMLV[f.id] || ["plausible", ""]; return { k: x[0], lbl: CMLV_LBL[x[0]][0], cls: CMLV_LBL[x[0]][1], why: x[1] || CMLV_DEF[x[0]] || "" }; }
   /* nettoyage : les mentions « à sourcer » sont remplacées par la section Références */
   FICHES.forEach(function (f) {
     f.cas = (f.cas || []).filter(function (c) { return !/^R[ée]f[ée]rences? à vérifier/.test(c); });
@@ -998,9 +1030,9 @@
     },
     "Hameçonnage ciblé de responsables": {
       plus: ["TDAH", "Troubles neurocognitifs", "Épuisement professionnel (état de surcharge, pas un trouble)",
-        ["Usage très habituel et rapide de la messagerie", "documenté", "Les habitudes de messagerie automatiques prédisent les clics sur les messages piégés (Vishwanath, 2015)."]],
-      moins: [["Personnes équipées d'une clé de sécurité physique", "documenté", "Le site piégé ne peut pas récupérer d'identifiants réutilisables : le clic ne suffit plus."],
-        ["Personnes entraînées par simulations", "plausible", "Effet modeste, voire nul selon des études de terrain (Lain et coll., 2022 ; Ho et coll., 2025) : utile s'il est répété et débriefé."]]
+        ["Usage très habituel et rapide de la messagerie", "plausible", "Les gestes automatiques laissent moins de place à la vérification (voir la fiche Contrôle exécutif)."]],
+      moins: [["Personnes équipées d'une clé de sécurité physique", "plausible", "Le site piégé ne peut pas récupérer d'identifiants réutilisables : le clic ne suffit plus."],
+        ["Personnes entraînées par simulations", "hypothèse", "Effet nul ou très faible en entreprise (Lain et coll., 2022 ; Ho et coll., 2025) ; l'intérêt d'un entraînement répété et débriefé reste à démontrer."]]
     },
     "Pretexting et canulars": {
       plus: ["Trouble d'anxiété sociale", "Trouble de la personnalité dépendante",
@@ -1151,7 +1183,7 @@
       blue: [["Signaux", "message suspect reçu par plusieurs personnes à la fois ; alerte visible par plusieurs services sans responsable nommé ; boîte de messagerie partagée ; silence collectif (« quelqu'un a dû le signaler ») ; personne ne sait à qui signaler."],
              ["Contre-mesures", "un responsable nommé pour chaque type d'alerte et chaque boîte partagée ; un bouton de signalement en un clic, sans reproche en cas de fausse alerte ; la règle « signaler même si d'autres l'ont reçu » ; accuser réception des signalements pour montrer qu'ils servent ; s'adresser à une personne nommée plutôt qu'à « l'équipe »."]],
       red: [["Hypothèse testée", "un message fictif envoyé à toute une équipe est-il signalé plus tard, ou moins souvent, que le même message envoyé à une seule personne ?"],
-            ["Indicateur", "taux et délai médian de signalement du même message fictif envoyé à une équipe ou à une seule personne, avant et après la désignation d'un responsable de la boîte partagée."],
+            ["Indicateur", "taux et délai médian de signalement du même message fictif envoyé à une équipe ou à des destinataires individuels, et selon qu'un responsable de la boîte partagée a été désigné ou non."],
             ["Cadre", RC]],
       pistes: ["Mesurer le délai avant le premier signalement selon le nombre de destinataires.", "Comparer une alerte adressée à « l'équipe » et une alerte adressée à une personne nommée.", "Tester l'effet d'un accusé de réception sur les signalements suivants."],
       note: "Niveau de preuve : effet documenté par méta-analyse, d'ampleur modérée et sensible au contexte ; sa transposition au signalement en entreprise est plausible, appuyée par les études sur les messages collectifs. L'affaire Kitty Genovese (1964), qui a inspiré ces travaux, a été déformée par la presse de l'époque (Manning et coll., 2007)." }
@@ -1163,14 +1195,14 @@
   R.philpot2020 = ["Philpot, R., Liebst, L. S., Levine, M., Bernasco, W., & Lindegaard, M. R. (2020). Would I be helped? Cross-national CCTV footage shows that intervention is the norm in public conflicts. American Psychologist, 75(1), 66–75.", D + "10.1037/amp0000469", 1];
   R.markey2000 = ["Markey, P. M. (2000). Bystander intervention in computer-mediated communication. Computers in Human Behavior, 16, 183–188.", D + "10.1016/S0747-5632(99)00056-4", 1];
   R.barron2002 = ["Barron, G., & Yechiam, E. (2002). Private e-mail requests and the diffusion of responsibility. Computers in Human Behavior, 18, 507–520.", D + "10.1016/S0747-5632(02)00007-9", 1];
-  R.manning2007 = ["Manning, R., Levine, M., & Collins, A. (2007). The Kitty Genovese murder and the social psychology of helping: The parable of the 38 witnesses. American Psychologist, 62(6), 555–562.", D + "10.1037/0003-066X.62.6.555", 0];
+  R.manning2007 = ["Manning, R., Levine, M., & Collins, A. (2007). The Kitty Genovese murder and the social psychology of helping: The parable of the 38 witnesses. American Psychologist, 62(6), 555–562.", D + "10.1037/0003-066X.62.6.555", 1];
   R.target2014 = ["Bloomberg Businessweek (2014, 13 mars). Missed alarms and 40 million stolen credit card numbers: How Target blew it. (Source de presse.)", "https://www.bloomberg.com/news/articles/2014-03-13/target-missed-warnings-in-epic-hack-of-credit-card-data", 1];
   FREFS.spectateur = ["darley1968", "fischer2011", "philpot2020", "markey2000", "barron2002", "manning2007", "target2014"];
   SENS["Effet spectateur et diffusion de responsabilité"] = {
-    plus: [["Destinataires d'un message collectif", "documenté", "Plus il y a de destinataires, moins chacun répond ou agit (Barron et Yechiam, 2002)."],
+    plus: [["Destinataires d'un message collectif", "plausible", "Une demande envoyée à plusieurs destinataires reçoit moins de réponses qu'une demande personnelle (Barron et Yechiam, 2002, une seule étude)."],
       ["Équipes sans responsable nommé", "plausible", "Quand personne n'est désigné, chacun attend qu'un autre agisse."],
       ["Situations ambiguës", "documenté", "L'effet est plus fort quand le danger n'est pas évident, ce qui est le cas d'un message bien imité (Fischer et coll., 2011)."]],
-    moins: [["Personnes nommément désignées", "documenté", "Être appelé par son nom fait presque disparaître l'effet (Markey, 2000)."],
+    moins: [["Personnes nommément désignées", "plausible", "Être appelé par son nom accélère nettement l'aide dans un salon de discussion (Markey, 2000, une seule étude)."],
       ["Équipes où signaler est simple et remercié", "plausible", "Un signalement en un clic, sans reproche, abaisse le coût d'agir."]]
   };
   GLOSS.push(
@@ -1209,12 +1241,12 @@
       teaser: "Appartenir à un groupe suffit à en favoriser les membres, et à baisser sa garde.",
       socle: ["Il suffit de répartir des personnes en groupes sur un critère arbitraire pour qu'elles favorisent les membres de leur groupe (Tajfel et coll., 1971). La théorie de l'identité sociale explique cet effet par le besoin de valoriser le groupe auquel on s'identifie (Tajfel et Turner, 1979).",
               "Deux usages offensifs en découlent. En ingénierie sociale, se présenter comme membre du même groupe (même service, même école, même métier) abaisse la vigilance. En influence politique, opposer un « nous » menacé à un « eux » responsable mobilise et polarise : on accepte plus facilement ce qui conforte son camp (Van Bavel et Pereira, 2018). Voir la fiche Désignation d'un adversaire.",
-              "La défense la mieux établie est le contact : une méta-analyse de plus de 500 études montre que le contact entre groupes réduit les préjugés (Pettigrew et Tropp, 2006). Rappeler une identité commune plus large, comme la même organisation ou le même public, atténue aussi l'opposition."],
+              "La défense la mieux établie est le contact : une méta-analyse de plus de 500 études associe le contact entre groupes à une baisse des préjugés (Pettigrew et Tropp, 2006). Rappeler une identité commune plus large, comme la même organisation ou le même public, est une autre piste, moins établie."],
       cas: ["Élection présidentielle américaine de 2016 : selon le rapport de la commission du renseignement du Sénat américain (2019), l'Internet Research Agency a animé des pages qui se présentaient comme issues de communautés, notamment afro-américaines, pour gagner leur confiance avant d'y diffuser ses messages. Le rapport indique qu'aucun groupe n'a été davantage ciblé que les Afro-Américains."],
       blue: [["Signaux", "interlocuteur qui insiste sur une appartenance commune (« entre collègues », « entre anciens ») pour obtenir une faveur ; message qui oppose un « nous » à un « eux » désigné comme responsable ; page ou compte qui se réclame d'une communauté sans historique vérifiable."],
              ["Contre-mesures", "appliquer la même vérification à un membre supposé du groupe qu'à un inconnu ; vérifier l'historique et l'origine des comptes communautaires ; dans la communication interne, rappeler les objectifs communs plutôt que les oppositions entre services ; favoriser les échanges réels entre équipes."]],
       red: [["Hypothèse testée", "un message fictif qui se réclame d'une appartenance professionnelle commune est-il moins vérifié qu'un message neutre ?"],
-            ["Indicateur", "taux de vérification du message fictif qui se réclame d'une appartenance professionnelle commune, comparé à celui d'un message neutre au contenu identique."],
+            ["Indicateur", "taux de vérification du message fictif qui se réclame d'une appartenance professionnelle commune, comparé à celui d'un message neutre au contenu identique, avec et sans la règle d'appliquer la même vérification à tous."],
             ["Cadre", RC + " Aucune appartenance politique, religieuse ou d'origine n'est utilisée."]],
       pistes: ["Cartographier les appartenances qu'un attaquant pourrait invoquer à partir de ce que l'organisation publie.", "Mesurer l'effet d'une identité commune rappelée en début d'exercice."],
       note: "Niveau de preuve : favoritisme envers son groupe et effet du contact bien établis ; ampleur variable selon les contextes. Décrit de façon symétrique : le mécanisme est employé par tous les camps." },
@@ -1254,7 +1286,7 @@
       blue: [["Signaux", "techniques de manipulation qui reviennent d'une campagne à l'autre (émotion forte, faux dilemme, bouc émissaire) ; formation unique jamais rappelée ; sensibilisation centrée sur des contenus plutôt que sur des techniques."],
              ["Contre-mesures", "montrer des exemples affaiblis des techniques réellement utilisées, avec leur réfutation ; viser les techniques plutôt que les sujets ; rappels courts et réguliers ; mesurer la détection dans le temps ; combiner avec des procédures de vérification."]],
       red: [["Hypothèse testée", "une courte séance de prébunking améliore-t-elle la détection de messages fictifs un mois plus tard, avec ou sans rappel ?"],
-            ["Indicateur", "taux de détection de messages fictifs nouveaux un mois après la séance, comparé à celui d'un groupe qui ne l'a pas encore suivie, avec et sans rappel."],
+            ["Indicateur", "taux de détection de messages fictifs nouveaux un mois après la séance, comparé à celui d'un groupe tiré au sort qui ne l'a pas encore suivie, avec et sans rappel."],
             ["Cadre", RC]],
       pistes: ["Construire un jeu court sur les cinq leviers du site.", "Comparer l'effet d'un rappel à un mois et à trois mois."],
       note: "Niveau de preuve : efficacité documentée en laboratoire et sur le terrain, avec des effets modestes qui s'érodent. Fiche défensive, liée aux patchs d'entraînement du Lexique et à la fiche Apprentissage, oubli et durée de vie d'un patch." }
@@ -1368,7 +1400,7 @@
       blue: [["Signaux", "nouvel interlocuteur très chaleureux qui s'impose vite ; demande de discrétion vis-à-vis des proches ; urgence financière présentée comme une affaire de confiance ; changement soudain d'habitudes bancaires."],
              ["Contre-mesures", "un tiers de confiance choisi à l'avance pour toute décision financière inhabituelle ; des règles simples et écrites (on ne donne jamais un code par téléphone) ; alertes et plafonds bancaires ; garder le lien social ; informer sans infantiliser."]],
       red: [["Hypothèse testée", "une règle écrite et un tiers de confiance réduisent-ils, dans un exercice de lecture de messages fictifs, les réponses aux demandes chaleureuses mais suspectes ?"],
-            ["Indicateur", "part des réponses aux demandes fictives chaleureuses mais suspectes, avec et sans règle écrite et tiers de confiance, chez des participants volontaires."],
+            ["Indicateur", "part des réponses aux demandes fictives chaleureuses mais suspectes, avec et sans règle écrite et tiers de confiance, chez des participants volontaires, dans une tâche de jugement annoncée, sans envoi surprise, avec des résultats par groupe."],
             ["Cadre", RC + " Participation volontaire, aucune personne vulnérable mise en difficulté."]],
       pistes: ["Construire avec des associations de personnes âgées des messages d'entraînement réalistes et respectueux.", "Comparer l'effet d'un tiers de confiance et celui d'une simple information."],
       note: "Niveau de preuve : différences liées à l'âge documentées, souvent sur de petits échantillons et en laboratoire ; modèle de risque issu d'une revue de littérature. Ne pas généraliser à l'ensemble des personnes âgées." },
@@ -1394,7 +1426,7 @@
       blue: [["Signaux", "taux de clic présenté seul ; comparaison entre campagnes aux messages différents ; conclusions tirées de quelques dizaines de personnes ; fausses alertes jamais comptées."],
              ["Contre-mesures", "compter signalements et fausses alertes ; calculer d' et c quand c'est possible ; donner des intervalles plutôt que des chiffres secs ; comparer à difficulté égale ; présenter les résultats par équipe, jamais par personne."]],
       red: [["Hypothèse testée", "deux campagnes fictives de difficulté différente produisent-elles des taux de clic différents alors que la sensibilité d' reste la même ?"],
-            ["Indicateur", "taux de clic, taux de signalement, sensibilité d' et critère c de chaque campagne, avec leurs intervalles, présentés par équipe."],
+            ["Indicateur", "taux de clic, taux de signalement, sensibilité d' et critère c de chaque campagne, avec leurs intervalles, présentés par équipe d'au moins 10 personnes."],
             ["Cadre", RC]],
       pistes: ["Proposer un modèle de tableau de bord qui montre d', c et les signalements.", "Recalculer d'anciennes campagnes avec ces mesures."],
       note: "Niveau de preuve : cadre statistique établi ; son usage en entreprise demande des effectifs suffisants. Fiche liée à Psychophysique et analyse des signaux et au Labo." },
@@ -1422,7 +1454,7 @@
       blue: [["Signaux", "exercice lancé sans cadre écrit ; leurre qui promet une prime, menace l'emploi ou touche à la santé ; résultats individuels diffusés ; aucun débriefing prévu ; participants qui découvrent l'exercice par la sanction."],
              ["Contre-mesures", "cadre écrit validé par la direction et les représentants du personnel ; information générale des équipes sur l'existence des exercices ; liste de leurres interdits ; débriefing rapide et bienveillant ; données agrégées ; possibilité de se retirer."]],
       red: [["Hypothèse testée", "informer les équipes de l'existence des exercices, sans date ni contenu, change-t-il la mesure par rapport à des exercices non annoncés, et améliore-t-il la confiance envers l'équipe de sécurité ?"],
-            ["Indicateur", "écart de détection entre exercices annoncés et non annoncés, et confiance envers l'équipe de sécurité, mesurée par questionnaire anonyme avant et après."],
+            ["Indicateur", "écart de détection entre exercices annoncés et non annoncés, et confiance envers l'équipe de sécurité, mesurée par questionnaire anonyme dans les deux conditions."],
             ["Cadre", RC]],
       pistes: ["Rédiger une charte d'exercice type, inspirée des comités d'éthique de la recherche.", "Recenser les leurres à proscrire et les remplacer par des équivalents neutres."],
       note: "Niveau de preuve : principes éthiques établis ; leur application aux exercices en entreprise fait l'objet de discussions. Fiche liée à la page Chapeaux." },
@@ -1448,7 +1480,7 @@
       blue: [["Signaux", "« une étude montre que… » sans référence ni taille d'échantillon ; effet spectaculaire jamais reproduit ; chiffre repris de source en source sans l'original ; certitude affichée sur un sujet débattu."],
              ["Contre-mesures", "remonter à la source originale ; chercher une méta-analyse ou une réplication ; noter la taille de l'échantillon ; préciser le niveau de preuve quand on cite ; préenregistrer ses propres exercices."]],
       red: [["Hypothèse testée", "des participants entraînés à trois questions (échantillon, réplication, financement) repèrent-ils mieux des affirmations scientifiques fictives exagérées ?"],
-            ["Indicateur", "part des affirmations fictives exagérées correctement repérées, avant et après l'entraînement aux trois questions, comparée à un groupe qui ne l'a pas encore suivi."],
+            ["Indicateur", "part des affirmations fictives exagérées correctement repérées, avant et après l'entraînement aux trois questions, comparée à un groupe tiré au sort qui ne l'a pas encore suivi."],
             ["Cadre", RC]],
       pistes: ["Ajouter à chaque fiche une ligne qui justifie son niveau de preuve.", "Créer un exercice du Labo sur les fausses preuves scientifiques."],
       note: "Niveau de preuve : crise de la réplication documentée en psychologie ; son ampleur varie selon les domaines. Fiche de méthode, liée à la page Références." }
@@ -1543,10 +1575,74 @@
     ["Crise de la réplication", "Constat qu'une part importante des résultats publiés, notamment en psychologie, ne se reproduit pas."]
   );
 
+  /* ---------- Psychopathologies concernées : protéger et renforcer la résilience ----------
+     [groupe, troubles réunis, noms repris de PSY (pour retrouver les fiches concernées), protéger, renforcer,
+     fiche dont l'indicateur permet de tester la protection sur la procédure].
+     Chaque mesure reprend une contre-mesure ou un constat déjà présent dans les fiches. */
+  var RESIL = [
+    ["Troubles neurocognitifs et lésions cérébrales acquises", "Maladie d'Alzheimer et autres troubles neurocognitifs, démence fronto-temporale, syndromes amnésiques, lésions frontales ou de l'hémisphère droit.",
+      ["Troubles neurocognitifs", "Troubles neurocognitifs (dont maladie d'Alzheimer)", "Maladie d'Alzheimer", "Atteintes frontales (lésion, démence fronto-temporale)", "Démence fronto-temporale (variant comportemental)", "Syndromes amnésiques (lésion hippocampique, syndrome de Korsakoff)", "Lésions préfrontales ventromédianes", "Lésions de l'hémisphère droit", "Syndrome dysexécutif (atteinte frontale)", "Amnésie et troubles de la mémoire de source (atteinte frontale)"],
+      "Un délai avant tout paiement important, des alertes et des plafonds bancaires que la personne choisit d'activer, une personne de confiance qu'elle désigne elle-même, et, en dernier recours, une mesure de protection juridique décidée par le juge, la moins contraignante possible, ou anticipée par la personne (mandat de protection future). Des procédures courtes, écrites et visibles, qui remplacent le souvenir par une aide externe.",
+      "Des routines répétées plutôt qu'une formation ponctuelle : dans les syndromes amnésiques, l'apprentissage procédural est souvent préservé. Des rappels fréquents, un apprentissage sans erreur, le lien social maintenu, et une information qui ne retire ni la dignité ni le droit de décider.", "declin-fraude"],
+    ["TDAH et syndromes dysexécutifs", "Trouble déficit de l'attention avec ou sans hyperactivité, difficultés de planification et d'inhibition.",
+      ["TDAH", "Syndrome dysexécutif (lésions frontales, TDAH)"],
+      "Une friction volontaire sur toute action irréversible : confirmation explicite, délai ou double validation. Aucune opération sensible traitée en multitâche, des listes de contrôle courtes et moins de notifications non essentielles.",
+      "Des plans « si… alors » préparés à l'avance (« si c'est urgent, je rappelle »), puis répétés en exercice. Un poste de travail qui limite les interruptions au moment des décisions sensibles.", "controle-executif"],
+    ["Troubles anxieux et stress post-traumatique", "Trouble anxieux généralisé, anxiété d'évaluation, trouble de stress post-traumatique.",
+      ["Troubles anxieux", "Trouble anxieux généralisé", "Troubles anxieux (anxiété d'évaluation)", "Trouble de stress post-traumatique", "État de stress post-traumatique"],
+      "Le droit écrit de prendre le temps de vérifier et de faire remonter un doute sans reproche. Des flux d'information filtrés plutôt que bruts, une communication régulière et prévisible, et des exercices sans stress au-delà du réaliste, avec un arrêt possible à tout moment.",
+      "Apprendre à nommer la pression comme un signal (« je sens de l'urgence, donc je vérifie ») grâce à la réévaluation et aux plans « si… alors » issus des TCC. Un soutien après incident, sans reproche, et des exercices dont la mesure ne confond pas anxiété de test et manque de vigilance.", "plans-si-alors"],
+    ["Anxiété sociale et personnalité dépendante", "Trouble d'anxiété sociale, trouble de la personnalité dépendante.",
+      ["Trouble d'anxiété sociale", "Trouble de la personnalité dépendante"],
+      "Le droit de refuser et de rappeler, écrit dans la procédure et valable même face à un supérieur. Une phrase toute prête pour suspendre un échange (« je vérifie et je vous rappelle »), une règle claire sur les faveurs, et la consigne de ne rien confirmer sans vérification.",
+      "Répéter ces phrases en exercice jusqu'à ce qu'elles deviennent automatiques, valoriser publiquement les refus motivés, et proposer un accompagnement adapté si la personne le souhaite.", "obeissance"],
+    ["Dépression", "Épisode dépressif, avec ou sans apathie et perte d'initiative.",
+      ["Dépression", "Dépression (apathie, perte d'initiative)"],
+      "Proposer, si la personne le souhaite, de prendre à deux les décisions importantes ; un délai avant tout engagement, et des aides externes (listes, rappels) quand la concentration baisse.",
+      "Des rappels espacés plutôt qu'une session unique, le soutien de l'entourage, un retour sans culpabilisation après une erreur, et l'orientation vers le soin quand c'est utile.", "decision-emotion"],
+    ["Épisodes maniaques ou hypomaniaques et addictions comportementales", "Épisodes maniaques ou hypomaniaques d'un trouble bipolaire, jeu pathologique et autres addictions comportementales.",
+      ["Épisode maniaque ou hypomaniaque (trouble bipolaire)", "Jeu pathologique et addictions comportementales", "Addictions comportementales"],
+      "Des plafonds et des délais bancaires, un tiers de confiance choisi par la personne pour les décisions financières inhabituelles, des pauses et des limites par défaut, et moins de notifications.",
+      "Convenir à l'avance, en période stable et à la demande de la personne, des garde-fous qu'elle souhaite voir appliquer pendant une phase difficile.", "vieillissement-confiance"],
+    ["Spectre psychotique et traits paranoïaques", "Schizophrénie et troubles du spectre psychotique, idées de référence, traits de personnalité paranoïaque.",
+      ["Schizophrénie", "Schizophrénie et spectre psychotique", "Troubles du spectre psychotique", "Troubles psychotiques (idées de référence)", "Traits de personnalité paranoïaque"],
+      "Une communication claire, stable et cohérente, avec moins d'informations ambiguës. Des consignes explicites plutôt qu'implicites, et une vérification de l'identité par un canal indépendant plutôt que par l'interprétation des intentions.",
+      "Orienter vers un soutien adapté plutôt que démentir en bloc, s'appuyer sur des repères fixes et partagés, et construire les messages de prévention avec les personnes concernées, des pairs aidants et les soignants.", "saillance-aberrante"],
+    ["Trouble du spectre de l'autisme", "Différences dans la communication sociale, l'implicite et le traitement sensoriel.",
+      ["Trouble du spectre de l'autisme"],
+      "Des consignes écrites et explicites, et des vérifications qui ne reposent pas sur la lecture des intentions : rappeler sur un numéro connu, vérifier le rôle annoncé par un autre canal.",
+      "Une procédure claire protège sans dépendre du flair social. L'hypothèse de la double empathie rappelle que la difficulté de compréhension est réciproque : les formations se conçoivent avec les personnes concernées.", "theorie-esprit"],
+    ["Troubles sensoriels, perceptifs et des apprentissages", "Prosopagnosie, cécité et malvoyance, daltonisme, agnosies visuelles, héminégligence, dyslexie.",
+      ["Prosopagnosie", "Prosopagnosie (agnosie des visages)", "Cécité (périphérique ou corticale)", "Cécité corticale et syndrome d'Anton", "Achromatopsie et daltonismes", "Agnosies visuelles (aperceptive, associative)", "Syndrome de Balint et simultanagnosie", "Héminégligence", "Troubles spécifiques des apprentissages (dyslexie)"],
+      "Des vérifications qui ne reposent pas sur la vue : un code ou une question convenus à l'avance, un rappel sur un numéro connu. Des versions accessibles (texte, audio, lecteur d'écran), des couleurs lisibles par les personnes daltoniennes, et des exercices écrits sans chronomètre ou avec un temps adapté.",
+      "Associer ces personnes à la conception des procédures : une vérification pensée pour elles peut aussi servir à tout le monde.", "visages"],
+    ["Surcharge, épuisement et isolement", "Des états ou des situations, pas des troubles : épuisement professionnel ou informationnel, isolement social marqué.",
+      ["Épuisement professionnel (état de surcharge, pas un trouble)", "Épuisement informationnel (état de surcharge, pas un trouble)", "Isolement social marqué (facteur de risque, pas un trouble)"],
+      "Alléger la charge au moment des décisions sensibles, prévoir des relais et des temps de récupération, et limiter l'exposition aux flux bruts.",
+      "Garder le lien social, encourager l'entraide dans l'équipe, et rendre le signalement simple et remercié.", "memoire-travail"]
+  ];
+
   /* ---------- Tables (DIMA, lexique) ---------- */
   $("dima-body").innerHTML = MAP.map(function (m) {
     var name = m.fiche ? '<a href="#fiche-' + m.fiche + '">' + m.label + '</a>' : m.label;
     return '<tr><td>' + name + '</td><td>' + chipsHTML(m.te) + '</td><td>' + m.note + '</td><td>' + sensListHTML(m.label, "plus") + '</td><td>' + sensListHTML(m.label, "moins") + '</td></tr>';
+  }).join("");
+  /* The fiches where a group of conditions appears, found through PSY (a lever without a fiche keeps its name) */
+  function psyFiches(names) {
+    return Object.keys(PSY).filter(function (lab) { return PSY[lab].some(function (p) { return names.indexOf(p[0]) !== -1; }); }).map(function (lab) {
+      var m = MAP.filter(function (x) { return x.label === lab; })[0];
+      var f = m && m.fiche ? ficheById(m.fiche) : FICHES.filter(function (x) { return x.title === lab; })[0];
+      return f ? '<a href="#fiche-' + f.id + '">' + nb(f.title) + '</a>' : lab.replace(/^Levier : (.*)$/, "levier $1");
+    });
+  }
+  $("resil").innerHTML = RESIL.map(function (g) {
+    var fl = psyFiches(g[2]);
+    return '<article class="tcard rcard"><h4>' + g[0] + '</h4><p class="tags pdesc">' + g[1] + '</p><dl>' +
+      '<div class="pr"><dt>Protéger</dt><dd>' + g[3] + '</dd></div>' +
+      '<div class="rf"><dt>Renforcer la résilience</dt><dd>' + g[4] + '</dd></div>' +
+      (g[5] && ficheById(g[5]) ? '<div class="ts"><dt>Tester la protection</dt><dd>Avec l\'indicateur de la fiche <a href="#fiche-' + g[5] + '">' + nb(ficheById(g[5]).title) +
+        '</a>, mesuré sur la procédure, par un audit ou un exercice avec des volontaires informés, jamais en ciblant les personnes concernées.</dd></div>' : '') +
+      (fl.length ? '<div class="fl"><dt>Fiches concernées</dt><dd>' + fl.join(", ") + '</dd></div>' : '') + '</dl></article>';
   }).join("");
   function byName(a, b) { return a[0].localeCompare(b[0], "fr", { sensitivity: "base" }); }
   $("lex-body").innerHTML = LEXCATS.map(function (c) {
@@ -1784,7 +1880,8 @@
       return '<div class="tgroup"><h3>' + fam[1] + ' <span class="n">' + list.length + '</span></h3><div class="tcards">' + list.map(function (f) {
         return '<article class="tcard t-' + f.ax[0] + '" data-ax="' + f.ax.join(" ") + '"><h4><a href="#fiche-' + f.id + '">' + nb(f.title) + '</a></h4>' +
           '<p class="tags">' + pills(f) + '</p><dl>' + item("cm", "Contre-mesures", part(f.blue, "Contre-mesures")) +
-          item("hy", "Hypothèse testée", part(f.red, "Hypothèse testée")) + item("ind", "Indicateur", part(f.red, "Indicateur")) + '</dl></article>';
+          item("hy", "Hypothèse testée", part(f.red, "Hypothèse testée")) + item("ind", "Indicateur", part(f.red, "Indicateur")) + '</dl>' +
+          (function (l) { return '<p class="cmlv"><span class="lv ' + l.cls + '">' + (l.k === "methode" ? cap(l.lbl) : 'Contre-mesure ' + l.lbl) + '</span> ' + cap(l.why) + '</p>'; })(cmlvOf(f)) + '</article>';
       }).join("") + '</div></div>';
     }).join("");
     carteFilter();
@@ -1837,13 +1934,18 @@
     var strip = function (s) { var d = document.createElement("div"); d.innerHTML = s || ""; return d.textContent.replace(/\s+/g, " ").trim(); };
     var q = function (s) { return '"' + strip(String(s)).replace(/"/g, '""') + '"'; };
     var url = function (f) { return STATIC ? new URL(fileFor("fiche-" + f.id), location.href).href : location.href.split("#")[0] + "#fiche-" + f.id; };
-    var head = ["id", "fiche", "adresse", "famille", "type", "terrains", "techniques DIMA", "phases DIMA", "signaux", "contre-mesures", "hypothèse testée", "indicateur", "cadre", "références"];
+    var head = ["id", "fiche", "adresse", "famille", "type", "terrains", "techniques DIMA", "phases DIMA", "signaux", "contre-mesures", "hypothèse testée", "indicateur", "cadre",
+      "niveau de preuve de la contre-mesure", "justification", "note de la fiche", "références", "statut des références"];
     var rows = FORDER.map(function (f) {
-      var fam = FAMS.filter(function (x) { return x[0] === famOf(f); })[0];
+      var fam = FAMS.filter(function (x) { return x[0] === famOf(f); })[0], l = cmlvOf(f), keys = FREFS[f.id] || [];
+      /* A few fiches name their first blue block otherwise (Indicateurs, Mesures, Usage): the label is kept */
+      var sig = (f.blue || []).filter(function (x) { return x[0] !== "Contre-mesures"; })[0];
       return [f.id, f.title, url(f), fam ? fam[1] : "", f.tag, f.ax.map(function (a) { return AX[a]; }).join(", "),
         teOf(f).map(function (t) { return t + " " + TE[t]; }).join(", "), phasesOf(f).map(function (p) { return DIMA_PHASE[p]; }).join(", "),
-        part(f.blue, "Signaux"), part(f.blue, "Contre-mesures"), part(f.red, "Hypothèse testée"), part(f.red, "Indicateur"), part(f.red, "Cadre"),
-        (FREFS[f.id] || []).map(function (k) { return R[k] ? R[k][0] : ""; }).join(" | ")].map(q).join(";");
+        sig ? (sig[0] === "Signaux" ? "" : sig[0] + " : ") + sig[1] : "", part(f.blue, "Contre-mesures"), part(f.red, "Hypothèse testée"), part(f.red, "Indicateur"), part(f.red, "Cadre"),
+        l.lbl, l.why, f.note || "",
+        keys.map(function (k) { return R[k] ? R[k][0] : ""; }).join(" | "),
+        keys.map(function (k) { return R[k] ? (R[k][2] ? "vérifiée" : "à contrôler") : ""; }).join(" | ")].map(q).join(";");
     });
     return "﻿" + [head.map(q).join(";")].concat(rows).join("\r\n") + "\r\n";
   }

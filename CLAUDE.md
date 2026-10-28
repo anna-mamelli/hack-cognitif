@@ -36,11 +36,11 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 
 - `FICHES` : `id`, `ax` (terrains `ent`, `pou`, `inf`, `tra`), `tag`, `title`, `teaser`, `socle`, `cas`, `blue` (`Signaux`, `Contre-mesures`), `red` (`Hypothèse testée`, `Indicateur`, `Cadre`), `pistes`, `note`, et facultativement `relu` et `contrib` (personnes créditées avec leur accord). Le `tag` range la fiche dans une famille par `FAM_OF` ; un tag inconnu tombe dans « Autres fiches ».
 - `R` : références `[citation, lien ou null, statut]`, statut `1` vérifiée, `0` à contrôler. `FREFS` relie chaque fiche à ses clés.
-- `TE` et `MAP` : techniques DIMA et rapprochements avec les fiches. `SENS` et `PSY` : colonnes « plus sensibles / moins exposées » et notes cliniques.
+- `TE` et `MAP` : techniques DIMA et rapprochements avec les fiches. `SENS` et `PSY` : colonnes « plus sensibles / ce qui protège » et notes cliniques. `RESIL` : mesures de protection et de résilience par famille de troubles (page Ressources), reliées aux fiches par les noms de `PSY`.
 - `COURS` : notions de la page Cours, statut `fiche`, `integre` ou `todo` ; `CTHEMES` et `CTHEME_OF` les rangent par thème.
 - `GLOSS` et `GCAT_OF` : glossaire et catégories. `CONTRIB_FORM` : adresse du formulaire Framaforms.
 
-La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide.
+La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide. Le niveau de preuve de chaque contre-mesure vient de `CMLV` (juste après `FREFS`) : une fiche absente de cette table est affichée « plausible ».
 
 Ajouter une page fixe demande trois choses : une section `v-<route>` dans `modele.html`, la route dans `VIEWS` (`script.js`) et, si besoin, un lien dans `#nav`.
 
@@ -50,7 +50,7 @@ Ajouter une page fixe demande trois choses : une section `v-<route>` dans `model
 
 - Le site applique une charte de « chapeau blanc » : aucune recette de manipulation, personne n'est visé, symétrie politique, aucune stigmatisation, prudence clinique. Elle est détaillée dans `.claude/agents/relecteur-charte.md` et sur les pages Contribuer et Chapeaux.
 - Ne jamais inventer une référence, un chiffre ou un cas public. Une nouvelle référence entre avec le statut `0` ; elle ne passe à `1` qu'après l'agent `verificateur-sources`.
-- Pour une nouvelle fiche, enchaîner les agents du projet : `redacteur-fiche` (rédaction au format du site), puis `verificateur-sources`, puis `relecteur-charte`, puis `gardien-objectif`.
+- Pour une nouvelle fiche, enchaîner les agents du projet : `redacteur-fiche` (rédaction au format du site), puis `verificateur-sources`, puis `redacteur-clarte` (lisibilité pour un lecteur humain), puis `relecteur-charte`, puis `gardien-objectif`. `redacteur-clarte` sert aussi seul, pour reprendre un passage dense ou une page entière.
 - Typographie : apostrophes droites (`'`) partout, jamais courbes, et pas de tiret cadratin.
 - DIMA (M82-project) est repris sous licence Apache 2.0 : garder la citation et le lien, et ne jamais laisser entendre que le projet DIMA approuve les rapprochements du site.
 

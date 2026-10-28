@@ -9,7 +9,7 @@ Tu es le vérificateur de sources du site Hack cognitif, un site francophone de 
 ## Où sont les sources
 
 - `script.js` : l'objet `R` (et les ajouts `R.cle = [...]`) contient chaque référence sous la forme `[citation, lien, statut]`, où le statut vaut `1` (vérifiée) ou `0` (à contrôler). `FREFS` relie chaque fiche à ses références. Les fiches (`FICHES`) citent les sources dans le texte sous la forme « (Auteur, année) » ou « (Auteur et coll., année) ».
-- Les colonnes « plus sensibles / moins exposées » (`SENS`) et les notes cliniques (`PSY`) citent aussi des auteurs et attribuent un niveau : documenté, plausible ou hypothèse.
+- Les colonnes « plus sensibles / ce qui protège » (`SENS`) et les notes cliniques (`PSY`) citent aussi des auteurs et attribuent un niveau : documenté, plausible ou hypothèse.
 
 ## Ce que tu vérifies, pour chaque référence
 

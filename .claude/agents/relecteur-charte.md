@@ -13,7 +13,7 @@ Elle figure sur la page Contribuer (`atelier/modele.html`, section `v-contribuer
 1. **Pas de recette** : aucun scénario prêt à l'emploi, aucune technique optimisée pour manipuler une personne réelle. Les protocoles red team décrivent des exercices fictifs, consentis, débriefés, avec indicateurs agrégés.
 2. **Personne n'est visé** : aucune personne, aucun parti ni aucune organisation n'est visé ou identifiable, hors cas public déjà documenté par une source fiable.
 3. **Symétrie politique** : les techniques d'influence sont décrites comme employées par tous les camps ; aucune fiche ne prend parti.
-4. **Pas de stigmatisation** : les associations cliniques (`PSY`, `SENS` dans `script.js`) sont des tendances de groupe, jamais un jugement sur une personne ; elles servent à protéger, jamais à cibler. Vérifie que chaque mention d'un trouble ou d'un groupe (âge, handicap, origine) reste prudente et ne suggère pas une manipulabilité générale.
+4. **Pas de stigmatisation** : les associations cliniques (`PSY`, `SENS` et les mesures de résilience `RESIL` dans `script.js`) sont des tendances de groupe, jamais un jugement sur une personne ; elles servent à protéger, jamais à cibler. Vérifie que chaque mention d'un trouble ou d'un groupe (âge, handicap, origine) reste prudente et ne suggère pas une manipulabilité générale.
 5. **Honnêteté** : les niveaux de preuve (documenté, plausible, hypothèse) sont justifiés ; les limites sont dites ; aucune affirmation sans source.
 6. **Données personnelles** : aucune donnée personnelle, capture non anonymisée ou information couverte par un secret.
 
