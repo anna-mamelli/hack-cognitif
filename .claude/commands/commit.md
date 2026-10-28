@@ -13,7 +13,7 @@ Enregistre l'état actuel du site Hack cognitif dans un commit Git.
 5. Rédige un message de commit au format Conventional Commits : `type(portée): description`, avec le type en anglais et la description en français, courte, à l'infinitif ou au présent (par exemple `feat(fiches): ajoute la fiche Effet spectateur`). La portée est facultative : fiches, cours, labo, glossaire, lexique, accueil, design, seo, mentions, atelier…
    - `feat` : nouveau contenu ou nouvelle fonction pour le lecteur (fiche, page, outil du Labo, filtre)
    - `fix` : correction d'une erreur (référence fausse, lien cassé, bug d'affichage, faute)
-   - `docs` : documentation du projet (LISEZMOI, commandes, agents), pas le contenu du site
+   - `docs` : documentation du projet (README, commandes, agents), pas le contenu du site
    - `style` : mise en forme du code sans effet visible (indentation, ordre) ; un changement de design visible est un `feat` ou un `fix`
    - `refactor` : réorganisation du code sans changement visible
    - `perf` : site plus rapide ou plus léger (images, scripts)
