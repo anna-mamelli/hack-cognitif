@@ -186,6 +186,8 @@ for (const route of routes) {
       '<meta name="twitter:card" content="summary_large_image">',
     ] : []),
   ];
+  // Audience measure, on the built pages only: the template stays free of it
+  const counter = config.goatcounter ? `<script data-goatcounter="${config.goatcounter}" async src="https://gc.zgo.at/count.js"></script>\n` : '';
   const ld = url ? `<script type="application/ld+json">${JSON.stringify(structured(route, snap, name, description, url, d)).replace(/</g, '\\u003c')}</script>\n` : '';
 
   let html = template
@@ -193,7 +195,7 @@ for (const route of routes) {
     // replacement functions, so that a $ in the content is never read as a pattern
     .replace(/<title>[^<]*<\/title>/, () => `<title>${escapeAttr(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*">/, () => head.join('\n'))
-    .replace('</head>', () => `${ld}</head>`)
+    .replace('</head>', () => `${ld}${counter}</head>`)
     .replace(/<main id="main">[\s\S]*<\/main>/, () => `<main id="main">\n${snap.html}\n</main>`)
     .replace('<body>', `<body data-page="${route}">`);
   if (snap.current) html = html.replace(`data-v="${snap.current}"`, `data-v="${snap.current}" aria-current="page"`);

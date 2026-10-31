@@ -10,60 +10,68 @@
   --container: 1440px; --gutter: clamp(1rem, 4vw, 4rem); --gap-columns: clamp(1rem, 2.5vw, 2rem); --section-gap-s: clamp(3.5rem, 10vw, 7.5rem); --section-gap: clamp(4.5rem, 12vw, 9rem); --section-gap-l: clamp(6rem, 14vw, 11rem);
   --pad-card: clamp(1rem, 4vw, 1.5rem); --block-gap: clamp(2.5rem, 7vw, 4rem); --bar-h: 3.5rem;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(84% 0.012 245); --color-paper-2: oklch(81% 0.012 245); --color-paper-3: oklch(77% 0.012 245);
-  --color-ink: oklch(16% 0.020 245); --color-ink-2: oklch(24% 0.018 245); --color-muted: oklch(38% 0.016 245);
-  --color-rule: oklch(73% 0.013 240); --color-rule-2: oklch(32% 0.018 240);
-  --color-accent: oklch(45% 0.180 350); --color-accent-2: oklch(37% 0.160 350); --color-accent-ink: oklch(97% 0.006 245); --color-focus: oklch(46% 0.190 350);
-  --color-sheet: oklch(93.5% 0.008 245);
-  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Newsreader", ui-serif, Georgia, serif;
+  --color-paper: #F3F4EF; --color-paper-2: #E9EAE3; --color-paper-3: #DEDFD7;
+  --color-ink: #111412; --color-ink-2: #252A26; --color-muted: #4E5650;
+  --color-rule: #C6C9C0; --color-rule-2: #111412;
+  --color-accent: #B42318; --color-accent-2: #8F1B12; --color-accent-ink: #FFFFFF; --color-focus: #B42318;
+  --color-sheet: #FFFFFF;
+  --font-display: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-outlier: "IBM Plex Mono", ui-monospace, monospace;
-  --radius-card: 0; --radius-pill: 2px; --rule-hair: 1px; --rule-bar: 2px; --shadow-card: none;
-  --tracking-display: -0.02em; --display-weight: 600;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 2px; --shadow-card: none;
+  --tracking-display: -0.025em; --display-weight: 600;
   --text-body: 1.125rem;
   /* Hack cognitif: the three terrains, blue and red team, printed as chart inks on the slate */
-  --color-ent: oklch(44% 0.090 75); --color-ent-tint: oklch(90% 0.035 80);
-  --color-pou: oklch(42% 0.075 215); --color-pou-tint: oklch(90% 0.025 215);
-  --color-inf: oklch(42% 0.085 145); --color-inf-tint: oklch(90% 0.035 145);
-  --color-blue: oklch(42% 0.120 260); --color-blue-tint: oklch(90% 0.030 260);
-  --color-red: oklch(46% 0.150 30); --color-red-tint: oklch(91% 0.030 30);
-  --color-accent-soft: oklch(90% 0.040 350);
-  --color-sheet-2: oklch(89% 0.010 245);
-  --color-band: var(--color-ink); --color-band-ink: var(--color-sheet); --color-band-muted: oklch(78% 0.012 245);
-  --color-scrim: oklch(16% 0.020 245 / 0.55);
+  --color-ent: oklch(44% 0.090 75); --color-ent-tint: oklch(92% 0.030 80);
+  --color-pou: oklch(42% 0.075 215); --color-pou-tint: oklch(92% 0.022 215);
+  --color-inf: oklch(42% 0.085 145); --color-inf-tint: oklch(92% 0.030 145);
+  --color-blue: #1F4FA3; --color-blue-tint: #E6ECF6;
+  --color-red: #B42318; --color-red-tint: #F8E9E6;
+  --color-accent-soft: #F8E9E6;
+  /* Blog: one colour per type of post */
+  --color-bt-reflexion: #1F4FA3; --color-bt-prospective: #6B2FA0; --color-bt-ressource: #0B6B4F;
+  --color-sheet-2: #F3F4EF;
+  --color-band: #111412; --color-band-ink: #F3F4EF; --color-band-muted: #D5D8CF;
+  --color-scrim: rgb(17 20 18 / 0.55);
+  /* The black bar of the bulletin, in both modes */
+  --color-head: #111412; --color-head-ink: #F3F4EF; --color-head-muted: #D5D8CF; --color-head-rule: #8A9088; --color-head-accent: #FF8A75;
 }
 /* Dark: re-derived, same hues; follows the site's Auto / Clair / Sombre switch (data-theme) */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-paper: oklch(17% 0.014 245); --color-paper-2: oklch(20% 0.014 245); --color-paper-3: oklch(23% 0.014 245);
-  --color-ink: oklch(93% 0.010 245); --color-ink-2: oklch(86% 0.012 245); --color-muted: oklch(72% 0.014 245);
-  --color-rule: oklch(33% 0.014 240); --color-rule-2: oklch(75% 0.014 240);
-  --color-accent: oklch(70% 0.115 350); --color-accent-2: oklch(78% 0.090 350); --color-accent-ink: oklch(17% 0.014 245); --color-focus: oklch(74% 0.130 350);
-  --color-sheet: oklch(22% 0.012 245); --color-sheet-2: oklch(26% 0.012 245);
-  --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(28% 0.040 80);
-  --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(27% 0.030 215);
-  --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(27% 0.040 145);
-  --color-blue: oklch(78% 0.090 260); --color-blue-tint: oklch(27% 0.040 260);
-  --color-red: oklch(76% 0.110 30); --color-red-tint: oklch(28% 0.045 30);
-  --color-accent-soft: oklch(30% 0.060 350);
-  --color-band: oklch(24% 0.016 245); --color-band-ink: var(--color-ink); --color-band-muted: var(--color-muted);
-  --color-scrim: oklch(8% 0.010 245 / 0.65);
+  --color-paper: #111412; --color-paper-2: #181C19; --color-paper-3: #212622;
+  --color-ink: #F3F4EF; --color-ink-2: #D9DCD3; --color-muted: #A9B0A6;
+  --color-rule: #2F3530; --color-rule-2: #8A9088;
+  --color-accent: #FF8A75; --color-accent-2: #FFA896; --color-accent-ink: #111412; --color-focus: #FF8A75;
+  --color-sheet: #1A1E1B; --color-sheet-2: #232823;
+  --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(26% 0.035 80);
+  --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(26% 0.028 215);
+  --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(26% 0.035 145);
+  --color-blue: #7FB4FF; --color-blue-tint: #18263A;
+  --color-red: #FF8A75; --color-red-tint: #2E1C19;
+  --color-accent-soft: #2E1C19;
+  --color-bt-reflexion: #7FB4FF; --color-bt-prospective: #C9A3F5; --color-bt-ressource: #6FD3A8;
+  --color-band: #232823; --color-band-ink: #F3F4EF; --color-band-muted: #C5CAC0;
+  --color-scrim: rgb(8 10 9 / 0.65);
+  --color-head: #1A1E1B; --color-head-ink: #F3F4EF; --color-head-muted: #C5CAC0; --color-head-rule: #6B726A; --color-head-accent: #FF8A75;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --color-paper: oklch(17% 0.014 245); --color-paper-2: oklch(20% 0.014 245); --color-paper-3: oklch(23% 0.014 245);
-    --color-ink: oklch(93% 0.010 245); --color-ink-2: oklch(86% 0.012 245); --color-muted: oklch(72% 0.014 245);
-    --color-rule: oklch(33% 0.014 240); --color-rule-2: oklch(75% 0.014 240);
-    --color-accent: oklch(70% 0.115 350); --color-accent-2: oklch(78% 0.090 350); --color-accent-ink: oklch(17% 0.014 245); --color-focus: oklch(74% 0.130 350);
-    --color-sheet: oklch(22% 0.012 245); --color-sheet-2: oklch(26% 0.012 245);
-    --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(28% 0.040 80);
-    --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(27% 0.030 215);
-    --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(27% 0.040 145);
-    --color-blue: oklch(78% 0.090 260); --color-blue-tint: oklch(27% 0.040 260);
-    --color-red: oklch(76% 0.110 30); --color-red-tint: oklch(28% 0.045 30);
-    --color-accent-soft: oklch(30% 0.060 350);
-    --color-band: oklch(24% 0.016 245); --color-band-ink: var(--color-ink); --color-band-muted: var(--color-muted);
-    --color-scrim: oklch(8% 0.010 245 / 0.65);
+    --color-paper: #111412; --color-paper-2: #181C19; --color-paper-3: #212622;
+    --color-ink: #F3F4EF; --color-ink-2: #D9DCD3; --color-muted: #A9B0A6;
+    --color-rule: #2F3530; --color-rule-2: #8A9088;
+    --color-accent: #FF8A75; --color-accent-2: #FFA896; --color-accent-ink: #111412; --color-focus: #FF8A75;
+    --color-sheet: #1A1E1B; --color-sheet-2: #232823;
+    --color-ent: oklch(80% 0.090 80); --color-ent-tint: oklch(26% 0.035 80);
+    --color-pou: oklch(78% 0.070 215); --color-pou-tint: oklch(26% 0.028 215);
+    --color-inf: oklch(79% 0.090 145); --color-inf-tint: oklch(26% 0.035 145);
+    --color-blue: #7FB4FF; --color-blue-tint: #18263A;
+    --color-red: #FF8A75; --color-red-tint: #2E1C19;
+    --color-accent-soft: #2E1C19;
+    --color-bt-reflexion: #7FB4FF; --color-bt-prospective: #C9A3F5; --color-bt-ressource: #6FD3A8;
+    --color-band: #232823; --color-band-ink: #F3F4EF; --color-band-muted: #C5CAC0;
+    --color-scrim: rgb(8 10 9 / 0.65);
+    --color-head: #1A1E1B; --color-head-ink: #F3F4EF; --color-head-muted: #C5CAC0; --color-head-rule: #6B726A; --color-head-accent: #FF8A75;
   }
 }

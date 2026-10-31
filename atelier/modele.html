@@ -9,7 +9,7 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../style.css">
 <script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 </head>
@@ -19,7 +19,7 @@
 
 <header class="top" id="top">
   <div class="container bar">
-    <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
+    <a class="brand" href="#accueil" aria-label="Hack cognitif">Hack<span aria-hidden="true">/</span><b>cognitif</b></a>
     <nav id="nav" aria-label="Navigation principale">
       <a href="#accueil" data-v="accueil">Accueil</a>
       <a href="#carte" data-v="carte">Carte</a>
@@ -56,6 +56,7 @@
 <div id="v-accueil" class="home">
   <section class="hero" aria-label="Accueil">
     <div class="container">
+      <p class="eyebrow">Registre public de vulnérabilités cognitives</p>
       <h1>Une carte ouverte des failles cognitives.</h1>
       <div class="hero-foot">
         <div>
@@ -83,10 +84,6 @@
     </div>
   </section>
 
-  <figure class="visual">
-    <img src="../images/cerveau-circuits-1600.webp" srcset="../images/cerveau-circuits-960.webp 960w, ../images/cerveau-circuits-1600.webp 1600w, ../images/cerveau-circuits-2400.webp 2400w" sizes="(min-width: 60rem) 100vw, (min-width: 40rem) 150vw, 225vw" width="2400" height="800" alt="Illustration : le profil d'une tête et de son cerveau, sur un fond de circuits électroniques et de code binaire." loading="lazy" decoding="async">
-  </figure>
-
   <section class="home-sec terrains" aria-labelledby="h-terrains">
     <div class="container">
       <div class="sec-head">
@@ -106,6 +103,7 @@
 
   <div class="close-band">
     <div class="container">
+      <p class="eyebrow">Portée : défensive</p>
       <p class="close-lead">Ce site sert à se défendre : cartographier les failles que la guerre cognitive exploite, et tester ce qui les corrige.</p>
       <p class="close-note">Il traite des mécanismes, des signaux de détection et des contre-mesures, avec pour chacune une hypothèse et un indicateur pour la tester dans un exercice encadré. Il ne publie ni scénarios prêts à l'emploi, ni techniques optimisées pour manipuler une personne réelle.</p>
       <p class="close-act"><a href="#contribuer">Contribuer au site</a></p>
@@ -213,7 +211,7 @@
 <section id="v-labo" class="page container" data-band="rose" hidden>
   <header class="page-head">
     <h1>Labo</h1>
-    <p class="lead">Trois exercices pour s'entraîner à repérer, mesurer et prioriser les failles cognitives. Tous les messages sont fictifs et rien n'est enregistré.</p>
+    <p class="lead">Trois exercices pour s'entraîner à repérer, mesurer et prioriser les failles cognitives. Tous les messages sont fictifs et vos réponses ne sont pas enregistrées.</p>
   </header>
   <div class="filters" id="lab-tabs" role="group" aria-label="Choix de l'outil"></div>
   <div class="lab-pane" id="lab-anat"></div>
@@ -269,7 +267,6 @@
 <section id="v-glossaire" class="page container" data-band="blue" hidden>
   <header class="page-head">
     <h1>Glossaire</h1>
-    <p class="lead">Définitions de travail, à vérifier à la source (ANSSI, SGDSN/Viginum, IRSEM, ministère des Armées) avant citation.</p>
   </header>
   <div class="toolbar">
     <input id="q" class="search" type="search" placeholder="phishing, pretexting, influence…" autocomplete="off" aria-label="Rechercher un terme">
@@ -365,6 +362,9 @@
     <h1>Neuropsychologue, en reconversion vers les réseaux et la cybersécurité.</h1>
     <p class="lead">Je cartographie les vulnérabilités cognitives et je conçois des protocoles de défense testables, pour former et renforcer la résilience informationnelle.</p>
   </header>
+  <figure class="visual">
+    <img src="../images/cerveau-circuits-1600.webp" srcset="../images/cerveau-circuits-960.webp 960w, ../images/cerveau-circuits-1600.webp 1600w, ../images/cerveau-circuits-2400.webp 2400w" sizes="(min-width: 60rem) min(90rem, 92vw), (min-width: 40rem) 150vw, 225vw" width="2400" height="800" alt="Illustration : le profil d'une tête et de son cerveau, sur un fond de circuits électroniques et de code binaire." loading="lazy" decoding="async">
+  </figure>
   <section class="block">
     <h2>Objectif</h2>
     <p class="lead">Fournir une carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive, avec des contre-mesures testables, pour former et renforcer la résilience.</p>
@@ -461,8 +461,8 @@
   <section class="block"><h2>Éditrice</h2>
     <p>Site personnel, édité à titre non professionnel par une personne physique. Conformément à la loi pour la confiance dans l'économie numérique (LCEN), l'éditrice a communiqué ses éléments d'identification à l'hébergeur indiqué ci-dessous. Pour lui écrire : <a href="#contribuer" data-contrib>formulaire de contact</a>.</p></section>
   <section class="block"><h2>Hébergeur</h2><p>GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Téléphone : +1 877 448 4820. Site : <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</p></section>
-  <section class="block"><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les textes de ce site, ses fiches et sa carte sont publiés sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> : vous pouvez les reproduire et les adapter, y compris à des fins commerciales ou de formation, à condition de citer Hack cognitif, d'indiquer le lien de la page et de signaler vos modifications. Cette licence ne couvre pas l'illustration de l'accueil ni les ressources tierces citées, qui restent soumises à leurs propres conditions. Les identifiants et les intitulés des techniques DIMA proviennent du projet <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">DIMA</a> (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés. Les rapprochements entre ces techniques et les fiches sont propres à Hack cognitif et n'engagent pas le projet DIMA.</p></section>
-  <section class="block"><h2>Données personnelles</h2><p>Ce site ne dépose pas de cookies de suivi. L'éditrice ne collecte aucune donnée autre que celles transmises volontairement par le formulaire de contribution et de contact, hébergé par Framaforms (association Framasoft). Ces informations servent uniquement à traiter votre message. Pour exercer vos droits d'accès, de rectification ou de suppression, utilisez ce même formulaire.</p>
+  <section class="block"><h2>Propriété intellectuelle</h2><p>Sauf mention contraire, les textes de ce site, ses fiches et sa carte sont publiés sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a> : vous pouvez les reproduire et les adapter, y compris à des fins commerciales ou de formation, à condition de citer Hack cognitif, d'indiquer le lien de la page et de signaler vos modifications. Cette licence ne couvre pas l'illustration de la page À propos ni les ressources tierces citées, qui restent soumises à leurs propres conditions. Les identifiants et les intitulés des techniques DIMA proviennent du projet <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">DIMA</a> (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés. Les rapprochements entre ces techniques et les fiches sont propres à Hack cognitif et n'engagent pas le projet DIMA.</p></section>
+  <section class="block"><h2>Données personnelles</h2><p>Ce site ne dépose pas de cookies de suivi. Pour connaître sa fréquentation, il utilise <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener">GoatCounter</a>, qui produit des statistiques agrégées : pages vues, site d'origine, navigateur, système, pays déduit de l'adresse IP, langue et largeur d'écran. Selon sa politique de confidentialité, l'adresse IP et l'identification complète du navigateur ne sont pas conservées, rien n'est stocké dans votre navigateur pour cette mesure, les données sont hébergées en Finlande et en Allemagne, et elles ne sont pas partagées avec des tiers. Ces statistiques servent uniquement à connaître l'audience du site.</p><p>En dehors de cette mesure, l'éditrice ne collecte aucune donnée autre que celles transmises volontairement par le formulaire de contribution et de contact, hébergé par Framaforms (association Framasoft). Ces informations servent uniquement à traiter votre message. Pour exercer vos droits d'accès, de rectification ou de suppression, utilisez ce même formulaire.</p>
     <p>Deux services techniques reçoivent votre adresse IP lors d'une visite : l'hébergeur GitHub, qui l'enregistre et la conserve pour des raisons de sécurité (<a href="https://docs.github.com/fr/pages/getting-started-with-github-pages/about-github-pages" target="_blank" rel="noopener">documentation de GitHub Pages</a>), et Google Fonts, d'où sont chargées les polices de caractères (<a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">règles de confidentialité de Google</a>).</p></section>
   <section class="block"><h2>Responsabilité</h2><p>Les contenus ont une visée informative et pédagogique. Ils ne constituent ni une doctrine officielle ni un conseil opérationnel. Les faits cités sont à vérifier à la source avant toute réutilisation.</p></section>
 </section>
@@ -472,7 +472,7 @@
 <footer class="foot">
   <div class="container foot-in">
     <div class="foot-brand">
-      <a class="brand" href="#accueil">Hack <b>cognitif</b></a>
+      <a class="brand" href="#accueil" aria-label="Hack cognitif">Hack<span aria-hidden="true">/</span><b>cognitif</b></a>
       <p>Une carte ouverte des failles cognitives, pour s'en défendre.</p>
     </div>
     <nav class="foot-cols" aria-label="Pied de page">

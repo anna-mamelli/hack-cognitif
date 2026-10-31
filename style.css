@@ -12,6 +12,7 @@
 /* Hallmark · dismissed 41 · .sheet, .panel, footer and .sp-panel set ink-2 from tokens that swap with the Auto / Clair / Sombre mode */
 /* Hallmark · dismissed 42 · footer: index columns, named in the stamp; Hack cognitif has a real sitemap of twelve views in four groups, no social row */
 /* Hallmark · dismissed 77 · the home holds hero, comparator, terrains, latest fiches, the close band and the footer; the counter sees only top-level sections */
+/* Owner's choice, 2026-10-31 · the "Bulletin de sécurité" look replaces Almanac: registry of advisories, black bar, IBM Plex, one signal red, light and dark; tinted page heads and home bands dropped; the section at the end of this file carries it */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -218,7 +219,6 @@ a.pill:active { background: var(--color-paper-3); }
 /* Blog */
 .billet { max-width: 65ch; }
 .billet-date { font-size: var(--text-sm); color: var(--color-muted); }
-.row .tags:has(.billet-date) { align-items: baseline; }
 html:not(.js) #bfilters { display: none; }
 
 /* The close */
@@ -886,4 +886,106 @@ html:not(.js) nav#nav a { min-height: 44px; border-bottom: 0; font-size: var(--t
   #lab-anat > .filters { grid-column: 1 / -1; }
   #lab-anat .mail { max-width: none; }
   #lab-anat .detail { position: sticky; top: var(--space-3xl); margin-top: 0; max-width: none; }
+}
+
+/* ---------- Bulletin de sécurité: the registry look, over everything above ---------- */
+/* The black bar, in both modes */
+header.top { background: var(--color-head); border-bottom-color: var(--color-head); color: var(--color-head-ink); }
+.brand { font: 600 var(--text-md)/1 var(--font-outlier); letter-spacing: 0; text-transform: uppercase; }
+.brand b { font-weight: 600; color: inherit; }
+.top .brand { color: var(--color-head-ink); }
+.top .brand:hover b { color: var(--color-head-accent); }
+.top a:focus-visible, .top button:focus-visible { outline-color: var(--color-head-accent); }
+nav#nav { background: var(--color-head); border-bottom-color: var(--color-head-rule); }
+nav#nav a { font: 400 var(--text-sm)/1 var(--font-outlier); color: var(--color-head-muted); border-bottom-color: var(--color-head-rule); }
+nav#nav a:hover, nav#nav a[aria-current="page"] { color: var(--color-head-ink); }
+nav#nav a::after { background: var(--color-head-accent); }
+.top .ibtn { border-color: var(--color-head-rule); color: var(--color-head-ink); font-family: var(--font-outlier); }
+@media (hover: hover) { .top .ibtn:hover { background: color-mix(in oklab, var(--color-head-ink) 14%, transparent); } }
+.top .ibtn:active { background: color-mix(in oklab, var(--color-head-ink) 22%, transparent); }
+.top .kbd { color: var(--color-head-muted); }
+#progress { background: var(--color-head-accent); }
+html:not(.js) nav#nav a { font-size: var(--text-sm); }
+@media (min-width: 72rem) {
+  nav#nav a { padding-inline: var(--space-2xs); font-size: var(--text-sm); border-bottom: 0; }
+  nav#nav a::after { left: var(--space-2xs); right: var(--space-2xs); }
+}
+
+/* Labels are set in the code face, the text stays in the reading face */
+.eyebrow { display: block; margin: 0 0 var(--space-xs); font: 500 var(--text-sm)/1.3 var(--font-outlier); letter-spacing: 0.02em; color: var(--color-accent); text-transform: uppercase; }
+.btn, .tlink { font-family: var(--font-outlier); }
+.pill, .billet-date, .count, .back { font-family: var(--font-outlier); }
+.pill { font-weight: 400; font-size: var(--text-xs); }
+.foot-cols h2, .toc h2, .fmeta dt, #sp-list .k { font: 500 var(--text-xs)/1.3 var(--font-outlier); letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-muted); }
+.item b { font-family: var(--font-outlier); font-size: var(--text-sm); font-weight: 500; }
+
+/* Pages: no tinted head, a firm rule; the tints stay for hovers and the contribution box */
+.page-head { background: transparent; box-shadow: none; }
+.page-head::after { background: var(--color-rule-2); }
+.page-head:has(.fmeta) { padding-bottom: 0; }
+.fmeta { gap: 0 var(--space-xl); margin-top: var(--space-lg); padding-block: var(--space-sm); border-top: var(--rule-hair) solid var(--color-rule); }
+.fmeta div { flex-direction: column; gap: var(--space-3xs); padding-block: var(--space-2xs); }
+.page section.block > h2::before { content: none; }
+.team { border-top-width: 6px; background: var(--color-sheet); }
+.team.b, .team.r { background: var(--color-sheet); }
+
+/* Home: eyebrow, title, then the figures as one strip */
+.hero { padding-block: clamp(2.5rem, 7vw, 5.5rem) 0; border-bottom: 0; }
+.hero h1 { max-width: 18ch; font-size: clamp(2.5rem, 1.5rem + 4.4vw, 5.25rem); line-height: 1.02; letter-spacing: -0.03em; }
+.hero-foot { row-gap: var(--space-xl); margin-top: var(--space-lg); }
+.hero-foot > div, .ledger { grid-column: 1 / -1; }
+.hero .lead { max-width: 58ch; }
+.ledger { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-columns); border-top: var(--rule-bar) solid var(--color-rule-2); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.ledger > div { flex-direction: column-reverse; align-items: flex-start; gap: var(--space-3xs); padding-block: var(--space-md); border-bottom: 0; }
+.ledger dt { font-size: var(--text-sm); color: var(--color-muted); }
+.ledger dd { min-width: 0; text-align: left; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem); line-height: 1.1; }
+.home-sec.band-blue { background: var(--color-paper-2); }
+.home-sec.latest { background: none; --row-hover: var(--color-paper-2); }
+.latest h2, .latest .rows, .latest .more { grid-column: 1 / -1; }
+.close-band .eyebrow { max-width: none; margin-bottom: var(--space-sm); font: 500 var(--text-sm)/1.3 var(--font-outlier); color: var(--color-band-muted); }
+.close-band .close-act a { text-decoration-color: var(--color-head-accent); }
+.close-band a:focus-visible { outline-color: var(--color-head-accent); }
+
+@media (min-width: 48rem) {
+  .ledger { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 60rem) {
+  .hero-foot > div, .ledger { grid-column: 1 / -1; }
+  .latest h2, .latest .rows, .latest .more { grid-column: 1 / -1; }
+}
+
+/* Blog: the posts as cards, one column on a phone, two from 48rem, three from 72rem */
+.bcards { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap-columns); }
+.bcard {
+  display: flex; flex-direction: column; gap: var(--space-sm); min-width: 0; padding: var(--pad-card); background: var(--color-sheet); color: var(--color-ink-2); text-decoration: none;
+  border-top: var(--rule-bar) solid var(--color-rule-2); transition: background-color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+}
+.bmeta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-xs) var(--space-md); }
+.page .bcard h3 { font-size: var(--text-title); line-height: 1.2; color: var(--color-ink); }
+.bcard p { flex: 1; margin: 0; font-size: var(--text-md); color: var(--color-muted); }
+.bgo { align-self: flex-start; padding-top: var(--space-xs); font: 500 var(--text-sm)/1.3 var(--font-outlier); color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.25em; }
+.bcard:focus-visible { border-top-color: var(--color-accent); }
+.bcard:active { background: var(--color-paper-3); }
+@media (hover: hover) {
+  .bcard:hover { background: var(--color-sheet-2); border-top-color: var(--color-accent); }
+  .bcard:hover .bgo { text-decoration-thickness: 2px; }
+}
+@media (min-width: 48rem) { .bcards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 72rem) { .bcards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Blog: one colour per type of post, always with its name beside it */
+.bt-reflexion { --bt: var(--color-bt-reflexion); }
+.bt-prospective { --bt: var(--color-bt-prospective); }
+.bt-ressource { --bt: var(--color-bt-ressource); }
+.bcard { border-top: var(--space-2xs) solid var(--bt, var(--color-rule-2)); }
+.bcard:focus-visible { border-top-color: var(--bt, var(--color-accent)); }
+.bcard .pill, .page-head[class*="bt-"] .pill { color: var(--bt, var(--color-ink)); }
+.bgo { text-decoration-color: var(--bt, var(--color-accent)); }
+.page-head[class*="bt-"]::after { height: var(--space-2xs); background: var(--bt); }
+#bfilters button[class*="bt-"]::before { content: ""; display: inline-block; width: 0.625em; height: 0.625em; margin-right: var(--space-xs); background: var(--bt); }
+#bfilters button[class*="bt-"][aria-pressed="true"] { background: var(--bt); border-color: var(--bt); color: var(--color-paper); }
+#bfilters button[class*="bt-"][aria-pressed="true"]::before { background: var(--color-paper); }
+@media (hover: hover) {
+  .bcard:hover { border-top-color: var(--bt, var(--color-accent)); }
+  #bfilters button[class*="bt-"][aria-pressed="true"]:hover { background: var(--bt); }
 }

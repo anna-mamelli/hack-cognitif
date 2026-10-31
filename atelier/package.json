@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Hack cognitif : carte ouverte des vulnérabilités cognitives exploitées par la guerre cognitive",
   "config": {
-    "siteUrl": "https://anna-mamelli.github.io/hack-cognitif"
+    "siteUrl": "https://hackcognitif.fr",
+    "goatcounter": "https://annaml.goatcounter.com/count"
   },
   "scripts": {
     "build": "node build.mjs"

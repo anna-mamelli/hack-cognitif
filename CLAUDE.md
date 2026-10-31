@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Le projet
 
-Hack cognitif est un site statique francophone, sans framework, qui informe et sensibilise sur les attaques exploitant nos leviers cognitifs (ingénierie sociale, influence politique, neuropsychologie, psychologie sociale). Il est publié par GitHub Pages depuis la branche `main` de `anna-mamelli/hack-cognitif` : tout le dépôt est servi tel quel. `README.txt` décrit le projet pour la propriétaire et liste ce qui reste à faire avant publication.
+Hack cognitif est un site statique francophone, sans framework, qui informe et sensibilise sur les attaques exploitant nos leviers cognitifs (ingénierie sociale, influence politique, neuropsychologie, psychologie sociale). Il est publié sur https://hackcognitif.fr par GitHub Pages, depuis la branche `main` de `anna-mamelli/hack-cognitif` : tout le dépôt est servi tel quel. Le fichier `CNAME` à la racine relie le domaine, ne pas le supprimer. `README.txt` décrit le projet pour la propriétaire et liste ce qui reste à faire avant publication.
 
 ## Objectif
 
@@ -17,7 +17,7 @@ Toute proposition se juge à cette aune, y compris une tâche de design ou de co
 Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier; npm run build`).
 
 - `npm install` : une seule fois, installe `puppeteer-core`.
-- `npm run build` : refabrique toutes les pages à la racine. Il faut Chrome ou Edge installé (sinon indiquer le chemin dans la variable `CHROME_PATH`). `SITE_URL` remplace `config.siteUrl` de `package.json`.
+- `npm run build` : refabrique toutes les pages à la racine. Il faut Chrome ou Edge installé (sinon indiquer le chemin dans la variable `CHROME_PATH`). `SITE_URL` remplace `config.siteUrl` de `package.json`. `config.goatcounter` y donne l'adresse de mesure d'audience, ajoutée aux seules pages fabriquées et décrite dans les mentions légales.
 - Il n'y a ni tests ni linter. La fabrication sert de vérification : elle sort en erreur si `script.js` lève une exception sur une page.
 - Aperçu sans fabriquer : ouvrir `atelier/modele.html` dans un navigateur, qui affiche tout le site sur une seule page ; on va à une page par son adresse en `#`, par exemple `modele.html#fiche-autorite`. Aperçu des pages fabriquées : Live Server (port 5501) à la racine.
 - `/commit` refabrique puis committe tout ; `/push` envoie sur GitHub, ce qui met à jour le site publié.
@@ -30,7 +30,7 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 
 **La fabrication (`atelier/build.mjs`).** Puppeteer ouvre le modèle, lit `window.HC_ROUTES` (les vues de `VIEWS`, sauf `fiche` et `terrain`, plus les clés de `TERRAINS` et `fiche-<id>` pour chaque fiche), affiche chaque route, copie la vue visible et l'insère dans une copie du modèle avec titre, description, Open Graph, lien canonique et données structurées JSON-LD (un `Article` avec ses références pour chaque fiche). Le titre vient de `data-name` sur la section, sinon du `h1` ; la description vient du premier `.lead`.
 
-**Dates (`atelier/dates.json`).** Chaque route y garde une empreinte de son contenu, sa date de publication et sa date de modification, qui ne change que si l'empreinte change. L'empreinte ignore `[data-maj]` (la date affichée) et `[data-volatile]` : tout contenu tiré au hasard à chaque visite doit porter `data-volatile`, sinon chaque fabrication change la date de la page. Ne pas supprimer ni éditer ce fichier à la main ; il est committé avec les pages.
+**Dates (`atelier/dates.json`).** Chaque route y garde une empreinte de son contenu, sa date de publication et sa date de modification, qui ne change que si l'empreinte change. L'empreinte ignore `[data-maj]` (la date affichée) et `[data-volatile]` : tout contenu tiré au hasard à chaque visite doit porter `data-volatile`, sinon chaque fabrication change la date de la page. Le pur habillage qui répète le contenu d'une fiche le porte aussi (le rappel des techniques DIMA de son en-tête). Ne pas supprimer ni éditer ce fichier à la main ; il est committé avec les pages.
 
 **Organisation de `script.js`.** Tout est dans une seule IIFE, sans module ni dépendance. La première moitié contient les données, la seconde le rendu de chaque vue (à partir de `/* ---------- Tables (DIMA, lexique) ---------- */`). Les données sont réparties en plusieurs blocs thématiques qui ajoutent chacun aux mêmes tables (`FICHES.push`, `MAP.push`, `R.cle = …`, `FREFS.id = …`, `SENS[…]`, `GLOSS.push`) : chercher toutes les occurrences d'une table, pas seulement sa déclaration. Les principales :
 
@@ -39,7 +39,7 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 - `TE` et `MAP` : techniques DIMA et rapprochements avec les fiches. `SENS` et `PSY` : colonnes « plus sensibles / ce qui protège » et notes cliniques. `RESIL` : mesures de protection et de résilience par famille de troubles (page Ressources), reliées aux fiches par les noms de `PSY`.
 - `COURS` : notions de la page Cours, statut `fiche`, `integre` ou `todo` ; `CTHEMES` et `CTHEME_OF` les rangent par thème.
 - `GLOSS` et `GCAT_OF` : glossaire et catégories. `CONTRIB_FORM` : adresse du formulaire Framaforms.
-- `BILLETS` : billets du blog (`id`, `type`, `date` au format `AAAA-MM-JJ`, `title`, `lead`, `sections`, `fiches`, `refs`). Chaque billet devient la page `billet-<id>`, reliée à la carte par `fiches`. Un nouveau billet s'ajoute à la fin de la table : la page Blog affiche le plus récent en premier et, à date égale, le dernier ajouté. Ses références sont dans `R`, avec les mêmes règles de statut que les fiches.
+- `BILLETS` : billets du blog (`id`, `type`, `date` au format `AAAA-MM-JJ`, `title`, `lead`, `sections`, `fiches`, `refs`). Chaque billet devient la page `billet-<id>`, reliée à la carte par `fiches`. Un nouveau billet s'ajoute à la fin de la table : la page Blog affiche le plus récent en premier et, à date égale, le dernier ajouté. Le temps de lecture se calcule tout seul (`readMin`). Chaque type a sa couleur : un nouveau type demande un jeton `--color-bt-<type>` dans les trois blocs de `tokens.css` et une ligne `.bt-<type>` dans `style.css`, sinon il reste neutre. Ses références sont dans `R`, avec les mêmes règles de statut que les fiches.
 
 La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide. Le niveau de preuve de chaque contre-mesure vient de `CMLV` (juste après `FREFS`) : une fiche absente de cette table est affichée « plausible ».
 
@@ -56,6 +56,7 @@ Ajouter une page fixe demande trois choses : une section `v-<route>` dans `model
 - Le site applique une charte de « chapeau blanc » : aucune recette de manipulation, personne n'est visé, symétrie politique, aucune stigmatisation, prudence clinique. Elle est détaillée dans `.claude/agents/relecteur-charte.md` et sur les pages Contribuer et Chapeaux.
 - Ne jamais inventer une référence, un chiffre ou un cas public. Une nouvelle référence entre avec le statut `0` ; elle ne passe à `1` qu'après l'agent `verificateur-sources`.
 - Pour une nouvelle fiche, enchaîner les agents du projet : `redacteur-fiche` (rédaction au format du site), puis `verificateur-sources`, puis `redacteur-clarte` (lisibilité pour un lecteur humain), puis `relecteur-charte`, puis `gardien-objectif`. `redacteur-clarte` sert aussi seul, pour reprendre un passage dense ou une page entière.
+- La propriétaire considère qu'aucune émotion n'est négative. Dire « désagréable » en son nom ; quand un texte reprend « émotion négative » d'une source, nommer les auteurs et rappeler que le terme est le leur, pas sa position.
 - Typographie : apostrophes droites (`'`) partout, jamais courbes, et pas de tiret cadratin.
 - DIMA (M82-project) est repris sous licence Apache 2.0 : garder la citation et le lien, et ne jamais laisser entendre que le projet DIMA approuve les rapprochements du site.
 

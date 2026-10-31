@@ -1710,6 +1710,46 @@
   R.viginum_cadre = ["SGDSN / VIGINUM (2026, 15 mai). VIGINUM, un cadre juridique précis et transparent.", "https://www.sgdsn.gouv.fr/viginum/comprendre-viginum/viginum-un-cadre-juridique-precis-et-transparent", 1];
   R.viginum_comite = ["SGDSN (2023, 26 juin). VIGINUM : publication du premier rapport du comité éthique et scientifique.", "https://www.sgdsn.gouv.fr/publications/viginum-publication-du-premier-rapport-du-comite-ethique-et-scientifique", 1];
   R.mpf_mission = ["Psychological Defence Agency (Suède). Our mission. Page publiée le 15 mars 2024, mise à jour le 23 septembre 2026.", "https://mpf.se/psychological-defence-agency/about-us/our-mission", 1];
+  R.shuman2013 = ["Shuman, V., Sander, D., & Scherer, K. R. (2013). Levels of valence. Frontiers in Psychology, 4, 261.", D + "10.3389/fpsyg.2013.00261", 1];
+  R.gruber2011 = ["Gruber, J., Mauss, I. B., & Tamir, M. (2011). A dark side of happiness? How, when, and why happiness is not always good. Perspectives on Psychological Science, 6(3), 222–233.", D + "10.1177/1745691611406927", 1];
+  R.ford2018 = ["Ford, B. Q., Lam, P., John, O. P., & Mauss, I. B. (2018). The psychological health benefits of accepting negative emotions and thoughts: Laboratory, diary, and longitudinal evidence. Journal of Personality and Social Psychology, 115(6), 1075–1092.", D + "10.1037/pspp0000157", 1];
+  R.fredrickson2005 = ["Fredrickson, B. L., & Branigan, C. (2005). Positive emotions broaden the scope of attention and thought-action repertoires. Cognition & Emotion, 19(3), 313–332.", D + "10.1080/02699930441000238", 1];
+  R.cannas2021 = ["Cannas Aghedu, F., Sarlo, M., Zappasodi, F., Acevedo, B. P., & Bisiacchi, P. S. (2021). Romantic love affects emotional processing of love-unrelated stimuli: An EEG/ERP study using a love induction task. Brain and Cognition, 151, 105733.", D + "10.1016/j.bandc.2021.105733", 1];
+  R.everaert2017 = ["Everaert, J., Podina, I. R., & Koster, E. H. W. (2017). A comprehensive meta-analysis of interpretation biases in depression. Clinical Psychology Review, 58, 33–48.", D + "10.1016/j.cpr.2017.09.005", 1];
+  R.bylsma2008 = ["Bylsma, L. M., Morris, B. H., & Rottenberg, J. (2008). A meta-analysis of emotional reactivity in major depressive disorder. Clinical Psychology Review, 28(4), 676–691.", D + "10.1016/j.cpr.2007.10.001", 1];
+  R.forgas1995 = ["Forgas, J. P. (1995). Mood and judgment: The affect infusion model (AIM). Psychological Bulletin, 117(1), 39–66.", D + "10.1037/0033-2909.117.1.39", 1];
+  R.yap2017 = ["Yap, S. C. Y., Wortman, J., Anusic, I., Baker, S. G., Scherer, L. D., Donnellan, M. B., & Lucas, R. E. (2017). The effect of mood on judgments of subjective well-being: Nine tests of the judgment model. Journal of Personality and Social Psychology, 113(6), 939–961.", D + "10.1037/pspp0000115", 1];
+  R.lerner2001 = ["Lerner, J. S., & Keltner, D. (2001). Fear, anger, and risk. Journal of Personality and Social Psychology, 81(1), 146–159.", D + "10.1037/0022-3514.81.1.146", 1];
+  R.lerner2003 = ["Lerner, J. S., Gonzalez, R. M., Small, D. A., & Fischhoff, B. (2003). Effects of fear and anger on perceived risks of terrorism: A national field experiment. Psychological Science, 14(2), 144–150.", D + "10.1111/1467-9280.01433", 1];
+  R.walgrave2023 = ["Walgrave, S., Jansen, A., Sevenans, J., Soontjens, K., Pilet, J.-B., Brack, N., Varone, F., Helfer, L., Vliegenthart, R., van der Meer, T., Breunig, C., Bailer, S., Sheffer, L., & Loewen, P. J. (2023). Inaccurate politicians: Elected representatives' estimations of public opinion in four countries. The Journal of Politics, 85(1), 209–222.", D + "10.1086/722042", 1];
+  R.broockman2018 = ["Broockman, D. E., & Skovron, C. (2018). Bias in perceptions of public opinion among political elites. American Political Science Review, 112(3), 542–563.", D + "10.1017/S0003055418000011", 1];
+  R.bucy2000 = ["Bucy, E. P. (2000). Emotional and evaluative consequences of inappropriate leader displays. Communication Research, 27(2), 194–226.", D + "10.1177/009365000027002004", 1];
+  R.vankleef2009 = ["Van Kleef, G. A. (2009). How emotions regulate social life: The emotions as social information (EASI) model. Current Directions in Psychological Science, 18(3), 184–188.", D + "10.1111/j.1467-8721.2009.01633.x", 1];
+  R.vankleef2008 = ["van Kleef, G. A., Oveis, C., van der Löwe, I., LuoKogan, A., Goetz, J., & Keltner, D. (2008). Power, distress, and compassion: Turning a blind eye to the suffering of others. Psychological Science, 19(12), 1315–1322.", D + "10.1111/j.1467-9280.2008.02241.x", 1];
+  R.galinsky2006 = ["Galinsky, A. D., Magee, J. C., Inesi, M. E., & Gruenfeld, D. H. (2006). Power and perspectives not taken. Psychological Science, 17(12), 1068–1074.", D + "10.1111/j.1467-9280.2006.01824.x", 1];
+  R.ebersole2016 = ["Ebersole, C. R., et coll. (2016). Many Labs 3: Evaluating participant pool quality across the academic semester via replication. Journal of Experimental Social Psychology.", D + "10.1016/j.jesp.2015.10.012", 0];
+  R.lucas2024 = ["Lucas, J., & Sheffer, L. (2024). What explains elite affective polarization? Evidence from Canadian politicians. Political Psychology, 46(1), 71–84.", D + "10.1111/pops.12974", 0];
+  R.mooreberg2020 = ["Moore-Berg, S. L., Ankori-Karlinsky, L.-O., Hameiri, B., & Bruneau, E. (2020). Exaggerated meta-perceptions predict intergroup hostility between American political partisans. Proceedings of the National Academy of Sciences, 117(26), 14864–14872.", D + "10.1073/pnas.2001263117", 1];
+  R.lees2020 = ["Lees, J., & Cikara, M. (2020). Inaccurate group meta-perceptions drive negative out-group attributions in competitive contexts. Nature Human Behaviour, 4(3), 279–286.", D + "10.1038/s41562-019-0766-4", 1];
+  R.mueller1970 = ["Mueller, J. E. (1970). Presidential popularity from Truman to Johnson. American Political Science Review, 64(1), 18–34.", D + "10.2307/1955610", 0];
+  R.hetherington2003 = ["Hetherington, M. J., & Nelson, M. (2003). Anatomy of a rally effect: George W. Bush and the war on terrorism. PS: Political Science & Politics, 36(1), 37–42.", D + "10.1017/S1049096503001665", 1];
+  R.baker2001 = ["Baker, W. D., & Oneal, J. R. (2001). Patriotism or opinion leadership? The nature and origins of the « rally 'round the flag » effect. Journal of Conflict Resolution, 45(5), 661–687.", D + "10.1177/0022002701045005006", 1];
+  R.baum2008 = ["Groeling, T., & Baum, M. A. (2008). Crossing the water's edge: Elite rhetoric, media coverage, and the rally-round-the-flag phenomenon. The Journal of Politics, 70(4), 1065–1085.", D + "10.1017/S0022381608081061", 1];
+  R.seo2024 = ["Seo, T., & Horiuchi, Y. (2024). Natural experiments of the rally 'round the flag effects using worldwide surveys. Journal of Conflict Resolution, 68(2-3), 269–293.", D + "10.1177/00220027231171310", 1];
+  R.kuijpers2019 = ["Kuijpers, D. (2019). Rally around all the flags: The effect of military casualties on incumbent popularity in ten countries 1990–2014. Foreign Policy Analysis, 15(3), 392–412.", D + "10.1093/fpa/orz014", 1];
+  R.gallup2001 = ["Gallup (2001, 26 février). Americans believe U.S. participation in Gulf War a decade ago worthwhile.", "https://news.gallup.com/poll/1963/americans-believe-us-participation-gulf-war-decade-ago-worthwhile.aspx", 1];
+  R.kiis2023 = ["KIIS (2023, 18 décembre). Dynamics of trust in social institutions in 2021-2023.", "https://kiis.com.ua/?lang=eng&cat=reports&id=1335&page=1", 1];
+  R.kiis2025 = ["KIIS (2025, 7 janvier). Dynamics of trust in President V. Zelenskyi in 2019-2024.", "https://kiis.com.ua/?cat=reports&id=1466&lang=eng&page=3", 1];
+  R.hale2022 = ["Hale, H. E. (2022). Authoritarian rallying as reputational cascade? Evidence from Putin's popularity surge after Crimea. American Political Science Review, 116(2), 580–594.", D + "10.1017/S0003055421001052", 1];
+  R.frye2017 = ["Frye, T., Gehlbach, S., Marquardt, K. L., & Reuter, O. J. (2017). Is Putin's popularity real? Post-Soviet Affairs, 33(1), 1–15.", D + "10.1080/1060586X.2016.1144334", 1];
+  R.lehrer2025 = ["Lehrer, R., Bahnsen, O., Müller, K., Neunhoeffer, M., Gschwend, T., & Juhl, S. (2025). Rallying around the leader in times of crises: The opposing effects of perceived threat and anxiety. European Journal of Political Research, 64(2), 697–718.", D + "10.1111/1475-6765.12717", 1];
+  R.lambert2010 = ["Lambert, A. J., Scherer, L. D., Schott, J. P., Olson, K. R., Andrews, R. K., O'Brien, T. C., & Zisser, A. R. (2010). Rally effects, threat, and attitude change: An integrative approach to understanding the role of emotion. Journal of Personality and Social Psychology, 98(6), 886–903.", D + "10.1037/a0019086", 0];
+  R.lambert2011 = ["Lambert, A. J., Schott, J. P., & Scherer, L. D. (2011). Threat, politics, and attitudes: Toward a greater understanding of rally-'round-the-flag effects. Current Directions in Psychological Science, 20(6), 343–348.", D + "10.1177/0963721411422060", 1];
+  R.landau2004 = ["Landau, M. J., Solomon, S., Greenberg, J., Cohen, F., Pyszczynski, T., Arndt, J., Miller, C. H., Ogilvie, D. M., & Cook, A. (2004). Deliver us from evil: The effects of mortality salience and reminders of 9/11 on support for President George W. Bush. Personality and Social Psychology Bulletin, 30(9), 1136–1150.", D + "10.1177/0146167204267988", 1];
+  R.klein2022 = ["Klein, R. A., et coll. (2022). Many Labs 4: Failure to replicate mortality salience effect with and without original author involvement. Collabra: Psychology, 8(1), 35271.", D + "10.1525/collabra.35271", 1];
+  R.merolla2007 = ["Merolla, J. L., Ramos, J. M., & Zechmeister, E. J. (2007). Crisis, charisma, and consequences: Evidence from the 2004 U.S. presidential election. The Journal of Politics, 69(1), 30–42.", D + "10.1111/j.1468-2508.2007.00492.x", 1];
+  R.albertson2015 = ["Albertson, B., & Gadarian, S. K. (2015). Anxious politics: Democratic citizenship in a threatening world. Cambridge University Press.", D + "10.1017/CBO9781139963107", 1];
+  R.marcus1993 = ["Marcus, G. E., & MacKuen, M. B. (1993). Anxiety, enthusiasm, and the vote: The emotional underpinnings of learning and involvement during presidential campaigns. American Political Science Review, 87(3), 672–685.", D + "10.2307/2938743", 1];
   var BILLETS = [
     { id: "attention-discours", type: "Réflexion", date: "2026-10-10",
       title: "Court et marquant : ce que la course à l'attention fait au discours politique",
@@ -1751,7 +1791,7 @@
           "La comparaison porte sur la structure du récit, pas sur les personnes ni sur leurs actes. Le résumé de l'article ne fait état d'aucune mesure de l'effet sur le public : il décrit un récit, sans dire s'il convainc."
         ] },
         { h: "Une autre lecture, à mettre en regard", p: [
-          "Dans un entretien, le géopolitologue Dominique Moïsi propose une lecture plus large : des émotions collectives comme l'espoir, la peur ou l'humiliation aideraient à comprendre le monde actuel, et les émotions négatives auraient pris le dessus depuis 2022. Il distingue l'émotion, plus brève, de la passion, plus durable, et estime que les réseaux sociaux amplifient les émotions (Moïsi, 2026).",
+          "Dans un entretien, le géopolitologue Dominique Moïsi propose une lecture plus large : des émotions collectives comme l'espoir, la peur ou l'humiliation aideraient à comprendre le monde actuel, et celles qu'il qualifie de « négatives » auraient pris le dessus depuis 2022. Le mot est le sien : pour moi, <a href=\"#billet-pas-d-emotion-negative\">aucune émotion n'est négative</a>. Il distingue l'émotion, plus brève, de la passion, plus durable, et estime que les réseaux sociaux amplifient les émotions (Moïsi, 2026).",
           "C'est un point de vue d'expert : l'entretien ne donne ni chiffres ni références, et prêter une émotion à toute une région reste une généralisation. Les deux textes se complètent : l'un propose une grille de lecture, l'autre demande comment vérifier ce que les émotions font vraiment.",
           '<p><a href="https://www.polytechnique-insights.com/tribunes/geopolitique/quand-la-geopolitique-est-dominee-par-les-emotions/" target="_blank" rel="noopener">Lire l\'entretien sur Polytechnique Insights</a></p>'
         ] },
@@ -1778,7 +1818,7 @@
           "<li><b>Le décalage ne fait pas que réduire au silence.</b> Quand une personne juge une émotion appropriée mais perçoit que son groupe ne la ressent pas, elle peut la ressentir plus fortement et se sentir responsable de la porter au nom du groupe. Les auteurs parlent de fardeau émotionnel (Goldenberg et coll., 2014).</li>" +
           "<li><b>Se croire minoritaire pèse sur la prise de parole, un peu.</b> C'est l'idée de la spirale du silence (Noelle-Neumann, 1974, référence à contrôler). Une méta-analyse de 66 études trouve un lien faible mais significatif entre le climat d'opinion perçu et le fait de s'exprimer (r = 0,10 ; Matthes et coll., 2018). Ces travaux portent sur les opinions : les étendre aux émotions est mon hypothèse.</li>" +
           "<li><b>On peut se croire seul à tort.</b> Des étudiants se croyaient tous plus mal à l'aise que l'étudiant moyen face aux pratiques d'alcool du campus, et cet écart illusoire était lié à un sentiment d'éloignement (Prentice et Miller, 1993). En Arabie saoudite, de jeunes hommes mariés sous-estimaient le soutien de leurs pairs au travail des femmes hors du foyer. Corriger cette croyance a accru leur disposition à aider leur épouse à chercher un emploi, et ces épouses ont ensuite davantage postulé (Bursztyn et coll., 2020). Là encore, il s'agit de normes, pas d'émotions.</li>" +
-          "<li><b>Ne rien montrer ne veut pas dire ne rien ressentir.</b> Dans 21 groupes de discussion menés en Belgique, en France, en Italie et au Portugal au printemps 2019, Anne-Marie Houde observe des attachements émotionnels à l'Union européenne, souvent implicites, qui peuvent passer pour de l'indifférence. Les participants les plus eurosceptiques jugent négative cette difficulté à imaginer leur pays hors de l'Union. L'échantillon n'est pas représentatif, et l'autrice appelle à davantage de recherches sur les attachements négatifs (Houde, 2025).</li>" +
+          "<li><b>Ne rien montrer ne veut pas dire ne rien ressentir.</b> Dans 21 groupes de discussion menés en Belgique, en France, en Italie et au Portugal au printemps 2019, Anne-Marie Houde observe des attachements émotionnels à l'Union européenne, souvent implicites, qui peuvent passer pour de l'indifférence. Les participants les plus eurosceptiques jugent négative cette difficulté à imaginer leur pays hors de l'Union. L'échantillon n'est pas représentatif, et l'autrice appelle à davantage de recherches sur ce qu'elle nomme des attachements « négatifs », son terme et non le mien (Houde, 2025).</li>" +
           "</ul>"
         ] },
         { h: "Pourquoi cet écart compte face à l'influence", p: [
@@ -1853,7 +1893,7 @@
         { h: "Ont-elles le même effet ?", p: [
           "On ne le sait pas. Chaque étude éclaire un seul côté.",
           '<ul class="plain">' +
-          "<li><b>En ligne, une émotion se transmet sans contact.</b> Sur Facebook, chez 689 003 utilisateurs, voir moins de contenus positifs conduit à publier moins de messages positifs et plus de négatifs, et inversement (Kramer et coll., 2014, référence à contrôler). La revue a publié une expression d'inquiétude sur cet article.</li>" +
+          "<li><b>En ligne, une émotion se transmet sans contact.</b> Sur Facebook, chez 689 003 utilisateurs, voir moins de contenus que les auteurs classent comme positifs conduit à publier moins de messages positifs et plus de messages « négatifs », et inversement (Kramer et coll., 2014, référence à contrôler). Ces catégories sont les leurs, pas les miennes. La revue a publié une expression d'inquiétude sur cet article.</li>" +
           "<li><b>En présence, ressentir ensemble renforce le lien.</b> Dans des marches folkloriques et des manifestations, la synchronie émotionnelle perçue accompagne une identité collective et une intégration sociale plus fortes (Páez et coll., 2015). L'étude ne compare pas avec des échanges en ligne.</li>" +
           "<li><b>En ligne, l'émotion des autres paraît plus forte qu'elle ne l'est.</b> Les observateurs surestiment l'indignation de ceux qui écrivent sur Twitter, ce qui gonfle leur impression d'une hostilité entre groupes (Brady et coll., 2023). Sur 2,7 millions de messages américains, chaque terme visant le camp adverse augmente de 67 % les chances de partage (Rathje et coll., 2021). Cette seconde étude mesure le partage, pas une émotion ressentie.</li>" +
           "<li><b>L'écran ne change pas tout.</b> Dans huit études, les personnes hostiles en politique en ligne le sont aussi hors ligne, et sont surtout motivées par le statut (Bor et Petersen, 2022). Cela porte sur l'hostilité, pas sur l'émotion. Une discussion en ligne sur un désaccord politique semble toutefois produire moins de solidarité qu'en face à face (Roos et coll., 2020, référence à contrôler).</li>" +
@@ -1941,7 +1981,138 @@
         ] }
       ],
       fiches: ["plans-si-alors", "stress-executif", "inoculation", "ethique-simulation"],
-      refs: ["hofmann2012", "gloster2020", "halperin2013", "lillis2007", "manbeck2018", "voelkel2024", "steenkamp2013", "mpf_mission", "viginum_comite", "viginum_cadre", "verduyn2012", "holman2014", "schleider2022", "roozenbeek2022", "maertens2021", "piccardi2025"] }
+      refs: ["hofmann2012", "gloster2020", "halperin2013", "lillis2007", "manbeck2018", "voelkel2024", "steenkamp2013", "mpf_mission", "viginum_comite", "viginum_cadre", "verduyn2012", "holman2014", "schleider2022", "roozenbeek2022", "maertens2021", "piccardi2025"] },
+    { id: "pas-d-emotion-negative", type: "Réflexion", date: "2026-10-31",
+      title: "Il n'y a pas d'émotion négative : la situation qui déclenche, l'émotion qui colore",
+      lead: "On dit « émotion négative » comme si l'émotion était le problème. Elle ne l'est pas. Le problème peut venir de deux endroits, dans deux sens opposés : une situation mal lue déclenche une émotion mal ajustée, ou une émotion déjà là repeint la situation.",
+      sections: [
+        { h: "Une émotion n'est jamais négative", p: [
+          "C'est ma lecture de neuropsychologue : toutes les émotions sont positives, au sens où elles nous informent toujours d'un état interne. La peur, la tristesse et la colère sont désagréables. Ce ne sont pas des pannes. Elles nous disent quelque chose de nous, même quand elles se trompent sur le monde.",
+          "Le mot « négatif » vient de la recherche, et il y désigne le plus souvent une valence, avec un sens qui n'est pas univoque. Passer de « cette émotion fait mal » à « il faut l'éviter » est déjà un jugement de valeur (Shuman et coll., 2013). Et une émotion agréable n'est pas toujours bonne : la recherche du bonheur pourrait parfois avoir des effets défavorables (Gruber et coll., 2011).",
+          "Accepter ce qu'on ressent semble d'ailleurs aider. L'acceptation habituelle de ses émotions et de ses pensées va de pair avec moins d'émotions que Ford et ses coauteurs appellent « négatives » face au stress, et avec une meilleure santé psychologique six mois plus tard (Ford et coll., 2018). Le mot est le leur, et ces données ne prouvent pas un lien de cause à effet. Il s'agit d'accepter ce qu'on ressent, pas la situation."
+        ] },
+        { h: "Deux sens à ne pas confondre", p: [
+          "Si l'émotion n'est pas le problème, où est-il ? Sur le trajet entre elle et la situation. Et ce trajet se fait dans les deux sens.",
+          '<ul class="plain">' +
+          "<li><b>Premier sens : situation → perception → émotion.</b> La situation déclenche l'émotion, à travers ce que j'en perçois. L'erreur possible est avant l'émotion.</li>" +
+          "<li><b>Second sens : émotion → perception → situation.</b> L'émotion est déjà là et change ce que je perçois de ce qui arrive. L'erreur possible est après elle.</li>" +
+          "</ul>",
+          "Dans le premier cas, je dois vérifier la situation. Dans le second, je dois regarder dans quel état j'étais avant. Prendre l'un pour l'autre, c'est chercher au mauvais endroit."
+        ] },
+        { h: "Premier sens : la situation déclenche l'émotion", p: [
+          "Un collègue m'envoie un message sec : « On en reparle demain. » J'y lis du mépris, et la colère monte. Il était peut-être seulement pressé.",
+          "Ma colère n'est pas fausse. Elle m'informe exactement : j'ai ressenti du mépris. Elle ne prouve pas qu'il y en avait. Une émotion répond à ce que je perçois, pas forcément à ce qui se passe : si ma perception de la situation est mauvaise, l'émotion sera mal adaptée à la situation réelle, tout en restant vraie sur moi. Et parfois, ma lecture est juste, et ma colère aussi.",
+          "L'exemple est fictif, et c'est ma lecture clinique : les travaux cités ici ne la démontrent pas directement."
+        ] },
+        { h: "Second sens : l'émotion colore la situation", p: [
+          "Reprenons le même message, mais lisons-le autrement. Ce matin, je suis amoureuse et joyeuse : « On en reparle demain », très bien, et je passe à autre chose. Ce matin, je suis triste et déprimée : ce même message m'accable, et il rejoint tout le reste. Le message n'a pas changé. C'est moi qui le lis à travers une couleur.",
+          "Quand on est amoureux ou joyeux, on prend les événements avec plus de légèreté. Quand on est triste et déprimé, même les événements les plus heureux a priori peuvent paraître tristes, déprimogènes. Beaucoup reconnaîtront cette expérience. Les études la soutiennent en partie, et la précisent.",
+          '<ul class="plain">' +
+          "<li><b>La couleur dépend de l'émotion.</b> Chez 973 adultes américains, la peur augmente le risque perçu de terrorisme, et la colère fait l'inverse (Lerner et coll., 2003 ; voir aussi Lerner et Keltner, 2001). Deux émotions désagréables, deux réalités différentes.</li>" +
+          "<li><b>La joie.</b> En laboratoire, chez 104 étudiants, des émotions agréables élargissent l'attention et le répertoire de pensées et d'actions (Fredrickson et Branigan, 2005). Cela ne prouve pas la légèreté, mais cela montre un changement de ce qu'on voit.</li>" +
+          "<li><b>L'amour.</b> Je n'ai pas trouvé d'étude sur l'évaluation des événements en général. Le plus proche compare en EEG 22 étudiants amoureux et 20 témoins devant des images sans lien avec l'amour, et les auteurs y voient une possible régulation implicite (Cannas Aghedu et coll., 2021). Ici, je m'appuie sur l'expérience, pas sur une preuve.</li>" +
+          "<li><b>La dépression.</b> Elle s'associe à des biais d'interprétation, avec un effet moyen (g = 0,72 ; Everaert et coll., 2017). Elle s'accompagne aussi d'une réactivité réduite, aux stimuli agréables comme désagréables, et davantage aux agréables (Bylsma et coll., 2008). Un événement heureux peut donc paraître triste, ou simplement ne plus toucher. Ce sont des tendances de groupe, qui ne disent rien d'une personne.</li>" +
+          "<li><b>Ce n'est pas automatique.</b> L'influence de l'humeur dépend de la façon dont le jugement est traité (Forgas, 1995). Dans neuf études, une humeur passagère change le plus souvent peu ou pas le jugement porté sur sa satisfaction de vie (Yap et coll., 2017).</li>" +
+          "</ul>",
+          "Si la tristesse devient durable et que plus rien ne touche, cela mérite d'en parler à un proche ou à un professionnel."
+        ] },
+        { h: "Quand les deux s'enchaînent", p: [
+          "Les deux sens peuvent se nourrir, et c'est ma lecture clinique plus qu'un résultat. Une émotion colore ma lecture d'une situation. Cette lecture déclenche une nouvelle émotion. Cette émotion colore la situation suivante. À la fin de la journée, je peux croire que tout m'a confirmé ce que je ressentais, alors que je n'ai rien vérifié."
+        ] },
+        { h: "Deux failles, deux prises pour l'influence", p: [
+          'Ce qui suit est mon analyse, et elle vise tous les camps. Un message peut agir sur le premier sens, en <a href="#fiche-cadrage-agenda">choisissant l\'angle</a> ou en retirant le contexte : on fabrique une perception, et l\'émotion suit. Il peut aussi agir sur le second, en installant une émotion avant de demander un jugement : l\'étude sur le terrorisme montre que cette couleur peut changer une estimation de risque.',
+          'Traiter une émotion de « négative » ou d\'« irrationnelle » est une autre prise : cela disqualifie celles et ceux qui la ressentent. Une émotion ne se réfute pas. C\'est la situation qui se vérifie. C\'est aussi pour cela qu\'<a href="#billet-therapie-politique-defense">une colère politique ne se soigne pas</a>.'
+        ] },
+        { h: "Deux questions, et deux tests", p: [
+          "Quand une émotion arrive, deux questions séparées : qu'est-ce que je sais vraiment de cette situation ? Et dans quel état étais-je juste avant ? La première vise le premier sens, la seconde le second. C'est une idée personnelle, pas une méthode évaluée.",
+          "Pour le tester en formation, avec des volontaires tirés au sort et des contenus fictifs. Pour le premier sens : montrer un même message avec ou sans son contexte, et comparer l'émotion rapportée. Pour le second : montrer d'abord un contenu inquiétant ou neutre, puis demander d'estimer un même risque. L'indicateur est l'écart entre les groupes, avec et sans les deux questions. Les résultats restent agrégés, les contenus évitent de mettre les participants en difficulté, chacun peut se retirer, et l'exercice est suivi d'un débriefing."
+        ] }
+      ],
+      fiches: ["decision-emotion", "stress-executif", "cadrage-agenda", "plans-si-alors"],
+      refs: ["shuman2013", "gruber2011", "ford2018", "lerner2003", "lerner2001", "fredrickson2005", "cannas2021", "everaert2017", "bylsma2008", "forgas1995", "yap2017"] },
+    { id: "dirigeants-population-desynchronises", type: "Réflexion", date: "2026-10-31",
+      title: "Dirigeants et population : quand les émotions se désynchronisent",
+      lead: "Ceux qui décident et ceux qui vivent la décision ne ressentent pas la même chose au même moment. Plus cet écart grandit, plus chaque camp risque de ne plus comprendre l'autre. C'est mon hypothèse, et je n'ai trouvé personne qui l'ait mesurée.",
+      sections: [
+        { h: "La même décision, deux réalités émotionnelles", p: [
+          "Prenons une scène fictive. Une ministre sort de trois semaines de crise. Elle a évité le pire, et elle est soulagée. Elle annonce : « Nous avons tenu. » Le même soir, une famille apprend que la mesure lui coûte son emploi. Elle est en colère.",
+          "Personne ne ment, et aucune des deux émotions n'est fausse : <a href=\"#billet-pas-d-emotion-negative\">chacune informe sur un état interne</a>. Mais la phrase de la ministre, vraie dans son monde, peut s'entendre comme du mépris dans l'autre. Et la colère de la famille peut se lire, depuis le bureau, comme de l'ingratitude ou de la manipulation. Chaque camp interprète l'autre à travers ce qu'il ressent.",
+          "Le mot « camp » est commode, mais il simplifie. <a href=\"#billet-hors-du-climat-emotionnel\">Une population ne ressent pas d'un seul bloc</a>, et les dirigeants non plus."
+        ] },
+        { h: "Mon hypothèse : un risque proportionnel à l'écart", p: [
+          "Les émotions des dirigeants et celles de la population peuvent être très différentes, et c'est normal : ils n'ont ni les mêmes informations, ni les mêmes responsabilités, ni les mêmes conséquences à vivre. Le danger commence quand elles sont trop désynchronisées. Je fais l'hypothèse que le risque d'incompréhension est alors fort, et qu'il augmente avec l'écart.",
+          "Je n'ai trouvé aucune étude qui mesure directement cet écart, ni ce lien proportionnel. Ma recherche a été limitée, et cela ne prouve pas qu'il n'en existe pas. Ce qui suit ne démontre donc pas mon hypothèse : ce sont des pièces autour d'elle."
+        ] },
+        { h: "Ce qui s'en approche", p: [
+          '<ul class="plain">' +
+          "<li><b>Les élus se trompent déjà sur les opinions.</b> Sur plus de 10 000 estimations de 866 élus dans quatre pays, ils se trompent régulièrement sur ce que veut une majorité d'électeurs (Walgrave et coll., 2023). Chez 3 765 élus d'États américains des deux partis, le soutien aux politiques conservatrices est nettement surestimé, peut-être à cause de qui les contacte (Broockman et Skovron, 2018). Cela porte sur les opinions : pour les émotions, on en sait moins encore.</li>" +
+          "<li><b>Une émotion affichée à contretemps a un coût.</b> Quand la réaction d'un président ne convient pas à l'actualité montrée, le public réagit plus fort, avec ce que l'auteur classe comme des émotions négatives (son terme, pas le mien), et juge le président moins bien (Bucy, 2000). L'étude compare l'expression au contexte, pas à ce que ressentent les citoyens. Une émotion exprimée est en effet lue comme une information sur celui qui l'exprime (Van Kleef, 2009).</li>" +
+          "<li><b>Le pouvoir peut éloigner de la souffrance d'autrui.</b> Dans des conversations en face à face sur des expériences douloureuses, celles et ceux qui se sentent puissants rapportent moins de détresse et de compassion, sans lire moins bien les émotions (van Kleef et coll., 2008). C'est un résultat de laboratoire, sans vrais dirigeants. Un résultat voisin très cité (Galinsky et coll., 2006) n'a pas été répliqué (Ebersole et coll., 2016, référence à contrôler) : la prudence s'impose.</li>" +
+          "<li><b>L'écart n'a pas un seul sens.</b> Des élus locaux canadiens sont en moyenne moins hostiles au camp adverse que les citoyens qu'ils représentent (Lucas et Sheffer, 2024, référence à contrôler). Les dirigeants ne sont donc pas toujours les plus froids, ni les plus échauffés.</li>" +
+          "<li><b>Le plus proche d'un effet proportionnel.</b> Chez des partisans américains, chaque camp surestime environ du simple au double les préjugés de l'autre (Moore-Berg et coll., 2020). Dans sept expériences et une enquête, plus une personne se trompe sur ce que pense l'autre groupe, plus elle lui prête une intention d'obstruction, et une correction réduit cet effet, en contexte de compétition (Lees et Cikara, 2020). Ce lien porte sur une croyance fausse, pas sur un écart d'émotions, et il ne concerne pas dirigeants et population.</li>" +
+          "</ul>"
+        ] },
+        { h: "Un écart, une prise pour l'influence", p: [
+          "Ce qui suit est mon analyse, et elle vaut pour tous les camps. Une opération d'influence n'a pas besoin de créer cet écart : elle peut l'élargir, ou le faire paraître plus grand qu'il n'est. En ligne, l'indignation paraît déjà plus forte qu'elle ne l'est aux yeux de ceux qui la lisent (Brady et coll., 2023). Le dirigeant y voit une foule furieuse, le citoyen y voit un pouvoir sourd, et chacun répond à une image de l'autre."
+        ] },
+        { h: "Se synchroniser, ce n'est pas ressentir pareil", p: [
+          "Le but n'est pas que tout le monde ressente la même chose. Un dirigeant n'a pas à mimer une émotion, et un État n'a pas à <a href=\"#billet-therapie-politique-defense\">gérer celles de sa population</a>. Le but est de savoir ce que l'autre ressent, et de ne plus le deviner.",
+          "Pour celles et ceux qui décident : mesurer ce que ressent la population au-delà des personnes qui les contactent, et se demander avant de parler comment la phrase sera entendue par celles et ceux qui vivront la décision. Pour le public et les médias : ne pas conclure du ton d'une annonce ce que pense ou ressent la personne qui la prononce. Ces pistes sont des idées personnelles, pas des méthodes évaluées."
+        ] },
+        { h: "Comment tester l'hypothèse", p: [
+          "On pourrait la tester sur plusieurs sujets. Un panel anonyme de citoyens et des décideurs volontaires indiquent ce qu'ils ressentent, ce qu'ils croient que l'autre groupe ressent, et quelles intentions ils lui prêtent. On obtient trois chiffres de groupe : l'écart réel entre les émotions, l'erreur sur l'émotion de l'autre, et le niveau de mauvaises intentions prêtées.",
+          "Si l'hypothèse est juste, le troisième chiffre augmente avec le premier, d'un sujet à l'autre. Si l'erreur explique tout et l'écart rien, je me serai trompée sur le mécanisme. Personne n'est nommé, les résultats restent agrégés, et les émotions et opinions politiques étant des données sensibles, l'étude demande un consentement explicite et un cadre éthique."
+        ] }
+      ],
+      fiches: ["pragmatique", "identite-sociale", "adversaire", "stress-executif"],
+      refs: ["walgrave2023", "broockman2018", "bucy2000", "vankleef2009", "vankleef2008", "galinsky2006", "ebersole2016", "lucas2024", "mooreberg2020", "lees2020", "brady2023"] },
+    { id: "ralliement-drapeau", type: "Réflexion", date: "2026-10-31",
+      title: "Pourquoi la cote d'un président monte-t-elle quand la guerre éclate ?",
+      lead: "Les sondages le montrent souvent : au début d'une guerre ou d'une attaque, le dirigeant gagne des points. On pense d'abord à la peur et au besoin d'une figure connue. Les études confirment une partie de cette idée, et en contredisent une autre.",
+      sections: [
+        { h: "Mon point de départ", p: [
+          "Quand une guerre éclate, la cote du président monte. Mon explication spontanée : les gens ont peur, et ils se tournent vers une image qu'ils connaissent et en laquelle ils ont confiance. Je l'ai confrontée aux études. Le fait existe, mais il est moins général qu'on le croit. Le mécanisme est encore moins établi."
+        ] },
+        { h: "Ce que montrent les sondages", p: [
+          '<ul class="plain">' +
+          "<li><b>L'effet a un nom.</b> On parle de ralliement autour du drapeau depuis les travaux de John Mueller sur les présidents américains, de Truman à Johnson. L'événement qui le déclenche est international et implique directement le pays et son président. Il est aussi précis et spectaculaire (Mueller, 1970, référence à contrôler).</li>" +
+          "<li><b>Il peut être énorme.</b> George W. Bush passe de 51 % d'approbation le 10 septembre 2001 à 86 % le 15 septembre. Le 22, il atteint 90 %, le niveau le plus haut jamais mesuré pour un président américain à cette date. Le 10 novembre 2002, il est encore à 68 %. La guerre du Golfe de 1991 avait apporté 18 points au président de l'époque (Hetherington et Nelson, 2003).</li>" +
+          "<li><b>Il n'est pas automatique.</b> Une étude couvre 46 différends militaires entre États, 27 pays et 34 118 réponses. En moyenne, ces différends font baisser le soutien aux dirigeants (Seo et Horiuchi, 2024). Aux États-Unis, sur 193 différends de 1933 à 1992, le ralliement moyen est faible et non significatif sur le plan statistique, même si certaines crises produisent un ralliement net. Il dépend beaucoup de la façon dont la crise est présentée : déclarations de la Maison-Blanche, soutien des deux partis, couverture médiatique (Baker et Oneal, 2001 ; Groeling et Baum, 2008).</li>" +
+          "<li><b>Il s'use.</b> Dans dix pays, de 1990 à 2014, les partis au pouvoir gagnent d'abord en popularité quand leurs pertes militaires augmentent. Après environ quatre ans et demi d'intervention, ils sont sanctionnés (Kuijpers, 2019). George H. W. Bush atteint 89 % après la guerre du Golfe (Gallup, 2001) et perd l'élection de 1992. En Ukraine, la confiance en Volodymyr Zelensky baisse entre fin 2022 et fin 2024. Mesurée par l'institut ukrainien KIIS, elle passe de 84 % en décembre 2022 à 62 % en décembre 2023, puis à 45 % en décembre 2024, avec 24 % de sans-avis (KIIS, 2023 ; KIIS, 2025). Une autre formulation de la question donne 77 % fin 2023 et 52 % en décembre 2024 (KIIS, 2025). Ces chiffres s'arrêtent à décembre 2024 et ne décrivent pas la situation d'aujourd'hui.</li>" +
+          "<li><b>Un sondage mesure ce qu'on dit.</b> Dans un régime qui tolère mal la critique, l'écart avec ce qu'on pense peut être grand. Selon une étude, environ trois quarts des personnes ralliées à Vladimir Poutine après l'annexion de la Crimée dissimulaient au moins en partie leur avis (Hale, 2022). Cette étude interroge les mêmes personnes à plusieurs reprises (enquête par panel). Elle y ajoute une expérience de liste, où l'on indique combien d'affirmations on approuve, sans dire lesquelles. Une autre équipe conclut qu'au début de 2015, sa cote reflétait pourtant largement les opinions (Frye et coll., 2017). Le débat reste ouvert. Ces mesures ne portent que sur la Russie : elles ne montrent pas qu'ailleurs chacun dit toujours ce qu'il pense.</li>" +
+          "</ul>",
+          "L'effet n'a pas de couleur politique : l'étude de Mueller couvre déjà des présidents démocrates et républicains. Bush revient souvent ici parce que beaucoup d'expériences portent sur le 11 septembre, ce qui ne dit rien de particulier sur lui ni sur ses électeurs. L'effet ne dit rien non plus de l'intelligence de celles et ceux qui se rallient. Se rassembler face à une attaque peut être une réponse raisonnable."
+        ] },
+        { h: "Est-ce la peur ?", p: [
+          "En partie seulement, et il faut séparer ce que les mots mélangent. Voir un danger (la menace perçue, dans les études), être inquiet (l'anxiété, dans les études) et être en colère ne font pas la même chose.",
+          '<ul class="plain">' +
+          "<li><b>Voir un danger et être inquiet vont en sens contraire.</b> En Allemagne, de fin mars à juillet 2020, la menace perçue augmente l'approbation d'Angela Merkel et l'anxiété la diminue, sur 32 187 entretiens auprès de 3 680 personnes (Lehrer et coll., 2025). C'était une épidémie, pas une guerre.</li>" +
+          "<li><b>La colère pourrait compter davantage.</b> Dans des expériences auprès d'étudiants américains, un film sur le 11 septembre augmente le soutien à Bush et à sa politique militaire, un effet que les auteurs attribuent à la colère. L'anxiété pousse plutôt dans l'autre sens. L'effet ne s'étend pas aux questions de société, comme l'avortement (Lambert et coll., 2010, référence à contrôler ; Lambert et coll., 2011). Peur et colère ont aussi des effets opposés sur le risque perçu de terrorisme (<a href=\"#billet-pas-d-emotion-negative\">Lerner et coll., 2003</a>).</li>" +
+          "<li><b>La piste du rappel de la mort est fragile.</b> Rappeler aux participants leur propre mort ou le 11 septembre augmente leur soutien à Bush (Landau et coll., 2004). Mais un effet voisin de ce type de rappel, testé sur la défense de sa vision du monde, n'a pas été répliqué dans le projet Many Labs 4, avec 17 laboratoires et 1 550 participants après exclusions (Klein et coll., 2022).</li>" +
+          "<li><b>La crise change le regard sur le dirigeant.</b> Dans une expérience de 2004, les participants placés dans un scénario de crise trouvent Bush plus charismatique. La crise influe aussi, directement et à travers ce charisme, sur la responsabilité qu'ils lui attribuent dans ce que l'étude présente comme des échecs en Irak (Merolla et coll., 2007).</li>" +
+          "</ul>",
+          "Je retiens donc ceci : la peur que j'imaginais n'est pas le moteur évident. Une partie du ralliement semble venir de la menace perçue et, dans d'autres expériences, de la colère, alors que l'inquiétude peut aller contre le dirigeant. Ces résultats viennent d'études séparées, menées dans peu de pays, et aucune ne clôt la question."
+        ] },
+        { h: "Une image familière et de confiance ?", p: [
+          "C'est la partie de mon idée que les études soutiennent le moins directement. Je n'ai trouvé aucune étude qui teste si un dirigeant plus familier gagne davantage en temps de guerre. Ma recherche a été limitée, et cela ne prouve pas qu'il n'en existe pas.",
+          '<ul class="plain">' +
+          "<li><b>Pour la confiance.</b> Les personnes rendues anxieuses accordent davantage leur confiance, mais de façon sélective : à ceux qui paraissent compétents face au danger, et pas à ceux qu'elles en tiennent pour responsables (Albertson et Gadarian, 2015). La compétence perçue compte donc. Ces travaux portent sur la santé publique et l'immigration, et ne comparent pas la compétence à l'habitude.</li>" +
+          "<li><b>Contre l'habitude.</b> Pendant les campagnes présidentielles américaines, l'anxiété stimule l'attention et décourage de voter par habitude (Marcus et MacKuen, 1993). C'est une campagne et pas une guerre, mais cela va plutôt, à mon sens, à l'inverse d'un repli sur le connu.</li>" +
+          "<li><b>Une confiance qui n'existait pas toujours avant.</b> À la veille du 11 septembre, Bush ne recueille que 51 % d'approbation (Hetherington et Nelson, 2003), et il est au pouvoir depuis moins d'un an. Une telle hausse ne peut pas venir seulement d'une confiance déjà là.</li>" +
+          "</ul>",
+          "Je reformule donc mon hypothèse. On se rallie peut-être moins à une image connue qu'à une fonction : la personne qui peut répondre au danger et que tout le monde regarde au même moment. La familiarité peut y aider, comme dans <a href=\"#fiche-parasocial\">les liens à distance avec une figure publique</a>, mais elle ne suffit sans doute pas. C'est une hypothèse, pas un résultat."
+        ] },
+        { h: "Une prise pour l'influence", p: [
+          "Ce qui suit est mon analyse. Elle ne vise aucun camp ni aucun pays en particulier, et je ne l'ai pas testée. Une crise fait fondre trois choses en une seule : soutenir mon pays, soutenir ce dirigeant, soutenir cette décision. Critiquer la troisième peut alors sembler trahir la première. C'est là que se trouve la prise, pour qui voudrait durcir un climat ou faire taire un débat, à l'intérieur comme de l'extérieur.",
+          "L'autre prise est l'impression d'unanimité. Si l'étude sur la Crimée dit vrai, le ralliement peut se nourrir de <a href=\"#fiche-normes\">ce qu'on croit que les autres pensent</a> (Hale, 2022). Une cote élevée n'est donc pas une preuve que la décision est bonne, ni que tout le monde l'approuve sincèrement. Une cote basse ne prouve pas non plus que la décision est mauvaise."
+        ] },
+        { h: "Quatre questions, et un test", p: [
+          "Quand une crise éclate et qu'une cote s'envole, je peux me poser séparément trois questions : est-ce que je soutiens mon pays, ce dirigeant, cette décision ? Et une quatrième : qu'est-ce que je ressens, de la colère ou de l'inquiétude, et qu'est-ce que je sais vraiment de la situation ? On peut aussi noter, avant toute crise, les critères sur lesquels juger un dirigeant, puis les relire le jour venu. Ce sont des idées personnelles, pas des méthodes évaluées.",
+          "On peut tester le mécanisme en formation ou en recherche, avec une crise et un dirigeant fictifs. Le tirage au sort répartit les volontaires. Un groupe voit d'abord ce dirigeant plusieurs fois, l'autre le découvre. Chaque personne lit ensuite le récit de la crise ou un texte neutre. Elle indique enfin son approbation, la menace qu'elle perçoit, son inquiétude et sa colère. Si la familiarité compte, la hausse d'approbation par rapport au texte neutre sera plus forte chez les personnes qui connaissent déjà le dirigeant. Sinon, je me serai trompée sur ce point. Pour tester les quatre questions, on compare les personnes qui les ont reçues avant de répondre à celles qui ne les ont pas reçues. L'indicateur est l'écart entre le soutien au dirigeant et le soutien à sa décision : s'il se creuse avec les questions, elles aident à séparer les deux. Les résultats restent agrégés et aucun camp réel n'est représenté. Les réactions politiques et les émotions étant des données sensibles, l'étude demande un consentement explicite et un cadre éthique. Chaque personne peut se retirer à tout moment, et un débriefing suit. Le récit reste sobre, sans détails violents, et les volontaires sont prévenus de son thème avant de s'engager, en particulier s'ils ont été touchés de près par une guerre ou un attentat."
+        ] }
+      ],
+      fiches: ["autorite", "parasocial", "normes", "decision-emotion", "cadrage-agenda"],
+      refs: ["mueller1970", "hetherington2003", "seo2024", "baker2001", "baum2008", "kuijpers2019", "gallup2001", "kiis2023", "kiis2025", "hale2022", "frye2017", "lehrer2025", "lambert2010", "lambert2011", "lerner2003", "landau2004", "klein2022", "merolla2007", "albertson2015", "marcus1993"] }
   ];
 
   /* ---------- Tables (DIMA, lexique) ---------- */
@@ -2235,9 +2406,10 @@
   }
   function ficheHTML(f) {
     SECS = [["s-socle", "Socle"]];
+    var mapped = MAP.filter(function (x) { return x.fiche === f.id; })[0];
     var out = '<header class="page-head"><a class="back" href="#fiches">Toutes les fiches</a>' +
       '<h1>' + nb(f.title) + '</h1><p class="lead">' + f.teaser + '</p>' +
-      '<dl class="fmeta"><div><dt>Terrains</dt><dd>' + f.ax.map(function (a) { return SLUG[a] ? '<a class="pill ' + a + '" href="#' + SLUG[a] + '">' + AX[a] + '</a>' : '<span class="pill ' + a + '">' + AX[a] + '</span>'; }).join("") + '</dd></div><div><dt>Type</dt><dd>' + f.tag + '</dd></div>' + majHTML() + '</dl></header><div class="fiche-layout"><article class="fiche-main">' +
+      '<dl class="fmeta"><div><dt>Terrains</dt><dd>' + f.ax.map(function (a) { return SLUG[a] ? '<a class="pill ' + a + '" href="#' + SLUG[a] + '">' + AX[a] + '</a>' : '<span class="pill ' + a + '">' + AX[a] + '</span>'; }).join("") + '</dd></div><div><dt>Type</dt><dd>' + f.tag + '</dd></div>' + (mapped ? '<div data-volatile><dt>Techniques DIMA</dt><dd>' + mapped.te.join(", ") + '</dd></div>' : '') + majHTML() + '</dl></header><div class="fiche-layout"><article class="fiche-main">' +
       '<section class="block" id="s-socle" style="margin-top:36px"><h2>Socle</h2>' + f.socle.map(function (p) { return '<p>' + p + '</p>'; }).join("") + '</section>';
     if (f.cas && f.cas.length) {
       SECS.push(["s-cas", "Cas publics"]);
@@ -2278,18 +2450,25 @@
   /* ---------- Blog ---------- */
   function billetById(id) { return BILLETS.filter(function (x) { return x.id === id; })[0]; }
   function dateFR(iso) { return new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }); }
+  /* Temps de lecture approximatif : le chapeau et les sections, à 200 mots par minute */
+  function readMin(b) {
+    var text = [b.lead].concat(b.sections.map(function (s) { return s.h + " " + s.p.join(" "); })).join(" ").replace(/<[^>]+>/g, " ");
+    return Math.max(1, Math.round(text.split(/\s+/).filter(Boolean).length / 200));
+  }
+  /* Chaque type a sa couleur : la classe bt-<type> de style.css reprend le jeton --color-bt-<type> de tokens.css */
+  function btClass(t) { return "bt-" + norm(t).trim().replace(/\s+/g, "-"); }
   /* Les types viennent des billets ; le choix est gardé dans l'adresse (?type=…) pour pouvoir partager une vue filtrée */
   var BTYPES = BILLETS.map(function (b) { return b.type; }).filter(function (t, i, all) { return all.indexOf(t) === i; }).sort(function (a, b) { return a.localeCompare(b, "fr"); });
   var btype = BTYPES.filter(function (t) { return norm(t) === norm(new URLSearchParams(location.search).get("type") || ""); })[0] || "";
   function renderBlog() {
     $("bfilters").innerHTML = [""].concat(BTYPES).map(function (t) {
       var n = BILLETS.filter(function (b) { return !t || b.type === t; }).length;
-      return '<button type="button" data-t="' + t + '" aria-pressed="' + (btype === t) + '">' + (t || "Tous") + ' (' + n + ')</button>';
+      return '<button type="button"' + (t ? ' class="' + btClass(t) + '"' : '') + ' data-t="' + t + '" aria-pressed="' + (btype === t) + '">' + (t || "Tous") + ' (' + n + ')</button>';
     }).join("");
     /* Le plus récent en premier ; à date égale, le dernier ajouté à BILLETS */
-    $("blog-rows").innerHTML = '<div class="rows">' + BILLETS.slice().reverse().sort(function (a, b) { return b.date.localeCompare(a.date); }).filter(function (b) { return !btype || b.type === btype; }).map(function (b) {
-      return '<a class="row" href="#billet-' + b.id + '"><div><h3>' + nb(b.title) + '</h3><p>' + b.lead + '</p></div>' +
-        '<div class="tags"><span class="pill">' + b.type + '</span><span class="billet-date">' + dateFR(b.date) + '</span></div></a>';
+    $("blog-rows").innerHTML = '<div class="bcards">' + BILLETS.slice().reverse().sort(function (a, b) { return b.date.localeCompare(a.date); }).filter(function (b) { return !btype || b.type === btype; }).map(function (b) {
+      return '<a class="bcard ' + btClass(b.type) + '" href="#billet-' + b.id + '"><div class="bmeta"><span class="pill">' + b.type + '</span><span class="billet-date">' + dateFR(b.date) + ' · ≈ ' + readMin(b) + ' min</span></div>' +
+        '<h3>' + nb(b.title) + '</h3><p>' + b.lead + '</p><span class="bgo">Lire le billet</span></a>';
     }).join("") + '</div>';
   }
   $("bfilters").addEventListener("click", function (e) {
@@ -2302,9 +2481,9 @@
   renderBlog();
   function billetHTML(b) {
     var fiches = (b.fiches || []).map(ficheById).filter(Boolean);
-    return '<header class="page-head"><a class="back" href="#blog">Tous les billets</a>' +
+    return '<header class="page-head ' + btClass(b.type) + '"><a class="back" href="#blog">Tous les billets</a>' +
       '<h1>' + nb(b.title) + '</h1><p class="lead">' + b.lead + '</p>' +
-      '<dl class="fmeta"><div><dt>Type</dt><dd>' + b.type + '</dd></div><div><dt>Publié le</dt><dd><time data-pub datetime="' + b.date + '">' + dateFR(b.date) + '</time></dd></div></dl></header>' +
+      '<dl class="fmeta"><div><dt>Type</dt><dd><span class="pill">' + b.type + '</span></dd></div><div><dt>Publié le</dt><dd><time data-pub datetime="' + b.date + '">' + dateFR(b.date) + '</time></dd></div><div><dt>Temps de lecture</dt><dd>≈ ' + readMin(b) + ' min</dd></div></dl></header>' +
       '<article class="billet">' +
       b.sections.map(function (s) {
         return '<section class="block"><h2>' + s.h + '</h2>' + s.p.map(function (p) { return p.charAt(0) === "<" ? p : '<p>' + p + '</p>'; }).join("") + '</section>';
