@@ -1673,8 +1673,45 @@
   R.keller2020 = ["Keller, F. B., Schoch, D., Stier, S., & Yang, J. (2020). Political astroturfing on Twitter: How to coordinate a disinformation campaign. Political Communication, 37(2), 256–280.", D + "10.1080/10584609.2019.1661888", 1];
   R.brady2021 = ["Brady, W. J., McLoughlin, K., Doan, T. N., & Crockett, M. J. (2021). How social learning amplifies moral outrage expression in online social networks. Science Advances, 7(33), eabe5641.", D + "10.1126/sciadv.abe5641", 1];
   R.houde2025 = ["Houde, A.-M. (2025). Emotions, International Relations, and the everyday: Individuals' emotional attachments to international organisations. Review of International Studies, 51(3), 504–522. Publié en ligne en 2023.", D + "10.1017/S0260210523000554", 0];
+  R.hoes2024 = ["Hoes, E., Aitken, B., Zhang, J., Gackowski, T., & Wojcieszak, M. (2024). Prominent misinformation interventions reduce misperceptions but increase scepticism. Nature Human Behaviour, 8(8), 1545–1553.", D + "10.1038/s41562-024-01884-x", 0];
+  R.vandermeer2023 = ["van der Meer, T. G. L. A., Hameleers, M., & Ohme, J. (2023). Can fighting misinformation have a negative spillover effect? How warnings for the threat of misinformation can decrease general news credibility. Journalism Studies, 24(6), 803–823.", D + "10.1080/1461670X.2023.2187652", 1];
+  R.modirrousta2023 = ["Modirrousta-Galian, A., & Higham, P. A. (2023). Gamified inoculation interventions do not improve discrimination between true and fake news: Reanalyzing existing research with receiver operating characteristic analysis. Journal of Experimental Psychology: General, 152(9), 2411–2437.", D + "10.1037/xge0001395", 1];
+  R.ternovski2022 = ["Ternovski, J., Kalla, J., & Aronow, P. M. (2022). The negative consequences of informing voters about deepfakes: Evidence from two survey experiments. Journal of Online Trust and Safety, 1(2).", D + "10.54501/jots.v1i2.28", 1];
+  R.vaccari2020 = ["Vaccari, C., & Chadwick, A. (2020). Deepfakes and disinformation: Exploring the impact of synthetic political video on deception, uncertainty, and trust in news. Social Media + Society, 6(1), 2056305120903408.", D + "10.1177/2056305120903408", 1];
+  R.chesney2019 = ["Chesney, B., & Citron, D. (2019). Deep fakes: A looming challenge for privacy, democracy, and national security. California Law Review, 107(6), 1753–1820.", D + "10.15779/Z38RV0D15J", 1];
+  R.schiff2025 = ["Schiff, K. J., Schiff, D. S., & Bueno, N. S. (2025). The liar's dividend: Can politicians claim misinformation to evade accountability? American Political Science Review, 119(1), 71–90.", D + "10.1017/S0003055423001454", 1];
+  R.altay2023 = ["Altay, S., Berriche, M., & Acerbi, A. (2023). Misinformation on misinformation: Conceptual and methodological challenges. Social Media + Society, 9(1), 20563051221150412.", D + "10.1177/20563051221150412", 1];
+  R.dnr2025 = ["Newman, N., et coll. (2025). Digital News Report 2025. Reuters Institute for the Study of Journalism.", D + "10.60625/risj-8qqf-jt36", 1];
+  R.toff2023 = ["Toff, B., Palmer, R., & Nielsen, R. K. (2023). Avoiding the news: Reluctant audiences for journalism. Columbia University Press.", D + "10.7312/toff20518", 1];
+  R.bor2022 = ["Bor, A., & Petersen, M. B. (2022). The psychology of online political hostility: A comprehensive, cross-national test of the mismatch hypothesis. American Political Science Review, 116(1), 1–18.", D + "10.1017/S0003055421000885", 1];
+  R.kramer2014 = ["Kramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. PNAS, 111(24), 8788–8790.", D + "10.1073/pnas.1320040111", 0];
+  R.brady2023 = ["Brady, W. J., McLoughlin, K. L., Torres, M. P., Luo, K. F., Gendron, M., & Crockett, M. J. (2023). Overperception of moral outrage in online social networks inflates beliefs about intergroup hostility. Nature Human Behaviour, 7(6), 917–927.", D + "10.1038/s41562-023-01582-0", 1];
+  R.rathje2021 = ["Rathje, S., Van Bavel, J. J., & van der Linden, S. (2021). Out-group animosity drives engagement on social media. PNAS, 118(26), e2024292118.", D + "10.1073/pnas.2024292118", 1];
+  R.garcia2019 = ["Garcia, D., & Rimé, B. (2019). Collective emotions and social resilience in the digital traces after a terrorist attack. Psychological Science, 30(4), 617–628.", D + "10.1177/0956797619831964", 1];
+  R.halperin2013 = ["Halperin, E., Porat, R., Tamir, M., & Gross, J. J. (2013). Can emotion regulation change political attitudes in intractable conflicts? From the laboratory to the field. Psychological Science, 24(1), 106–111.", D + "10.1177/0956797612452572", 1];
+  R.allcott2020 = ["Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676.", D + "10.1257/aer.20190658", 1];
+  R.asimovic2021 = ["Asimovic, N., Nagler, J., Bonneau, R., & Tucker, J. A. (2021). Testing the effects of Facebook usage in an ethnically polarized setting. PNAS, 118(25), e2022819118.", D + "10.1073/pnas.2022819118", 0];
+  R.piccardi2025 = ["Piccardi, T., Saveski, M., Jia, C., Hancock, J., Tsai, J. L., & Bernstein, M. S. (2025). Reranking partisan animosity in algorithmic social media feeds alters affective polarization. Science, 390(6776), eadu5584.", D + "10.1126/science.adu5584", 1];
+  R.guess2023 = ["Guess, A. M., Malhotra, N., Pan, J., Barberá, P., et coll. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? Science, 381(6656), 398–404.", D + "10.1126/science.abp9364", 0];
+  R.roos2020 = ["Roos, C. A., Postmes, T., & Koudenburg, N. (2020). The microdynamics of social regulation: Comparing the navigation of disagreements in text-based online and face-to-face discussions. Group Processes & Intergroup Relations, 23(6), 902–917.", D + "10.1177/1368430220935989", 0];
+  R.verduyn2015rev = ["Verduyn, P., Delaveau, P., Rotgé, J.-Y., Fossati, P., & Van Mechelen, I. (2015). Determinants of emotion duration and underlying psychological and neural mechanisms. Emotion Review, 7(4), 330–335.", D + "10.1177/1754073915590618", 1];
+  R.verduyn2009 = ["Verduyn, P., Delvaux, E., Van Coillie, H., Tuerlinckx, F., & Van Mechelen, I. (2009). Predicting the duration of emotional experience: Two experience sampling studies. Emotion, 9(1), 83–91.", D + "10.1037/a0014610", 1];
+  R.verduyn2012 = ["Verduyn, P., Van Mechelen, I., Kross, E., Chezzi, C., & Van Bever, F. (2012). The relationship between self-distancing and the duration of negative and positive emotional experiences in daily life. Emotion, 12(6), 1248–1263.", D + "10.1037/a0028289", 1];
+  R.kuppens2010 = ["Kuppens, P., Allen, N. B., & Sheeber, L. B. (2010). Emotional inertia and psychological maladjustment. Psychological Science, 21(7), 984–991.", D + "10.1177/0956797610372634", 1];
+  R.holman2014 = ["Holman, E. A., Garfin, D. R., & Silver, R. C. (2014). Media's role in broadcasting acute stress following the Boston Marathon bombings. Proceedings of the National Academy of Sciences, 111(1), 93–98.", D + "10.1073/pnas.1316265110", 1];
+  R.thompson2019 = ["Thompson, R. R., Jones, N. M., Holman, E. A., & Silver, R. C. (2019). Media exposure to mass violence events can fuel a cycle of distress. Science Advances, 5(4), eaav3502.", D + "10.1126/sciadv.aav3502", 1];
+  R.hofmann2012 = ["Hofmann, S. G., Asnaani, A., Vonk, I. J. J., Sawyer, A. T., & Fang, A. (2012). The efficacy of cognitive behavioral therapy: A review of meta-analyses. Cognitive Therapy and Research, 36(5), 427–440.", D + "10.1007/s10608-012-9476-1", 0];
+  R.gloster2020 = ["Gloster, A. T., Walder, N., Levin, M. E., Twohig, M. P., & Karekla, M. (2020). The empirical status of acceptance and commitment therapy: A review of meta-analyses. Journal of Contextual Behavioral Science, 18, 181–192.", D + "10.1016/j.jcbs.2020.09.009", 0];
+  R.lillis2007 = ["Lillis, J., & Hayes, S. C. (2007). Applying acceptance, mindfulness, and values to the reduction of prejudice: A pilot study. Behavior Modification, 31(4), 389–411.", D + "10.1177/0145445506298413", 1];
+  R.manbeck2018 = ["Manbeck, K. E., Kanter, J. W., Kuczynski, A. M., Fine, L., Corey, M. D., & Maitland, D. W. M. (2018). Improving relations among conservatives and liberals on a college campus: A preliminary trial of a contextual-behavioral intervention. Journal of Contextual Behavioral Science, 10, 120–125.", D + "10.1016/j.jcbs.2018.10.006", 0];
+  R.voelkel2024 = ["Voelkel, J. G., Stagnaro, M. N., Chu, J. Y., et coll. (2024). Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity. Science, 386(6719), eadh4764.", D + "10.1126/science.adh4764", 1];
+  R.steenkamp2013 = ["Steenkamp, M. M., Nash, W. P., & Litz, B. T. (2013). Post-traumatic stress disorder: Review of the Comprehensive Soldier Fitness program. American Journal of Preventive Medicine, 44(5), 507–512.", D + "10.1016/j.amepre.2013.01.013", 1];
+  R.schleider2022 = ["Schleider, J. L., Mullarkey, M. C., Fox, K. R., Dobias, M. L., Shroff, A., Hart, E. A., & Roulston, C. A. (2022). A randomized trial of online single-session interventions for adolescent depression during COVID-19. Nature Human Behaviour, 6(2), 258–268.", D + "10.1038/s41562-021-01235-0", 1];
+  R.viginum_cadre = ["SGDSN / VIGINUM (2026, 15 mai). VIGINUM, un cadre juridique précis et transparent.", "https://www.sgdsn.gouv.fr/viginum/comprendre-viginum/viginum-un-cadre-juridique-precis-et-transparent", 1];
+  R.viginum_comite = ["SGDSN (2023, 26 juin). VIGINUM : publication du premier rapport du comité éthique et scientifique.", "https://www.sgdsn.gouv.fr/publications/viginum-publication-du-premier-rapport-du-comite-ethique-et-scientifique", 1];
+  R.mpf_mission = ["Psychological Defence Agency (Suède). Our mission. Page publiée le 15 mars 2024, mise à jour le 23 septembre 2026.", "https://mpf.se/psychological-defence-agency/about-us/our-mission", 1];
   var BILLETS = [
-    { id: "attention-discours", type: "Réflexion", date: "2026-10-31",
+    { id: "attention-discours", type: "Réflexion", date: "2026-10-10",
       title: "Court et marquant : ce que la course à l'attention fait au discours politique",
       lead: "Pour être entendu, un discours politique a de plus en plus besoin d'être court et marquant. Mais les données racontent autre chose qu'une simple baisse de notre attention.",
       sections: [
@@ -1701,7 +1738,7 @@
       ],
       fiches: ["cadrage-agenda", "memoire-sources", "attention-selective"],
       refs: ["maybin2017", "andrzejewski2024", "schelenz2024", "mark2016", "lorenzspreen2019", "hallin1992"] },
-    { id: "emotions-relations-internationales", type: "Ressource", date: "2026-10-31",
+    { id: "emotions-relations-internationales", type: "Ressource", date: "2026-10-17",
       title: "À lire : étudier les émotions en relations internationales",
       lead: "Un billet d'Eric Sangar, publié en 2018 par l'Association belge francophone de science politique, sur une question difficile : comment savoir ce que les émotions font vraiment à la politique internationale ?",
       sections: [
@@ -1725,7 +1762,7 @@
       ],
       fiches: ["decision-emotion", "cadrage-agenda"],
       refs: ["sangar2018", "clement2017", "clementsangar2018", "moisi2026"] },
-    { id: "hors-du-climat-emotionnel", type: "Réflexion", date: "2026-10-31",
+    { id: "hors-du-climat-emotionnel", type: "Réflexion", date: "2026-10-24",
       title: "Quand on ne ressent pas ce que son pays semble ressentir",
       lead: "Deuil, fierté, colère : il arrive qu'une émotion paraisse partagée par tout un pays. Que se passe-t-il pour celles et ceux qui ne la ressentent pas, et pourquoi cet écart compte-t-il face à l'influence ?",
       sections: [
@@ -1760,7 +1797,151 @@
         ] }
       ],
       fiches: ["normes", "identite-sociale", "adversaire", "inondation"],
-      refs: ["hochschild1979", "paez2015", "deleersnyder2014", "goldenberg2014", "noelleneumann1974", "matthes2018", "prentice1993", "bursztyn2020", "houde2025", "keller2020", "brady2021"] }
+      refs: ["hochschild1979", "paez2015", "deleersnyder2014", "goldenberg2014", "noelleneumann1974", "matthes2018", "prentice1993", "bursztyn2020", "houde2025", "keller2020", "brady2021"] },
+    { id: "defense-defiance", type: "Prospective", date: "2026-10-27",
+      title: "Et si la défense fabriquait la défiance ? Un angle mort pour 2030",
+      lead: "On apprend à repérer le faux, et on mesure si cela marche. On mesure beaucoup moins ce que cela fait à notre confiance dans le vrai. D'ici quelques années, ce pourrait être une faille à part entière.",
+      sections: [
+        { h: "L'angle mort", p: [
+          'La plupart des défenses contre la manipulation se jugent à la même question : repère-t-on mieux le faux ? Ce site ne fait pas exception : l\'indicateur de la fiche <a href="#fiche-inoculation">Inoculation</a> compte les messages fictifs détectés.',
+          "Or une personne qui répond « faux » à tout détecte tout le faux. Elle a aussi perdu le vrai. Une défense peut donc réussir à son propre test et affaiblir ce qu'elle voulait protéger."
+        ] },
+        { h: "Ce que l'on sait déjà", p: [
+          '<ul class="plain">' +
+          "<li><b>L'effet existe en expérience.</b> Aux États-Unis, en Pologne et à Hong Kong (6 127 personnes), le fact-checking, les conseils d'éducation aux médias et la couverture médiatique de la désinformation réduisent la croyance dans le faux, mais aussi la crédibilité des informations factuelles (Hoes et coll., 2024, référence à contrôler). Présenter la désinformation comme une menace peut aussi amorcer une méfiance envers les informations authentiques (van der Meer et coll., 2023).</li>" +
+          "<li><b>Mieux détecter n'est pas toujours mieux distinguer.</b> Une réanalyse de cinq études sur deux jeux d'inoculation ne trouve pas de meilleure distinction entre vrai et faux : les participants répondent surtout davantage « faux » (Modirrousta-Galian et Higham, 2023). Ce résultat ne vaut pas pour toute l'inoculation.</li>" +
+          "<li><b>Les contenus synthétiques ajoutent du doute.</b> Informer sur les deepfakes n'améliore pas leur détection et pousse à juger fausses des vidéos authentiques (Ternovski et coll., 2022). Au Royaume-Uni, face à une vidéo truquée, les gens sont plus souvent incertains que trompés, et cette incertitude va de pair avec une moindre confiance dans l'information sur les réseaux sociaux (Vaccari et Chadwick, 2020).</li>" +
+          "</ul>"
+        ] },
+        { h: "Ce que l'on ne sait pas", p: [
+          "Ces résultats viennent surtout d'expériences en ligne, et ceux que j'ai pu contrôler ne disent pas si l'effet dure. Rien ne montre encore qu'une formation crée une défiance durable envers les médias.",
+          "Il y a aussi un contrepoint. Le « dividende du menteur », l'expression de Chesney et Citron (2019), désigne le gain de celui qui crie au faux pour échapper à une accusation. Testé auprès de 15 287 adultes américains, ce gain apparaît surtout pour des scandales rapportés par écrit et beaucoup moins en vidéo. Il porte sur le soutien au responsable politique : l'étude ne trouve pas d'effet significatif sur la confiance dans les médias (Schiff et coll., 2025).",
+          "Le contexte, enfin, ne prouve rien à lui seul. 40 % des personnes interrogées dans 48 marchés disent éviter parfois ou souvent l'information, contre 29 % en 2017 (Newman et coll., 2025). Selon la présentation de l'éditeur, cet évitement touche surtout les groupes défavorisés (Toff et coll., 2023). Rien ne le relie à la lutte contre la désinformation. Et certains chercheurs jugent l'ampleur de la désinformation surestimée (Altay et coll., 2023) : une raison de plus de ne pas gonfler la menace."
+        ] },
+        { h: "Trois futurs possibles d'ici 2030", p: [
+          "Ce ne sont pas des prévisions, mais des scénarios pour réfléchir. Aucun n'a été mesuré.",
+          '<ul class="plain">' +
+          "<li><b>Le doute par défaut.</b> Les contenus synthétiques deviennent ordinaires et chaque formation répète que tout peut être faux. Vérifier coûte cher, alors on doute de ce qui dérange et on croit ce qui arrange. N'importe quel acteur mis en cause, quel que soit son camp, peut répondre « c'est un faux ».</li>" +
+          "<li><b>Le retrait.</b> On ne trie plus, on s'en va. L'évitement progresse, surtout chez celles et ceux qui ont le moins de ressources pour vérifier. Un adversaire n'a plus besoin de faire croire quoi que ce soit : il lui suffit que plus rien ne soit cru.</li>" +
+          "<li><b>La confiance outillée.</b> Les preuves d'origine des contenus se banalisent, les institutions publient leurs corrections, et les formations apprennent à accorder sa confiance autant qu'à la retirer. Le doute redevient un outil, pas un réflexe.</li>" +
+          "</ul>"
+        ] },
+        { h: "Les signaux à surveiller", p: [
+          '<ul class="plain">' +
+          "<li>Des formations évaluées sans aucun contenu vrai dans le test.</li>" +
+          "<li>Des messages de sensibilisation dont la conclusion revient à « ne croyez plus rien ».</li>" +
+          "<li>Des responsables de tous bords qui répondent « c'est un faux » sans apporter d'élément.</li>" +
+          "<li>Une hausse de l'évitement de l'information dans les enquêtes répétées, surtout chez les publics les moins favorisés.</li>" +
+          "</ul>"
+        ] },
+        { h: "Ce qu'on peut tester dès maintenant", p: [
+          'Une règle simple : aucune évaluation sans contenus vrais. Le test mêle des contenus vrais et des contenus fictifs de difficulté comparable, et on suit deux chiffres en résultat de groupe : la <a href="#fiche-analyse-exercice">sensibilité et le critère</a>, c\'est-à-dire la capacité à distinguer et la tendance à répondre « faux ». S\'y ajoute un chiffre très parlant : la part de contenus vrais jugés faux.',
+          "L'hypothèse à tester : une formation réussit seulement si la sensibilité monte sans que le critère glisse vers « tout est faux ». On compare à un groupe tiré au sort qui ne l'a pas encore suivie, tout de suite puis à trois mois. Les participants sont volontaires, et l'exercice est suivi d'un débriefing.",
+          "Je changerai d'avis si des suivis à plusieurs mois montrent que cet effet disparaît, ou si les formations améliorent la distinction sans déplacer le critère. Ce serait une bonne nouvelle."
+        ] }
+      ],
+      fiches: ["inoculation", "analyse-exercice", "inondation", "usurpation"],
+      refs: ["hoes2024", "vandermeer2023", "modirrousta2023", "ternovski2022", "vaccari2020", "chesney2019", "schiff2025", "dnr2025", "toff2023", "altay2023"] },
+    { id: "emotions-en-ligne-en-presence", type: "Réflexion", date: "2026-10-29",
+      title: "Une émotion née en ligne vaut-elle une émotion née dans la rue ?",
+      lead: "Même effet politique, même durée, même façon de l'apaiser ? Je n'ai trouvé aucune étude qui compare directement une émotion politique selon l'endroit où elle naît. Ce qui existe permet pourtant de mieux poser la question.",
+      sections: [
+        { h: "Une question plus floue qu'il n'y paraît", p: [
+          "On oppose souvent les émotions nées en ligne (IVL, <i>in virtual life</i>) à celles nées en présence (IRL, <i>in real life</i>). Le mot « réel » est trompeur : une colère née devant un écran est une vraie colère. Et beaucoup d'émotions passent de l'un à l'autre, d'une vidéo vue sur son téléphone à une discussion en famille ou à une manifestation.",
+          "Ma recherche a été limitée, et ne pas trouver d'étude ne prouve pas qu'il n'y en a pas. Les réponses ci-dessous sont donc des indices, jamais des comparaisons directes."
+        ] },
+        { h: "Ont-elles le même effet ?", p: [
+          "On ne le sait pas. Chaque étude éclaire un seul côté.",
+          '<ul class="plain">' +
+          "<li><b>En ligne, une émotion se transmet sans contact.</b> Sur Facebook, chez 689 003 utilisateurs, voir moins de contenus positifs conduit à publier moins de messages positifs et plus de négatifs, et inversement (Kramer et coll., 2014, référence à contrôler). La revue a publié une expression d'inquiétude sur cet article.</li>" +
+          "<li><b>En présence, ressentir ensemble renforce le lien.</b> Dans des marches folkloriques et des manifestations, la synchronie émotionnelle perçue accompagne une identité collective et une intégration sociale plus fortes (Páez et coll., 2015). L'étude ne compare pas avec des échanges en ligne.</li>" +
+          "<li><b>En ligne, l'émotion des autres paraît plus forte qu'elle ne l'est.</b> Les observateurs surestiment l'indignation de ceux qui écrivent sur Twitter, ce qui gonfle leur impression d'une hostilité entre groupes (Brady et coll., 2023). Sur 2,7 millions de messages américains, chaque terme visant le camp adverse augmente de 67 % les chances de partage (Rathje et coll., 2021). Cette seconde étude mesure le partage, pas une émotion ressentie.</li>" +
+          "<li><b>L'écran ne change pas tout.</b> Dans huit études, les personnes hostiles en politique en ligne le sont aussi hors ligne, et sont surtout motivées par le statut (Bor et Petersen, 2022). Cela porte sur l'hostilité, pas sur l'émotion. Une discussion en ligne sur un désaccord politique semble toutefois produire moins de solidarité qu'en face à face (Roos et coll., 2020, référence à contrôler).</li>" +
+          "<li><b>Quitter le réseau n'a pas d'effet unique.</b> Aux États-Unis, quatre semaines sans Facebook avant une élection réduisent la polarisation et augmentent le bien-être, mais aussi la méconnaissance de l'actualité (Allcott et coll., 2020). En Bosnie-Herzégovine, une semaine sans Facebook en juillet 2019, autour de la commémoration du génocide, réduit l'estime pour les autres groupes ethniques, peut-être selon la diversité du lieu de vie (Asimovic et coll., 2021, référence à contrôler). Le hors ligne n'apaise donc pas toujours.</li>" +
+          "</ul>",
+          "Mon hypothèse : la différence tient moins à l'émotion qu'à ce qui l'entoure. En présence, on voit des visages, on peut être contredit, et le groupe a une taille visible. En ligne, on voit surtout celles et ceux qui s'expriment, des compteurs, et un public dont on ignore la taille."
+        ] },
+        { h: "S'estompent-elles plus lentement ?", p: [
+          "Aucune source que j'ai pu contrôler ne compare ce rythme. Les durées affichées dans les études portent sur l'expérience, pas sur l'émotion.",
+          "Un indice va contre l'idée d'une émotion en ligne toujours éphémère : après les attentats de Paris de novembre 2015, chez 62 114 utilisateurs de Twitter, les mots liés à la solidarité augmentent durablement, et les plus engagés dans l'émotion collective emploient un langage plus prosocial dans les mois suivants (Garcia et Rimé, 2019). Ce sont des mots publiés, pas un ressenti mesuré.",
+          "Je vois deux hypothèses opposées, à tester. Une émotion née en ligne pourrait durer plus longtemps, parce que le fil la remet sous les yeux. Elle pourrait aussi durer moins, parce que le sujet suivant la chasse : chaque sujet retient l'attention collective de moins en moins longtemps (Lorenz-Spreen et coll., 2019)."
+        ] },
+        { h: "Ce qui fait durer une émotion", p: [
+          "Une émotion dure de quelques secondes à plusieurs heures. Une revue range ce qui joue en trois familles : l'événement, l'émotion elle-même et la personne (Verduyn et coll., 2015). Ces travaux portent sur la vie quotidienne, pas sur la politique, et ils montrent des liens plutôt que des causes. Les appliquer aux émotions politiques est mon hypothèse.",
+          '<ul class="plain">' +
+          "<li><b>L'importance de la situation.</b> Plus la situation compte, plus l'émotion tend à durer (Verduyn et coll., 2009).</li>" +
+          "<li><b>L'intensité au départ.</b> Plus l'émotion est forte au début, plus elle tend à durer (Verduyn et coll., 2009).</li>" +
+          "<li><b>Le retour du déclencheur.</b> L'émotion dure davantage quand ce qui l'a provoquée revient, physiquement ou seulement en pensée (Verduyn et coll., 2009).</li>" +
+          "<li><b>La façon d'y repenser.</b> Y repenser avec du recul va de pair avec des émotions plus courtes que s'y replonger (Verduyn et coll., 2012).</li>" +
+          "<li><b>La personne.</b> Ses dispositions et ses façons de réguler ses émotions jouent aussi (Verduyn et coll., 2015). L'inertie émotionnelle, la résistance au changement d'un moment à l'autre, est plus forte en moyenne chez des étudiants à l'estime de soi plus basse et chez des adolescents déprimés (Kuppens et coll., 2010). C'est une tendance de groupe, qui ne dit rien d'une personne, et l'inertie n'est pas tout à fait la durée.</li>" +
+          "<li><b>L'exposition répétée.</b> Après l'attentat du marathon de Boston, chez 4 675 personnes, le stress aigu augmente avec les heures passées devant les médias. À partir de six heures par jour, il dépasse celui des personnes directement exposées (Holman et coll., 2014). Un suivi sur trois ans évoque un cercle entre détresse et consommation de médias (Thompson et coll., 2019). Ces études mesurent le stress après des violences, pas sa durée, ni la colère politique, et elles ne prouvent pas le sens du lien.</li>" +
+          "</ul>",
+          "Si ces paramètres valent pour la politique, le canal ne serait pas le plus important. Une émotion née en ligne durerait surtout quand le fil remet le déclencheur sous les yeux, quand le contenu retenu est le plus intense, et quand le sujet touche à ce qui compte pour nous. Une émotion née en présence durerait, elle aussi, si on en reparle chaque soir. C'est ce que le test proposé plus bas permettrait de vérifier."
+        ] },
+        { h: "Se régulent-elles de la même façon ?", p: [
+          "Là non plus, je n'ai pas trouvé de comparaison directe. Mais deux leviers sont documentés séparément.",
+          '<ul class="plain">' +
+          "<li><b>Ce que fait la personne.</b> Des participants israéliens, formés à réévaluer autrement une information sur le conflit israélo-palestinien qui suscite la colère, soutiennent davantage les politiques conciliantes et moins les politiques agressives. L'effet se retrouve encore cinq mois après (Halperin et coll., 2013). Il porte sur des attitudes, sans distinguer d'où vient la colère.</li>" +
+          "<li><b>Ce que fait l'environnement.</b> Pendant dix jours sur X, durant la campagne américaine de 2024, augmenter ou réduire l'exposition à l'animosité partisane modifie l'animosité envers l'autre parti de plus de 2 points sur 100, sans différence détectable selon le parti (Piccardi et coll., 2025). Passer simplement à un fil chronologique sur Facebook et Instagram, en 2020, ne change pas significativement la polarisation en trois mois (Guess et coll., 2023, référence à contrôler). Ces études diffèrent trop pour conclure, mais ce qui est mis en avant semble compter plus que le simple ordre du fil.</li>" +
+          "</ul>",
+          "Mon hypothèse : en présence, les autres aident à réguler sans qu'on le demande, par un regard ou une objection. En ligne, cette aide arrive plus tard, ou pas du tout, et la réaction qui revient peut au contraire encourager (Brady et coll., 2021)."
+        ] },
+        { h: "Pourquoi cela compte, et comment le tester", p: [
+          "Si une émotion née en ligne semble plus partagée qu'elle ne l'est, elle offre une prise à toute opération d'influence, quel que soit le camp. Reste à savoir ce qui dure vraiment, et ce qui s'apaise.",
+          "Pour le mesurer, on pourrait suivre des volontaires pendant quelques semaines autour d'un même événement, avec de courtes questions plusieurs fois par jour : quelle émotion, quelle intensité, née où, revue combien de fois. L'indicateur serait le temps de retour au niveau de départ, comparé selon l'origine de l'émotion. Les résultats resteraient agrégés. Les opinions politiques étant des données sensibles, l'étude demanderait un consentement explicite et un cadre éthique.",
+          "En attendant, pour soi, trois questions simples : où cette émotion a-t-elle commencé ? L'ai-je revue dix fois depuis ? Est-ce que je sais combien de personnes la ressentent vraiment, ou seulement combien l'expriment ? Ces questions sont une idée personnelle, pas une méthode évaluée."
+        ] }
+      ],
+      fiches: ["plans-si-alors", "stress-executif", "recompense-renforcement", "identite-sociale"],
+      refs: ["kramer2014", "paez2015", "brady2023", "rathje2021", "bor2022", "roos2020", "allcott2020", "asimovic2021", "garcia2019", "lorenzspreen2019", "verduyn2015rev", "verduyn2009", "verduyn2012", "kuppens2010", "holman2014", "thompson2019", "halperin2013", "piccardi2025", "guess2023", "brady2021"] },
+    { id: "therapie-politique-defense", type: "Réflexion", date: "2026-10-31",
+      title: "Une colère politique ne se soigne pas : la psychothérapie a-t-elle quelque chose à apporter à la Défense ?",
+      lead: "Les psychothérapies modifient des émotions liées à une situation. Peut-on en tirer quelque chose pour la psychologie politique et la Défense nationale ? Aucune étude que j'ai lue ne teste ce transfert. Je propose une piste à discuter, à condition de ne jamais décider à la place des gens ce qu'ils doivent ressentir.",
+      sections: [
+        { h: "Ce que la thérapie sait faire", p: [
+          "Oui, une psychothérapie peut modifier des émotions liées à une situation. Les preuves viennent surtout de personnes qui demandent de l'aide pour un trouble, pas de citoyens face à l'actualité.",
+          '<ul class="plain">' +
+          "<li><b>La TCC</b> est très étudiée. Une revue de 106 méta-analyses, tirées de 269 repérées, trouve le soutien le plus fort pour les troubles anxieux, la gestion de la colère et le stress général, entre autres, et demande encore des essais contrôlés (Hofmann et coll., 2012, référence à contrôler).</li>" +
+          "<li><b>L'ACT</b> ne cherche pas d'abord à réduire l'émotion, mais à changer le rapport qu'on a avec elle et à agir selon ses valeurs. Une revue de méta-analyses la trouve efficace, et meilleure que la plupart des comparateurs, à l'exception de la TCC (Gloster et coll., 2020, référence à contrôler).</li>" +
+          "</ul>",
+          "Je n'ai pas trouvé de classement des thérapies pour une émotion liée à une situation précise. Je n'en proposerai donc pas."
+        ] },
+        { h: "Ce qui ne se transfère pas", p: [
+          "Une thérapie, c'est aussi une personne qui demande de l'aide, une alliance, la confidentialité et un objectif qu'elle choisit. Sans cela, il ne reste qu'une technique, et ce n'est plus une thérapie.",
+          "Aucune source que j'ai pu lire ne teste ce transfert vers la politique ou la Défense. Ce qui suit est donc une extrapolation, à discuter."
+        ] },
+        { h: "Ce qui s'en approche", p: [
+          '<ul class="plain">' +
+          "<li><b>La réévaluation.</b> Des participants israéliens formés à réévaluer une information sur le conflit israélo-palestinien qui suscite la colère soutiennent davantage les politiques conciliantes et moins les politiques agressives, encore cinq mois après (Halperin et coll., 2013).</li>" +
+          "<li><b>L'ACT, à très petite échelle.</b> Une séance auprès d'étudiants augmente des intentions de comportements positifs dans une étude pilote sur les préjugés raciaux (Lillis et Hayes, 2007). Un atelier réunissant 20 étudiants conservateurs et libéraux donne des résultats préliminaires (Manbeck et coll., 2018, référence à contrôler). C'est bien trop peu pour conclure.</li>" +
+          "<li><b>D'autres résultats, sans thérapie.</b> Sur 32 059 Américains et 25 traitements testés, montrer des personnes sympathiques d'opinions différentes et souligner des identités communes réduisent le plus l'animosité partisane. Corriger les idées fausses sur l'autre camp et souligner le risque d'effondrement démocratique réduisent le plus les attitudes antidémocratiques (Voelkel et coll., 2024). Je n'ai lu que le résumé : il ne dit rien de techniques thérapeutiques. Ces traitements visent eux aussi des attitudes : selon la frontière que je pose plus bas, ce n'est pas à un État de les reprendre à son compte.</li>" +
+          "<li><b>Un avertissement sur un programme militaire.</b> Selon une revue de 2013, le programme américain Comprehensive Soldier Fitness avait été diffusé à plus d'un million de soldats sans revue indépendante et objective (Steenkamp et coll., 2013). Déployer d'abord et évaluer ensuite, c'est le risque à éviter.</li>" +
+          "</ul>"
+        ] },
+        { h: "La limite principale", p: [
+          "Une colère politique n'est pas un symptôme. Elle peut être justifiée, informer et pousser à agir. Si un État cherche à l'apaiser, il ne soigne pas : il fait de l'influence, quel que soit le gouvernement et même avec de bonnes intentions. Dans l'étude sur la réévaluation, menée auprès d'une seule population et dans un seul conflit, cet outil a déplacé des positions politiques. Que ce déplacement soit souhaitable ou non, ce n'est pas à l'outil d'en décider.",
+          "La frontière me semble être celle-ci : aider chacun à réguler ses émotions, oui ; viser une émotion ou une opinion précise, non. Selon l'agence suédoise de défense psychologique, sa mission porte sur les influences informationnelles hostiles de puissances étrangères, et son but est de protéger la liberté d'expression et une société ouverte (Psychological Defence Agency). Sur le papier, c'est une autre logique que gérer l'humeur d'une population. Cette page dit la mission affichée, pas la pratique.",
+          "En France, VIGINUM, le service de vigilance et de protection contre les ingérences numériques étrangères, montre à quoi peuvent ressembler des garde-fous écrits (SGDSN, 2023). Selon le SGDSN, le service ne collecte que des contenus publiquement accessibles, pas ceux des groupes fermés ni des messageries. La conservation des données ne peut excéder un an, la reconnaissance faciale et l'identification vocale sont proscrites, le traitement des données se fait sous le contrôle de la CNIL, et un comité éthique et scientifique de huit personnalités suit l'activité du service. Un décret de février 2026 a aussi élargi le champ de la collecte et allongé la durée de conservation (SGDSN, 2026). Ces garde-fous peuvent donc évoluer, et c'est là encore le cadre affiché, pas une évaluation de la pratique.",
+          "Mon hypothèse : l'ACT serait la plus facile à transférer, parce qu'elle ne dit pas quoi ressentir et que les valeurs restent celles de la personne. Rien ne le démontre pour l'instant."
+        ] },
+        { h: "Par quels moyens ?", p: [
+          '<ul class="plain">' +
+          "<li><b>La formation volontaire.</b> C'est le moyen le plus défendable, dans les armées, les écoles ou les cellules de crise. Trois gestes : repérer d'où vient l'émotion, prendre du recul, puis décider quoi faire selon ses valeurs. Y repenser avec du recul va de pair avec des émotions plus courtes (Verduyn et coll., 2012), mais ce module reste à évaluer. Dans une armée comme à l'école, le volontariat est fragile : refuser ne doit avoir aucune conséquence. À l'école, ce module ne devrait pas relever d'un commanditaire de défense.</li>" +
+          "<li><b>La communication de crise.</b> Après un attentat, on peut proposer de limiter les heures passées devant les médias, sans déconseiller de s'informer : les personnes qui y passent le plus de temps rapportent plus de stress aigu (Holman et coll., 2014). C'est une association, le stress peut aussi pousser à regarder davantage, et rien ne prouve que ce conseil protège. Il concerne une détresse aiguë, pas une opinion.</li>" +
+          "<li><b>Les réseaux sociaux, pour faire connaître un module.</b> Un essai clinique a recruté sur Instagram 2 452 adolescents de 13 à 16 ans aux symptômes dépressifs élevés. À trois mois, une séance unique en ligne réduit davantage les symptômes qu'un témoin actif, avec un effet faible (d = 0,18 ; Schleider et coll., 2022). Ce résultat clinique ne dit rien d'un programme politique ou de défense, et il ne justifie pas de viser des mineurs ou des personnes en souffrance.</li>" +
+          "<li><b>Les vidéos courtes.</b> Elles peuvent montrer des techniques de manipulation sans dicter de conclusion (Roozenbeek et coll., 2022), avec des effets modestes qui s'estompent sans rappel (Maertens et coll., 2021) et le <a href=\"#billet-defense-defiance\">risque de nourrir la défiance</a>.</li>" +
+          "<li><b>Les plateformes.</b> Changer ce que le fil met en avant modifie un peu l'animosité partisane (Piccardi et coll., 2025). Cela relève d'un débat public sur la régulation, pas d'un message d'État.</li>" +
+          "</ul>",
+          "À exclure : les messages émotionnels ciblés, les faux comptes, le profilage psychologique et tout recrutement visant des mineurs ou des personnes en souffrance. La défense deviendrait ce qu'elle prétend combattre."
+        ] },
+        { h: "Comment savoir si cela marche", p: [
+          "C'est une proposition, elle n'est pas évaluée. Des volontaires sont tirés au sort, le commanditaire est affiché, l'évaluation est indépendante et les résultats sont publiés, même décevants. Le module ne contient aucun contenu politique choisi par le commanditaire, et les résultats restent agrégés. Les participants sont débriefés et peuvent se retirer à tout moment.",
+          'On décrit l\'intensité de l\'émotion et le temps de retour au calme, comme dans le <a href="#billet-emotions-en-ligne-en-presence">billet sur les émotions en ligne et en présence</a>, sans en faire un objectif : rester en colère n\'est pas un échec. Le critère principal est la capacité à choisir sa réponse selon ses valeurs, un critère encore à définir et à valider.',
+          "On vérifie aussi que la participation politique et la confiance dans des informations vérifiées, choisies par un comité indépendant du commanditaire, ne baissent pas. La participation politique est mesurée par l'équipe indépendante, et n'est jamais transmise au commanditaire autrement qu'en résultats agrégés. Un programme qui rendrait les gens calmes mais passifs serait un échec."
+        ] }
+      ],
+      fiches: ["plans-si-alors", "stress-executif", "inoculation", "ethique-simulation"],
+      refs: ["hofmann2012", "gloster2020", "halperin2013", "lillis2007", "manbeck2018", "voelkel2024", "steenkamp2013", "mpf_mission", "viginum_comite", "viginum_cadre", "verduyn2012", "holman2014", "schleider2022", "roozenbeek2022", "maertens2021", "piccardi2025"] }
   ];
 
   /* ---------- Tables (DIMA, lexique) ---------- */
@@ -2097,12 +2278,27 @@
   /* ---------- Blog ---------- */
   function billetById(id) { return BILLETS.filter(function (x) { return x.id === id; })[0]; }
   function dateFR(iso) { return new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }); }
+  /* Les types viennent des billets ; le choix est gardé dans l'adresse (?type=…) pour pouvoir partager une vue filtrée */
+  var BTYPES = BILLETS.map(function (b) { return b.type; }).filter(function (t, i, all) { return all.indexOf(t) === i; }).sort(function (a, b) { return a.localeCompare(b, "fr"); });
+  var btype = BTYPES.filter(function (t) { return norm(t) === norm(new URLSearchParams(location.search).get("type") || ""); })[0] || "";
   function renderBlog() {
-    $("blog-rows").innerHTML = '<div class="rows">' + BILLETS.slice().sort(function (a, b) { return b.date.localeCompare(a.date); }).map(function (b) {
+    $("bfilters").innerHTML = [""].concat(BTYPES).map(function (t) {
+      var n = BILLETS.filter(function (b) { return !t || b.type === t; }).length;
+      return '<button type="button" data-t="' + t + '" aria-pressed="' + (btype === t) + '">' + (t || "Tous") + ' (' + n + ')</button>';
+    }).join("");
+    /* Le plus récent en premier ; à date égale, le dernier ajouté à BILLETS */
+    $("blog-rows").innerHTML = '<div class="rows">' + BILLETS.slice().reverse().sort(function (a, b) { return b.date.localeCompare(a.date); }).filter(function (b) { return !btype || b.type === btype; }).map(function (b) {
       return '<a class="row" href="#billet-' + b.id + '"><div><h3>' + nb(b.title) + '</h3><p>' + b.lead + '</p></div>' +
         '<div class="tags"><span class="pill">' + b.type + '</span><span class="billet-date">' + dateFR(b.date) + '</span></div></a>';
     }).join("") + '</div>';
   }
+  $("bfilters").addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b) return;
+    btype = b.getAttribute("data-t");
+    renderBlog();
+    try { history.replaceState(null, "", location.pathname + (btype ? "?type=" + encodeURIComponent(norm(btype)) : "") + location.hash); } catch (err) {}
+  });
   renderBlog();
   function billetHTML(b) {
     var fiches = (b.fiches || []).map(ficheById).filter(Boolean);

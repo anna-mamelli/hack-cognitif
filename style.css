@@ -219,6 +219,7 @@ a.pill:active { background: var(--color-paper-3); }
 .billet { max-width: 65ch; }
 .billet-date { font-size: var(--text-sm); color: var(--color-muted); }
 .row .tags:has(.billet-date) { align-items: baseline; }
+html:not(.js) #bfilters { display: none; }
 
 /* The close */
 .close-band { margin-top: 0; padding-block: var(--section-gap-s); background: var(--color-band); color: var(--color-band-ink); }

@@ -39,7 +39,7 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 - `TE` et `MAP` : techniques DIMA et rapprochements avec les fiches. `SENS` et `PSY` : colonnes « plus sensibles / ce qui protège » et notes cliniques. `RESIL` : mesures de protection et de résilience par famille de troubles (page Ressources), reliées aux fiches par les noms de `PSY`.
 - `COURS` : notions de la page Cours, statut `fiche`, `integre` ou `todo` ; `CTHEMES` et `CTHEME_OF` les rangent par thème.
 - `GLOSS` et `GCAT_OF` : glossaire et catégories. `CONTRIB_FORM` : adresse du formulaire Framaforms.
-- `BILLETS` : billets du blog (`id`, `type`, `date` au format `AAAA-MM-JJ`, `title`, `lead`, `sections`, `fiches`, `refs`). Chaque billet devient la page `billet-<id>`, reliée à la carte par `fiches`. Ses références sont dans `R`, avec les mêmes règles de statut que les fiches.
+- `BILLETS` : billets du blog (`id`, `type`, `date` au format `AAAA-MM-JJ`, `title`, `lead`, `sections`, `fiches`, `refs`). Chaque billet devient la page `billet-<id>`, reliée à la carte par `fiches`. Un nouveau billet s'ajoute à la fin de la table : la page Blog affiche le plus récent en premier et, à date égale, le dernier ajouté. Ses références sont dans `R`, avec les mêmes règles de statut que les fiches.
 
 La page Carte (`renderCarte` et `carteCSV`) se construit entièrement à partir de ces tables : famille par `FAM_OF`, phase DIMA par le quatrième caractère des identifiants `TE` de la fiche dans `MAP`, contre-mesures et test par les entrées `blue` et `red`. Une fiche sans entrée `Indicateur` y laisse une case vide. Le niveau de preuve de chaque contre-mesure vient de `CMLV` (juste après `FREFS`) : une fiche absente de cette table est affichée « plausible ».
 
