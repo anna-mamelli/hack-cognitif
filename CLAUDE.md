@@ -19,7 +19,7 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 - `npm install` : une seule fois, installe `puppeteer-core`.
 - `npm run build` : refabrique toutes les pages à la racine. Il faut Chrome ou Edge installé (sinon indiquer le chemin dans la variable `CHROME_PATH`). `SITE_URL` remplace `config.siteUrl` de `package.json`. `config.goatcounter` y donne l'adresse de mesure d'audience, ajoutée aux seules pages fabriquées et décrite dans les mentions légales.
 - Il n'y a ni tests ni linter. La fabrication sert de vérification : elle sort en erreur si `script.js` lève une exception sur une page.
-- Aperçu sans fabriquer : ouvrir `atelier/modele.html` dans un navigateur, qui affiche tout le site sur une seule page ; on va à une page par son adresse en `#`, par exemple `modele.html#fiche-autorite`. Aperçu des pages fabriquées : Live Server (port 5501) à la racine.
+- Aperçu sans fabriquer : ouvrir `atelier/modele.html` dans un navigateur, qui affiche tout le site sur une seule page ; on va à une page par son adresse en `#`, par exemple `modele.html#fiche-autorite`. Aperçu des pages fabriquées : Live Server (port 5501) à la racine ; leur politique de sécurité bloque le rechargement automatique de Live Server, recharger la page à la main.
 - `/commit` refabrique puis committe tout ; `/push` envoie sur GitHub, ce qui met à jour le site publié.
 
 ## Architecture
@@ -49,7 +49,9 @@ Ajouter une page fixe demande trois choses : une section `v-<route>` dans `model
 
 **Responsive.** Le CSS part du téléphone : la base est la version étroite et les paliers `min-width` (40, 48, 60, 64 et 72rem) ajoutent de la place. Sous 72rem, les tableaux sont des cartes (`labelCells` écrit le titre de chaque colonne dans `data-label`). Jusqu'à 60rem, `FOLD` replie les cartes de test de la Carte par famille et les lignes du tableau DIMA : ce repli n'existe que dans le navigateur. `build.mjs` travaille à 1280 px de large pour qu'il n'entre ni dans le HTML publié ni dans l'empreinte de `dates.json`. Sans JavaScript (`html:not(.js)`), tout reste ouvert et le menu s'affiche à plat.
 
-**CSS.** `style.css` importe `tokens.css` (couleurs, espacements, polices ; thème clair, thème sombre par `data-theme` et par `prefers-color-scheme`) et `base.css`. Les commentaires « Hallmark » en tête de `style.css` consignent les choix de design voulus par la propriétaire : les lire avant de toucher à l'apparence.
+**Sécurité.** GitHub Pages ne permet pas de régler les en-têtes : `build.mjs` écrit dans chaque page fabriquée une balise `meta` Content-Security-Policy, qui n'autorise que les fichiers du site, le script en ligne de `modele.html` (par son empreinte, recalculée à chaque fabrication) et GoatCounter. Le modèle n'en a pas. Une nouvelle ressource extérieure doit y être ajoutée, et les attributs `onclick=…` et les balises `<style>` restent interdits. Le script GoatCounter est fixé à une version avec son empreinte (`COUNTER_JS`, `COUNTER_SRI`). Les textes de `script.js` s'insèrent sans échappement : une contribution ne doit y entrer qu'après relecture de son HTML. Tout le dépôt est lisible sur le site publié : n'y mettre aucun secret.
+
+**CSS.** `style.css` importe `fonts.css` (IBM Plex, servi depuis `fonts/`, jamais depuis un service tiers), `tokens.css` (couleurs, espacements, polices ; thème clair, thème sombre par `data-theme` et par `prefers-color-scheme`) et `base.css`. Les commentaires « Hallmark » en tête de `style.css` consignent les choix de design voulus par la propriétaire : les lire avant de toucher à l'apparence.
 
 ## Contenus
 

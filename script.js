@@ -2853,11 +2853,13 @@
      En aperçu local (fichier ouvert depuis le disque, Live Server), rien ne fait ce lien : les liens gardent .html */
   var LOCAL = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   var EXT = LOCAL ? ".html" : "";
+  /* Own keys only: an address such as #constructor must not pass for a terrain */
+  function isTerrain(h) { return Object.prototype.hasOwnProperty.call(TERRAINS, h); }
   function fileFor(h) {
     if (!h || h === "accueil") return LOCAL ? "index.html" : "./";
     if (h.indexOf("fiche-") === 0) return ficheById(h.slice(6)) ? h + EXT : null;
     if (h.indexOf("billet-") === 0) return billetById(h.slice(7)) ? h + EXT : null;
-    if (TERRAINS[h] || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain" && h !== "billet")) return h + EXT;
+    if (isTerrain(h) || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain" && h !== "billet")) return h + EXT;
     return null;
   }
   function nav(h, q) {
@@ -2870,7 +2872,7 @@
   function route() {
     var h = STATIC ? document.body.getAttribute("data-page") : (location.hash || "").slice(1) || "accueil";
     var view = h, f = null;
-    if (TERRAINS[h]) {
+    if (isTerrain(h)) {
       view = "terrain";
       $("v-terrain").innerHTML = terrainHTML(TERRAINS[h]);
       $("v-terrain").setAttribute("data-band", TERRAINS[h]);

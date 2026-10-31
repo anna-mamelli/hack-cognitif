@@ -8,9 +8,10 @@ Organisation du dossier
 - À la racine : le site tel qu'il est publié.
   - index.html et les autres pages .html (une par rubrique, par terrain et par fiche) : pages FABRIQUÉES, à ne pas modifier à la main (elles sont effacées et recréées à chaque fabrication).
   - script.js : contenus (fiches, cours, glossaire, références, tableau DIMA, colonnes « plus sensibles / ce qui protège ») et fonctionnement du site. C'est ici que l'on modifie les contenus.
-  - style.css, tokens.css, base.css : apparence (couleurs clair et sombre, polices, mise en page).
+  - style.css, tokens.css, base.css, fonts.css : apparence (couleurs clair et sombre, polices, mise en page).
+  - fonts/ : les polices IBM Plex et leur licence, servies par le site lui-même.
   - images/ : l'illustration du bandeau de l'accueil, en trois tailles (le navigateur choisit selon l'écran). Vérifier que sa licence autorise l'usage sur le site.
-- atelier/ : ce qui sert à fabriquer le site, à ne pas publier.
+- atelier/ : ce qui sert à fabriquer le site (GitHub Pages le publie aussi, voir « Publier »).
   - modele.html : le modèle de toutes les pages. C'est ici que l'on modifie le menu, le pied de page et les textes des pages fixes (À propos, Contact, Mentions légales, Chapeaux...). En l'ouvrant dans un navigateur, on voit tout le site sur une seule page, pratique pour vérifier une modification avant de fabriquer.
   - build.mjs, package.json, node_modules/ : le fabricant de pages.
 - .hallmark/ : sauvegarde d'avant la refonte et captures d'écran ; à ne pas publier.
@@ -26,12 +27,13 @@ Contributions et contact (formulaire Framaforms)
 - Créditer une personne sur une fiche (avec son accord) : dans script.js, ajouter à la fiche concernée relu: ["Prénom Nom"] pour une relecture, ou contrib: ["Prénom Nom"] pour une contribution. Les noms s'affichent en bas de la fiche, dans l'encadré « Contribuer à cette fiche ».
 
 Publier
-- Déposer à la racine de l'hébergement statique (Netlify, GitHub Pages, OVH...) : tous les fichiers .html de la racine, favicon.svg, script.js, style.css, tokens.css, base.css et le dossier images/ (et sitemap.xml et robots.txt s'ils existent). Ne pas publier atelier/, .hallmark/, .vscode/ ni README.txt. Avec GitHub Pages, le dépôt entier est publié : c'est sans danger, ces fichiers ne contiennent rien de personnel.
+- Déposer à la racine de l'hébergement statique (Netlify, GitHub Pages, OVH...) : tous les fichiers .html de la racine, favicon.svg, script.js, style.css, tokens.css, base.css, fonts.css et les dossiers images/ et fonts/ (et sitemap.xml et robots.txt s'ils existent). Ne pas publier atelier/, .hallmark/, .vscode/ ni README.txt. Avec GitHub Pages, tout le dépôt est lisible sur le site, y compris atelier/, README.txt, CLAUDE.md et .claude/ : ces fichiers ne contiennent aucun secret, mais CLAUDE.md porte l'identifiant GitHub de la propriétaire. N'y mettre jamais rien de confidentiel.
 - Quand l'adresse du site est connue, l'écrire une fois pour toutes dans atelier/package.json, à la ligne "siteUrl" (par exemple "siteUrl": "https://hack-cognitif.github.io"), puis relancer « npm run build ». Chaque fabrication ajoute alors sitemap.xml, robots.txt, les liens canoniques, l'image de partage et les données structurées lues par Google (nom du site, fil d'Ariane, article avec dates et références sur chaque fiche).
 - Les adresses des pages n'ont pas d'extension (…/fiches, …/fiche-autorite) : GitHub Pages sert fiches.html à l'adresse …/fiches, et les anciennes adresses en .html marchent toujours. En aperçu local (index.html ouvert depuis le disque, ou Live Server), les liens gardent .html pour fonctionner sans serveur. Un autre hébergeur doit savoir servir page.html à l'adresse page (Netlify le fait ; Apache demande une règle).
 - atelier/dates.json garde la date de première publication et de dernière modification de chaque page : la date ne change que si le contenu de la page change. La date de mise à jour s'affiche en haut de chaque fiche. Ne pas supprimer ce fichier.
 - Après la mise en ligne : vérifier une fiche avec le test des résultats enrichis de Google (search.google.com/test/rich-results), puis déclarer le site et son sitemap dans la Search Console.
-- Les polices viennent de Google Fonts (connexion requise ; sinon polices système de repli). Pour un site conforme RGPD, héberger les polices soi-même.
+- Les polices sont hébergées sur le site (fonts/) : une visite ne contacte plus Google Fonts.
+- Sécurité : chaque page fabriquée porte une politique de sécurité (Content-Security-Policy, dans atelier/build.mjs) qui bloque tout ce qui ne vient pas du site ou de GoatCounter. Une nouvelle ressource extérieure (vidéo, script, image) doit y être ajoutée, sinon le navigateur la refuse.
 
 A faire avant publication
 - Site édité à titre non professionnel : l'éditrice reste anonyme pour le public, mais doit communiquer son identité (nom, prénom, adresse, téléphone) à l'hébergeur, et les Mentions légales doivent indiquer le nom et l'adresse de cet hébergeur (atelier/modele.html, section Hébergeur, encore à compléter). Régime prévu par la LCEN (article 1-1, II, depuis la renumérotation de 2024, à vérifier sur Légifrance). Si le site sert un jour à promouvoir une activité rémunérée, il deviendrait professionnel et les mentions complètes seraient obligatoires.

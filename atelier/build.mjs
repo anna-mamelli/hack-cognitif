@@ -36,6 +36,11 @@ const CHROMES = [
   '/usr/bin/chromium-browser',
 ];
 
+// A fixed version of the audience script and its fingerprint (goatcounter.com/help/countjs-versions): the
+// browser refuses the script if it ever changes
+const COUNTER_JS = 'https://gc.zgo.at/count.v5.js';
+const COUNTER_SRI = 'sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ';
+
 const chrome = CHROMES.find((p) => p && existsSync(p));
 if (!chrome) {
   console.error('Chrome ou Edge introuvable : indiquez son chemin dans la variable CHROME_PATH.');
@@ -54,6 +59,23 @@ const template = readFileSync(TEMPLATE, 'utf8');
 const homeDescription = (template.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
 const oldDates = existsSync(DATES) ? JSON.parse(readFileSync(DATES, 'utf8')) : {};
 const dates = {};
+
+// What a page may load: the site's own files, the template's one inline script (by its hash) and the audience
+// measure. GitHub Pages sets no headers, so the policy is a meta tag, placed before the first script.
+// A new outside resource has to be added here, or the browser blocks it.
+const inlineScript = template.match(/<script>([\s\S]*?)<\/script>/)[1];
+const counterOrigin = config.goatcounter ? new URL(config.goatcounter).origin : '';
+const csp = [
+  "default-src 'none'",
+  `script-src 'self' 'sha256-${createHash('sha256').update(inlineScript).digest('base64')}'${config.goatcounter ? ` ${new URL(COUNTER_JS).origin}` : ''}`,
+  "style-src 'self'",
+  "style-src-attr 'unsafe-inline'", // the style="…" attributes written in script.js and modele.html
+  "font-src 'self'",
+  `img-src 'self'${counterOrigin ? ` ${counterOrigin}` : ''}`,
+  ...(counterOrigin ? [`connect-src ${counterOrigin}`] : []),
+  "base-uri 'none'",
+  "form-action 'none'",
+].join('; ');
 
 const browser = await puppeteer.launch({ executablePath: chrome, headless: true });
 const page = await browser.newPage();
@@ -187,10 +209,11 @@ for (const route of routes) {
     ] : []),
   ];
   // Audience measure, on the built pages only: the template stays free of it
-  const counter = config.goatcounter ? `<script data-goatcounter="${config.goatcounter}" async src="https://gc.zgo.at/count.js"></script>\n` : '';
+  const counter = config.goatcounter ? `<script data-goatcounter="${config.goatcounter}" async src="${COUNTER_JS}" crossorigin="anonymous" integrity="${COUNTER_SRI}"></script>\n` : '';
   const ld = url ? `<script type="application/ld+json">${JSON.stringify(structured(route, snap, name, description, url, d)).replace(/</g, '\\u003c')}</script>\n` : '';
 
   let html = template
+    .replace('<meta charset="utf-8">', () => `<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="${csp}">`)
     .replace(/<meta name="robots" content="noindex">\r?\n/, '') // the template is kept out of search engines, the pages are not
     // replacement functions, so that a $ in the content is never read as a pattern
     .replace(/<title>[^<]*<\/title>/, () => `<title>${escapeAttr(title)}</title>`)
