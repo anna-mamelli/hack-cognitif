@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Usurpation de voix et d'image | Hack cognitif</title>
 <meta name="description" content="Quand « j'ai vu » et « j'ai entendu » ne prouvent plus rien.">
 <meta name="robots" content="max-image-preview:large">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+<script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Usurpation de voix et d'image","description":"Quand « j'ai vu » et « j'ai entendu » ne prouvent plus rien.","url":"https://anna-mamelli.github.io/hack-cognitif/fiche-usurpation","mainEntityOfPage":"https://anna-mamelli.github.io/hack-cognitif/fiche-usurpation","inLanguage":"fr-FR","image":["https://anna-mamelli.github.io/hack-cognitif/images/partage-16x9.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-4x3.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-1x1.jpg"],"datePublished":"2026-10-27","dateModified":"2026-10-28","author":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"publisher":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"isPartOf":{"@type":"WebSite","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"articleSection":"Technique","citation":[{"@type":"CreativeWork","name":"Magramo, K. (2024, 16 mai). British engineering giant Arup revealed as $25 million deepfake scam victim. CNN. (Arup confirme que « de fausses voix et de fausses images » ont été utilisées.)","url":"https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk"},{"@type":"CreativeWork","name":"Swenson, A., & Weissert, W. (2024, 22 janvier). AI-generated robocall impersonates Biden in an apparent attempt to suppress votes in New Hampshire. Associated Press.","url":"https://www.news4jax.com/news/politics/2024/01/22/ai-generated-robocall-impersonates-biden-in-an-apparent-attempt-to-suppress-votes-in-new-hampshire/"},{"@type":"CreativeWork","name":"Bruce, V., & Young, A. (1986). Understanding face recognition. British Journal of Psychology, 77(3), 305–327.","url":"https://doi.org/10.1111/j.2044-8295.1986.tb02199.x"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://anna-mamelli.github.io/hack-cognitif/"},{"@type":"ListItem","position":2,"name":"Fiches","item":"https://anna-mamelli.github.io/hack-cognitif/fiches"},{"@type":"ListItem","position":3,"name":"Usurpation de voix et d'image","item":"https://anna-mamelli.github.io/hack-cognitif/fiche-usurpation"}]}]}</script>
 </head>
 <body data-page="fiche-usurpation">
@@ -103,11 +103,16 @@
 <div class="sp" id="sp" hidden>
   <div class="sp-back" data-close="1"></div>
   <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
-    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <div class="sp-top">
+      <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+      <button class="ibtn sp-close" type="button" data-close="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
     <ul id="sp-list" role="listbox"></ul>
     <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
   </div>
 </div>
+
+<button class="ibtn" id="totop" type="button" aria-label="Revenir en haut de la page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"></path></svg></button>
 
 <script src="script.js"></script>
 </body>

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Plans « si… alors » et réévaluation : des outils des TCC contre la pression | Hack cognitif</title>
 <meta name="description" content="Décider à l'avance de ce qu'on fera quand l'urgence arrivera.">
 <meta name="robots" content="max-image-preview:large">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+<script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Plans « si… alors » et réévaluation : des outils des TCC contre la pression","description":"Décider à l'avance de ce qu'on fera quand l'urgence arrivera.","url":"https://anna-mamelli.github.io/hack-cognitif/fiche-plans-si-alors","mainEntityOfPage":"https://anna-mamelli.github.io/hack-cognitif/fiche-plans-si-alors","inLanguage":"fr-FR","image":["https://anna-mamelli.github.io/hack-cognitif/images/partage-16x9.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-4x3.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-1x1.jpg"],"datePublished":"2026-10-27","dateModified":"2026-10-28","author":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"publisher":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"isPartOf":{"@type":"WebSite","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"articleSection":"Psychologie clinique","citation":[{"@type":"CreativeWork","name":"Gross, J. J. (2002). Emotion regulation: Affective, cognitive, and social consequences. Psychophysiology, 39(3), 281–291.","url":"https://doi.org/10.1017/S0048577201393198"},{"@type":"CreativeWork","name":"Gollwitzer, P. M. (1999). Implementation intentions: Strong effects of simple plans. American Psychologist, 54(7), 493–503.","url":"https://doi.org/10.1037/0003-066X.54.7.493"},{"@type":"CreativeWork","name":"Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119.","url":"https://doi.org/10.1016/S0065-2601(06)38002-1"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://anna-mamelli.github.io/hack-cognitif/"},{"@type":"ListItem","position":2,"name":"Fiches","item":"https://anna-mamelli.github.io/hack-cognitif/fiches"},{"@type":"ListItem","position":3,"name":"Plans « si… alors » et réévaluation : des outils des TCC contre la pression","item":"https://anna-mamelli.github.io/hack-cognitif/fiche-plans-si-alors"}]}]}</script>
 </head>
 <body data-page="fiche-plans-si-alors">
@@ -103,11 +103,16 @@
 <div class="sp" id="sp" hidden>
   <div class="sp-back" data-close="1"></div>
   <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
-    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <div class="sp-top">
+      <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+      <button class="ibtn sp-close" type="button" data-close="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
     <ul id="sp-list" role="listbox"></ul>
     <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
   </div>
 </div>
+
+<button class="ibtn" id="totop" type="button" aria-label="Revenir en haut de la page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"></path></svg></button>
 
 <script src="script.js"></script>
 </body>

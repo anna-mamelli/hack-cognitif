@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Mémoire de source et faux souvenirs | Hack cognitif</title>
 <meta name="description" content="On retient le contenu, on oublie d'où il vient.">
 <meta name="robots" content="max-image-preview:large">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+<script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Mémoire de source et faux souvenirs","description":"On retient le contenu, on oublie d'où il vient.","url":"https://anna-mamelli.github.io/hack-cognitif/fiche-memoire-sources","mainEntityOfPage":"https://anna-mamelli.github.io/hack-cognitif/fiche-memoire-sources","inLanguage":"fr-FR","image":["https://anna-mamelli.github.io/hack-cognitif/images/partage-16x9.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-4x3.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-1x1.jpg"],"datePublished":"2026-10-27","dateModified":"2026-10-28","author":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"publisher":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"isPartOf":{"@type":"WebSite","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"articleSection":"Neuropsychologie cognitive","citation":[{"@type":"CreativeWork","name":"Johnson, M. K., Hashtroudi, S., & Lindsay, D. S. (1993). Source monitoring. Psychological Bulletin, 114(1), 3–28.","url":"https://doi.org/10.1037/0033-2909.114.1.3"},{"@type":"CreativeWork","name":"Hasher, L., Goldstein, D., & Toppino, T. (1977). Frequency and the conference of referential validity. Journal of Verbal Learning and Verbal Behavior, 16(1), 107–112.","url":"https://doi.org/10.1016/S0022-5371(77)80012-1"},{"@type":"CreativeWork","name":"Loftus, E. F., & Palmer, J. C. (1974). Reconstruction of automobile destruction: An example of the interaction between language and memory. Journal of Verbal Learning and Verbal Behavior, 13(5), 585–589.","url":"https://doi.org/10.1016/s0022-5371(74)80011-3"},{"@type":"CreativeWork","name":"Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N., & Cook, J. (2012). Misinformation and its correction: Continued influence and successful debiasing. Psychological Science in the Public Interest, 13(3), 106–131.","url":"https://doi.org/10.1177/1529100612451018"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://anna-mamelli.github.io/hack-cognitif/"},{"@type":"ListItem","position":2,"name":"Fiches","item":"https://anna-mamelli.github.io/hack-cognitif/fiches"},{"@type":"ListItem","position":3,"name":"Mémoire de source et faux souvenirs","item":"https://anna-mamelli.github.io/hack-cognitif/fiche-memoire-sources"}]}]}</script>
 </head>
 <body data-page="fiche-memoire-sources">
@@ -103,11 +103,16 @@
 <div class="sp" id="sp" hidden>
   <div class="sp-back" data-close="1"></div>
   <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
-    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <div class="sp-top">
+      <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+      <button class="ibtn sp-close" type="button" data-close="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
     <ul id="sp-list" role="listbox"></ul>
     <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
   </div>
 </div>
+
+<button class="ibtn" id="totop" type="button" aria-label="Revenir en haut de la page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"></path></svg></button>
 
 <script src="script.js"></script>
 </body>

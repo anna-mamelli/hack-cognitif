@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Engagement et cohérence : l'escalade des petites demandes | Hack cognitif</title>
 <meta name="description" content="Après un premier oui, le second coûte moins.">
 <meta name="robots" content="max-image-preview:large">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+<script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Engagement et cohérence : l'escalade des petites demandes","description":"Après un premier oui, le second coûte moins.","url":"https://anna-mamelli.github.io/hack-cognitif/fiche-engagement","mainEntityOfPage":"https://anna-mamelli.github.io/hack-cognitif/fiche-engagement","inLanguage":"fr-FR","image":["https://anna-mamelli.github.io/hack-cognitif/images/partage-16x9.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-4x3.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-1x1.jpg"],"datePublished":"2026-10-27","dateModified":"2026-10-28","author":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"publisher":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"isPartOf":{"@type":"WebSite","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"articleSection":"Psychologie sociale","citation":[{"@type":"CreativeWork","name":"Freedman, J. L., & Fraser, S. C. (1966). Compliance without pressure: The foot-in-the-door technique. Journal of Personality and Social Psychology, 4(2), 195–202.","url":"https://doi.org/10.1037/h0023552"},{"@type":"CreativeWork","name":"Burger, J. M. (1999). The foot-in-the-door compliance procedure: A multiple-process analysis and review. Personality and Social Psychology Review, 3(4), 303–325.","url":"https://doi.org/10.1207/s15327957pspr0304_2"},{"@type":"CreativeWork","name":"Cialdini, R. B., Cacioppo, J. T., Bassett, R., & Miller, J. A. (1978). Low-ball procedure for producing compliance: Commitment then cost. Journal of Personality and Social Psychology, 36(5), 463–476.","url":"https://doi.org/10.1037/0022-3514.36.5.463"},{"@type":"CreativeWork","name":"Festinger, L., & Carlsmith, J. M. (1959). Cognitive consequences of forced compliance. Journal of Abnormal and Social Psychology, 58(2), 203–210.","url":"https://doi.org/10.1037/h0041593"},{"@type":"CreativeWork","name":"Staw, B. M. (1976). Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action. Organizational Behavior and Human Performance, 16(1), 27–44.","url":"https://doi.org/10.1016/0030-5073(76)90005-2"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://anna-mamelli.github.io/hack-cognitif/"},{"@type":"ListItem","position":2,"name":"Fiches","item":"https://anna-mamelli.github.io/hack-cognitif/fiches"},{"@type":"ListItem","position":3,"name":"Engagement et cohérence : l'escalade des petites demandes","item":"https://anna-mamelli.github.io/hack-cognitif/fiche-engagement"}]}]}</script>
 </head>
 <body data-page="fiche-engagement">
@@ -103,11 +103,16 @@
 <div class="sp" id="sp" hidden>
   <div class="sp-back" data-close="1"></div>
   <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
-    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <div class="sp-top">
+      <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+      <button class="ibtn sp-close" type="button" data-close="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
     <ul id="sp-list" role="listbox"></ul>
     <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
   </div>
 </div>
+
+<button class="ibtn" id="totop" type="button" aria-label="Revenir en haut de la page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"></path></svg></button>
 
 <script src="script.js"></script>
 </body>

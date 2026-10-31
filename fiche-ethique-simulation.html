@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Simuler une attaque sans trahir : consentement, tromperie et débriefing | Hack cognitif</title>
 <meta name="description" content="Un exercice qui humilie fait perdre plus de sécurité qu'il n'en apporte.">
 <meta name="robots" content="max-image-preview:large">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
+<script>document.documentElement.classList.add("js"); try { var t = localStorage.getItem("hc-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Simuler une attaque sans trahir : consentement, tromperie et débriefing","description":"Un exercice qui humilie fait perdre plus de sécurité qu'il n'en apporte.","url":"https://anna-mamelli.github.io/hack-cognitif/fiche-ethique-simulation","mainEntityOfPage":"https://anna-mamelli.github.io/hack-cognitif/fiche-ethique-simulation","inLanguage":"fr-FR","image":["https://anna-mamelli.github.io/hack-cognitif/images/partage-16x9.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-4x3.jpg","https://anna-mamelli.github.io/hack-cognitif/images/partage-1x1.jpg"],"datePublished":"2026-10-27","dateModified":"2026-10-28","author":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"publisher":{"@type":"Organization","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"isPartOf":{"@type":"WebSite","name":"Hack cognitif","url":"https://anna-mamelli.github.io/hack-cognitif/"},"articleSection":"Méthode","citation":[{"@type":"CreativeWork","name":"American Psychological Association (2017). Ethical principles of psychologists and code of conduct (2002, amendé en 2010 et 2017 ; normes 8.07 et 8.08).","url":"https://www.apa.org/ethics/code"},{"@type":"CreativeWork","name":"Resnik, D. B., & Finn, P. R. (2018). Ethics and phishing experiments. Science and Engineering Ethics, 24(4), 1241–1252.","url":"https://doi.org/10.1007/s11948-017-9952-9"},{"@type":"CreativeWork","name":"CERéDéPsy (2021). Code de déontologie des psychologues (version consolidée du 9 septembre 2021).","url":"https://psychologues.org/wp-content/uploads/2025/01/CODE-DE-DEONTOLOGIE-DES-PSYCHOLOGUES-2021_Colonnes_A3.pdf"},{"@type":"CreativeWork","name":"World Medical Association (1964, révisée 2024). Declaration of Helsinki: Ethical principles for medical research involving human participants.","url":"https://www.wma.net/policies-post/wma-declaration-of-helsinki"},{"@type":"CreativeWork","name":"Bell, K. (2020, 24 décembre). GoDaddy phishing 'test' teased employees with a fake holiday bonus. Engadget.","url":"https://www.engadget.com/godaddy-sent-fake-phising-email-promising-holiday-bonus-220756457.html"},{"@type":"CreativeWork","name":"Coble, S. (2021, 10 mai). Staff bonus was \"crass\" phishing simulation. Infosecurity Magazine.","url":"https://www.infosecurity-magazine.com/news/staff-bonus-was-crass-phishing/"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://anna-mamelli.github.io/hack-cognitif/"},{"@type":"ListItem","position":2,"name":"Fiches","item":"https://anna-mamelli.github.io/hack-cognitif/fiches"},{"@type":"ListItem","position":3,"name":"Simuler une attaque sans trahir : consentement, tromperie et débriefing","item":"https://anna-mamelli.github.io/hack-cognitif/fiche-ethique-simulation"}]}]}</script>
 </head>
 <body data-page="fiche-ethique-simulation">
@@ -103,11 +103,16 @@
 <div class="sp" id="sp" hidden>
   <div class="sp-back" data-close="1"></div>
   <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Rechercher dans le site">
-    <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+    <div class="sp-top">
+      <input id="sp-in" type="search" placeholder="Rechercher une fiche, un terme, un cours…" autocomplete="off" aria-label="Rechercher">
+      <button class="ibtn sp-close" type="button" data-close="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
     <ul id="sp-list" role="listbox"></ul>
     <p class="sp-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> naviguer</span><span><kbd>Entrée</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span></p>
   </div>
 </div>
+
+<button class="ibtn" id="totop" type="button" aria-label="Revenir en haut de la page" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"></path></svg></button>
 
 <script src="script.js"></script>
 </body>

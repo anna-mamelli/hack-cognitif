@@ -46,6 +46,8 @@ Le tableau DIMA de la page Ressources (`renderDima`) se filtre par entrée « Pl
 
 Ajouter une page fixe demande trois choses : une section `v-<route>` dans `modele.html`, la route dans `VIEWS` (`script.js`) et, si besoin, un lien dans `#nav`.
 
+**Responsive.** Le CSS part du téléphone : la base est la version étroite et les paliers `min-width` (40, 48, 60, 64 et 72rem) ajoutent de la place. Sous 72rem, les tableaux sont des cartes (`labelCells` écrit le titre de chaque colonne dans `data-label`). Jusqu'à 60rem, `FOLD` replie les cartes de test de la Carte par famille et les lignes du tableau DIMA : ce repli n'existe que dans le navigateur. `build.mjs` travaille à 1280 px de large pour qu'il n'entre ni dans le HTML publié ni dans l'empreinte de `dates.json`. Sans JavaScript (`html:not(.js)`), tout reste ouvert et le menu s'affiche à plat.
+
 **CSS.** `style.css` importe `tokens.css` (couleurs, espacements, polices ; thème clair, thème sombre par `data-theme` et par `prefers-color-scheme`) et `base.css`. Les commentaires « Hallmark » en tête de `style.css` consignent les choix de design voulus par la propriétaire : les lire avant de toucher à l'apparence.
 
 ## Contenus

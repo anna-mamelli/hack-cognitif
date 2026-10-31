@@ -947,6 +947,9 @@
     return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + (CONTRIB_FORM || "#contribuer") + '"' + (CONTRIB_FORM ? ' target="_blank" rel="noopener"' : '') + '>' + label + '</a>';
   }
   var calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+  /* Phones and small tablets: the longest lists fold. build.mjs works at a wider size, so the built pages keep everything open and their dates do not move */
+  var FOLD = window.matchMedia("(max-width: 60rem)");
+  function foldBtn(label, open) { return '<button type="button" class="fold-btn" aria-expanded="' + open + '">' + label + '</button>'; }
 
   /* A marker that glides to the chosen tab ("box", "under") or to the sommaire entry being read ("left") */
   function slide(group, mode, sel) {
@@ -1723,6 +1726,11 @@
     $("f-reset").hidden = !on;
     $("f-plus").value = f.plus; $("f-moins").value = f.moins; $("f-te").value = f.te;
     labelCells(document);
+    /* On a small screen each row opens on demand; a filter shows its answer at once */
+    if (FOLD.matches && !on && rows.length) Array.prototype.forEach.call($("dima-body").children, function (tr) {
+      tr.classList.add("folded");
+      tr.insertAdjacentHTML("beforeend", '<td class="fold-td">' + foldBtn("Plus sensibles, ce qui protège", false) + '</td>');
+    });
   }
   /* The choice is kept in the address (?plus=…&protege=…&te=…), so that a filtered view can be shared as a link */
   function dimaToUrl() {
@@ -1743,6 +1751,11 @@
     renderDima(); dimaToUrl();
   }
   $("dima-body").addEventListener("click", pickChip);
+  $("dima-body").addEventListener("click", function (e) {
+    var b = e.target.closest(".fold-btn");
+    if (!b) return;
+    b.setAttribute("aria-expanded", String(b.closest("tr").classList.toggle("folded") === false));
+  });
   $("dima-body").addEventListener("keydown", pickChip);
   (function () {
     var p = new URLSearchParams(location.search), match = function (v, list) {
@@ -2012,6 +2025,7 @@
       }).join("") + '</div></div>';
     }).join("");
     carteFilter();
+    foldTests();
     /* The gaps: phases with no fiche in a family of vulnerabilities (care and method fiches describe no attack technique),
        and levers that have no fiche yet */
     var empty = [];
@@ -2028,6 +2042,21 @@
       (levers.length ? '<li><b>Leviers décrits sur l\'accueil mais sans fiche dédiée :</b> ' + levers.join(", ") + '.</li>' : '') +
       '</ul><p class="contrib-act">' + contribLink("Proposer une fiche ou un cas", "btn") + '</p>';
   }
+  /* On a small screen the test cards fold by family, the first one open, and a chosen terrain opens them all; the map above keeps every family and every blank cell in view */
+  function foldTests() {
+    Array.prototype.forEach.call($("carte-tests").querySelectorAll(".tgroup"), function (g, i) {
+      var h = g.querySelector("h3"), b = h.querySelector(".fold-btn"), open = cax !== "all" || i === 0;
+      if (!FOLD.matches) { if (b) h.innerHTML = b.innerHTML; g.classList.remove("folded"); return; }
+      if (b) b.setAttribute("aria-expanded", String(open)); else h.innerHTML = foldBtn(h.innerHTML, open);
+      g.classList.toggle("folded", !open);
+    });
+  }
+  $("carte-tests").addEventListener("click", function (e) {
+    var b = e.target.closest(".fold-btn");
+    if (!b) return;
+    b.setAttribute("aria-expanded", String(b.closest(".tgroup").classList.toggle("folded") === false));
+  });
+  FOLD.addEventListener("change", function () { renderDima(); foldTests(); });
   /* The terrain buttons are the map's legend and its filter: the map keeps its shape and dims the other fiches, the test cards show only this terrain */
   var cax = "all";
   function carteFilter() {
@@ -2046,6 +2075,7 @@
     if (!b) return;
     cax = b.getAttribute("data-ax");
     carteFilter();
+    foldTests();
   });
   /* A fiche placed in several phases: pointing at one lights up the others */
   function relTile(e, on) {
@@ -2297,8 +2327,11 @@
     var o = $("top").classList.toggle("open");
     $("menu-btn").setAttribute("aria-expanded", o ? "true" : "false");
   });
-  $("nav").addEventListener("click", function (e) {
-    if (e.target.closest("a")) { $("top").classList.remove("open"); $("menu-btn").setAttribute("aria-expanded", "false"); }
+  function closeMenu() { $("top").classList.remove("open"); $("menu-btn").setAttribute("aria-expanded", "false"); }
+  $("nav").addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("click", function (e) { if ($("top").classList.contains("open") && !e.target.closest("#top")) closeMenu(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && $("top").classList.contains("open")) { closeMenu(); $("menu-btn").focus(); }
   });
 
   /* ---------- Routage ---------- */
@@ -2386,13 +2419,18 @@
   }
 
   /* ---------- Progression de lecture et sommaire ---------- */
-  var ticking = false;
+  var ticking = false, tocAt = null;
+  $("totop").addEventListener("click", function () {
+    window.scrollTo(0, 0);
+    document.querySelector(".brand").focus({ preventScroll: true });
+  });
   function onScroll() {
     if (ticking) return;
     ticking = true;
     window.requestAnimationFrame(function () {
       ticking = false;
       var bar = $("progress");
+      $("totop").hidden = window.scrollY < 2 * window.innerHeight;
       if (current !== "fiche") { bar.style.transform = "scaleX(0)"; return; }
       var max = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.transform = "scaleX(" + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ")";
@@ -2403,6 +2441,8 @@
       });
       Array.prototype.forEach.call(document.querySelectorAll(".toc button"), function (b) {
         b.setAttribute("aria-current", b.getAttribute("data-t") === active ? "true" : "false");
+        /* In the strip of a small screen, the entry being read stays in view */
+        if (b.getAttribute("data-t") === active && active !== tocAt) { tocAt = active; b.closest("ol").scrollLeft = b.parentNode.offsetLeft - 16; }
       });
       slide(document.querySelector("#v-fiche .toc ol"), "left", '[aria-current="true"]');
     });
@@ -2479,7 +2519,11 @@
     var li = e.target.closest("li[data-i]");
     if (li) spGo(parseInt(li.getAttribute("data-i"), 10));
   });
-  $("sp").addEventListener("click", function (e) { if (e.target.getAttribute("data-close")) spClose(); });
+  $("sp").addEventListener("click", function (e) { if (e.target.closest("[data-close]")) spClose(); });
+  /* The keyboard of a phone covers the page without always shrinking it: the panel takes the height it leaves */
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", function () {
+    document.documentElement.style.setProperty("--vvh", window.visualViewport.height + "px");
+  });
   document.addEventListener("keydown", function (e) {
     var tag = (e.target && e.target.tagName) || "";
     var typing = tag === "INPUT" || tag === "TEXTAREA";

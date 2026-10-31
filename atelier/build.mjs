@@ -57,6 +57,8 @@ const dates = {};
 
 const browser = await puppeteer.launch({ executablePath: chrome, headless: true });
 const page = await browser.newPage();
+// Wider than FOLD in script.js: what folds on a small screen must not enter the pages or their fingerprint
+await page.setViewport({ width: 1280, height: 900 });
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
 // Reduced motion: the router then switches views at once, with no transition to wait for
