@@ -98,7 +98,8 @@ const render = (route, modified) => page.evaluate(async (r, d) => {
     return { name: c.textContent.replace(/\s+/g, ' ').trim(), url: a ? a.href : '' };
   });
   return {
-    html: clone.outerHTML, bare: bare.outerHTML, fiche: view.id === 'v-fiche',
+    html: clone.outerHTML, bare: bare.outerHTML, fiche: view.id === 'v-fiche', billet: view.id === 'v-billet',
+    date: (view.querySelector('time[data-pub]') || {}).dateTime || '',
     h1: text('h1').trim(), name: view.dataset.name || '', lead: text('.lead').trim().replace(/\s+/g, ' '),
     current: nav ? nav.getAttribute('data-v') : '', type: type ? type.querySelector('dd').textContent : '', refs,
   };
@@ -123,7 +124,7 @@ function structured(route, snap, name, description, url, d) {
   if (route === 'accueil') {
     return { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/`, inLanguage: 'fr-FR', description, publisher: editor() };
   }
-  if (!snap.fiche) return { '@context': 'https://schema.org', ...crumbs([home, [name, url]]) };
+  if (!snap.fiche && !snap.billet) return { '@context': 'https://schema.org', ...crumbs([home, [name, url]]) };
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -143,7 +144,7 @@ function structured(route, snap, name, description, url, d) {
         ...(snap.type ? { articleSection: snap.type } : {}),
         ...(snap.refs.length ? { citation: snap.refs.map((r) => ({ '@type': 'CreativeWork', name: r.name, ...(r.url ? { url: r.url } : {}) })) } : {}),
       },
-      crumbs([home, ['Fiches', urlOf('fiches')], [name, url]]),
+      crumbs([home, snap.billet ? ['Blog', urlOf('blog')] : ['Fiches', urlOf('fiches')], [name, url]]),
     ],
   };
 }
@@ -156,7 +157,7 @@ for (const route of routes) {
   const before = oldDates[route];
   let snap = await render(route, before && before.modified);
   const hash = createHash('sha256').update(snap.bare).digest('hex').slice(0, 16);
-  const d = { hash, published: before ? before.published : today, modified: before && before.hash === hash ? before.modified : today };
+  const d = { hash, published: snap.date || (before ? before.published : today), modified: before && before.hash === hash ? before.modified : today };
   if (snap.fiche && d.modified !== (before && before.modified)) snap = await render(route, d.modified);
   dates[route] = d;
 
@@ -172,9 +173,9 @@ for (const route of routes) {
     `<meta property="og:site_name" content="${SITE_NAME}">`,
     `<meta property="og:title" content="${escapeAttr(title)}">`,
     `<meta property="og:description" content="${escapeAttr(description)}">`,
-    `<meta property="og:type" content="${snap.fiche ? 'article' : 'website'}">`,
+    `<meta property="og:type" content="${snap.fiche || snap.billet ? 'article' : 'website'}">`,
     '<meta property="og:locale" content="fr_FR">',
-    ...(snap.fiche ? [`<meta property="article:published_time" content="${d.published}">`, `<meta property="article:modified_time" content="${d.modified}">`] : []),
+    ...(snap.fiche || snap.billet ? [`<meta property="article:published_time" content="${d.published}">`, `<meta property="article:modified_time" content="${d.modified}">`] : []),
     ...(url ? [
       `<link rel="canonical" href="${url}">`,
       `<meta property="og:url" content="${url}">`,

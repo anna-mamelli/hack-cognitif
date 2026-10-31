@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anna-mamelli.github.io/hack-cognitif/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/carte</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/fiches</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/cours</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/labo</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/chapeaux</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://anna-mamelli.github.io/hack-cognitif/references</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/references</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/glossaire</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/lexique</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/ressources</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/blog</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/a-propos</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/contribuer</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/contact</loc><lastmod>2026-10-27</lastmod></url>
@@ -61,4 +62,7 @@
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/fiche-ethique-simulation</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/fiche-facteurs-humains</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://anna-mamelli.github.io/hack-cognitif/fiche-niveaux-preuve</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/billet-attention-discours</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/billet-emotions-relations-internationales</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://anna-mamelli.github.io/hack-cognitif/billet-hors-du-climat-emotionnel</loc><lastmod>2026-10-31</lastmod></url>
 </urlset>

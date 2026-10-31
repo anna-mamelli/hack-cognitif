@@ -847,7 +847,7 @@
     return '<li>' + c + ' <span class="lv ' + (r[2] ? 'ok' : 'half') + '" title="' + (r[2] ? 'Titre, auteurs, année et support confirmés en ligne.' : 'Référence existante ; pagination, éditeur ou lien à contrôler.') + '">' + (r[2] ? 'vérifiée' : 'à contrôler') + '</span></li>';
   }
   function refsHTML(f) {
-    var ks = FREFS[f.id] || [];
+    var ks = f.refs || FREFS[f.id] || [];
     if (!ks.length) return '<section id="s-refs"><h2 style="margin-top:28px">Références</h2><p class="note" style="margin-top:0;border-top:0;padding-top:0">Aucune référence pour l\'instant : cette fiche est une hypothèse prospective, à valider par la recherche.</p></section>';
     return '<section id="s-refs"><h2 style="margin-top:28px">Références</h2><ul class="plain refs">' + ks.map(refLi).join("") + '</ul><p class="note" style="margin-top:0;border-top:0;padding-top:0">« Vérifiée » : titre, auteurs, année et support confirmés en ligne. « À contrôler » : la référence existe mais un détail (pages, éditeur, lien) n\'a pas été relu à la source. <a href="#references">Toutes les références</a>.</p></section>';
   }
@@ -1651,6 +1651,118 @@
   FREFS["theorie-esprit"].push("milton2012");
   FREFS.normes.push("hull2017");
 
+  /* ---------- Blog : billets (date au format AAAA-MM-JJ) ---------- */
+  R.maybin2017 = ["Maybin, S. (2017, 10 mars). Busting the attention span myth. BBC News.", "https://www.bbc.com/news/health-38896790", 0];
+  R.andrzejewski2024 = ["Andrzejewski, D., Zeilinger, E. L., & Pietschnig, J. (2024). Is there a Flynn effect for attention? Cross-temporal meta-analytical evidence for better test performance (1990–2021). Personality and Individual Differences, 216, 112417.", D + "10.1016/j.paid.2023.112417", 1];
+  R.schelenz2024 = ["Schelenz, R. (2024, 2 janvier). How to sharpen your attention and meet your goals in 2024 [entretien avec G. Mark]. UC Newsroom, University of California.", "https://www.universityofcalifornia.edu/news/how-sharpen-your-attention-and-meet-your-goals-2024", 1];
+  R.mark2016 = ["Mark, G., Iqbal, S. T., Czerwinski, M., Johns, P., & Sano, A. (2016). Neurotics can't focus: An in situ study of online multitasking in the workplace. Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems, 1739–1744.", D + "10.1145/2858036.2858202", 1];
+  R.lorenzspreen2019 = ["Lorenz-Spreen, P., Mønsted, B. M., Hövel, P., & Lehmann, S. (2019). Accelerating dynamics of collective attention. Nature Communications, 10, 1759.", D + "10.1038/s41467-019-09311-w", 1];
+  R.hallin1992 = ["Hallin, D. C. (1992). Sound bite news: Television coverage of elections, 1968–1988. Journal of Communication, 42(2), 5–24.", D + "10.1111/j.1460-2466.1992.tb00775.x", 1];
+  R.sangar2018 = ["Sangar, E. (2018, 11 juin). Comment analyser le(s) rôle(s) des émotions dans les relations internationales? ABSP, Association belge francophone de science politique.", "https://absp.be/article/comment-analyser-les-roles-des-emotions-dans-les-relations-internationales/", 1];
+  R.clement2017 = ["Clément, M., Lindemann, T., & Sangar, E. (2017). The \"Hero-Protector Narrative\": Manufacturing emotional consent for the use of force. Political Psychology, 38(6), 991–1008.", D + "10.1111/pops.12385", 1];
+  R.clementsangar2018 = ["Clément, M., & Sangar, E. (dir.) (2018). Researching emotions in international relations: Methodological perspectives on the emotional turn. Palgrave Macmillan.", D + "10.1007/978-3-319-65575-8", 1];
+  R.moisi2026 = ["Moïsi, D. (2026, 17 juin). Quand la géopolitique est dominée par les émotions [entretien recueilli par A. Piveteau]. Polytechnique Insights.", "https://www.polytechnique-insights.com/tribunes/geopolitique/quand-la-geopolitique-est-dominee-par-les-emotions/", 0];
+  R.hochschild1979 = ["Hochschild, A. R. (1979). Emotion work, feeling rules, and social structure. American Journal of Sociology, 85(3), 551–575.", D + "10.1086/227049", 0];
+  R.paez2015 = ["Páez, D., Rimé, B., Basabe, N., Wlodarczyk, A., & Zumeta, L. (2015). Psychosocial effects of perceived emotional synchrony in collective gatherings. Journal of Personality and Social Psychology, 108(5), 711–729.", D + "10.1037/pspi0000014", 1];
+  R.deleersnyder2014 = ["De Leersnyder, J., Mesquita, B., Kim, H., Eom, K., & Choi, H. (2014). Emotional fit with culture: A predictor of individual differences in relational well-being. Emotion, 14(2), 241–245.", D + "10.1037/a0035296", 1];
+  R.goldenberg2014 = ["Goldenberg, A., Saguy, T., & Halperin, E. (2014). How group-based emotions are shaped by collective emotions: Evidence for emotional transfer and emotional burden. Journal of Personality and Social Psychology, 107(4), 581–596.", D + "10.1037/a0037462", 1];
+  R.noelleneumann1974 = ["Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. Journal of Communication, 24(2), 43–51.", D + "10.1111/j.1460-2466.1974.tb00367.x", 0];
+  R.matthes2018 = ["Matthes, J., Knoll, J., & von Sikorski, C. (2018). The \"spiral of silence\" revisited: A meta-analysis on the relationship between perceptions of opinion support and political opinion expression. Communication Research, 45(1), 3–33.", D + "10.1177/0093650217745429", 1];
+  R.prentice1993 = ["Prentice, D. A., & Miller, D. T. (1993). Pluralistic ignorance and alcohol use on campus: Some consequences of misperceiving the social norm. Journal of Personality and Social Psychology, 64(2), 243–256.", D + "10.1037/0022-3514.64.2.243", 1];
+  R.bursztyn2020 = ["Bursztyn, L., González, A. L., & Yanagizawa-Drott, D. (2020). Misperceived social norms: Women working outside the home in Saudi Arabia. American Economic Review, 110(10), 2997–3029.", D + "10.1257/aer.20180975", 1];
+  R.keller2020 = ["Keller, F. B., Schoch, D., Stier, S., & Yang, J. (2020). Political astroturfing on Twitter: How to coordinate a disinformation campaign. Political Communication, 37(2), 256–280.", D + "10.1080/10584609.2019.1661888", 1];
+  R.brady2021 = ["Brady, W. J., McLoughlin, K., Doan, T. N., & Crockett, M. J. (2021). How social learning amplifies moral outrage expression in online social networks. Science Advances, 7(33), eabe5641.", D + "10.1126/sciadv.abe5641", 1];
+  R.houde2025 = ["Houde, A.-M. (2025). Emotions, International Relations, and the everyday: Individuals' emotional attachments to international organisations. Review of International Studies, 51(3), 504–522. Publié en ligne en 2023.", D + "10.1017/S0260210523000554", 0];
+  var BILLETS = [
+    { id: "attention-discours", type: "Réflexion", date: "2026-10-31",
+      title: "Court et marquant : ce que la course à l'attention fait au discours politique",
+      lead: "Pour être entendu, un discours politique a de plus en plus besoin d'être court et marquant. Mais les données racontent autre chose qu'une simple baisse de notre attention.",
+      sections: [
+        { h: "Mon point de départ", p: [
+          "On entend partout que les gens ont de moins en moins d'attention. J'en tire une conséquence : un discours politique doit être assez court et assez marquant pour avoir une chance d'être écouté. Les sources confirment cette conséquence, mais elles obligent à préciser le constat."
+        ] },
+        { h: "Ce que disent les sources", p: [
+          '<ul class="plain">' +
+          "<li><b>Le chiffre des huit secondes ne prouve rien.</b> Ce chiffre, « moins qu'un poisson rouge », est très repris, mais son origine est contestée (Maybin, 2017, référence à contrôler).</li>" +
+          "<li><b>La capacité ne semble pas s'effondrer.</b> Entre 1990 et 2021, sur 287 échantillons et 21 291 personnes de 32 pays, les adultes gagnent modérément en concentration à un test d'attention. Les enfants n'y gagnent pas : ils vont plus vite et font plus d'erreurs (Andrzejewski et coll., 2024). Ce n'est qu'un seul test.</li>" +
+          "<li><b>Nos usages changent.</b> Chez des travailleurs de l'information, Gloria Mark rapporte environ 2 min 30 sur un écran avant de changer dans sa première étude, publiée en 2004, et une moyenne de 47 secondes sur des études de 2016-2020 (Schelenz, 2024). Une de ces études donne une médiane de 40 secondes (Mark et coll., 2016). C'est le temps passé sur un écran, pas une capacité d'attention.</li>" +
+          "<li><b>L'attention collective s'accélère.</b> Chaque sujet retient l'attention du public moins longtemps. La cause principale avancée, à partir d'un modèle volontairement simple, est la hausse des contenus produits et consommés (Lorenz-Spreen et coll., 2019). Cette étude porte sur les sujets, pas sur les personnes.</li>" +
+          "<li><b>Le format rétrécit depuis longtemps.</b> Dans des échantillons de journaux du soir des grandes chaînes américaines, la citation moyenne en période d'élection présidentielle passe de 43 secondes en 1968 à 9 secondes en 1988 (Hallin, 1992), bien avant les réseaux sociaux.</li>" +
+          "</ul>"
+        ] },
+        { h: "Ce que j'en retiens", p: [
+          "Ce qui manque n'est peut-être pas notre capacité d'attention, mais la place pour s'en servir : trop de messages se disputent le même temps. C'est une hypothèse. Elle mène à la même conclusion pratique : sans version courte et marquante, un discours a peu de chances d'être entendu.",
+          "Faire court n'est pas manipuler. Tous les camps le font, et la clarté respecte celles et ceux qui écoutent. Mais une phrase laisse forcément de côté des conditions, des chiffres et des objections. Une formule courte se répète aussi plus facilement, et la répétition rend une affirmation plus familière, donc plus crédible. La version courte devrait donc toujours renvoyer à une version longue, facile à trouver."
+        ] },
+        { h: "Un test à faire soi-même", p: [
+          "Prenez cinq phrases politiques qui vous ont marqué cette semaine, venues de camps différents. Pour chacune, cherchez la source et la version longue. Notez deux choses : combien de phrases vous avez pu sourcer, et combien changent de sens une fois replacées dans leur contexte. Recommencez un mois plus tard.",
+          "C'est une idée personnelle, pas une méthode évaluée. Sans groupe de comparaison, ce test ne prouve rien : il sert à voir ce que le format retire."
+        ] }
+      ],
+      fiches: ["cadrage-agenda", "memoire-sources", "attention-selective"],
+      refs: ["maybin2017", "andrzejewski2024", "schelenz2024", "mark2016", "lorenzspreen2019", "hallin1992"] },
+    { id: "emotions-relations-internationales", type: "Ressource", date: "2026-10-31",
+      title: "À lire : étudier les émotions en relations internationales",
+      lead: "Un billet d'Eric Sangar, publié en 2018 par l'Association belge francophone de science politique, sur une question difficile : comment savoir ce que les émotions font vraiment à la politique internationale ?",
+      sections: [
+        { h: "Ce que dit le texte", p: [
+          "En théorie des relations internationales, un « tournant émotionnel » s'est dessiné depuis les années 1990 : les émotions y deviennent un objet de recherche. Elles restent pourtant difficiles à saisir, et les chercheurs ne s'accordent pas sur leur nature. L'auteur demande donc un choix de méthode conscient et transparent, et présente six débats de méthode tirés d'un ouvrage collectif (Clément et Sangar, 2018).",
+          '<p><a href="https://absp.be/article/comment-analyser-les-roles-des-emotions-dans-les-relations-internationales/" target="_blank" rel="noopener">Lire le billet sur le site de l\'ABSP</a></p>'
+        ] },
+        { h: "L'exemple qui m'intéresse", p: [
+          "Le billet s'appuie sur un article de son auteur et de ses collègues. Ils y comparent des discours favorables et opposés au recours à la force. Les premiers, dont ceux de George W. Bush et d'Oussama Ben Laden sur la guerre d'Irak, partagent un récit qui combine compassion, colère morale et identification à un héros : le « récit du héros-protecteur » (Clément, Lindemann et Sangar, 2017).",
+          "La comparaison porte sur la structure du récit, pas sur les personnes ni sur leurs actes. Le résumé de l'article ne fait état d'aucune mesure de l'effet sur le public : il décrit un récit, sans dire s'il convainc."
+        ] },
+        { h: "Une autre lecture, à mettre en regard", p: [
+          "Dans un entretien, le géopolitologue Dominique Moïsi propose une lecture plus large : des émotions collectives comme l'espoir, la peur ou l'humiliation aideraient à comprendre le monde actuel, et les émotions négatives auraient pris le dessus depuis 2022. Il distingue l'émotion, plus brève, de la passion, plus durable, et estime que les réseaux sociaux amplifient les émotions (Moïsi, 2026).",
+          "C'est un point de vue d'expert : l'entretien ne donne ni chiffres ni références, et prêter une émotion à toute une région reste une généralisation. Les deux textes se complètent : l'un propose une grille de lecture, l'autre demande comment vérifier ce que les émotions font vraiment.",
+          '<p><a href="https://www.polytechnique-insights.com/tribunes/geopolitique/quand-la-geopolitique-est-dominee-par-les-emotions/" target="_blank" rel="noopener">Lire l\'entretien sur Polytechnique Insights</a></p>'
+        ] },
+        { h: "Pourquoi je le garde", p: [
+          'Il complète mon billet sur <a href="#billet-attention-discours">le discours court et marquant</a>. Mon hypothèse : une phrase courte garde rarement les arguments, mais elle garde plus facilement une histoire et les émotions qu\'elle porte.',
+          "Devant un discours, de n'importe quel camp, ces questions aident à voir le récit : qui est présenté comme victime, comme coupable, comme héros ? Quelle action paraît alors inévitable ? Quelles autres options ont disparu ?"
+        ] }
+      ],
+      fiches: ["decision-emotion", "cadrage-agenda"],
+      refs: ["sangar2018", "clement2017", "clementsangar2018", "moisi2026"] },
+    { id: "hors-du-climat-emotionnel", type: "Réflexion", date: "2026-10-31",
+      title: "Quand on ne ressent pas ce que son pays semble ressentir",
+      lead: "Deuil, fierté, colère : il arrive qu'une émotion paraisse partagée par tout un pays. Que se passe-t-il pour celles et ceux qui ne la ressentent pas, et pourquoi cet écart compte-t-il face à l'influence ?",
+      sections: [
+        { h: "De quoi je parle", p: [
+          "Après un attentat, une victoire sportive, une élection ou le début d'une guerre, une émotion semble parfois occuper toute la place. Certaines personnes ne la ressentent pas, ou en ressentent une autre. Cela peut tenir à leur histoire, à leur groupe, à leurs convictions ou au moment de leur vie.",
+          "Ce décalage n'est ni un trouble ni une trahison. Et l'émotion « du pays » est en partie une impression : on voit surtout celles et ceux qui l'expriment, pas celles et ceux qui se taisent."
+        ] },
+        { h: "Ce que la recherche permet de dire", p: [
+          '<ul class="plain">' +
+          "<li><b>Il existe des règles implicites.</b> Arlie Hochschild parle de règles de sentiment : des attentes sur ce qu'il convient de ressentir dans une situation (Hochschild, 1979, référence à contrôler).</li>" +
+          "<li><b>Ressentir ensemble peut faire du bien.</b> Dans des marches folkloriques et des manifestations, la synchronie émotionnelle perçue accompagne une identité collective, une intégration sociale et une estime de soi plus fortes (Páez et coll., 2015). L'étude ne dit rien de celles et ceux qui ne participent pas.</li>" +
+          "<li><b>L'ajustement émotionnel est lié aux relations.</b> Aux États-Unis, en Belgique et en Corée, être ajusté émotionnellement à sa culture est associé au bien-être relationnel (De Leersnyder et coll., 2014). C'est une association, pas une cause, et elle porte sur la culture plutôt que sur un événement national.</li>" +
+          "<li><b>Le décalage ne fait pas que réduire au silence.</b> Quand une personne juge une émotion appropriée mais perçoit que son groupe ne la ressent pas, elle peut la ressentir plus fortement et se sentir responsable de la porter au nom du groupe. Les auteurs parlent de fardeau émotionnel (Goldenberg et coll., 2014).</li>" +
+          "<li><b>Se croire minoritaire pèse sur la prise de parole, un peu.</b> C'est l'idée de la spirale du silence (Noelle-Neumann, 1974, référence à contrôler). Une méta-analyse de 66 études trouve un lien faible mais significatif entre le climat d'opinion perçu et le fait de s'exprimer (r = 0,10 ; Matthes et coll., 2018). Ces travaux portent sur les opinions : les étendre aux émotions est mon hypothèse.</li>" +
+          "<li><b>On peut se croire seul à tort.</b> Des étudiants se croyaient tous plus mal à l'aise que l'étudiant moyen face aux pratiques d'alcool du campus, et cet écart illusoire était lié à un sentiment d'éloignement (Prentice et Miller, 1993). En Arabie saoudite, de jeunes hommes mariés sous-estimaient le soutien de leurs pairs au travail des femmes hors du foyer. Corriger cette croyance a accru leur disposition à aider leur épouse à chercher un emploi, et ces épouses ont ensuite davantage postulé (Bursztyn et coll., 2020). Là encore, il s'agit de normes, pas d'émotions.</li>" +
+          "<li><b>Ne rien montrer ne veut pas dire ne rien ressentir.</b> Dans 21 groupes de discussion menés en Belgique, en France, en Italie et au Portugal au printemps 2019, Anne-Marie Houde observe des attachements émotionnels à l'Union européenne, souvent implicites, qui peuvent passer pour de l'indifférence. Les participants les plus eurosceptiques jugent négative cette difficulté à imaginer leur pays hors de l'Union. L'échantillon n'est pas représentatif, et l'autrice appelle à davantage de recherches sur les attachements négatifs (Houde, 2025).</li>" +
+          "</ul>"
+        ] },
+        { h: "Pourquoi cet écart compte face à l'influence", p: [
+          "Ce qui suit est mon analyse. Elle s'appuie sur ces travaux, mais aucune étude citée ne la mesure directement. Tous les camps peuvent être concernés.",
+          '<ul class="plain">' +
+          "<li><b>Une émotion peut paraître plus partagée qu'elle ne l'est.</b> Lors de la présidentielle sud-coréenne de 2012, des agents coordonnés du service de renseignement se sont fait passer pour des citoyens indépendants sur Twitter. Les auteurs concluent toutefois à un impact limité (Keller et coll., 2020).</li>" +
+          "<li><b>Ce qu'on voit en ligne n'est pas un sondage.</b> Sur Twitter, le retour social positif rend l'indignation future plus probable, et les utilisateurs ajustent leur indignation aux normes de leur réseau (Brady et coll., 2021).</li>" +
+          "<li><b>Le décalage peut servir de prise, de deux façons.</b> On peut désigner celles et ceux qui ne ressentent pas la même chose comme des traîtres. On peut aussi leur offrir une communauté de remplacement, où eux seuls verraient clair. Dans les deux cas, on transforme une différence ordinaire en frontière entre « nous » et « eux ».</li>" +
+          "</ul>"
+        ] },
+        { h: "Ce qui pourrait protéger", p: [
+          "Pour soi : avant de conclure qu'on est seul, distinguer ce qu'on voit passer de ce qui a été mesuré. Un fil d'actualité ne dit pas ce que ressent un pays.",
+          "Pour celles et ceux qui informent : éviter « les Français sont en colère » quand seule une partie l'exprime, et montrer l'éventail des réactions quand il est connu. Et ne jamais exiger d'une personne qu'elle affiche une émotion.",
+          "Pour un groupe en formation, un test à essayer : demander de façon anonyme à chacun ce qu'il ressent face à une actualité, et ce qu'il pense que les autres ressentent. L'indicateur est l'écart entre les deux, en résultat de groupe. On montre ensuite les résultats, et on mesure à nouveau cet écart sur un autre sujet quelques semaines plus tard.",
+          "Ce test transpose aux émotions un résultat obtenu sur les normes : il reste à évaluer. Il demande le consentement des participants, et il ne doit jamais servir à repérer ou à surveiller quelqu'un."
+        ] }
+      ],
+      fiches: ["normes", "identite-sociale", "adversaire", "inondation"],
+      refs: ["hochschild1979", "paez2015", "deleersnyder2014", "goldenberg2014", "noelleneumann1974", "matthes2018", "prentice1993", "bursztyn2020", "houde2025", "keller2020", "brady2021"] }
+  ];
+
   /* ---------- Tables (DIMA, lexique) ---------- */
   /* Filters of the DIMA table: a condition or situation from « Plus sensibles », a practice from « Ce qui protège », a DIMA technique.
      A condition written differently from one fiche to another is brought together under one name, so that a person finds at once
@@ -1981,6 +2093,31 @@
     var el = $(b.getAttribute("data-t"));
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+
+  /* ---------- Blog ---------- */
+  function billetById(id) { return BILLETS.filter(function (x) { return x.id === id; })[0]; }
+  function dateFR(iso) { return new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }); }
+  function renderBlog() {
+    $("blog-rows").innerHTML = '<div class="rows">' + BILLETS.slice().sort(function (a, b) { return b.date.localeCompare(a.date); }).map(function (b) {
+      return '<a class="row" href="#billet-' + b.id + '"><div><h3>' + nb(b.title) + '</h3><p>' + b.lead + '</p></div>' +
+        '<div class="tags"><span class="pill">' + b.type + '</span><span class="billet-date">' + dateFR(b.date) + '</span></div></a>';
+    }).join("") + '</div>';
+  }
+  renderBlog();
+  function billetHTML(b) {
+    var fiches = (b.fiches || []).map(ficheById).filter(Boolean);
+    return '<header class="page-head"><a class="back" href="#blog">Tous les billets</a>' +
+      '<h1>' + nb(b.title) + '</h1><p class="lead">' + b.lead + '</p>' +
+      '<dl class="fmeta"><div><dt>Type</dt><dd>' + b.type + '</dd></div><div><dt>Publié le</dt><dd><time data-pub datetime="' + b.date + '">' + dateFR(b.date) + '</time></dd></div></dl></header>' +
+      '<article class="billet">' +
+      b.sections.map(function (s) {
+        return '<section class="block"><h2>' + s.h + '</h2>' + s.p.map(function (p) { return p.charAt(0) === "<" ? p : '<p>' + p + '</p>'; }).join("") + '</section>';
+      }).join("") +
+      (fiches.length ? '<section class="block"><h2>Sur la carte</h2><ul class="plain">' + fiches.map(function (f) { return '<li><a href="#fiche-' + f.id + '">' + nb(f.title) + '</a> : ' + f.teaser + '</li>'; }).join("") + '</ul></section>' : '') +
+      (b.refs && b.refs.length ? refsHTML(b) : '') +
+      '<p class="note">Ce billet donne un point de vue personnel. Il n\'a pas la valeur d\'une <a href="#fiches">fiche</a>. Une source ou une correction à proposer ? ' + contribLink("Écrire à l'autrice") + '.</p>' +
+      '</article>';
+  }
 
   /* ---------- Carte : chaque fiche placée par famille et par phase DIMA, avec ses contre-mesures et leur test ---------- */
   var PHASES = ["1", "2", "3", "4"];
@@ -2335,7 +2472,7 @@
   });
 
   /* ---------- Routage ---------- */
-  var VIEWS = ["accueil", "carte", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "a-propos", "contribuer", "contact", "mentions-legales"];
+  var VIEWS = ["accueil", "carte", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "blog", "billet", "a-propos", "contribuer", "contact", "mentions-legales"];
   var current = "accueil";
   /* Sur le site publié, les adresses n'ont pas d'extension : l'hébergeur sert fiches.html à l'adresse « fiches ».
      En aperçu local (fichier ouvert depuis le disque, Live Server), rien ne fait ce lien : les liens gardent .html */
@@ -2344,7 +2481,8 @@
   function fileFor(h) {
     if (!h || h === "accueil") return LOCAL ? "index.html" : "./";
     if (h.indexOf("fiche-") === 0) return ficheById(h.slice(6)) ? h + EXT : null;
-    if (TERRAINS[h] || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain")) return h + EXT;
+    if (h.indexOf("billet-") === 0) return billetById(h.slice(7)) ? h + EXT : null;
+    if (TERRAINS[h] || (VIEWS.indexOf(h) !== -1 && h !== "fiche" && h !== "terrain" && h !== "billet")) return h + EXT;
     return null;
   }
   function nav(h, q) {
@@ -2352,8 +2490,8 @@
     var t = fileFor(h);
     if (t) location.href = t + (q ? "?q=" + encodeURIComponent(q) : "");
   }
-  window.HC_ROUTES = VIEWS.filter(function (v) { return v !== "fiche" && v !== "terrain"; })
-    .concat(Object.keys(TERRAINS), FICHES.map(function (f) { return "fiche-" + f.id; }));
+  window.HC_ROUTES = VIEWS.filter(function (v) { return v !== "fiche" && v !== "terrain" && v !== "billet"; })
+    .concat(Object.keys(TERRAINS), FICHES.map(function (f) { return "fiche-" + f.id; }), BILLETS.map(function (b) { return "billet-" + b.id; }));
   function route() {
     var h = STATIC ? document.body.getAttribute("data-page") : (location.hash || "").slice(1) || "accueil";
     var view = h, f = null;
@@ -2366,13 +2504,17 @@
       var id = h.slice(6);
       f = ficheById(id) || null;
       view = f ? "fiche" : "fiches";
-    } else if (VIEWS.indexOf(h) === -1 || h === "fiche" || h === "terrain") { view = "accueil"; }
+    } else if (h.indexOf("billet-") === 0) {
+      var b = billetById(h.slice(7));
+      view = b ? "billet" : "blog";
+      if (b) $("v-billet").innerHTML = billetHTML(b);
+    } else if (VIEWS.indexOf(h) === -1 || h === "fiche" || h === "terrain" || h === "billet") { view = "accueil"; }
     if (f) {
       $("v-fiche").innerHTML = ficheHTML(f);
       $("v-fiche").setAttribute("data-band", f.ax[0]);
     }
     VIEWS.forEach(function (v) { $("v-" + v).hidden = (v !== view); });
-    var cur = view === "fiche" ? "fiches" : view === "terrain" ? "" : view;
+    var cur = view === "fiche" ? "fiches" : view === "billet" ? "blog" : view === "terrain" ? "" : view;
     Array.prototype.forEach.call(document.querySelectorAll("#nav a"), function (a) {
       if (a.getAttribute("data-v") === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -2450,11 +2592,12 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   /* ---------- Recherche globale ---------- */
-  var PAGES = [["Accueil", "accueil"], ["Carte des vulnérabilités cognitives", "carte"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
+  var PAGES = [["Accueil", "accueil"], ["Carte des vulnérabilités cognitives", "carte"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["Blog", "blog"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
   var IDX = [];
   PAGES.forEach(function (p) { IDX.push({ t: p[0], k: "Page", x: "", go: function () { nav(p[1]); } }); });
   Object.keys(TERRAINS).forEach(function (slug) { IDX.push({ t: AX[TERRAINS[slug]], k: "Terrain", x: TERRAIN_FOR[TERRAINS[slug]], go: function () { nav(slug); } }); });
   FICHES.forEach(function (f) { IDX.push({ t: f.title, k: "Fiche", x: f.teaser + " " + f.socle.join(" "), go: function () { nav("fiche-" + f.id); } }); });
+  BILLETS.forEach(function (b) { IDX.push({ t: b.title, k: "Blog", x: b.lead, go: function () { nav("billet-" + b.id); } }); });
   COURS.forEach(function (g) { g.n.forEach(function (x) { IDX.push({ t: x[0], k: "Cours", x: x[3] || "", go: function () { nav(x[2] ? "fiche-" + x[2] : "cours"); } }); }); });
   GLOSS.forEach(function (g) { IDX.push({ t: g[0], k: "Glossaire", x: g[1], go: function () { $("q").value = g[0]; renderGloss(g[0]); nav("glossaire", g[0]); } }); });
   LEX.forEach(function (r) { IDX.push({ t: r[0], k: "Lexique IT", x: r[1] + " " + r[2] + " " + r[3], go: function () { nav("lexique"); } }); });
@@ -2835,7 +2978,8 @@
     var cited = {};
     Object.keys(FREFS).forEach(function (id) { FREFS[id].forEach(function (k) { (cited[k] = cited[k] || []).push(id); }); });
     $("reflist").innerHTML = keys.map(function (k) {
-      var used = (cited[k] || []).map(function (id) { var f = FICHES.filter(function (x) { return x.id === id; })[0]; return f ? '<a href="#fiche-' + id + '">' + f.title + '</a>' : ""; }).join(", ");
+      var used = (cited[k] || []).map(function (id) { var f = FICHES.filter(function (x) { return x.id === id; })[0]; return f ? '<a href="#fiche-' + id + '">' + f.title + '</a>' : ""; })
+        .concat(BILLETS.filter(function (b) { return (b.refs || []).indexOf(k) !== -1; }).map(function (b) { return '<a href="#billet-' + b.id + '">' + b.title + '</a>'; })).join(", ");
       return refLi(k).replace(/<\/li>$/, (used ? '<br><span class="pdesc">Citée dans : ' + used + '</span>' : (k === "deonto" || k === "helsinki" || k === "attack" || k === "dima" ? '<br><span class="pdesc">Cadre et outils : voir Chapeaux et Ressources.</span>' : "")) + '</li>');
     }).join("");
     $("refcount").textContent = keys.length + " référence" + (keys.length > 1 ? "s" : "");

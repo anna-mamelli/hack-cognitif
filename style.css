@@ -215,6 +215,11 @@ a.pill:active { background: var(--color-paper-3); }
 .row p { margin: var(--space-2xs) 0 0; color: var(--color-muted); }
 .row .tags { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: var(--space-xs); max-width: 22rem; padding-top: var(--space-2xs); }
 
+/* Blog */
+.billet { max-width: 65ch; }
+.billet-date { font-size: var(--text-sm); color: var(--color-muted); }
+.row .tags:has(.billet-date) { align-items: baseline; }
+
 /* The close */
 .close-band { margin-top: 0; padding-block: var(--section-gap-s); background: var(--color-band); color: var(--color-band-ink); }
 .close-band p { margin: 0; max-width: 34ch; font: 400 var(--text-2xl)/1.25 var(--font-body); color: var(--color-band-ink); }

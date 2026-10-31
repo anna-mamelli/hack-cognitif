@@ -1,8 +1,8 @@
 {
   "accueil": {
-    "hash": "7daf9db0516281b0",
+    "hash": "a522e3a55d30b535",
     "published": "2026-10-27",
-    "modified": "2026-10-28"
+    "modified": "2026-10-31"
   },
   "carte": {
     "hash": "016007218c8f7183",
@@ -30,9 +30,9 @@
     "modified": "2026-10-27"
   },
   "references": {
-    "hash": "b81b4972d8cb9002",
+    "hash": "cbb8f721e6b5e107",
     "published": "2026-10-27",
-    "modified": "2026-10-28"
+    "modified": "2026-10-31"
   },
   "glossaire": {
     "hash": "eb3646942738b4e1",
@@ -48,6 +48,11 @@
     "hash": "adb35c0a4b50e06f",
     "published": "2026-10-27",
     "modified": "2026-10-28"
+  },
+  "blog": {
+    "hash": "af6e643c7931de7b",
+    "published": "2026-10-31",
+    "modified": "2026-10-31"
   },
   "a-propos": {
     "hash": "d5077a0e396646b6",
@@ -303,5 +308,20 @@
     "hash": "bc859e5991064f4c",
     "published": "2026-10-27",
     "modified": "2026-10-28"
+  },
+  "billet-attention-discours": {
+    "hash": "dfea8f910cdf4a92",
+    "published": "2026-10-31",
+    "modified": "2026-10-31"
+  },
+  "billet-emotions-relations-internationales": {
+    "hash": "2040988659dd0dbc",
+    "published": "2026-10-31",
+    "modified": "2026-10-31"
+  },
+  "billet-hors-du-climat-emotionnel": {
+    "hash": "537f990d4f7bc0e9",
+    "published": "2026-10-31",
+    "modified": "2026-10-31"
   }
 }
