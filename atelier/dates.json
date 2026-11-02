@@ -1,8 +1,8 @@
 {
   "accueil": {
-    "hash": "7713bde6c429c3d4",
+    "hash": "a95c3ebef4a792bf",
     "published": "2026-10-27",
-    "modified": "2026-10-31"
+    "modified": "2026-11-02"
   },
   "carte": {
     "hash": "016007218c8f7183",
@@ -30,9 +30,9 @@
     "modified": "2026-10-27"
   },
   "references": {
-    "hash": "246f97f994145ef8",
+    "hash": "1807b7519657a529",
     "published": "2026-10-27",
-    "modified": "2026-10-31"
+    "modified": "2026-11-02"
   },
   "glossaire": {
     "hash": "5382f329d9ab1365",
@@ -50,9 +50,9 @@
     "modified": "2026-10-28"
   },
   "blog": {
-    "hash": "9aa3aecf1cfec81c",
+    "hash": "5e5379b0438b9a8e",
     "published": "2026-10-31",
-    "modified": "2026-10-31"
+    "modified": "2026-11-02"
   },
   "a-propos": {
     "hash": "17d7adce2b77a876",
@@ -353,5 +353,10 @@
     "hash": "caaf999476fddb7a",
     "published": "2026-10-31",
     "modified": "2026-10-31"
+  },
+  "billet-best-seller-emotion-epoque": {
+    "hash": "812667bca14d5b8b",
+    "published": "2026-11-02",
+    "modified": "2026-11-02"
   }
 }
