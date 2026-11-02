@@ -582,6 +582,27 @@ svg.radar { width: 100%; max-width: 280px; height: auto; margin: var(--space-xs)
 svg.radar text { fill: var(--color-muted); font: 500 10px var(--font-body); }
 svg.radar .grid { fill: none; stroke: var(--color-rule-2); stroke-width: 0.5; }
 svg.radar .shape { fill: var(--color-accent-soft); stroke: var(--color-accent); stroke-width: 2; }
+/* Autoscan: four layers under hair rules, as in the hat test; the pasted text is set as a sheet, like the message of the quiz */
+.ascan { max-width: 48rem; }
+.astep { margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+.astep .cta { margin-top: var(--space-md); }
+.astep h3 { margin: var(--space-md) 0 var(--space-xs); }
+.ascan textarea {
+  display: block; width: 100%; min-height: 8rem; padding: var(--space-sm) var(--space-md); resize: vertical; font-size: var(--text-md); color: var(--color-ink);
+  background: var(--color-sheet); border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-card);
+}
+.ascan textarea:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 0; }
+.xtext { margin-top: var(--space-md); padding: var(--pad-card); background: var(--color-sheet); border-top: var(--rule-bar) solid var(--color-ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.xlist li { margin-bottom: var(--space-sm); }
+.ask { margin-top: var(--space-md); }
+.ask > p { margin: 0 0 var(--space-xs); }
+.ask .filters { margin-bottom: 0; }
+.askfb .fb { margin-top: var(--space-xs); }
+.trait { margin-top: var(--space-lg); }
+.trait .poles { display: flex; justify-content: space-between; gap: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+.trait .poles span:last-child { text-align: right; }
+.trait .tx { margin-top: var(--space-xs); }
+.trait .tx p { margin: 0 0 var(--space-2xs); }
 
 /* ---------- Chapeaux ---------- */
 .hats3 { display: grid; grid-template-columns: minmax(0, 1fr); margin: var(--space-lg) 0 var(--space-xs); }

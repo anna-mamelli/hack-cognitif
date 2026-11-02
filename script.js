@@ -362,6 +362,7 @@
     ["Authentification multifacteur", "Vérification d'identité qui combine au moins deux facteurs de nature différente : ce que l'on sait, ce que l'on possède, ce que l'on est.", "Vérifier une information par plusieurs sources ou canaux indépendants.", "Confirmer une demande par un second canal.", "", "defense"],
     ["Moindre privilège", "Principe qui n'accorde à chaque utilisateur, programme ou service que les droits strictement nécessaires à sa tâche.", "Ne déléguer que ce qui est nécessaire, à une personne comme à un assistant.", "Un assistant qui propose sans pouvoir valider.", "", "defense"],
     ["Indicateur de compromission (IOC)", "Trace technique qui signale une compromission possible : adresse IP, nom de domaine, empreinte de fichier, comportement anormal.", "Signal observable d'une tentative de manipulation.", "Demande de secret, changement de canal, urgence injustifiée.", "Un indicateur isolé ne prouve rien.", "analyse"],
+    ["Scan de vulnérabilités", "Inventaire automatisé de ce qu'un système expose (machines, ports, services et leurs versions), comparé à une base de failles connues pour les signaler avant qu'un attaquant ne les trouve. Il repère sans exploiter, à la différence du pentest.", "Faire l'inventaire de ce qu'une personne ou un processus expose, avant un attaquant.", "L'autoscan du Labo, sur ses propres textes et ses propres processus.", "Mené sur une autre personne sans son accord, ce n'est plus un audit mais du profilage.", "analyse"],
     ["Pentest / red team", "Test d'intrusion autorisé (pentest) ou simulation complète d'un adversaire (red team), menés dans un périmètre convenu pour éprouver les défenses.", "Simulation encadrée pour tester la défense.", "Message fictif dans une organisation consentante.", "Exige consentement, cadre éthique et débriefing.", "analyse"],
     ["Bac à sable (sandbox)", "Environnement isolé où l'on exécute un programme ou un fichier suspect sans risque pour le reste du système, afin d'observer son comportement.", "Délai et espace de vérification avant d'agir ou de relayer.", "Attendre avant de partager une image sensible.", "", "defense"],
     ["Journalisation (logs)", "Enregistrement horodaté des événements d'un système (connexions, actions, erreurs), qui permet de détecter une attaque et de reconstituer ce qui s'est passé.", "Traçabilité des échanges et décisions sensibles.", "Carnet des demandes de paiement exceptionnelles.", "À encadrer pour respecter la vie privée.", "analyse"],
@@ -3275,9 +3276,259 @@
   });
   scInit();
 
+  /* Autoscan : le scan de vulnérabilités tourné vers soi, en quatre couches (exposition, état, style, situation), repris du projet psycyber.
+     Il ne lit que les textes et réponses de la personne elle-même, ne donne aucun score de vulnérabilité et n'enregistre rien. */
+  var AS_B = "(^|[^a-zà-ÿœæ0-9])", AS_E = "(?=$|[^a-zà-ÿœæ0-9])";
+  var AS_M = "(?: (?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre))";
+  function asRe(w) { return new RegExp(AS_B + "(" + w + ")" + AS_E, "gi"); }
+  var AS_EXPO = [
+    { name: "Rôle et pouvoir de décision", f: "hamecon-cible",
+      re: asRe("directeur|directrice|responsable|cheffe|chef|manager|daf|drh|dsi|pdg|ceo|cfo|comptable|assistante? de direction|gérante?|présidente?|trésorière|trésorier|en charge d[eu]s?|chargée? d[eu]s?|nouveau poste|nouvelles? fonctions?|je rejoins"),
+      why: "Il indique qui peut valider quoi, donc à qui une fausse demande serait adressée.",
+      fix: "Garder en ligne la fonction, pas le détail de ce que vous validez (paiements, accès, recrutements)." },
+    { name: "Rythmes et absences", f: "autorite",
+      re: asRe("congés?|vacances|absente?|absence|en déplacement|de retour|retour le|jusqu['’](?:au|à)|du \\d{1,2}(?:er)? au \\d{1,2}" + AS_M + "?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|week-end|demain|la semaine prochaine|\\d{1,2}[/.]\\d{1,2}(?:[/.]\\d{2,4})?|\\d{1,2}(?:er)?" + AS_M + "|\\d{1,2} ?h(?:\\d{2})?"),
+      why: "Une absence annoncée ouvre une période où l'on ne peut pas vous joindre pour vérifier une demande faite en votre nom.",
+      fix: "Dans un message d'absence, donner un contact de remplacement plutôt que vos dates et votre destination." },
+    { name: "Relations et chaîne de confiance", f: "usurpation",
+      re: asRe("collègues?|équipes?|clients?|clientes?|fournisseurs?|prestataires?|partenaires?|@[\\w.]+"),
+      why: "Les noms de vos collègues et partenaires permettent d'imiter quelqu'un que vous connaissez.",
+      fix: "Citer l'organisation plutôt que les personnes, et convenir en équipe d'un canal pour vérifier une demande." },
+    { name: "Outils et procédures internes", f: "pretexting",
+      re: asRe("logiciels?|outils?|intranet|vpn|teams|slack|outlook|sharepoint|sap|erp|crm|procédures?|validations?|virements?|factures?|rib|iban|mots? de passe|badges?|accès"),
+      why: "Le vocabulaire interne rend une fausse demande crédible : elle parle comme la maison.",
+      fix: "Ne pas décrire en public les étapes d'une procédure de paiement ou d'accès." },
+    { name: "Coordonnées directes", f: "hamecon-cible",
+      re: asRe("[\\w.+-]+@[\\w-]+(?:\\.[\\w-]+)+|(?:\\+33 ?|0)[1-9](?:[ .-]?\\d{2}){4}"),
+      why: "Un numéro ou une adresse directs ouvrent un canal qui contourne l'accueil et ses filtres.",
+      fix: "Préférer une adresse de fonction ou un formulaire à vos coordonnées directes." },
+    { name: "Lieux et événements", f: "pretexting",
+      re: asRe("salons?|conférences?|séminaires?|colloques?|forums?|webinaires?|aéroport|hôtel|à l['’]étranger|en mission"),
+      why: "Un événement annoncé fournit un souvenir commun facile à invoquer pour paraître familier.",
+      fix: "Parler d'un événement après coup plutôt qu'avant ou pendant." },
+    { name: "Centres d'intérêt", f: "saillance",
+      re: asRe("passionnée?|fan de|j['’]adore|j['’]aime|amateur|amatrice|hobbys?|hobbies|loisirs?|je collectionne|collectionneur|collectionneuse"),
+      why: "Un centre d'intérêt affiché sert d'appât : un contenu sur mesure donne envie de cliquer.",
+      fix: "Rien à cacher forcément : savoir que c'est l'appât le plus probable, et vérifier d'autant plus ce qui touche à vos passions." }
+  ];
+  var AS_EXAMPLE = "Responsable des achats chez Exemple SA, en charge des fournisseurs et des factures. En congés du 3 au 17 août, de retour le 18. En mon absence, voir avec ma collègue Camille. Passionnée de photographie, rendez-vous au salon Exemple Expo jeudi !";
+  var AS_STATE = [
+    "Manquez-vous de temps en ce moment ?",
+    "La fatigue se fait-elle sentir ?",
+    "Plusieurs tâches ou interruptions se disputent-elles votre attention ?",
+    "Une émotion forte vous occupe-t-elle, quelle qu'elle soit ?"
+  ];
+  var AS_TRAITS = [
+    { k: "o", name: "Ouverture", lo: "J'aime le connu et les habitudes", hi: "J'aime la nouveauté et explorer",
+      xlo: "ce qui imite un interlocuteur ou un format familier", flo: "visages",
+      xhi: "les contenus nouveaux ou étonnants qui donnent envie de cliquer (appâts)", fhi: "saillance",
+      pro: "Vérifier la source avant de cliquer ou de répondre, surtout quand le message tombe pile sur ce qui vous plaît ou vous rassure." },
+    { k: "c", name: "Caractère consciencieux", lo: "J'improvise, je vais vite", hi: "J'organise, je suis les règles",
+      xlo: "l'urgence qui pousse à sauter une étape", flo: "urgence",
+      xhi: "ce qui a l'apparence d'une règle, d'une procédure ou d'une demande officielle", fhi: "obeissance",
+      pro: "Une procédure qui prévoit elle-même la vérification : suivre la règle revient alors à vérifier." },
+    { k: "e", name: "Extraversion", lo: "Je préfère le calme et la discrétion", hi: "J'aime le groupe et partager",
+      xlo: "le fait de traiter seul une demande étrange, sans la montrer à quelqu'un", flo: "",
+      xhi: "une exposition publique plus large et l'envie de rendre la pareille (réciprocité)", fhi: "hamecon-cible",
+      pro: "Montrer toute demande inhabituelle à une personne de confiance avant d'agir." },
+    { k: "a", name: "Agréabilité", lo: "Je doute d'abord, je dis non facilement", hi: "J'aide volontiers, je fais confiance",
+      xlo: "le rejet de messages légitimes, et même de vraies alertes", flo: "psychophysique",
+      xhi: "les demandes d'aide et la pression de rendre service", fhi: "pretexting",
+      pro: "Une vérification par un canal connu, appliquée à toutes les demandes : elle permet de dire « je vous rappelle » sans paraître impoli, et de confirmer une vraie alerte au lieu de l'écarter." },
+    { k: "n", name: "Réactivité émotionnelle", lo: "Je reste plutôt calme face aux alertes", hi: "Je réagis vite aux alertes, je m'inquiète facilement",
+      xlo: "l'idée « ça ne m'arrivera pas », qui fait baisser la garde", flo: "meconnaissance",
+      xhi: "les fausses alertes et les messages qui font peur (scareware)", fhi: "stress-executif",
+      pro: "Un circuit connu pour vérifier toute alerte, appliqué quel que soit votre ressenti : il évite d'agir dans la précipitation comme de se croire à l'abri." }
+  ];
+  var AS_SIT = [
+    { name: "Paiement exceptionnel", q: [
+      ["Un message venu de l'extérieur ou d'un canal inhabituel est-il signalé comme tel, avec l'adresse réelle de l'expéditeur ?", "Marquer les messages externes et afficher l'adresse complète de l'expéditeur.", "autorite"],
+      ["La demande est-elle jugée sur la procédure, plutôt que sur le nom, le rang ou le ton de la personne qui la fait ?", "Écrire la règle : plus une demande est urgente ou vient de haut, plus on vérifie.", "obeissance"],
+      ["Le numéro à rappeler et les coordonnées bancaires viennent-ils d'une liste tenue à jour, jamais du message lui-même ?", "Tenir un annuaire de rappel et un fichier de coordonnées bancaires validées.", "usurpation"],
+      ["Tout paiement hors habitude demande-t-il une deuxième validation, impossible à contourner seul ?", "Double validation obligatoire et délai minimal pour tout paiement hors habitude.", "urgence"]
+    ] },
+    { name: "Changement de coordonnées bancaires", q: [
+      ["Un changement de RIB annoncé par un fournisseur est-il traité comme un événement à signaler, même s'il vient d'une adresse connue ?", "Signaler tout changement de RIB, quel que soit l'expéditeur : une adresse connue peut avoir été piratée.", "hamecon-cible"],
+      ["Le message est-il vérifié sur des faits (contrat, échéances) plutôt que sur sa forme, qui peut être copiée à l'identique ?", "Rappeler en équipe qu'un message d'apparence parfaite peut venir d'une messagerie compromise.", "pretexting"],
+      ["Le numéro pour joindre le fournisseur vient-il de votre dossier, et pas du message qui annonce le changement ?", "Rappeler le fournisseur sur un numéro déjà enregistré, jamais sur celui du message.", "usurpation"],
+      ["Le premier paiement vers les nouvelles coordonnées attend-il cette confirmation ?", "Bloquer le premier paiement vers un nouveau RIB jusqu'à la confirmation par rappel.", "urgence"]
+    ] },
+    { name: "Réinitialisation d'un accès", q: [
+      ["Tout le monde sait-il qu'un appel ou un message du « support » qui demande un code ou un mot de passe est anormal ?", "Le redire régulièrement : aucun support ne vous demande, par téléphone ou par message, votre mot de passe ni un code reçu par SMS.", "pretexting"],
+      ["L'identité de la personne qui demande est-elle vérifiée par la procédure, et non par son aisance avec le jargon interne ?", "Vérifier l'identité par un rappel sur un numéro connu, quel que soit le vocabulaire employé.", "pragmatique"],
+      ["Chacun sait-il comment joindre le vrai support, sans avoir à chercher ?", "Afficher le contact officiel du support là où on le cherche : intranet, poste de travail, badge.", "memoire-travail"],
+      ["Une réinitialisation demandée par téléphone est-elle confirmée par un second canal avant d'être faite ?", "Confirmer par un second canal avant toute réinitialisation.", "urgence"]
+    ] },
+    { name: "Relais d'une information urgente", q: [
+      ["Avant de relayer, regardez-vous d'où vient l'information à l'origine, et pas seulement qui vous l'a transmise ?", "Remonter à la source d'origine avant de partager.", "inondation"],
+      ["L'information est-elle confirmée par au moins une source indépendante, y compris quand elle va dans votre sens ?", "Chercher une source indépendante qui confirme, avant de relayer.", "cadrage-agenda"],
+      ["Faites-vous la différence entre ce que vous avez vu souvent et ce qui a été vérifié ?", "Se rappeler qu'une information vue souvent n'en devient pas plus vraie.", "memoire-sources"],
+      ["Attendez-vous avant de relayer un contenu qui vous fait réagir fort ?", "Un délai avant de partager tout contenu qui suscite une réaction forte.", "decision-emotion"]
+    ] }
+  ];
+  var AS_TEST = {
+    expo: "Refaire l'autoscan sur le texte corrigé : moins de types d'information repérés.",
+    etat: "Pendant deux semaines, noter vos décisions sensibles et votre état : la vérification a-t-elle eu lieu quand deux réponses ou plus étaient « oui » ?",
+    style: "Choisir une seule piste et compter, sur un mois, les demandes inhabituelles que vous avez vérifiées ou montrées à quelqu'un.",
+    sit: "Exercice fictif, annoncé et consenti, sur le processus corrigé, mesuré par des indicateurs agrégés sans désigner personne, et suivi d'un débriefing."
+  };
+  var asFound = [], asState = [null, null, null, null], asTr = {}, asProc = 0, asSit = [null, null, null, null], asText = "";
+  AS_TRAITS.forEach(function (t) { asTr[t.k] = 3; });
+  function asEsc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function asSee(id) {
+    var f = FICHES.filter(function (x) { return x.id === id; })[0];
+    return f ? ' Voir la fiche <a href="#fiche-' + id + '">' + f.title + '</a>.' : "";
+  }
+  function asAsk(q, i, opts, lab) {
+    return '<div class="ask" data-i="' + i + '"><p>' + (lab ? '<span class="pill">' + lab + '</span> ' : '') + q + '</p><div class="filters" role="group" aria-label="' + asEsc(q) + '">' +
+      opts.map(function (o) { return '<button type="button" data-v="' + o[0] + '" aria-pressed="false">' + o[1] + '</button>'; }).join("") + '</div><div class="askfb" aria-live="polite"></div></div>';
+  }
+  function asPos(v, t) { return v === 3 ? "Entre les deux" : (v < 3 ? (v === 1 ? "Nettement : " : "Plutôt : ") + t.lo : (v === 5 ? "Nettement : " : "Plutôt : ") + t.hi); }
+  function asTraitTx(t) {
+    var v = asTr[t.k];
+    var x = v === 3 ? '<b>Entre les deux :</b> les deux pistes peuvent valoir : ' + t.xlo + ' ; ' + t.xhi + '.'
+      : '<b>Hypothèse :</b> ce pôle exposerait davantage à ' + (v < 3 ? t.xlo : t.xhi) + '.' + asSee(v < 3 ? t.flo : t.fhi);
+    return '<p>' + x + '</p><p><b>Ce qui protège :</b> ' + t.pro + '</p>';
+  }
+  function asSitHTML() {
+    var p = AS_SIT[asProc];
+    return '<div class="filters" role="group" aria-label="Choix du processus">' + AS_SIT.map(function (s, i) { return '<button type="button" data-proc="' + i + '" aria-pressed="' + (i === asProc) + '">' + s.name + '</button>'; }).join("") + '</div>' +
+      p.q.map(function (q, i) {
+        return asAsk(q[0], i, [["y", "Oui"], ["n", "Non"], ["u", "Je ne sais pas"]], DIMA_PHASE[String(i + 1)].replace(/ \(.*\)$/, ""));
+      }).join("");
+  }
+  function asInit() {
+    $("lab-auto").innerHTML = '<div class="ascan">' +
+      '<p class="hint">Un scan de vulnérabilités fait l\'inventaire de ce qu\'un système expose, avant qu\'un attaquant ne le fasse. L\'autoscan fait de même pour vous, en quatre couches : ce que vos textes exposent, votre état du moment, votre style et un processus de travail. Il ne donne pas de score de vulnérabilité : chaque point relevé vient avec sa contre-mesure et une façon de la tester.</p>' +
+      '<section class="astep"><p class="eyebrow">Couche 1 · Exposition</p><h2>Ce que vos textes exposent</h2>' +
+      '<p>Collez un de vos propres textes rendus publics : bio professionnelle, publication, message d\'absence, signature. L\'outil repère ce qu\'il révèle, comme le ferait une reconnaissance passive. Analyser le texte d\'une autre personne sans son accord, ce n\'est plus un audit mais du <a href="#chapeaux">profilage</a>.</p>' +
+      '<textarea id="as-text" rows="5" aria-label="Votre texte" placeholder="Votre texte" spellcheck="false" autocomplete="off"></textarea>' +
+      '<div class="cta"><button type="button" class="btn" id="as-go">Analyser</button><button type="button" class="btn" id="as-ex">Essayer avec un exemple fictif</button></div>' +
+      '<div id="as-xres" aria-live="polite"></div></section>' +
+      '<section class="astep"><p class="eyebrow">Couche 2 · État</p><h2>Votre état en ce moment</h2>' +
+      '<p>Quatre questions à se poser juste avant une décision sensible. Votre état change dans la journée : la réponse ne vaut que pour maintenant.</p>' +
+      AS_STATE.map(function (q, i) { return asAsk(q, i, [["y", "Oui"], ["n", "Non"]]); }).join("") +
+      '<div id="as-sres" aria-live="polite"></div></section>' +
+      '<section class="astep"><p class="eyebrow">Couche 3 · Style</p><h2>Votre style, sur cinq spectres</h2>' +
+      '<p>Placez-vous sur chaque spectre, d\'après le modèle des cinq grands traits de personnalité. Aucune position n\'est meilleure qu\'une autre : chaque pôle expose à des leviers différents. Ces correspondances sont des hypothèses du site, sans source à ce jour (voir les <a href="#fiche-niveaux-preuve">niveaux de preuve</a>), et un curseur n\'est pas une mesure de la personnalité.</p>' +
+      AS_TRAITS.map(function (t) {
+        return '<div class="trait sl"><label for="as-t-' + t.k + '">' + t.name + '</label>' +
+          '<input id="as-t-' + t.k + '" type="range" min="1" max="5" step="1" value="3" data-k="' + t.k + '" aria-valuetext="' + asEsc(asPos(3, t)) + '">' +
+          '<div class="poles" aria-hidden="true"><span>' + t.lo + '</span><span>' + t.hi + '</span></div>' +
+          '<div class="tx" id="as-x-' + t.k + '">' + asTraitTx(t) + '</div></div>';
+      }).join("") +
+      '<p class="note flush">La réactivité émotionnelle correspond au « névrosisme » du modèle : le mot décrit une réactivité, pas un trouble. Ressentir de l\'inquiétude n\'est pas un défaut, c\'est un signal, et c\'est ce signal qu\'un message alarmiste cherche à déclencher.</p></section>' +
+      '<section class="astep"><p class="eyebrow">Couche 4 · Situation</p><h2>Un processus, phase par phase</h2>' +
+      '<p>Choisissez un processus que vous connaissez et passez-le aux quatre phases du modèle DIMA (M82 Project, voir les <a href="#ressources">ressources</a>) ; le rattachement des questions aux phases est propre au site. Une réponse « Je ne sais pas » compte comme un point à vérifier : si personne ne sait, la protection n\'existe pas en pratique.</p>' +
+      '<div id="as-sit">' + asSitHTML() + '</div></section>' +
+      '<section class="astep"><p class="eyebrow">Rapport</p><h2>Votre rapport d\'autoscan</h2>' +
+      '<div id="as-report"></div>' +
+      '<div class="cta"><button type="button" class="btn" id="as-copy">Copier le rapport</button><button type="button" class="btn" id="as-score">Prioriser les processus avec le Score de gravité</button></div>' +
+      '<p class="hint" id="as-copied" aria-live="polite"></p></section>' +
+      '<p class="note">Rien n\'est enregistré ni envoyé : tout reste dans votre navigateur et disparaît quand vous quittez la page. C\'est un outil pédagogique, pas un test validé.</p></div>';
+    asReport();
+  }
+  function asExpo() {
+    var t = $("as-text").value, hits = [];
+    AS_EXPO.forEach(function (c, ci) {
+      var m;
+      c.re.lastIndex = 0;
+      while ((m = c.re.exec(t))) {
+        var s = m.index + m[1].length;
+        if (m[2]) hits.push([s, s + m[2].length, ci]);
+        else c.re.lastIndex++;
+      }
+    });
+    hits.sort(function (a, b) { return a[0] - b[0] || b[1] - a[1]; });
+    var kept = [], end = 0, out = "", pos = 0, words = {};
+    hits.forEach(function (h) { if (h[0] >= end) { kept.push(h); end = h[1]; } });
+    kept.forEach(function (h) {
+      var w = t.slice(h[0], h[1]);
+      out += asEsc(t.slice(pos, h[0])) + '<mark title="' + AS_EXPO[h[2]].name + '">' + asEsc(w) + '</mark>';
+      pos = h[1];
+      var l = words[h[2]] = words[h[2]] || [];
+      if (l.indexOf(w.toLowerCase()) === -1) l.push(w.toLowerCase());
+    });
+    out += asEsc(t.slice(pos));
+    asFound = AS_EXPO.map(function (c, i) { return i; }).filter(function (i) { return words[i]; });
+    if (!t.trim()) { $("as-xres").innerHTML = ""; asReport(); return; }
+    $("as-xres").innerHTML = '<div class="xtext">' + out + '</div>' +
+      '<p class="count">' + (asFound.length ? asFound.length + ' type' + (asFound.length > 1 ? 's' : '') + ' d\'information repéré' + (asFound.length > 1 ? 's' : '') + ' sur ' + AS_EXPO.length + '.' : 'Aucun type d\'information repéré.') + '</p>' +
+      (asFound.length ? '<ul class="plain xlist">' + asFound.map(function (i) {
+        var c = AS_EXPO[i];
+        return '<li><b>' + c.name + '</b> (' + words[i].slice(0, 5).map(asEsc).join(", ") + '). ' + c.why + ' <b>Contre-mesure :</b> ' + c.fix + asSee(c.f) + '</li>';
+      }).join("") + '</ul>' : '') +
+      '<p class="hint">L\'outil repère des mots, pas le sens : relisez chaque passage. Un texte sans résultat n\'est pas pour autant sans exposition.</p>';
+    asReport();
+  }
+  function asStateRes() {
+    var yes = asState.filter(function (x) { return x === "y"; }).length, done = asState.every(function (x) { return x; });
+    if (yes >= 2) return '<div class="callout"><p><b>Mode vérification.</b> Votre état peut favoriser les réponses rapides et automatiques, ce que Kahneman (2011) appelle le système 1. Le seuil de deux « oui » est un repère pratique, pas une mesure. Ce n\'est pas une faute : c\'est l\'état que visent l\'<a href="#fiche-urgence">urgence</a> et la <a href="#fiche-memoire-travail">surcharge</a>. Avant toute action sensible : rappeler par un canal connu, attendre, demander un deuxième avis. Un <a href="#fiche-plans-si-alors">plan « si… alors »</a> préparé à froid aide : « si une demande urgente arrive, alors je rappelle ».</p></div>';
+    if (done) return '<div class="callout"><p>Votre état laisse de la place à la vérification. Il change dans la journée : refaites ce point juste avant une décision sensible.</p></div>';
+    return "";
+  }
+  function asReport() {
+    var parts = [], P = AS_SIT[asProc];
+    if (asFound.length) parts.push(["expo", "Exposition", asFound.map(function (i) { return [AS_EXPO[i].name, AS_EXPO[i].fix]; })]);
+    if (asState.filter(function (x) { return x === "y"; }).length >= 2) parts.push(["etat", "État", [["Deux « oui » ou plus en ce moment", "Mode vérification avant toute action sensible : rappel par un canal connu, délai, deuxième avis."]]]);
+    var st = AS_TRAITS.filter(function (t) { return asTr[t.k] !== 3; }).map(function (t) { return [t.name, t.pro]; });
+    if (st.length) parts.push(["style", "Style (protections, d'après des hypothèses)", st]);
+    var si = [];
+    asSit.forEach(function (a, i) {
+      if (a === "n" || a === "u") si.push([(a === "u" ? "À vérifier, phase " : "Phase ") + DIMA_PHASE[String(i + 1)].replace(/ \(.*\)$/, "") + " (" + P.name.toLowerCase() + ")", P.q[i][1]]);
+    });
+    if (si.length) parts.push(["sit", "Situation", si]);
+    $("as-report").innerHTML = parts.length ? parts.map(function (p) {
+      return '<h3>' + p[1] + '</h3><ul class="plain">' + p[2].map(function (x) { return '<li><b>' + x[0] + ' :</b> ' + x[1] + '</li>'; }).join("") + '</ul><p class="hint">Pour le tester : ' + AS_TEST[p[0]] + '</p>';
+    }).join("") : '<p class="hint">Le rapport se remplit au fur et à mesure de vos réponses.</p>';
+    $("as-copy").disabled = $("as-score").disabled = !parts.length;
+    $("as-copied").textContent = "";
+    asText = "Autoscan, Hack cognitif\n" + parts.map(function (p) {
+      return "\n" + p[1] + "\n" + p[2].map(function (x) { return "- " + x[0] + " : " + x[1]; }).join("\n") + "\nPour le tester : " + AS_TEST[p[0]];
+    }).join("\n");
+  }
+  $("lab-auto").addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b) return;
+    if (b.id === "as-go") { asExpo(); return; }
+    if (b.id === "as-ex") { $("as-text").value = AS_EXAMPLE; asExpo(); return; }
+    if (b.id === "as-score") { setLab("score"); $("lab-tabs").scrollIntoView({ block: "start" }); return; }
+    if (b.id === "as-copy") {
+      var done = function (ok) { $("as-copied").textContent = ok ? "Rapport copié." : "La copie a échoué : sélectionnez le rapport à la main."; };
+      if (navigator.clipboard) navigator.clipboard.writeText(asText).then(function () { done(true); }, function () { done(false); });
+      else done(false);
+      return;
+    }
+    if (b.hasAttribute("data-proc")) { asProc = parseInt(b.getAttribute("data-proc"), 10); asSit = [null, null, null, null]; $("as-sit").innerHTML = asSitHTML(); asReport(); return; }
+    var box = b.closest(".ask"), v = b.getAttribute("data-v");
+    if (!box || !v) return;
+    var i = parseInt(box.getAttribute("data-i"), 10);
+    Array.prototype.forEach.call(box.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    if (box.closest("#as-sit")) {
+      var q = AS_SIT[asProc].q[i];
+      asSit[i] = v;
+      box.querySelector(".askfb").innerHTML = v === "y" ? '<div class="fb ok"><p>Protection en place à cette phase.</p></div>'
+        : '<div class="fb ko"><p><b>' + (v === "u" ? "À vérifier." : "Point relevé.") + '</b> ' + q[1] + asSee(q[2]) + '</p></div>';
+    } else {
+      asState[i] = v;
+      $("as-sres").innerHTML = asStateRes();
+    }
+    asReport();
+  });
+  $("lab-auto").addEventListener("input", function (e) {
+    var k = e.target.getAttribute("data-k");
+    if (!k) return;
+    var t = AS_TRAITS.filter(function (x) { return x.k === k; })[0];
+    asTr[k] = parseInt(e.target.value, 10);
+    e.target.setAttribute("aria-valuetext", asPos(asTr[k], t));
+    $("as-x-" + k).innerHTML = asTraitTx(t);
+    asReport();
+  });
+  asInit();
+
   /* Onglets du labo */
   var labTab = "anat";
-  var LAB_TABS = [["anat", "Anatomie d'un message"], ["quiz", "Repère la faille"], ["score", "Score de gravité"]];
+  var LAB_TABS = [["anat", "Anatomie d'un message"], ["quiz", "Repère la faille"], ["score", "Score de gravité"], ["auto", "Autoscan"]];
   function setLab(t) {
     labTab = t;
     $("lab-tabs").innerHTML = LAB_TABS.map(function (x) { return '<button type="button" data-t="' + x[0] + '" aria-pressed="' + (x[0] === labTab) + '">' + x[1] + '</button>'; }).join("");
