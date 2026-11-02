@@ -24,7 +24,7 @@ Toutes les commandes npm se lancent dans `atelier/` (en PowerShell : `cd atelier
 
 ## Architecture
 
-**Deux sources, des pages fabriquées.** Les seuls fichiers à modifier sont `script.js` (tous les contenus et tout le fonctionnement) et `atelier/modele.html` (en-tête, menu, pied de page et texte des pages fixes : À propos, Contact, Contribuer, Mentions légales, Chapeaux…). Les `*.html` de la racine, `sitemap.xml` et `robots.txt` sont générés : la fabrication efface tous les `*.html` de la racine avant de les réécrire, donc une modification faite à la main est perdue.
+**Deux sources, des pages fabriquées.** Les seuls fichiers à modifier sont `script.js` (tous les contenus et tout le fonctionnement) et `atelier/modele.html` (en-tête, menu, pied de page et texte des pages fixes : À propos, Contact, Contribuer, Mentions légales, Chapeaux…). Les `*.html` de la racine, `sitemap.xml`, `robots.txt` et `flux.xml` (flux Atom des fiches et des billets, relié depuis la page Blog et le pied de page) sont générés : la fabrication efface tous les `*.html` de la racine avant de les réécrire, donc une modification faite à la main est perdue.
 
 **Un seul script, deux modes.** `modele.html` contient une `<section id="v-…">` par vue. Dans le modèle, `script.js` est un routeur par `#` qui affiche une vue et masque les autres. Sur une page fabriquée, `<body data-page="…">` active le mode `STATIC` : une vue par fichier, et les liens `#vue` deviennent des liens vers les fichiers. Dans les deux sources, les liens internes s'écrivent `href="#route"`. Sur le site publié, les adresses sont sans extension (`fiches`, `fiche-autorite`) ; en aperçu local (`file:` ou localhost), le script remet `.html`.
 

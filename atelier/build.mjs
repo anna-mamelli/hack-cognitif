@@ -175,6 +175,7 @@ function structured(route, snap, name, description, url, d) {
 for (const f of readdirSync(SITE)) if (f.endsWith('.html')) rmSync(join(SITE, f));
 
 const pages = [];
+const feed = [];
 for (const route of routes) {
   const before = oldDates[route];
   let snap = await render(route, before && before.modified);
@@ -200,6 +201,7 @@ for (const route of routes) {
     ...(snap.fiche || snap.billet ? [`<meta property="article:published_time" content="${d.published}">`, `<meta property="article:modified_time" content="${d.modified}">`] : []),
     ...(url ? [
       `<link rel="canonical" href="${url}">`,
+      `<link rel="alternate" type="application/atom+xml" title="${SITE_NAME} : nouvelles fiches et nouveaux billets" href="${SITE_URL}/flux.xml">`,
       `<meta property="og:url" content="${url}">`,
       `<meta property="og:image" content="${SITE_URL}/images/${SHARE[0][0]}">`,
       `<meta property="og:image:width" content="${SHARE[0][1]}">`,
@@ -226,6 +228,7 @@ for (const route of routes) {
 
   writeFileSync(join(SITE, file), html);
   pages.push([url, d.modified]);
+  if (snap.fiche || snap.billet) feed.push({ name, description, url, d, kind: snap.billet ? 'Billet' : 'Fiche', i: feed.length });
 }
 await browser.close();
 writeFileSync(DATES, `${JSON.stringify(dates, null, 2)}\n`);
@@ -233,9 +236,41 @@ writeFileSync(DATES, `${JSON.stringify(dates, null, 2)}\n`);
 if (SITE_URL) {
   writeFileSync(join(SITE, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(([u, m]) => `  <url><loc>${u}</loc><lastmod>${m}</lastmod></url>`).join('\n')}\n</urlset>\n`);
   writeFileSync(join(SITE, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+
+  // The news feed (Atom): every fiche and every post, newest first; on the same day, the one added last
+  // comes first. Its dates come from dates.json, so a build that changes nothing leaves it unchanged.
+  const xml = (s) => escapeAttr(s).replace(/>/g, '&gt;');
+  const stamp = (day) => `${day}T00:00:00Z`;
+  feed.sort((a, b) => b.d.published.localeCompare(a.d.published) || b.i - a.i);
+  const updated = feed.reduce((m, e) => (e.d.modified > m ? e.d.modified : m), '');
+  const entries = feed.map((e) => [
+    '  <entry>',
+    `    <title>${xml(e.name)}</title>`,
+    `    <link rel="alternate" type="text/html" href="${e.url}"/>`,
+    `    <id>${e.url}</id>`,
+    `    <published>${stamp(e.d.published)}</published>`,
+    `    <updated>${stamp(e.d.modified)}</updated>`,
+    `    <category term="${e.kind}" label="${e.kind}"/>`,
+    `    <summary>${xml(e.description)}</summary>`,
+    '  </entry>',
+  ].join('\n'));
+  writeFileSync(join(SITE, 'flux.xml'), [
+    '<?xml version="1.0" encoding="utf-8"?>',
+    '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">',
+    `  <title>${SITE_NAME}</title>`,
+    '  <subtitle>Nouvelles fiches et nouveaux billets</subtitle>',
+    `  <link rel="self" type="application/atom+xml" href="${SITE_URL}/flux.xml"/>`,
+    `  <link rel="alternate" type="text/html" href="${SITE_URL}/"/>`,
+    `  <id>${SITE_URL}/</id>`,
+    `  <updated>${stamp(updated)}</updated>`,
+    `  <author><name>${SITE_NAME}</name></author>`,
+    ...entries,
+    '</feed>',
+    '',
+  ].join('\n'));
 }
 
-console.log(`${routes.length} pages écrites à la racine du site${SITE_URL ? ', avec données structurées, sitemap.xml et robots.txt' : " (sans adresse du site : renseigner config.siteUrl dans package.json pour ajouter données structurées et sitemap)"}.`);
+console.log(`${routes.length} pages écrites à la racine du site${SITE_URL ? ', avec données structurées, sitemap.xml, robots.txt et flux.xml' : " (sans adresse du site : renseigner config.siteUrl dans package.json pour ajouter données structurées et sitemap)"}.`);
 if (errors.length) {
   console.error(`Erreurs de script pendant la génération :\n${errors.join('\n')}`);
   process.exit(1);

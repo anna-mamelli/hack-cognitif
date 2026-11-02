@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <title>Hack cognitif</title>
+  <subtitle>Nouvelles fiches et nouveaux billets</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://hackcognitif.fr/flux.xml"/>
+  <link rel="alternate" type="text/html" href="https://hackcognitif.fr/"/>
+  <id>https://hackcognitif.fr/</id>
+  <updated>2026-11-02T00:00:00Z</updated>
+  <author><name>Hack cognitif</name></author>
+  <entry>
+    <title>Livres, films, séries : un succès dit-il l'émotion d'une époque ?</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-best-seller-emotion-epoque"/>
+    <id>https://hackcognitif.fr/billet-best-seller-emotion-epoque</id>
+    <published>2026-11-02T00:00:00Z</published>
+    <updated>2026-11-02T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>La colère d'un pamphlet, la mélancolie des romantiques, la curiosité du feuilleton, la peur d'un film d'épidémie : un succès semble capter l'émotion de son temps. Les données le confirment en partie : quand on a peur, on semble même aller vers des œuvres qui font peur. Cette émotion partagée offre une prise aux opérations d'influence, quel que soit leur camp.</summary>
+  </entry>
+  <entry>
+    <title>Pourquoi la cote d'un président monte-t-elle quand la guerre éclate ?</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-ralliement-drapeau"/>
+    <id>https://hackcognitif.fr/billet-ralliement-drapeau</id>
+    <published>2026-10-31T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Les sondages le montrent souvent : au début d'une guerre ou d'une attaque, le dirigeant gagne des points. On pense d'abord à la peur et au besoin d'une figure connue. Les études confirment une partie de cette idée, et en contredisent une autre.</summary>
+  </entry>
+  <entry>
+    <title>Dirigeants et population : quand les émotions se désynchronisent</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-dirigeants-population-desynchronises"/>
+    <id>https://hackcognitif.fr/billet-dirigeants-population-desynchronises</id>
+    <published>2026-10-31T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Ceux qui décident et ceux qui vivent la décision ne ressentent pas la même chose au même moment. Plus cet écart grandit, plus chaque camp risque de ne plus comprendre l'autre. C'est mon hypothèse, et je n'ai trouvé personne qui l'ait mesurée.</summary>
+  </entry>
+  <entry>
+    <title>Il n'y a pas d'émotion négative : la situation qui déclenche, l'émotion qui colore</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-pas-d-emotion-negative"/>
+    <id>https://hackcognitif.fr/billet-pas-d-emotion-negative</id>
+    <published>2026-10-31T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>On dit « émotion négative » comme si l'émotion était le problème. Elle ne l'est pas. Le problème peut venir de deux endroits, dans deux sens opposés : une situation mal lue déclenche une émotion mal ajustée, ou une émotion déjà là repeint la situation.</summary>
+  </entry>
+  <entry>
+    <title>Une colère politique ne se soigne pas : la psychothérapie a-t-elle quelque chose à apporter à la Défense ?</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-therapie-politique-defense"/>
+    <id>https://hackcognitif.fr/billet-therapie-politique-defense</id>
+    <published>2026-10-31T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Les psychothérapies modifient des émotions liées à une situation. Peut-on en tirer quelque chose pour la psychologie politique et la Défense nationale ? Aucune étude que j'ai lue ne teste ce transfert. Je propose une piste à discuter, à condition de ne jamais décider à la place des gens ce qu'ils doivent ressentir.</summary>
+  </entry>
+  <entry>
+    <title>Une émotion née en ligne vaut-elle une émotion née dans la rue ?</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-emotions-en-ligne-en-presence"/>
+    <id>https://hackcognitif.fr/billet-emotions-en-ligne-en-presence</id>
+    <published>2026-10-29T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Même effet politique, même durée, même façon de l'apaiser ? Je n'ai trouvé aucune étude qui compare directement une émotion politique selon l'endroit où elle naît. Ce qui existe permet pourtant de mieux poser la question.</summary>
+  </entry>
+  <entry>
+    <title>Et si la défense fabriquait la défiance ? Un angle mort pour 2030</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-defense-defiance"/>
+    <id>https://hackcognitif.fr/billet-defense-defiance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>On apprend à repérer le faux, et on mesure si cela marche. On mesure beaucoup moins ce que cela fait à notre confiance dans le vrai. D'ici quelques années, ce pourrait être une faille à part entière.</summary>
+  </entry>
+  <entry>
+    <title>Niveaux de preuve : documenté, plausible, hypothèse</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-niveaux-preuve"/>
+    <id>https://hackcognitif.fr/fiche-niveaux-preuve</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Une étude n'est pas une preuve, et un effet célèbre n'est pas toujours solide.</summary>
+  </entry>
+  <entry>
+    <title>Facteurs humains : concevoir pour l'erreur plutôt que contre l'utilisateur</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-facteurs-humains"/>
+    <id>https://hackcognitif.fr/fiche-facteurs-humains</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Les erreurs sont inévitables ; les accidents viennent des systèmes qui ne les rattrapent pas.</summary>
+  </entry>
+  <entry>
+    <title>Simuler une attaque sans trahir : consentement, tromperie et débriefing</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-ethique-simulation"/>
+    <id>https://hackcognitif.fr/fiche-ethique-simulation</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Un exercice qui humilie fait perdre plus de sécurité qu'il n'en apporte.</summary>
+  </entry>
+  <entry>
+    <title>Concevoir un exercice qui mesure vraiment</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-plan-exercice"/>
+    <id>https://hackcognitif.fr/fiche-plan-exercice</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Avant, après : la différence ne dit rien sans point de comparaison.</summary>
+  </entry>
+  <entry>
+    <title>Lire les résultats d'un exercice : taux, sensibilité et critère</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-analyse-exercice"/>
+    <id>https://hackcognitif.fr/fiche-analyse-exercice</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Un taux de clic qui baisse ne prouve pas que l'équipe repère mieux.</summary>
+  </entry>
+  <entry>
+    <title>Plans « si… alors » et réévaluation : des outils des TCC contre la pression</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-plans-si-alors"/>
+    <id>https://hackcognitif.fr/fiche-plans-si-alors</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Décider à l'avance de ce qu'on fera quand l'urgence arrivera.</summary>
+  </entry>
+  <entry>
+    <title>Vieillissement et confiance : un facteur de risque, pas une fatalité</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-vieillissement-confiance"/>
+    <id>https://hackcognitif.fr/fiche-vieillissement-confiance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Avec l'âge, les signaux de méfiance s'atténuent, mais la plupart des personnes âgées ne sont pas victimes.</summary>
+  </entry>
+  <entry>
+    <title>Après l'escroquerie : honte, silence et revictimisation</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-victimologie"/>
+    <id>https://hackcognitif.fr/fiche-victimologie</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Une victime qui se tait est une victime qu'on peut tromper à nouveau.</summary>
+  </entry>
+  <entry>
+    <title>Inoculation : s'entraîner sur une version affaiblie</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-inoculation"/>
+    <id>https://hackcognitif.fr/fiche-inoculation</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Reconnaître une technique avant de la rencontrer en vrai.</summary>
+  </entry>
+  <entry>
+    <title>Réactance : quand la règle donne envie de la contourner</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-reactance"/>
+    <id>https://hackcognitif.fr/fiche-reactance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Une règle vécue comme imposée est contournée, même quand elle protège.</summary>
+  </entry>
+  <entry>
+    <title>Engagement et cohérence : l'escalade des petites demandes</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-engagement"/>
+    <id>https://hackcognitif.fr/fiche-engagement</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Après un premier oui, le second coûte moins.</summary>
+  </entry>
+  <entry>
+    <title>Identité sociale : « nous » contre « eux »</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-identite-sociale"/>
+    <id>https://hackcognitif.fr/fiche-identite-sociale</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Appartenir à un groupe suffit à en favoriser les membres, et à baisser sa garde.</summary>
+  </entry>
+  <entry>
+    <title>Obéissance et conformité : ce qui rend le refus possible</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-obeissance"/>
+    <id>https://hackcognitif.fr/fiche-obeissance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Un seul allié qui dit non suffit souvent à libérer les autres.</summary>
+  </entry>
+  <entry>
+    <title>Normes sociales : ce que font les autres, ce qu'ils approuvent</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-normes"/>
+    <id>https://hackcognitif.fr/fiche-normes</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>« Beaucoup cliquent encore » apprend surtout que cliquer est normal.</summary>
+  </entry>
+  <entry>
+    <title>Effet spectateur et diffusion de responsabilité</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-spectateur"/>
+    <id>https://hackcognitif.fr/fiche-spectateur</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand tout le monde a vu l'alerte, chacun pense qu'un autre l'a signalée.</summary>
+  </entry>
+  <entry>
+    <title>Récompense et renforcement variable</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-recompense-renforcement"/>
+    <id>https://hackcognitif.fr/fiche-recompense-renforcement</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Pourquoi un fil d'actualité donne envie de continuer.</summary>
+  </entry>
+  <entry>
+    <title>Perception visuelle : voir est une reconstruction</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-perception-reconstruction"/>
+    <id>https://hackcognitif.fr/fiche-perception-reconstruction</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Le cerveau complète ce que l'œil ne donne pas.</summary>
+  </entry>
+  <entry>
+    <title>Psychométrie : fiabilité et validité d'un exercice</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-psychometrie"/>
+    <id>https://hackcognitif.fr/fiche-psychometrie</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Mesurer sans se raconter d'histoires.</summary>
+  </entry>
+  <entry>
+    <title>Stress, émotion et contrôle exécutif</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-stress-executif"/>
+    <id>https://hackcognitif.fr/fiche-stress-executif</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Sous stress, le contrôle recule et l'automatisme avance.</summary>
+  </entry>
+  <entry>
+    <title>Apprentissage, oubli et durée de vie d'un patch</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-apprentissage-oubli"/>
+    <id>https://hackcognitif.fr/fiche-apprentissage-oubli</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Un patch cognitif a une date de péremption.</summary>
+  </entry>
+  <entry>
+    <title>Saillance aberrante et traitement des signaux ambigus</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-saillance-aberrante"/>
+    <id>https://hackcognitif.fr/fiche-saillance-aberrante</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand tout semble signifier quelque chose.</summary>
+  </entry>
+  <entry>
+    <title>Théorie de l'esprit et lecture des intentions</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-theorie-esprit"/>
+    <id>https://hackcognitif.fr/fiche-theorie-esprit</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Deviner ce que l'autre veut, et se tromper sur ce qu'il veut vraiment.</summary>
+  </entry>
+  <entry>
+    <title>Décision, émotion et cortex préfrontal ventromédian</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-decision-emotion"/>
+    <id>https://hackcognitif.fr/fiche-decision-emotion</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Sans émotion, on ne décide pas mieux.</summary>
+  </entry>
+  <entry>
+    <title>Déclin cognitif et vulnérabilité à la fraude</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-declin-fraude"/>
+    <id>https://hackcognitif.fr/fiche-declin-fraude</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Protéger sans stigmatiser.</summary>
+  </entry>
+  <entry>
+    <title>Réseaux de la saillance et du contrôle</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-reseaux-saillance"/>
+    <id>https://hackcognitif.fr/fiche-reseaux-saillance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Ce que l'imagerie dit, et ne dit pas, de l'attention.</summary>
+  </entry>
+  <entry>
+    <title>Langage et pragmatique : ce qui est dit sans l'être</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-pragmatique"/>
+    <id>https://hackcognitif.fr/fiche-pragmatique</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>L'essentiel d'un message passe par l'implicite.</summary>
+  </entry>
+  <entry>
+    <title>Méconnaissance de sa propre vulnérabilité</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-meconnaissance"/>
+    <id>https://hackcognitif.fr/fiche-meconnaissance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>« Moi, je ne me ferais jamais avoir. »</summary>
+  </entry>
+  <entry>
+    <title>Contrôle exécutif : habitude contre supervision</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-controle-executif"/>
+    <id>https://hackcognitif.fr/fiche-controle-executif</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand le pilote automatique décide à la place du pilote.</summary>
+  </entry>
+  <entry>
+    <title>Attention sélective, divisée et cécité attentionnelle</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-attention-selective"/>
+    <id>https://hackcognitif.fr/fiche-attention-selective</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>On ne voit pas ce qu'on ne cherche pas.</summary>
+  </entry>
+  <entry>
+    <title>Mémoire de source et faux souvenirs</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-memoire-sources"/>
+    <id>https://hackcognitif.fr/fiche-memoire-sources</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>On retient le contenu, on oublie d'où il vient.</summary>
+  </entry>
+  <entry>
+    <title>Mémoire de travail et charge cognitive</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-memoire-travail"/>
+    <id>https://hackcognitif.fr/fiche-memoire-travail</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Une tête pleine vérifie moins.</summary>
+  </entry>
+  <entry>
+    <title>Reconnaissance des visages et familiarité</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-visages"/>
+    <id>https://hackcognitif.fr/fiche-visages</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Reconnaître un visage n'est pas vérifier une identité.</summary>
+  </entry>
+  <entry>
+    <title>Psychophysique et analyse des signaux</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-psychophysique"/>
+    <id>https://hackcognitif.fr/fiche-psychophysique</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Mesurer ce qu'une équipe de veille détecte vraiment.</summary>
+  </entry>
+  <entry>
+    <title>Capture de la délégation décisionnelle</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-delegation"/>
+    <id>https://hackcognitif.fr/fiche-delegation</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Influencer le processus de choix plutôt que les opinions.</summary>
+  </entry>
+  <entry>
+    <title>Détournement de la saillance</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-saillance"/>
+    <id>https://hackcognitif.fr/fiche-saillance</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand on déplace le projecteur plutôt que de mentir.</summary>
+  </entry>
+  <entry>
+    <title>Désignation d'un adversaire</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-adversaire"/>
+    <id>https://hackcognitif.fr/fiche-adversaire</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Réduire un problème complexe à un coupable.</summary>
+  </entry>
+  <entry>
+    <title>Proximité et relation parasociale</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-parasocial"/>
+    <id>https://hackcognitif.fr/fiche-parasocial</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand le sentiment de connaître quelqu'un remplace l'examen de ses positions.</summary>
+  </entry>
+  <entry>
+    <title>Inondation informationnelle</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-inondation"/>
+    <id>https://hackcognitif.fr/fiche-inondation</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Saturer la capacité de vérification plutôt que convaincre.</summary>
+  </entry>
+  <entry>
+    <title>Cadrage et agenda</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-cadrage-agenda"/>
+    <id>https://hackcognitif.fr/fiche-cadrage-agenda</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Choisir l'angle et les sujets plutôt que mentir.</summary>
+  </entry>
+  <entry>
+    <title>Pretexting et canulars</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-pretexting"/>
+    <id>https://hackcognitif.fr/fiche-pretexting</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Se faire passer pour un interlocuteur plausible.</summary>
+  </entry>
+  <entry>
+    <title>Hameçonnage ciblé de responsables</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-hamecon-cible"/>
+    <id>https://hackcognitif.fr/fiche-hamecon-cible</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Un message sur mesure, adressé à la bonne personne.</summary>
+  </entry>
+  <entry>
+    <title>Usurpation de voix et d'image</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-usurpation"/>
+    <id>https://hackcognitif.fr/fiche-usurpation</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand « j'ai vu » et « j'ai entendu » ne prouvent plus rien.</summary>
+  </entry>
+  <entry>
+    <title>Urgence et pression temporelle</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-urgence"/>
+    <id>https://hackcognitif.fr/fiche-urgence</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Le délai court remplace la réflexion.</summary>
+  </entry>
+  <entry>
+    <title>Autorité usurpée</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/fiche-autorite"/>
+    <id>https://hackcognitif.fr/fiche-autorite</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="Fiche" label="Fiche"/>
+    <summary>Quand le titre de l'émetteur remplace la vérification.</summary>
+  </entry>
+  <entry>
+    <title>Quand on ne ressent pas ce que son pays semble ressentir</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-hors-du-climat-emotionnel"/>
+    <id>https://hackcognitif.fr/billet-hors-du-climat-emotionnel</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Deuil, fierté, colère : il arrive qu'une émotion paraisse partagée par tout un pays. Que se passe-t-il pour celles et ceux qui ne la ressentent pas, et pourquoi cet écart compte-t-il face à l'influence ?</summary>
+  </entry>
+  <entry>
+    <title>À lire : étudier les émotions en relations internationales</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-emotions-relations-internationales"/>
+    <id>https://hackcognitif.fr/billet-emotions-relations-internationales</id>
+    <published>2026-10-17T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Un billet d'Eric Sangar, publié en 2018 par l'Association belge francophone de science politique, sur une question difficile : comment savoir ce que les émotions font vraiment à la politique internationale ?</summary>
+  </entry>
+  <entry>
+    <title>Court et marquant : ce que la course à l'attention fait au discours politique</title>
+    <link rel="alternate" type="text/html" href="https://hackcognitif.fr/billet-attention-discours"/>
+    <id>https://hackcognitif.fr/billet-attention-discours</id>
+    <published>2026-10-10T00:00:00Z</published>
+    <updated>2026-10-31T00:00:00Z</updated>
+    <category term="Billet" label="Billet"/>
+    <summary>Pour être entendu, un discours politique a de plus en plus besoin d'être court et marquant. Mais les données racontent autre chose qu'une simple baisse de notre attention.</summary>
+  </entry>
+</feed>
