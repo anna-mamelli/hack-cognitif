@@ -437,7 +437,8 @@ ul.psy li { margin-bottom: var(--space-xs); }
 .tcard dd { margin: var(--space-3xs) 0 0; }
 .tcard .ind dd { color: var(--color-ink); }
 .rcard { border-top: var(--rule-bar) solid var(--band-ink); scroll-margin-top: var(--space-3xl); }
-.rcard:target { outline: var(--rule-bar) solid var(--color-accent); outline-offset: 2px; }
+.rcard:target, .tcard:target { outline: var(--rule-bar) solid var(--color-accent); outline-offset: 2px; }
+.team-more { margin-top: var(--space-lg); }
 
 /* Ressources: filters of the DIMA table, the chosen entry lit in its cell */
 .dfilters { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-sm) var(--space-md); align-items: end; margin: var(--space-lg) 0 var(--space-sm); }

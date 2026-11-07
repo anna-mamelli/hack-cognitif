@@ -130,7 +130,7 @@ const render = (route, modified) => page.evaluate(async (r, d) => {
 // The template's #view links become links between files (in-page anchors such as #main stay),
 // and its ../ asset paths become paths from the root
 const relink = (html) => html
-  .replace(/href="#([^"]+)"/g, (m, id) => (known.has(id) ? `href="${linkOf(id)}"` : m))
+  .replace(/href="#([^"#]+)(#[^"]+)?"/g, (m, id, frag) => (known.has(id) ? `href="${linkOf(id)}${frag || ''}"` : m))
   .replace(/(href|src)="\.\.\//g, '$1="')
   .replace(/\.\.\/images\//g, 'images/');
 

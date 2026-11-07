@@ -2346,7 +2346,7 @@
   var tests = FICHES.filter(function (f) { return f.red.some(function (p) { return p[0] === "Indicateur"; }); }).length;
   var checked = Object.keys(R).filter(function (k) { return R[k][2]; }).length;
   $("home-meta").innerHTML = [[FICHES.length, "fiches"], [tests, "protocoles de test"], [Object.keys(TE).length, "techniques DIMA rapprochées"], [checked, "références vérifiées"]].map(function (x) {
-    return '<div><dt>' + x[1] + '</dt><dd>' + x[0] + '</dd></div>';
+    return '<div><dt>' + (x[1] === "protocoles de test" ? '<a href="#protocoles">' + x[1] + '</a>' : x[1]) + '</dt><dd>' + x[0] + '</dd></div>';
   }).join("");
   $("home-rows").innerHTML = FICHES.slice(-3).reverse().map(rowHTML).join("");
 
@@ -2492,7 +2492,8 @@
     SECS.push(["s-equipes", "Blue et red team"]);
     out += '<section id="s-equipes" class="block" style="margin-top:40px"><div class="cols">' +
       '<div class="team b"><h3 class="team-label b">Blue team : défense</h3>' + items(f.blue) + '</div>' +
-      '<div class="team r"><h3 class="team-label r">Red team : simulation encadrée</h3>' + items(f.red) + '</div></div></section>';
+      '<div class="team r"><h3 class="team-label r">Red team : simulation encadrée</h3>' + items(f.red) +
+      '<p class="team-more" data-volatile><a class="tlink" href="#protocoles#p-' + f.id + '">Voir ce protocole parmi les autres</a></p></div></div></section>';
     SECS.push(["s-pistes", "Pistes originales"]);
     out += '<section class="block" id="s-pistes" style="margin-top:40px"><h2>Pistes originales</h2><ul class="plain">' + f.pistes.map(function (p) { return '<li>' + p + '</li>'; }).join("") + '</ul></section>';
     var d = dimaHTML(f);
@@ -2604,7 +2605,7 @@
     $("carte-tests").innerHTML = fams.map(function (fam) {
       var list = FORDER.filter(function (f) { return famOf(f) === fam[0]; });
       return '<div class="tgroup"><h3>' + fam[1] + ' <span class="n">' + list.length + '</span></h3><div class="tcards">' + list.map(function (f) {
-        return '<article class="tcard t-' + f.ax[0] + '" data-ax="' + f.ax.join(" ") + '"><h4><a href="#fiche-' + f.id + '">' + nb(f.title) + '</a></h4>' +
+        return '<article class="tcard t-' + f.ax[0] + '" id="p-' + f.id + '" data-ax="' + f.ax.join(" ") + '"><h4><a href="#fiche-' + f.id + '">' + nb(f.title) + '</a></h4>' +
           '<p class="tags">' + pills(f) + '</p><dl>' + item("cm", "Contre-mesures", part(f.blue, "Contre-mesures")) +
           item("hy", "Hypothèse testée", part(f.red, "Hypothèse testée")) + item("ind", "Indicateur", part(f.red, "Indicateur")) + '</dl>' +
           (function (l) { return '<p class="cmlv"><span class="lv ' + l.cls + '">' + (l.k === "methode" ? cap(l.lbl) : 'Contre-mesure ' + l.lbl) + '</span> ' + cap(l.why) + '</p>'; })(cmlvOf(f)) + '</article>';
@@ -2629,9 +2630,14 @@
       '</ul><p class="contrib-act">' + contribLink("Proposer une fiche ou un cas", "btn") + '</p>';
   }
   /* On a small screen the test cards fold by family, the first one open, and a chosen terrain opens them all; the map above keeps every family and every blank cell in view */
+  /* The element an address points at inside a view: #p-autorite on a published page, #protocoles#p-autorite in the template */
+  function anchorOf() {
+    var h = (location.hash || "").slice(1), i = h.indexOf("#");
+    return STATIC ? h : i > 0 ? h.slice(i + 1) : "";
+  }
   function foldTests() {
     Array.prototype.forEach.call($("carte-tests").querySelectorAll(".tgroup"), function (g, i) {
-      var h = g.querySelector("h3"), b = h.querySelector(".fold-btn"), open = cax !== "all" || i === 0;
+      var h = g.querySelector("h3"), b = h.querySelector(".fold-btn"), t = anchorOf(), open = cax !== "all" || i === 0 || !!(t && g.querySelector('[id="' + t + '"]'));
       if (!FOLD.matches) { if (b) h.innerHTML = b.innerHTML; g.classList.remove("folded"); return; }
       if (b) b.setAttribute("aria-expanded", String(open)); else h.innerHTML = foldBtn(h.innerHTML, open);
       g.classList.toggle("folded", !open);
@@ -2934,6 +2940,8 @@
   /* Own keys only: an address such as #constructor must not pass for a terrain */
   function isTerrain(h) { return Object.prototype.hasOwnProperty.call(TERRAINS, h); }
   function fileFor(h) {
+    var i = h ? h.indexOf("#") : -1;
+    if (i > 0) { var base = fileFor(h.slice(0, i)); return base ? base + h.slice(i) : null; }
     if (!h || h === "accueil") return LOCAL ? "index.html" : "./";
     if (h.indexOf("fiche-") === 0) return ficheById(h.slice(6)) ? h + EXT : null;
     if (h.indexOf("billet-") === 0) return billetById(h.slice(7)) ? h + EXT : null;
@@ -2948,7 +2956,7 @@
   window.HC_ROUTES = VIEWS.filter(function (v) { return v !== "fiche" && v !== "terrain" && v !== "billet"; })
     .concat(Object.keys(TERRAINS), FICHES.map(function (f) { return "fiche-" + f.id; }), BILLETS.map(function (b) { return "billet-" + b.id; }));
   function route() {
-    var h = STATIC ? document.body.getAttribute("data-page") : (location.hash || "").slice(1) || "accueil";
+    var h = STATIC ? document.body.getAttribute("data-page") : (location.hash || "").slice(1).split("#")[0] || "accueil";
     var view = h, f = null;
     if (isTerrain(h)) {
       view = "terrain";
@@ -2975,7 +2983,8 @@
       if (a.getAttribute("data-v") === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     current = view;
-    window.scrollTo(0, 0);
+    var at = anchorOf() && document.getElementById(anchorOf());
+    if (at && !at.closest("[hidden]")) { foldTests(); at.scrollIntoView({ behavior: "instant" }); } else window.scrollTo(0, 0);
     slideAll();
     onScroll();
   }
@@ -3005,7 +3014,7 @@
     };
     /* In a local preview, the page's own links (written without extension) get their .html back */
     if (LOCAL) Array.prototype.forEach.call(document.querySelectorAll("a[href]"), function (a) {
-      var v = a.getAttribute("href"), t = v === "./" ? "index.html" : /^[\w-]+$/.test(v) && fileFor(v);
+      var v = a.getAttribute("href"), t = v === "./" ? "index.html" : /^[\w-]+(#[\w-]+)?$/.test(v) && fileFor(v);
       if (t) a.setAttribute("href", t);
     });
     relink();
