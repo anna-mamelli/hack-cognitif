@@ -18,14 +18,9 @@
   <div class="container bar">
     <a class="brand" href="#accueil" aria-label="Hack cognitif">Hack<span aria-hidden="true">/</span><b>cognitif</b></a>
     <nav id="nav" aria-label="Navigation principale">
-      <a href="#accueil" data-v="accueil">Accueil</a>
       <a href="#carte" data-v="carte">Carte</a>
       <a href="#fiches" data-v="fiches">Fiches</a>
-      <a href="#cours" data-v="cours">Cours</a>
       <a href="#labo" data-v="labo">Labo</a>
-      <a href="#chapeaux" data-v="chapeaux">Chapeaux</a>
-      <a href="#glossaire" data-v="glossaire">Glossaire</a>
-      <a href="#lexique" data-v="lexique">Lexique IT</a>
       <a href="#ressources" data-v="ressources">Ressources</a>
       <a href="#blog" data-v="blog">Blog</a>
       <a href="#a-propos" data-v="a-propos">À propos</a>
@@ -113,6 +108,7 @@
   <header class="page-head">
     <h1>La carte des vulnérabilités cognitives</h1>
     <p class="lead">Les failles cognitives que la guerre cognitive exploite, rangées par famille de mécanismes et par phase de la manipulation, chacune avec ses contre-mesures et le moyen de les tester.</p>
+    <p class="cta"><a class="tlink" href="#protocoles">Les protocoles de test de chaque fiche</a></p>
   </header>
   <div class="callout"><p><b>Lire la carte.</b> Chaque ligne réunit une famille de fiches. Chaque colonne correspond à l'une des quatre phases dans lesquelles le cadre ouvert <a href="#ressources">DIMA</a> range les techniques de manipulation de l'information : Detect, Inform, Memorise, Act. Une fiche peut occuper plusieurs cases. La colonne « Hors DIMA » réunit les fiches de défense, de méthode et de soin, qui ne décrivent pas une technique d'attaque. Une case hachurée reste à cartographier : aucune fiche ne la couvre encore.</p></div>
   <div class="carte-tools">
@@ -121,24 +117,6 @@
   </div>
   <div class="tablewrap" id="carte-map"></div>
   <p class="note">Les rapprochements avec DIMA sont des propositions d'analyse propres à Hack cognitif : ils n'engagent pas le projet DIMA et restent ouverts à la discussion.</p>
-
-  <section class="block">
-    <h2>Des contre-mesures testables</h2>
-    <p>Pour chaque fiche : la contre-mesure, l'hypothèse qu'un exercice peut vérifier, et l'indicateur qui dit si elle marche. Testable ne veut pas dire testé : le résultat dépend de l'exercice mené, de son cadre et de ses effectifs. Les exercices sont fictifs, consentis et débriefés, et leurs indicateurs restent agrégés : aucun individu n'est désigné.</p>
-    <p>Un indicateur ne prouve rien seul : il se compare à un groupe tiré au sort, ou à la même équipe dans une autre condition. La fiche <a href="#fiche-plan-exercice">Concevoir un exercice qui mesure vraiment</a> explique comment.</p>
-    <p>Chaque carte indique aussi le niveau de preuve de la contre-mesure elle-même, et non du mécanisme : <span class="lv lv-d">évaluée</span> quand une étude citée a mesuré l'effet d'une contre-mesure de ce type sur ce terrain, <span class="lv lv-d">évaluée hors sécurité</span> quand cette mesure vient d'un autre domaine (santé, environnement, demandes d'aide), <span class="lv lv-p">plausible</span> quand elle découle d'un mécanisme documenté sans évaluation directe, <span class="lv lv-h">à tester</span> quand elle repose sur une hypothèse, et <span class="lv lv-d">méthode établie</span> pour les fiches qui servent à mesurer. « Évaluée » ne veut pas dire efficace : la justification dit ce que l'étude a trouvé.</p>
-    <p class="count" id="carte-count" aria-live="polite"></p>
-    <div id="carte-tests"></div>
-  </section>
-
-  <section class="block">
-    <h2>Former avec la carte</h2>
-    <ul class="plain">
-      <li><b>Repérer :</b> commencer par un exercice du <a href="#labo">Labo</a>, comme l'anatomie d'un message ou le quiz de détection.</li>
-      <li><b>Comprendre :</b> lire la fiche du mécanisme en jeu, ses signaux et ses contre-mesures, puis la page du terrain concerné : <a href="#organisations">organisations</a>, <a href="#dirigeants-cibles">dirigeants ciblés</a> ou <a href="#dirigeants-qui-influencent">dirigeants qui influencent</a>.</li>
-      <li><b>Tester :</b> reprendre l'hypothèse et l'indicateur de la fiche pour concevoir un exercice encadré, avec les fiches <a href="#fiche-plan-exercice">Concevoir un exercice qui mesure vraiment</a> et <a href="#fiche-ethique-simulation">Simuler une attaque sans trahir</a>.</li>
-    </ul>
-  </section>
 
   <section class="block">
     <h2>À cartographier</h2>
@@ -150,6 +128,34 @@
     <h2>Une carte ouverte</h2>
     <p>La carte est publiée sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank" rel="noopener">Creative Commons Attribution 4.0 (CC BY 4.0)</a> : chacun peut la reprendre et l'adapter, y compris dans une formation, en citant Hack cognitif et en signalant ses modifications. Les identifiants et les intitulés des techniques DIMA restent sous licence Apache 2.0. Les sources sont listées sur la page <a href="#references">Références</a>, avec leur statut de vérification.</p>
     <p class="contrib-act"><button class="btn" id="carte-csv" type="button">Télécharger la carte (CSV)</button></p>
+  </section>
+</section>
+
+<!-- PROTOCOLES -->
+<section id="v-protocoles" data-name="Protocoles de test" class="page container" data-band="blue" hidden>
+  <header class="page-head">
+    <h1>Des contre-mesures testables</h1>
+    <p class="lead">Pour chaque fiche de la <a href="#carte">carte</a> : la contre-mesure, l'hypothèse qu'un exercice peut vérifier, et l'indicateur qui dit si elle marche.</p>
+  </header>
+  <section class="block">
+    <h2>Lire les protocoles</h2>
+    <p>Testable ne veut pas dire testé : le résultat dépend de l'exercice mené, de son cadre et de ses effectifs. Les exercices sont fictifs, consentis et débriefés, et leurs indicateurs restent agrégés : aucun individu n'est désigné.</p>
+    <p>Un indicateur ne prouve rien seul : il se compare à un groupe tiré au sort, ou à la même équipe dans une autre condition. La fiche <a href="#fiche-plan-exercice">Concevoir un exercice qui mesure vraiment</a> explique comment.</p>
+    <p>Chaque carte indique aussi le niveau de preuve de la contre-mesure elle-même, et non du mécanisme : <span class="lv lv-d">évaluée</span> quand une étude citée a mesuré l'effet d'une contre-mesure de ce type sur ce terrain, <span class="lv lv-d">évaluée hors sécurité</span> quand cette mesure vient d'un autre domaine (santé, environnement, demandes d'aide), <span class="lv lv-p">plausible</span> quand elle découle d'un mécanisme documenté sans évaluation directe, <span class="lv lv-h">à tester</span> quand elle repose sur une hypothèse, et <span class="lv lv-d">méthode établie</span> pour les fiches qui servent à mesurer. « Évaluée » ne veut pas dire efficace : la justification dit ce que l'étude a trouvé.</p>
+  </section>
+  <div class="carte-tools">
+    <div class="filters" id="proto-filters" role="group" aria-label="Filtrer par terrain"></div>
+    <p class="count" id="carte-count" aria-live="polite"></p>
+  </div>
+  <div id="carte-tests"></div>
+
+  <section class="block">
+    <h2>Former avec la carte</h2>
+    <ul class="plain">
+      <li><b>Repérer :</b> commencer par un exercice du <a href="#labo">Labo</a>, comme l'anatomie d'un message ou le quiz de détection.</li>
+      <li><b>Comprendre :</b> lire la fiche du mécanisme en jeu, ses signaux et ses contre-mesures, puis la page du terrain concerné : <a href="#organisations">organisations</a>, <a href="#dirigeants-cibles">dirigeants ciblés</a> ou <a href="#dirigeants-qui-influencent">dirigeants qui influencent</a>.</li>
+      <li><b>Tester :</b> reprendre l'hypothèse et l'indicateur de la fiche pour concevoir un exercice encadré, avec les fiches <a href="#fiche-plan-exercice">Concevoir un exercice qui mesure vraiment</a> et <a href="#fiche-ethique-simulation">Simuler une attaque sans trahir</a>.</li>
+    </ul>
   </section>
 </section>
 
@@ -309,6 +315,15 @@
     <p class="lead">Ce site ne refait pas les catalogues existants. Il les relie aux mécanismes cognitifs et aux contre-mesures.</p>
   </header>
   <section class="block">
+    <h2>Apprendre et vérifier</h2>
+    <ul class="plain">
+      <li><a href="#cours">Cours et notions</a> : les notions de psychologie cognitive et de neuropsychologie, celles qui sont rédigées en fiches et celles qui restent à faire.</li>
+      <li><a href="#glossaire">Glossaire</a> : les termes employés sur le site.</li>
+      <li><a href="#lexique">Lexique IT</a> : les mots de la cybersécurité appliqués aux failles humaines.</li>
+      <li><a href="#references">Références</a> : toutes les sources citées dans les fiches, avec leur statut de vérification.</li>
+    </ul>
+  </section>
+  <section class="block">
     <h2>DIMA</h2>
     <p>Cadre open source (licence Apache-2.0) qui recense les tentatives d'exploiter les biais cognitifs dans les flux d'information. Il s'organise en quatre phases (Detect, Inform, Memorise, Act), en tactiques puis en techniques, et propose un navigateur pour rédiger des rapports de campagne.</p>
     <p><a href="https://m82-project.github.io/DIMA/" target="_blank" rel="noopener">Ouvrir le navigateur DIMA</a>, ou consulter le <a href="https://github.com/M82-project/DIMA" target="_blank" rel="noopener">dépôt GitHub</a>. Les identifiants et les intitulés des techniques repris sur ce site viennent de DIMA (M82 Project), distribué sous <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">licence Apache 2.0</a> ; certains intitulés sont abrégés.</p>
@@ -389,7 +404,7 @@
   </section>
   <section class="block">
     <h2>Posture éthique</h2>
-    <p>La finalité est défensive : que chacun, personne ou organisation, reconnaisse ces attaques et s'en prémunisse. Défendre et construire, jamais manipuler. Les cas cités sont publics et sourcés. Les techniques d'influence politique sont décrites de façon symétrique : elles sont employées par tous les camps, et aucune fiche ne vise un parti ou une personne. Aucune fiche ne propose de scénario prêt à l'emploi contre une personne réelle. Les simulations red team décrites se font dans des cadres d'exercice, avec des participants informés ou une organisation consentante.</p>
+    <p>La finalité est défensive : que chacun, personne ou organisation, reconnaisse ces attaques et s'en prémunisse. Défendre et construire, jamais manipuler. Les cas cités sont publics et sourcés. Les techniques d'influence politique sont décrites de façon symétrique : elles sont employées par tous les camps, et aucune fiche ne vise un parti ou une personne. Aucune fiche ne propose de scénario prêt à l'emploi contre une personne réelle. Les simulations red team décrites se font dans des cadres d'exercice, avec des participants informés ou une organisation consentante. La page <a href="#chapeaux">Chapeaux blancs, gris et noirs</a> détaille ce cadre.</p>
   </section>
 </section>
 
@@ -481,7 +496,7 @@
       </div>
       <div>
         <h2>Apprendre</h2>
-        <ul><li><a href="#carte">Carte</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#cours">Cours</a></li><li><a href="#labo">Labo</a></li><li><a href="#chapeaux">Chapeaux</a></li></ul>
+        <ul><li><a href="#carte">Carte</a></li><li><a href="#protocoles">Protocoles de test</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#cours">Cours</a></li><li><a href="#labo">Labo</a></li><li><a href="#chapeaux">Chapeaux</a></li></ul>
       </div>
       <div>
         <h2>Vocabulaire</h2>

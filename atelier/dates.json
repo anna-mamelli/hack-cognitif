@@ -5,9 +5,14 @@
     "modified": "2026-11-02"
   },
   "carte": {
-    "hash": "016007218c8f7183",
+    "hash": "eaa61a5243f0dbdc",
     "published": "2026-10-28",
-    "modified": "2026-10-28"
+    "modified": "2026-11-07"
+  },
+  "protocoles": {
+    "hash": "f65b103d1a79d25c",
+    "published": "2026-11-07",
+    "modified": "2026-11-07"
   },
   "fiches": {
     "hash": "388cb620ec7c6bee",
@@ -45,9 +50,9 @@
     "modified": "2026-11-02"
   },
   "ressources": {
-    "hash": "adb35c0a4b50e06f",
+    "hash": "f61f39dca06cad53",
     "published": "2026-10-27",
-    "modified": "2026-10-28"
+    "modified": "2026-11-07"
   },
   "blog": {
     "hash": "9347bbc08713ada5",
@@ -55,9 +60,9 @@
     "modified": "2026-11-02"
   },
   "a-propos": {
-    "hash": "17d7adce2b77a876",
+    "hash": "92981904e6e23131",
     "published": "2026-10-27",
-    "modified": "2026-10-31"
+    "modified": "2026-11-07"
   },
   "contribuer": {
     "hash": "7ad20089a0a685c4",

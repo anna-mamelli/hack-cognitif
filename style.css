@@ -118,13 +118,13 @@ ul.plain li { margin-bottom: var(--space-xs); }
 .filters button[aria-pressed="true"] { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-paper); }
 .filters button:disabled { opacity: 0.55; cursor: not-allowed; }
 /* A long row of filters slides sideways on a phone, so that the list it filters stays on the first screen; it wraps again from 40rem */
-#carte-filters, #filters, #cfilters, #gfilters, #lab-tabs {
+#carte-filters, #proto-filters, #filters, #cfilters, #gfilters, #lab-tabs {
   flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
   margin-inline: calc(-1 * var(--gutter)); padding: var(--space-2xs) var(--gutter); scroll-padding-inline: var(--gutter);
 }
-#carte-filters::-webkit-scrollbar, #filters::-webkit-scrollbar, #cfilters::-webkit-scrollbar, #gfilters::-webkit-scrollbar, #lab-tabs::-webkit-scrollbar { display: none; }
-#carte-filters > button, #filters > button, #cfilters > button, #gfilters > button, #lab-tabs > button { flex: none; white-space: nowrap; }
-.carte-tools > #carte-filters { flex: 1 1 100%; min-width: 0; }
+#carte-filters::-webkit-scrollbar, #proto-filters::-webkit-scrollbar, #filters::-webkit-scrollbar, #cfilters::-webkit-scrollbar, #gfilters::-webkit-scrollbar, #lab-tabs::-webkit-scrollbar { display: none; }
+#carte-filters > button, #proto-filters > button, #filters > button, #cfilters > button, #gfilters > button, #lab-tabs > button { flex: none; white-space: nowrap; }
+.carte-tools > #carte-filters, .carte-tools > #proto-filters { flex: 1 1 100%; min-width: 0; }
 .search {
   width: 100%; max-width: 28rem; min-height: 48px; padding: 0 var(--space-md); font-size: var(--text-md); color: var(--color-ink);
   background: var(--color-sheet); border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-pill);
@@ -827,7 +827,7 @@ html:not(.js) nav#nav a { min-height: 44px; border-bottom: 0; font-size: var(--t
 /* ---------- Wider screens: the base above is the phone; each step adds room ---------- */
 @media (min-width: 40rem) {
   :root { --bar-h: 4rem; }
-  #carte-filters, #filters, #cfilters, #gfilters, #lab-tabs { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding: 0; }
+  #carte-filters, #proto-filters, #filters, #cfilters, #gfilters, #lab-tabs { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding: 0; }
   #lab-tabs { gap: var(--space-xl); }
   #lab-tabs button { margin-bottom: calc(-1 * var(--rule-bar)); }
   .sp-panel { display: block; height: auto; margin: var(--space-3xl) auto 0; width: min(40rem, calc(100% - 2 * var(--space-md))); }

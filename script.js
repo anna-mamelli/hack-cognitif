@@ -2646,7 +2646,7 @@
   /* The terrain buttons are the map's legend and its filter: the map keeps its shape and dims the other fiches, the test cards show only this terrain */
   var cax = "all";
   function carteFilter() {
-    $("carte-filters").innerHTML = FILTERS.map(function (x) {
+    $("carte-filters").innerHTML = $("proto-filters").innerHTML = FILTERS.map(function (x) {
       return '<button type="button" data-ax="' + x[0] + '" aria-pressed="' + (x[0] === cax) + '">' + (x[0] === "all" ? '' : '<span class="swatch ' + x[0] + '" aria-hidden="true"></span>') + x[1] + '</button>';
     }).join("");
     var on = function (el) { return cax === "all" || el.getAttribute("data-ax").split(" ").indexOf(cax) !== -1; };
@@ -2656,12 +2656,15 @@
     Array.prototype.forEach.call($("carte-tests").querySelectorAll(".tgroup"), function (g) { g.hidden = !g.querySelector(".tcard:not([hidden])"); });
     $("carte-count").textContent = n + " fiche" + (n > 1 ? "s" : "") + (cax === "all" ? "" : " sur ce terrain");
   }
-  $("carte-filters").addEventListener("click", function (e) {
-    var b = e.target.closest("button[data-ax]");
-    if (!b) return;
-    cax = b.getAttribute("data-ax");
-    carteFilter();
-    foldTests();
+  /* The map and the test protocols share the terrain filter */
+  ["carte-filters", "proto-filters"].forEach(function (id) {
+    $(id).addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-ax]");
+      if (!b) return;
+      cax = b.getAttribute("data-ax");
+      carteFilter();
+      foldTests();
+    });
   });
   /* A fiche placed in several phases: pointing at one lights up the others */
   function relTile(e, on) {
@@ -2921,8 +2924,9 @@
   });
 
   /* ---------- Routage ---------- */
-  var VIEWS = ["accueil", "carte", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "blog", "billet", "a-propos", "contribuer", "contact", "mentions-legales"];
+  var VIEWS = ["accueil", "carte", "protocoles", "fiches", "fiche", "terrain", "cours", "labo", "chapeaux", "references", "glossaire", "lexique", "ressources", "blog", "billet", "a-propos", "contribuer", "contact", "mentions-legales"];
   var current = "accueil";
+  var NAV_OF = { fiche: "fiches", cours: "fiches", billet: "blog", terrain: "", protocoles: "carte", glossaire: "ressources", lexique: "ressources", references: "ressources", chapeaux: "a-propos" };
   /* Sur le site publié, les adresses n'ont pas d'extension : l'hébergeur sert fiches.html à l'adresse « fiches ».
      En aperçu local (fichier ouvert depuis le disque, Live Server), rien ne fait ce lien : les liens gardent .html */
   var LOCAL = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
@@ -2965,7 +2969,8 @@
       $("v-fiche").setAttribute("data-band", f.ax[0]);
     }
     VIEWS.forEach(function (v) { $("v-" + v).hidden = (v !== view); });
-    var cur = view === "fiche" ? "fiches" : view === "billet" ? "blog" : view === "terrain" ? "" : view;
+    /* Pages outside the menu light up the entry they belong to */
+    var cur = NAV_OF[view] !== undefined ? NAV_OF[view] : view;
     Array.prototype.forEach.call(document.querySelectorAll("#nav a"), function (a) {
       if (a.getAttribute("data-v") === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -3043,7 +3048,7 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   /* ---------- Recherche globale ---------- */
-  var PAGES = [["Accueil", "accueil"], ["Carte des vulnérabilités cognitives", "carte"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["Blog", "blog"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
+  var PAGES = [["Accueil", "accueil"], ["Carte des vulnérabilités cognitives", "carte"], ["Protocoles de test", "protocoles"], ["Fiches", "fiches"], ["Cours et notions", "cours"], ["Labo : anatomie, quiz, score de gravité", "labo"], ["Chapeaux blancs, gris et noirs", "chapeaux"], ["Références et sources", "references"], ["Glossaire", "glossaire"], ["Lexique IT", "lexique"], ["Ressources et correspondance DIMA", "ressources"], ["Blog", "blog"], ["À propos", "a-propos"], ["Contribuer", "contribuer"], ["Contact", "contact"], ["Mentions légales", "mentions-legales"]];
   var IDX = [];
   PAGES.forEach(function (p) { IDX.push({ t: p[0], k: "Page", x: "", go: function () { nav(p[1]); } }); });
   Object.keys(TERRAINS).forEach(function (slug) { IDX.push({ t: AX[TERRAINS[slug]], k: "Terrain", x: TERRAIN_FOR[TERRAINS[slug]], go: function () { nav(slug); } }); });
